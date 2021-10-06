@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./popup.css">
+</head>
+
+<body class="p-2 bg-light">
+  <!-- ------------------------- aem select, aem button, url input ------------------------- -->
+
+  <div class="row g-2 mb-2">
+    <div class="col">
+      <div class="input-group input-group-sm" id="select_aem_button_aem_login">
+        <select class="form-select form-select-sm" id="select_aem">
+          <option value="p5_aem">p5 aem</option>
+          <option value="p5_aem_eu">p5 aem eu</option>
+          <option value="p5_aem_eu_shop">p5 aem eu shop</option>
+          <option value="p6_aem_ap">p6 aem ap</option>
+          <option value="p6_aem_eu">p6 aem eu</option>
+          <option value="p6_aem_us">p6 aem us</option>
+        </select>
+        <button class="btn btn-light btn-sm" id="button_aem_login" type="button">
+          <img src="./assets/svg/open_20_regular.svg" alt="aem login">
+        </button>
+      </div>
+    </div>
+    <div class="col">
+      <input class="form-control form-control-sm" id="input_url" type="url">
+    </div>
+  </div>
+
+  <!-- ------------------------- url buttons ------------------------- -->
+
+  <div class="d-flex mb-2">
+    <button class="btn btn-light btn-sm me-2" id="button_editor" type="button">
+      <img src="./assets/svg/edit_20_regular.svg" alt="editor">
+    </button>
+    <button class="btn btn-light btn-sm me-2" id="button_editor_off" type="button">
+      <img src="./assets/svg/edit_off_20_regular.svg" alt="editor off">
+    </button>
+    <button class="btn btn-light btn-sm me-2 | width" id="button_qa" type="button">qa</button>
+    <button class="btn btn-light btn-sm me-2 | width" id="button_live" type="button">live</button>
+    <button class="btn btn-light btn-sm me-2 | width" id="button_sites" type="button">sites</button>
+    <button class="btn btn-light btn-sm | width" id="button_assets" type="button">assets</button>
+  </div>
+
+  <!-- ------------------------- aem buttons ------------------------- -->
+
+  <div class="d-flex mb-2">
+    <button class="btn btn-light btn-sm me-2 text-truncate | width" id="button_task_management" type="button">task management</button>
+    <button class="btn btn-light btn-sm me-2 text-truncate | width" id="button_workflows" type="button">workflows</button>
+    <button class="btn btn-light btn-sm me-2 | width" id="button_purging" type="button">purging</button>
+    <button class="btn btn-light btn-sm me-2 | width" id="button_pim_b2c" type="button">pim b2c</button>
+    <button class="btn btn-light btn-sm | width" id="button_pim_b2b" type="button">pim b2b</button>
+  </div>
+
+  <!-- ------------------------- utilities ------------------------- -->
+
+  <div class="row g-2">
+    <div class="col">
+      <div class="input-group input-group-sm" id="button_paste_input_text">
+        <button class="btn btn-light btn-sm" id="button_paste" type="button">
+          <img src="./assets/svg/clipboard_paste_20_regular.svg" alt="paste">
+        </button>
+        <input class="form-control form-control-sm" id="input_text" type="text" placeholder="text">
+      </div>
+    </div>
+    <div class="col">
+      <div class="btn-group btn-group-sm | width" id="button_to_lower_case_button_to_upper_case">
+        <button class="btn btn-light btn-sm" id="button_to_lower_case" type="button">
+          <img src="./assets/svg/arrow_down_20_regular.svg" alt="to lower case">
+        </button>
+        <button class="btn btn-light btn-sm" id="button_to_upper_case" type="button">
+          <img src="./assets/svg/arrow_up_20_regular.svg" alt="to upper case">
+        </button>
+      </div>
+      <div class="btn-group btn-group-sm | width" id="button_cut_button_copy">
+        <button class="btn btn-light btn-sm" id="button_cut" type="button">
+          <img src="./assets/svg/cut_20_regular.svg" alt="cut">
+        </button>
+        <button class="btn btn-light btn-sm" id="button_copy" type="button">
+          <img src="./assets/svg/copy_20_regular.svg" alt="copy">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
+  <script src="./popup.js"></script>
+</body>
+
+</html>

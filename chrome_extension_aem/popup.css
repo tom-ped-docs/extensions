@@ -1,0 +1,108 @@
+.bg-light {
+  background-color: #f2f2f2;
+}
+
+.btn-light {
+  color: #000;
+  background-color: #ebebeb;
+  border: none;
+}
+
+.btn-light:hover {
+  color: #000;
+  background-color: #dbdbdb;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+}
+
+.width {
+  width: 5rem;
+}
+
+/*
+ * ------------------------- motion -------------------------
+ */
+
+@keyframes ms-motion-slideDownIn {
+  from {
+    transform: translate3d(0, -48px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes ms-motion-fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#select_aem_button_aem_login {
+  animation: 100ms 125ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#input_url {
+  animation: 100ms 150ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_editor {
+  animation: 100ms 175ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 175ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_editor_off {
+  animation: 100ms 200ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_qa {
+  animation: 100ms 225ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 225ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_live {
+  animation: 100ms 250ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 250ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_sites {
+  animation: 100ms 275ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 275ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_assets {
+  animation: 100ms 300ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 300ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_task_management {
+  animation: 100ms 325ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 325ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_workflows {
+  animation: 100ms 350ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 350ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_purging {
+  animation: 100ms 375ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 375ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_pim_b2c {
+  animation: 100ms 400ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 400ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_pim_b2b {
+  animation: 100ms 425ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 425ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_paste_input_text {
+  animation: 100ms 450ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 450ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_to_lower_case_button_to_upper_case {
+  animation: 100ms 475ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 475ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_cut_button_copy {
+  animation: 100ms 500ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 500ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}

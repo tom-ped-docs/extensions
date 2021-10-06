@@ -1,0 +1,35 @@
+{
+  "name": "Adobe Experience Manager extension.",
+  "description": "Adobe Experience Manager utilities.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "clipboardRead",
+    "clipboardWrite",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "176": "./assets/png/icon_176.png"
+    },
+    "default_title": "Adobe Experience Manager extension."
+  },
+  "icons": {
+    "176": "./assets/png/icon_176.png"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+1",
+        "mac": "Alt+1"
+      },
+      "description": "Activate the extension."
+    }
+  }
+}

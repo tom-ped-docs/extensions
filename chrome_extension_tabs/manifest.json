@@ -1,0 +1,56 @@
+{
+  "name": "Tabs extension.",
+  "description": "Duplicate, group, pin & move tabs.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabGroups"
+  ],
+  "icons": {
+    "176": "./assets/png/icon_176.png"
+  },
+  "commands": {
+    "tabs-duplicate": {
+      "suggested_key": {
+        "default": "Alt+Shift+D",
+        "mac": "Alt+Shift+D"
+      },
+      "description": "tabs-duplicate (Alt + Shift + D)"
+    },
+    "toggle-tabs-pinned": {
+      "suggested_key": {
+        "default": "Alt+Shift+P",
+        "mac": "Alt+Shift+P"
+      },
+      "description": "toggle-tabs-pinned (Alt + Shift + P)"
+    },
+    "toggle-tabs-group": {
+      "suggested_key": {
+        "default": "Alt+Shift+G",
+        "mac": "Alt+Shift+G"
+      },
+      "description": "toggle-tabs-group (Alt + Shift + G)"
+    },
+    "group-collapsed": {
+      "description": "group-collapsed (Alt + Shift + C)"
+    },
+    "tabs-move-left": {
+      "description": "tabs-move-left (Alt + Shift + Page Up)"
+    },
+    "tabs-move-right": {
+      "description": "tabs-move-right (Alt + Shift + Page Down)"
+    },
+    "tabs-move-top": {
+      "description": "tabs-move-top (Alt + Shift + Home)"
+    },
+    "tabs-move-bottom": {
+      "description": "tabs-move-bottom (Alt + Shift + End)"
+    },
+    "tabs-move-window": {
+      "description": "tabs-move-window (Alt + Shift + N)"
+    }
+  }
+}
