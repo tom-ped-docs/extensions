@@ -23,6 +23,7 @@ const URL = {
   p6_aem_us:            "https://p6-us-author.samsung.com/",
   p6_qa:                "https://p6-qa.samsung.com/",
   p6_pim_b2c:           "aem/pim/b2c/product/detail/main/page/list",
+  p6_pim_b2b:           "aem/bim/b2b/product/detail/main/page/list",
   p6_purging:           "aem/pim/global/setting/cdnpurging/page/purgerequest/info",
   p6_workflows:         "aem/inbox"
 }

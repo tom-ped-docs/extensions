@@ -24,10 +24,8 @@ const setButtonTaskManagementButtonPimB2bDisabled = () => {
   chrome.storage.local.get("selected_aem", ({ selected_aem }) => {
     if (selected_aem === "p6_aem_ap" || selected_aem === "p6_aem_eu" || selected_aem === "p6_aem_us") {
       BUTTON_TASK_MANAGEMENT.setAttribute("disabled", "");
-      BUTTON_PIM_B2B.setAttribute("disabled", "");
     } else {
       BUTTON_TASK_MANAGEMENT.removeAttribute("disabled");
-      BUTTON_PIM_B2B.removeAttribute("disabled");
     }
   });
 }
@@ -205,7 +203,11 @@ BUTTON_PIM_B2C.addEventListener("click", () => {
 // on click set "pim_b2b" url & create new tab, if disabled = false
 BUTTON_PIM_B2B.addEventListener("click", () => {
   chrome.storage.local.get(["URL", "selected_aem"], ({ URL, selected_aem }) => {
-    createTabs(URL[selected_aem] + URL.p5_pim_b2b);
+    if (selected_aem === "p5_aem" || selected_aem === "p5_aem_eu" || selected_aem === "p5_aem_eu_shop") {
+      createTabs(URL[selected_aem] + URL.p5_pim_b2b);
+    } else {
+      createTabs(URL[selected_aem] + URL.p6_pim_b2b);
+    }
   });
 });
 
