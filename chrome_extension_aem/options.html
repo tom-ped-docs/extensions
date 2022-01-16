@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./popup.css">
+</head>
+
+<body class="p-2">
+  <div><!-- class="w-50" -->
+
+    <!-- ------------------------- samsung aem ------------------------- -->
+
+    <div class="card mb-2" id="s_div_aem">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          s aem
+          <div class="form-check form-switch">
+            <span id="s_span_display_aem">Off</span>
+            <input class="form-check-input" id="s_input_display_aem" type="checkbox">
+            <!-- <label class="form-check-label" for="s_input_aem">...</label> -->
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          p5_login (user_id)
+          <div class="d-flex">
+            <input class="form-control form-control-sm me-2 | width-20" id="s_input_p5_login" type="text" placeholder="user_id">
+            <button class="btn btn-sm me-2" id="s_button_p5_login_save" type="button">
+              <img src="./assets/svg/save_20_regular.svg" alt="save">
+            </button>
+            <button class="btn btn-sm" id="s_button_p5_login_reset" type="button">
+              <img src="./assets/svg/arrow_reset_20_regular.svg" alt="arrow reset">
+            </button>
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          p6_login (user_email)
+          <div class="d-flex">
+            <input class="form-control form-control-sm me-2 | width-20"" id="s_input_p6_login" type="text" placeholder="user_email">
+            <button class="btn btn-sm me-2" id="s_button_p6_login_save" type="button">
+              <img src="./assets/svg/save_20_regular.svg" alt="save">
+            </button>
+            <button class="btn btn-sm" id="s_button_p6_login_reset" type="button">
+              <img src="./assets/svg/arrow_reset_20_regular.svg" alt="arrow reset">
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ------------------------- pmi aem ------------------------- -->
+
+    <div class="card mb-2" id="pmi_div_aem">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          pmi aem
+          <div class="form-check form-switch">
+            <span id="pmi_span_display_aem">Off</span>
+            <input class="form-check-input" id="pmi_input_display_aem" type="checkbox">
+            <!-- <label class="form-check-label" for="pmi_input_aem">...</label> -->
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ------------------------- utilities ------------------------- -->
+
+    <div class="card mb-2" id="div_utilities">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          utilities
+          <div class="form-check form-switch">
+            <span id="span_display_utilities">Off</span>
+            <input class="form-check-input" id="input_display_utilities" type="checkbox">
+            <!-- <label class="form-check-label" for="input_utilities">...</label> -->
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ------------------------- theme ------------------------- -->
+
+    <div class="card" id="div_theme">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          theme
+          <select class="form-select form-select-sm | width-10" id="select_theme">
+            <option value="auto">auto</option>
+            <option value="light">light</option>
+            <option value="dark">dark</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
+  <script src="./options.js"></script>
+</body>
+</html>
