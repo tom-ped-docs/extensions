@@ -128,13 +128,13 @@ INPUT_DISPLAY_UTILITIES.addEventListener("click",
  */
 
 const setLight = () => {
-  document.body.classList.remove("bg-dark");
-  document.body.classList.add("bg-light");
+  document.documentElement.classList.remove("dark");
+  document.documentElement.classList.add("light");
 }
 
 const setDark = () => {
-  document.body.classList.remove("bg-light");
-  document.body.classList.add("bg-dark");
+  document.documentElement.classList.remove("light");
+  document.documentElement.classList.add("dark");
 }
 
 // on popup ...

@@ -28,22 +28,22 @@
   .bg-dark {...};
 } */
 
-.bg-light {
+/* .bg-light {
   background-color: #f2f2f2;
-}
+} */
 
-body.bg-light button {
+/* body.bg-light button {
   color: #000;
   background-color: #ebebeb;
   border: none;
-}
+} */
 
-body.bg-light button:hover {
+/* body.bg-light button:hover {
   color: #000;
   background-color: #dbdbdb;
   border: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
-}
+} */
 
 /*
  * ------------------------- motion -------------------------

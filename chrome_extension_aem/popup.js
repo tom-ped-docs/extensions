@@ -13,13 +13,13 @@ const PMI_DIV_AEM = document.querySelector("#pmi_div_aem");
 const DIV_UTILITIES = document.querySelector("#div_utilities");
 
 const setLight = () => {
-  document.body.classList.remove("bg-dark");
-  document.body.classList.add("bg-light");
+  document.documentElement.classList.remove("dark");
+  document.documentElement.classList.add("light");
 }
 
 const setDark = () => {
-  document.body.classList.remove("bg-light");
-  document.body.classList.add("bg-dark");
+  document.documentElement.classList.remove("light");
+  document.documentElement.classList.add("dark");
 }
 
 // on popup ...
@@ -134,9 +134,21 @@ const setInputUrl = (input_url) => {
 
   if (input_url.startsWith("/")) {
     input_url = input_url.slice(1);
-  } else if (input_url.endsWith("/")) {
+  }
+
+  if (input_url.endsWith("/")) {
     input_url = input_url.slice(0, input_url.length - 1);
-  } else if (input_url.endsWith(".html")) {
+  }
+
+  if (input_url.endsWith("?gr=false")) {
+    input_url = input_url.slice(0, input_url.length - 9);
+  }
+
+  if (input_url.endsWith("?wcmmode=disabled")) {
+    input_url = input_url.slice(0, input_url.length - 17);
+  }
+
+  if (input_url.endsWith(".html")) {
     input_url = input_url.slice(0, input_url.length - 5);
   }
 
@@ -288,14 +300,15 @@ const PMI_BUTTON_LIVE_LOGIN = document.querySelector("#pmi_button_live_login");
 const PMI_BUTTON_LIVE = document.querySelector("#pmi_button_live");
 const PMI_BUTTON_SITES = document.querySelector("#pmi_button_sites");
 const PMI_BUTTON_ASSETS = document.querySelector("#pmi_button_assets");
+const PMI_BUTTON_GRFALSE = document.querySelector("#pmi_button_grfalse");
 
 const setPmiAttributes = () => {
   chrome.storage.local.get("pmi_selected_aem", ({ pmi_selected_aem }) => {
     if (pmi_selected_aem === "prod_aem") {
-      PMI_DIV_AEM.classList.add("bg-danger");
+      PMI_DIV_AEM.classList.add("f-critical-background");
       PMI_BUTTON_LIVE_LOGIN.setAttribute("disabled", "");
     } else {
-      PMI_DIV_AEM.classList.remove("bg-danger");
+      PMI_DIV_AEM.classList.remove("f-critical-background");
       PMI_BUTTON_LIVE_LOGIN.removeAttribute("disabled");
     }
   });
@@ -384,6 +397,15 @@ PMI_BUTTON_ASSETS.addEventListener("click", () => {
   chrome.storage.local.get(["PMI_URL", "pmi_selected_aem"], ({ PMI_URL, pmi_selected_aem }) => {
     createTabs(PMI_URL[pmi_selected_aem] + PMI_URL.assets);
   });
+});
+
+PMI_BUTTON_GRFALSE.addEventListener("click", () => {
+  const updateTabs = async () => {
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.tabs.update({ url: tab.url + "?gr=false" });
+  }
+  updateTabs();
 });
 
 /*

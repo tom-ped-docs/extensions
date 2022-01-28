@@ -1,0 +1,553 @@
+/*
+ * ------------------------- Button -------------------------
+ */
+
+/* .btn {
+  height: 32px;
+  width: 120px;
+} */
+
+/* ------------------------- Mode: Light, Style: Standard ------------------------- */
+
+.light .btn.f-text {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.16);
+}
+
+.light .btn.f-text:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+  /* border: 1px solid; */
+  /* border-color: rgba(0, 0, 0, 0.06); */
+  /* border-color: rgba(0, 0, 0, 0.16); */
+}
+
+.light .btn.f-text:active {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.light .btn.f-text:disabled {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.light .btn.f-text:focus {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ------------------------- Mode: Light, Style: Accent ------------------------- */
+
+.light .btn.f-text-on-accent {
+  background-color: rgba(0, 95, 184, 1);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.light .btn.f-text-on-accent:hover {
+  background-color: rgba(0, 95, 184, 0.9);
+  /* border: 1px solid; */
+  /* border-color: rgba(255, 255, 255, 0.08); */
+  /* border-color: rgba(0, 0, 0, 0.4); */
+}
+
+.light .btn.f-text-on-accent:active {
+  background-color: rgba(0, 95, 184, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.light .btn.f-text-on-accent:disabled {
+  background-color: rgba(0, 0, 0, 0.22);
+  border: unset;
+}
+
+.light .btn.f-text-on-accent:focus {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ------------------------- Mode: Dark, Style: Standard ------------------------- */
+
+.dark .btn.f-text {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+.dark .btn.f-text:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  /* border: 1px solid; */
+  /* border-color: rgba(255, 255, 255, 0.09); */
+  /* border-color: rgba(255, 255, 255, 0.07); */
+}
+
+.dark .btn.f-text:active {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dark .btn.f-text:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dark .btn.f-text:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+}
+
+/* ------------------------- Mode: Dark, Style: Accent ------------------------- */
+
+.dark .btn.f-text-on-accent {
+  background-color: rgba(96, 205, 255, 1);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+.dark .btn.f-text-on-accent:hover {
+  background-color: rgba(96, 205, 255, 0.9);
+  /* border: 1px solid; */
+  /* border-color: rgba(255, 255, 255, 0.08); */
+  /* border-color: rgba(0, 0, 0, 0.14); */
+}
+
+.dark .btn.f-text-on-accent:active {
+  background-color: rgba(96, 205, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .btn.f-text-on-accent:disabled {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: unset;
+}
+
+.dark .btn.f-text-on-accent:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+}
+
+/*
+ * ------------------------- Dropdown -------------------------
+ */
+
+/* ------------------------- Mode: Light, Open: True ------------------------- */
+
+.light .form-select {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.16);
+}
+
+.light .form-select:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+  /* border: 1px solid; */
+  /* border-color: rgba(0, 0, 0, 0.06); */
+  /* border-color: rgba(0, 0, 0, 0.16); */
+}
+
+.light .form-select:active {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.light .form-select:disabled {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.light .form-select:focus {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+}
+
+.light .form-select option {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  /* background: rgba(255, 255, 255, 1); */
+  /* mix-blend-mode: multiply; */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+
+  /* background: url(NoiseAsset_256.png), rgba(252, 252, 252, 0.85); */
+  background-color:rgba(252, 252, 252, 0.85);
+  /* background-blend-mode: normal, luminosity; */
+  /* backdrop-filter: blur(60px); */
+}
+
+/* ------------------------- Mode: Dark, Open: True ------------------------- */
+
+.dark .form-select {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+.dark .form-select:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  /* border: 1px solid; */
+  /* border-color: rgba(255, 255, 255, 0.09); */
+  /* border-color: rgba(255, 255, 255, 0.07); */
+}
+
+.dark .form-select:active {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dark .form-select:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dark .form-select:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+}
+
+.dark .form-select option {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  /* background: rgba(255, 255, 255, 1); */
+  /* mix-blend-mode: multiply; */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
+
+  /* background: url(NoiseAsset_256.png), linear-gradient(0deg, rgba(44, 44, 44, 0.15), rgba(44, 44, 44, 0.15)), rgba(44, 44, 44, 0.96); */
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.96);
+  /* background-blend-mode: normal, color, luminosity; */
+  /* backdrop-filter: blur(60px); */
+}
+
+/*
+ * ------------------------- Toggle Switch -------------------------
+ */
+
+/* ------------------------- Mode: Light, Selected: False ------------------------- */
+
+.light .form-switch .form-check-input {
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+.light .form-switch .form-check-input:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  /* border: 1px solid rgba(0, 0, 0, 0.45); */
+}
+
+.light .form-switch .form-check-input:active {
+  background-color: rgba(0, 0, 0, 0.09);
+  /* border: 1px solid rgba(0, 0, 0, 0.45); */
+}
+
+.light .form-switch .form-check-input:disabled {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.light .form-switch .form-check-input:focus {
+  /* box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.9); */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+/* ------------------------- Mode: Light, Selected: True ------------------------- */
+
+.light .form-switch .form-check-input:checked {
+  background-color: rgba(0, 95, 184, 1);
+  border: 1px solid rgba(0, 95, 184, 1);
+}
+
+.light .form-switch .form-check-input:checked:hover {
+  background-color: rgba(0, 95, 184, 0.9);
+  border: 1px solid rgba(0, 95, 184, 0.9);
+}
+
+.light .form-switch .form-check-input:checked:active {
+  background-color: rgba(0, 95, 184, 0.8);
+  border: 1px solid rgba(0, 95, 184, 0.8);
+}
+
+.light .form-switch .form-check-input:checked:disabled {
+  background-color: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.light .form-switch .form-check-input:checked:focus {
+  /* box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.9); */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+/* ------------------------- Mode: Dark, Selected: False ------------------------- */
+
+.dark .form-switch .form-check-input {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.54);
+}
+
+.dark .form-switch .form-check-input:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  /* border: 1px solid rgba(255, 255, 255, 0.54); */
+}
+
+.dark .form-switch .form-check-input:active {
+  background-color: rgba(255, 255, 255, 0.07);
+  /* border: 1px solid rgba(255, 255, 255, 0.54); */
+}
+
+.dark .form-switch .form-check-input:disabled {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.dark .form-switch .form-check-input:focus {
+  /* box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 255, 255, 1); */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgba(255, 255, 255, 1);
+}
+
+/* ------------------------- Mode: Dark, Selected: True ------------------------- */
+
+.dark .form-switch .form-check-input:checked {
+  background-color: rgba(96, 205, 255, 1);
+  border: 1px solid rgba(96, 205, 255, 1);
+}
+
+.dark .form-switch .form-check-input:checked:hover {
+  background-color: rgba(96, 205, 255, 0.9);
+  border: 1px solid rgba(96, 205, 255, 0.9);
+}
+
+.dark .form-switch .form-check-input:checked:active {
+  background-color: rgba(96, 205, 255, 0.8);
+  border: 1px solid rgba(96, 205, 255, 0.8);
+}
+
+.dark .form-switch .form-check-input:checked:disabled {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.dark .form-switch .form-check-input:checked:focus {
+  /* box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 255, 255, 1); */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgba(255, 255, 255, 1);
+}
+
+/*
+ * ------------------------- Expander -------------------------
+ */
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* ------------------------- Mode: Light, Expanded: False & True ------------------------- */
+
+.light .accordion-item {
+  background-color: rgba(246, 246, 246, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.light .accordion-button {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.light .accordion-button:not(.collapsed) {
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+}
+
+.light .accordion-body {
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.08); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.light .accordion-body:last-of-type {
+  border-bottom: none;
+}
+
+/* ------------------------- Mode: Dark, Expanded: False & True ------------------------- */
+
+.dark .accordion-item {
+  background-color: rgba(255, 255, 255, 0.03);
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .accordion-button {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark .accordion-button:not(.collapsed) {
+  /* box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1); */
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.dark .accordion-body {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .accordion-body:last-of-type {
+  border-bottom: none;
+}
+
+/*
+ * ------------------------- Text Box -------------------------
+ */
+
+/* input.form-control {
+  height: 32px;
+  width: 120px;
+} */
+
+/* ------------------------- Mode: Light ------------------------- */
+
+.light input.form-control {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.06);
+  /* border-color: rgba(0, 0, 0, 0.45); */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+}
+
+.light input.form-control:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+  /* border: 1px solid; */
+  /* border-color: rgba(0, 0, 0, 0.06); */
+  /* border-color: rgba(0, 0, 0, 0.45); */
+}
+
+.light input.form-control:active,
+.light input.form-control:focus {
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom: 2px solid rgba(0, 95, 184, 1);
+  box-shadow: unset;
+}
+
+.light input.form-control:disabled {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ------------------------- Mode: Dark ------------------------- */
+
+.dark input.form-control {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  /* border-color: rgba(255, 255, 255, 0.54); */
+  /* border-color: rgba(255, 255, 255, 0.54); */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.54);
+}
+
+.dark input.form-control:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  /* border: 1px solid; */
+  /* border-color: rgba(255, 255, 255, 0.08); */
+  /* border-color: rgba(255, 255, 255, 0.54); */
+  /* border-color: rgba(255, 255, 255, 0.54); */
+}
+
+.dark input.form-control:active,
+.dark input.form-control:focus {
+  background-color: rgba(30, 30, 30, 0.7);
+  border-bottom: 2px solid rgba(96, 205, 255, 1);
+  box-shadow: unset;
+}
+
+.dark input.form-control:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/*
+ * ------------------------- Scroll Bar (Scroll Viewer) -------------------------
+ */
+
+/* html {
+  overflow: auto;
+} */
+
+/* body {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  padding: 4px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+} */
+
+/* ------------------------- Mode: Light, Orientation: Bidirectional, Expanded: False ------------------------- */
+
+html.light ::-webkit-scrollbar {
+  width: 2px;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 9999px;
+}
+
+/* ------------------------- Mode: Dark, Orientation: Bidirectional, Expanded: False ------------------------- */
+
+html.dark ::-webkit-scrollbar {
+  width: 2px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 9999px;
+}
+
+/*
+ * ------------------------- Surfaces -------------------------
+ */
+
+/* ------------------------- App Surface ------------------------- */
+
+/* Mode: Light, Part: Base (Mica), Inactive: False */
+
+.light .f-app-surface-base {
+  border: 1px solid rgba(117, 117, 117, 0.4);
+
+  /* background: rgba(255, 255, 255, 1); */
+  /* mix-blend-mode: multiply; */
+  box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.28), 0px 2px 21px rgba(0, 0, 0, 0.22);
+
+  /* background: linear-gradient(0deg, rgba(243, 243, 243, 0.5), rgba(243, 243, 243, 0.5)), rgb(243, 243, 243); */
+  background-color: rgba(243, 243, 243, 0.5);
+  background-color: rgba(243, 243, 243, 0.5);
+  /* background-blend-mode: color, luminosity; */
+  /* backdrop-filter: blur(240px); */
+}
+
+/* Mode: Light, Part: Layer, Inactive: False */
+
+.light .f-app-surface-layer {
+  border: 1px solid rgba(0, 0, 0, 0.0578);
+
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Mode: Dark, Part: Base (Mica), Inactive: False */
+
+.dark .f-app-surface-base {
+  border: 1px solid rgba(117, 117, 117, 0.4);
+
+  /* background: rgb(255, 255, 255); */
+  /* mix-blend-mode: multiply; */
+  box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.56), 0px 2px 21px rgba(0, 0, 0, 0.55);
+
+  /* background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8)), rgb(32, 32, 32); */
+  background-color: rgba(32, 32, 32, 0.8);
+  background-color: rgba(32, 32, 32, 0.8);
+  /* background-blend-mode: color, luminosity; */
+  /* backdrop-filter: blur(240px); */
+}
+
+/* Mode: Dark, Part: Layer, Inactive: False */
+
+.dark .f-app-surface-layer {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  background: rgba(58, 58, 58, 0.3);
+}

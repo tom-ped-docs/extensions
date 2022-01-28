@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -8,30 +8,35 @@
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./popup.css">
+
+  <link rel="stylesheet" href="./css/fluent_typography.css">
+  <link rel="stylesheet" href="./css/fluent_color.css">
+  <link rel="stylesheet" href="./css/fluent_controls.css">
+  <link rel="stylesheet" href="./css/fluent_iconography.css">
 </head>
 
-<body class="p-2">
+<body class="p-2 | f-app-surface-base">
 
   <!-- ------------------------- options ------------------------- -->
 
-  <div class="border rounded p-2">
+  <div class="rounded p-2 | f-app-surface-layer">
     <div class="d-flex justify-content-end">
-      <button class="btn btn-sm" id="button_options" type="button">
-        <img src="./assets/svg/options_20_regular.svg" alt="options">
+      <button class="btn btn-sm | f-body f-text" id="button_options" type="button">
+        <!-- <img src="./assets/svg/options_20_regular.svg" alt="options"> -->
       </button>
     </div>
   </div>
 
   <!-- ------------------------- samsung aem ------------------------- -->
 
-  <div class="border rounded mt-2 p-2" id="s_div_aem">
+  <div class="rounded mt-2 p-2 | f-app-surface-layer" id="s_div_aem">
 
     <!-- ------------------------- samsung aem select, samsung aem button, samsung url input ------------------------- -->
 
     <div class="row g-2 mb-2">
       <div class="col">
         <div class="input-group input-group-sm" id="s_select_aem_s_button_login">
-          <select class="form-select form-select-sm" id="s_select_aem">
+          <select class="form-select form-select-sm | f-body f-text" id="s_select_aem">
             <option value="p5_aem">p5 aem</option>
             <option value="p5_aem_eu">p5 aem eu</option>
             <option value="p5_aem_eu_shop">p5 aem eu shop</option>
@@ -39,13 +44,13 @@
             <option value="p6_aem_eu">p6 aem eu</option>
             <option value="p6_aem_us">p6 aem us</option>
           </select>
-          <button class="btn btn-sm" id="s_button_login" type="button">
-            <img src="./assets/svg/open_20_regular.svg" alt="open">
+          <button class="btn btn-sm | f-body f-text" id="s_button_login" type="button">
+            <!-- <img src="./assets/svg/open_20_regular.svg" alt="open"> -->
           </button>
         </div>
       </div>
       <div class="col">
-        <input class="form-control form-control-sm" id="s_input_url" type="url">
+        <input class="form-control form-control-sm | f-body f-text" id="s_input_url" type="url">
       </div>
     </div>
 
@@ -53,98 +58,99 @@
 
     <div class="d-flex mb-2">
       <div class="btn-group btn-group-sm me-2 | width-5" id="s_button_editor_s_button_editor_off">
-        <button class="btn btn-sm" id="s_button_editor" type="button">
-          <img src="./assets/svg/edit_20_regular.svg" alt="edit">
+        <button class="btn btn-sm | f-body f-text" id="s_button_editor" type="button">
+          <!-- <img src="./assets/svg/edit_20_regular.svg" alt="edit"> -->
         </button>
-        <button class="btn btn-sm" id="s_button_editor_off" type="button">
-          <img src="./assets/svg/edit_off_20_regular.svg" alt="edit off">
+        <button class="btn btn-sm | f-body f-text" id="s_button_editor_off" type="button">
+          <!-- <img src="./assets/svg/edit_off_20_regular.svg" alt="edit off"> -->
         </button>
       </div>
-      <button class="btn btn-sm me-2 | width-5" id="s_button_qa" type="button">qa</button>
-      <button class="btn btn-sm me-2 | width-5" id="s_button_live" type="button">live</button>
-      <button class="btn btn-sm me-2 | width-5" id="s_button_sites" type="button">sites</button>
-      <button class="btn btn-sm | width-5" id="s_button_assets" type="button">assets</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="s_button_qa" type="button">qa</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="s_button_live" type="button">live</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="s_button_sites" type="button">sites</button>
+      <button class="btn btn-sm | width-5 f-body f-text" id="s_button_assets" type="button">assets</button>
     </div>
 
     <!-- ------------------------- samsung aem buttons ------------------------- -->
 
     <div class="d-flex">
-      <button class="btn btn-sm text-truncate me-2 | width-5" id="s_button_task_management" type="button">task management</button>
-      <button class="btn btn-sm text-truncate me-2 | width-5" id="s_button_workflows" type="button">workflows</button>
-      <button class="btn btn-sm me-2 | width-5" id="s_button_purging" type="button">purging</button>
-      <button class="btn btn-sm me-2 | width-5" id="s_button_pim_b2c" type="button">pim b2c</button>
-      <button class="btn btn-sm | width-5" id="s_button_pim_b2b" type="button">pim b2b</button>
+      <button class="btn btn-sm text-truncate me-2 | width-5 f-body f-text" id="s_button_task_management" type="button">task management</button>
+      <button class="btn btn-sm text-truncate me-2 | width-5 f-body f-text" id="s_button_workflows" type="button">workflows</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="s_button_purging" type="button">purging</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="s_button_pim_b2c" type="button">pim b2c</button>
+      <button class="btn btn-sm | width-5 f-body f-text" id="s_button_pim_b2b" type="button">pim b2b</button>
     </div>
   </div>
 
   <!-- ------------------------- pmi aem ------------------------- -->
 
-  <div class="border rounded mt-2 p-2" id="pmi_div_aem">
+  <div class="rounded mt-2 p-2 | f-app-surface-layer" id="pmi_div_aem">
 
     <!-- ------------------------- pmi aem select, pmi aem button, pmi url input ------------------------- -->
 
     <div class="row g-2 mb-2">
       <div class="col">
         <div class="input-group input-group-sm" id="pmi_select_aem_pmi_button_login">
-          <select class="form-select form-select-sm" id="pmi_select_aem">
+          <select class="form-select form-select-sm | f-body f-text" id="pmi_select_aem">
             <option value="pre_prod_aem">pre prod aem</option>
             <option value="prod_aem">prod aem</option>
           </select>
-          <button class="btn btn-sm" id="pmi_button_login" type="button">
-            <img src="./assets/svg/open_20_regular.svg" alt="open">
+          <button class="btn btn-sm | f-body f-text" id="pmi_button_login" type="button">
+            <!-- <img src="./assets/svg/open_20_regular.svg" alt="open"> -->
           </button>
         </div>
       </div>
       <div class="col">
-        <input class="form-control form-control-sm" id="pmi_input_url" type="url">
+        <input class="form-control form-control-sm | f-body f-text" id="pmi_input_url" type="url">
       </div>
     </div>
 
     <!-- ------------------------- pmi url buttons ------------------------- -->
 
-    <div class="d-flex">
+    <div class="d-flex mb-2">
       <div class="btn-group btn-group-sm me-2 | width-5" id="pmi_button_editor_pmi_button_editor_off">
-        <button class="btn btn-sm" id="pmi_button_editor" type="button">
-          <img src="./assets/svg/edit_20_regular.svg" alt="edit">
+        <button class="btn btn-sm | f-body f-text" id="pmi_button_editor" type="button">
+          <!-- <img src="./assets/svg/edit_20_regular.svg" alt="edit"> -->
         </button>
-        <button class="btn btn-sm" id="pmi_button_editor_off" type="button">
-          <img src="./assets/svg/edit_off_20_regular.svg" alt="edit off">
+        <button class="btn btn-sm | f-body f-text" id="pmi_button_editor_off" type="button">
+          <!-- <img src="./assets/svg/edit_off_20_regular.svg" alt="edit off"> -->
         </button>
       </div>
-      <button class="btn btn-sm me-2 | width-5" id="pmi_button_live_login" type="button">live login</button>
-      <button class="btn btn-sm me-2 | width-5" id="pmi_button_live" type="button">qa / live</button>
-      <button class="btn btn-sm me-2 | width-5" id="pmi_button_sites" type="button">sites</button>
-      <button class="btn btn-sm | width-5" id="pmi_button_assets" type="button">assets</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="pmi_button_live_login" type="button">live login</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="pmi_button_live" type="button">qa / live</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="pmi_button_sites" type="button">sites</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="pmi_button_assets" type="button">assets</button>
+      <button class="btn btn-sm | width-5 f-body f-text" id="pmi_button_grfalse" type="button">?gr=false</button>
     </div>
   </div>
 
   <!-- ------------------------- utilities ------------------------- -->
 
-  <div class="border rounded mt-2 p-2" id="div_utilities">
+  <div class="rounded mt-2 p-2 | f-app-surface-layer" id="div_utilities">
     <div class="row g-2">
       <div class="col">
         <div class="input-group input-group-sm" id="button_paste_input_text">
-          <button class="btn btn-sm" id="button_paste" type="button">
-            <img src="./assets/svg/clipboard_paste_20_regular.svg" alt="clipboard paste">
+          <button class="btn btn-sm | f-body f-text" id="button_paste" type="button">
+            <!-- <img src="./assets/svg/clipboard_paste_20_regular.svg" alt="clipboard paste"> -->
           </button>
-          <input class="form-control form-control-sm" id="input_text" type="text" placeholder="text">
+          <input class="form-control form-control-sm | f-body f-text" id="input_text" type="text" placeholder="text">
         </div>
       </div>
       <div class="col d-flex">
         <div class="btn-group btn-group-sm me-2 | width-5" id="button_to_lower_case_button_to_upper_case">
-          <button class="btn btn-sm" id="button_to_lower_case" type="button">
-            <img src="./assets/svg/arrow_down_20_regular.svg" alt="arrow down">
+          <button class="btn btn-sm | f-body f-text" id="button_to_lower_case" type="button">
+            <!-- <img src="./assets/svg/arrow_down_20_regular.svg" alt="arrow down"> -->
           </button>
-          <button class="btn btn-sm" id="button_to_upper_case" type="button">
-            <img src="./assets/svg/arrow_up_20_regular.svg" alt="arrow up">
+          <button class="btn btn-sm | f-body f-text" id="button_to_upper_case" type="button">
+            <!-- <img src="./assets/svg/arrow_up_20_regular.svg" alt="arrow up"> -->
           </button>
         </div>
         <div class="btn-group btn-group-sm | width-5" id="button_cut_button_copy">
-          <button class="btn btn-sm" id="button_cut" type="button">
-            <img src="./assets/svg/cut_20_regular.svg" alt="cut">
+          <button class="btn btn-sm  | f-body f-text" id="button_cut" type="button">
+            <!-- <img src="./assets/svg/cut_20_regular.svg" alt="cut"> -->
           </button>
-          <button class="btn btn-sm" id="button_copy" type="button">
-            <img src="./assets/svg/copy_20_regular.svg" alt="copy">
+          <button class="btn btn-sm | f-body f-text" id="button_copy" type="button">
+            <!-- <img src="./assets/svg/copy_20_regular.svg" alt="copy"> -->
           </button>
         </div>
       </div>

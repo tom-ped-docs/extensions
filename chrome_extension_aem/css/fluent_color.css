@@ -1,0 +1,109 @@
+/*
+ * ------------------------- Light Theme Colors -------------------------
+ */
+
+/* ------------------------- Text ------------------------- */
+
+/* Text / Primary & Disabled */
+
+.light .text-background-color {
+  background-color: rgba(246, 246, 246, 0.5);
+}
+
+.light .f-text {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.light .f-text:disabled {
+  color: rgba(0, 0, 0, 0.36);
+}
+
+/* Accent Text / Primary & Disabled */
+
+.light .accent-text-background-color {
+  background-color: rgba(246, 246, 246, 0.5);
+}
+
+.light .f-accent-text {
+  color: rgba(0, 62, 146, 1);
+}
+
+.light .f-accent-text:disabled {
+  color: rgba(0, 0, 0, 0.36);
+}
+
+/* Text on Accent / Primary & Disabled */
+
+.light .text-on-accent-background-color {
+  background-color: rgba(0, 95, 184, 1);
+}
+
+.light .f-text-on-accent {
+  color: rgba(255, 255, 255, 1);
+}
+
+.light .f-text-on-accent:disabled {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* System / Critical & Critical Background */
+
+.light .f-critical-background {
+  /* background-color: rgba(196, 43, 28, 1) !important; */
+  background-color: rgba(253, 231, 233, 1) !important;
+}
+
+/*
+ * ------------------------- Dark Theme Colors -------------------------
+ */
+
+/* ------------------------- Text ------------------------- */
+
+/* Text / Primary & Disabled */
+
+.dark .text-background-color {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dark .f-text {
+  color: rgba(255, 255, 255, 1);
+}
+
+.dark .f-text:disabled {
+  color: rgba(255, 255, 255, 0.36);
+}
+
+/* Accent Text / Primary & Disabled */
+
+.dark .accent-text-background-color {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dark .f-accent-text {
+  color: rgba(153, 235, 255, 1);
+}
+
+.dark .f-accent-text:disabled {
+  color: rgba(255, 255, 255, 0.36);
+}
+
+/* Text on Accent / Primary & Disabled */
+
+.dark .text-on-accent-background-color {
+  background-color: rgba(96, 205, 255, 1);
+}
+
+.dark .f-text-on-accent {
+  color: rgba(0, 0, 0, 1);
+}
+
+.dark .f-text-on-accent:disabled {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* System / Critical & Critical Background */
+
+.dark .f-critical-background {
+  /* background-color: rgba(255, 153, 164, 1) !important; */
+  background-color: rgba(68, 39, 38, 1) !important;
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -8,97 +8,130 @@
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./popup.css">
+
+  <link rel="stylesheet" href="./css/fluent_typography.css">
+  <link rel="stylesheet" href="./css/fluent_color.css">
+  <link rel="stylesheet" href="./css/fluent_controls.css">
+  <link rel="stylesheet" href="./css/fluent_iconography.css">
 </head>
 
-<body class="p-2">
+<body class="p-2 | f-app-surface-base">
   <div><!-- class="w-50" -->
 
     <!-- ------------------------- samsung aem ------------------------- -->
 
-    <div class="card mb-2" id="s_div_aem">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          s aem
-          <div class="form-check form-switch">
-            <span id="s_span_display_aem">Off</span>
-            <input class="form-check-input" id="s_input_display_aem" type="checkbox">
-            <!-- <label class="form-check-label" for="s_input_aem">...</label> -->
+    <div class="mb-2" id="s_div_aem">
+      <div class="accordion-item">
+        <span class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#s_accordion_collapse_aem">
+            <span class="| f-body f-text">Text</span>
+          </button>
+        </span>
+        <div class="accordion-collapse collapse show" id="s_accordion_collapse_aem">
+          <div class="accordion-body d-flex justify-content-between align-items-center">
+            <span class="| f-body f-text">s aem</span>
+            <div class="form-check form-switch">
+              <span class="| f-body f-text" id="s_span_display_aem">Off</span>
+              <input class="form-check-input" id="s_input_display_aem" type="checkbox">
+              <!-- <label class="form-check-label" for="s_input_aem">...</label> -->
+            </div>
           </div>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          p5_login (user_id)
-          <div class="d-flex">
-            <input class="form-control form-control-sm me-2 | width-20" id="s_input_p5_login" type="text" placeholder="user_id">
-            <button class="btn btn-sm me-2" id="s_button_p5_login_save" type="button">
-              <img src="./assets/svg/save_20_regular.svg" alt="save">
-            </button>
-            <button class="btn btn-sm" id="s_button_p5_login_reset" type="button">
-              <img src="./assets/svg/arrow_reset_20_regular.svg" alt="arrow reset">
-            </button>
+          <div class="accordion-body d-flex justify-content-between align-items-center">
+            <span class="| f-body f-text">p5_login (user_id)</span>
+            <div class="d-flex">
+              <input class="form-control form-control-sm me-2 | width-20 f-body f-text" id="s_input_p5_login" type="text" placeholder="user_id">
+              <button class="btn btn-sm me-2 | f-body f-text" id="s_button_p5_login_save" type="button">
+                <!-- <img src="./assets/svg/save_20_regular.svg" alt="save"> -->
+              </button>
+              <button class="btn btn-sm | f-body f-text" id="s_button_p5_login_reset" type="button">
+                <!-- <img src="./assets/svg/arrow_reset_20_regular.svg" alt="arrow reset"> -->
+              </button>
+            </div>
           </div>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          p6_login (user_email)
-          <div class="d-flex">
-            <input class="form-control form-control-sm me-2 | width-20"" id="s_input_p6_login" type="text" placeholder="user_email">
-            <button class="btn btn-sm me-2" id="s_button_p6_login_save" type="button">
-              <img src="./assets/svg/save_20_regular.svg" alt="save">
-            </button>
-            <button class="btn btn-sm" id="s_button_p6_login_reset" type="button">
-              <img src="./assets/svg/arrow_reset_20_regular.svg" alt="arrow reset">
-            </button>
+          <div class="accordion-body d-flex justify-content-between align-items-center">
+            <span class="| f-body f-text">p6_login (user_email)</span>
+            <div class="d-flex">
+              <input class="form-control form-control-sm me-2 | width-20 f-body f-text" id="s_input_p6_login" type="text" placeholder="user_email">
+              <button class="btn btn-sm me-2 | f-body f-text" id="s_button_p6_login_save" type="button">
+                <!-- <img src="./assets/svg/save_20_regular.svg" alt="save"> -->
+              </button>
+              <button class="btn btn-sm | f-body f-text" id="s_button_p6_login_reset" type="button">
+                <!-- <img src="./assets/svg/arrow_reset_20_regular.svg" alt="arrow reset"> -->
+              </button>
+            </div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
 
     <!-- ------------------------- pmi aem ------------------------- -->
 
-    <div class="card mb-2" id="pmi_div_aem">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          pmi aem
-          <div class="form-check form-switch">
-            <span id="pmi_span_display_aem">Off</span>
-            <input class="form-check-input" id="pmi_input_display_aem" type="checkbox">
-            <!-- <label class="form-check-label" for="pmi_input_aem">...</label> -->
+    <div class="mb-2" id="pmi_div_aem">
+      <div class="accordion-item">
+        <span class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pmi_accordion_collapse_aem">
+            <span class="| f-body f-text">Text</span>
+          </button>
+        </span>
+        <div class="accordion-collapse collapse show" id="pmi_accordion_collapse_aem">
+          <div class="accordion-body d-flex justify-content-between align-items-center">
+            <span class="| f-body f-text">pmi aem</span>
+            <div class="form-check form-switch">
+              <span class="| f-body f-text" id="pmi_span_display_aem">Off</span>
+              <input class="form-check-input" id="pmi_input_display_aem" type="checkbox">
+              <!-- <label class="form-check-label" for="pmi_input_aem">...</label> -->
+            </div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
 
     <!-- ------------------------- utilities ------------------------- -->
 
-    <div class="card mb-2" id="div_utilities">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          utilities
-          <div class="form-check form-switch">
-            <span id="span_display_utilities">Off</span>
-            <input class="form-check-input" id="input_display_utilities" type="checkbox">
-            <!-- <label class="form-check-label" for="input_utilities">...</label> -->
+    <div class="mb-2" id="div_utilities">
+      <div class="accordion-item">
+        <span class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion_collapse_utilities">
+            <span class="| f-body f-text">Text</span>
+          </button>
+        </span>
+        <div class="accordion-collapse collapse show" id="accordion_collapse_utilities">
+          <div class="accordion-body d-flex justify-content-between align-items-center">
+            <span class="| f-body f-text">utilities</span>
+            <div class="form-check form-switch">
+              <span class="| f-body f-text" id="span_display_utilities">Off</span>
+              <input class="form-check-input" id="input_display_utilities" type="checkbox">
+              <!-- <label class="form-check-label" for="input_utilities">...</label> -->
+            </div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
 
     <!-- ------------------------- theme ------------------------- -->
 
-    <div class="card" id="div_theme">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          theme
-          <select class="form-select form-select-sm | width-10" id="select_theme">
-            <option value="auto">auto</option>
-            <option value="light">light</option>
-            <option value="dark">dark</option>
-          </select>
-        </li>
-      </ul>
+    <div id="div_theme">
+      <div class="accordion-item">
+        <span class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-collapse-theme">
+            <span class="| f-body f-text">Text</span>
+          </button>
+        </span>
+        <div class="accordion-collapse collapse show" id="accordion-collapse-theme">
+          <div class="accordion-body d-flex justify-content-between align-items-center">
+            <span class="| f-body f-text">theme</span>
+            <select class="form-select form-select-sm | width-10 f-body f-text" id="select_theme">
+              <option value="auto">auto</option>
+              <option value="light">light</option>
+              <option value="dark">dark</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./options.js"></script>
 </body>
 </html>
