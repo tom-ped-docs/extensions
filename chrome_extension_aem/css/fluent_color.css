@@ -1,3 +1,17 @@
+/* System / Critical & Critical Background */
+
+.light .f-critical-background {
+  /* background-color: rgba(196, 43, 28, 1) !important; */
+  background-color: rgba(253, 231, 233, 1) !important;
+}
+
+/* System / Critical & Critical Background */
+
+.dark .f-critical-background {
+  /* background-color: rgba(255, 153, 164, 1) !important; */
+  background-color: rgba(68, 39, 38, 1) !important;
+}
+
 /*
  * ------------------------- Light Theme Colors -------------------------
  */
@@ -46,13 +60,6 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* System / Critical & Critical Background */
-
-.light .f-critical-background {
-  /* background-color: rgba(196, 43, 28, 1) !important; */
-  background-color: rgba(253, 231, 233, 1) !important;
-}
-
 /*
  * ------------------------- Dark Theme Colors -------------------------
  */
@@ -99,11 +106,4 @@
 
 .dark .f-text-on-accent:disabled {
   color: rgba(0, 0, 0, 0.5);
-}
-
-/* System / Critical & Critical Background */
-
-.dark .f-critical-background {
-  /* background-color: rgba(255, 153, 164, 1) !important; */
-  background-color: rgba(68, 39, 38, 1) !important;
 }

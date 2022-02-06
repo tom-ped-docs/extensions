@@ -6,71 +6,118 @@
 }
 
 #button_options,
-#s_button_login,
-#pmi_button_login,
-#s_button_editor,
-#pmi_button_editor,
-#s_button_editor_off,
-#pmi_button_editor_off,
+#button_s_login,
+#button_p_login,
+#button_s_editor,
+#button_p_editor,
+#button_s_editor_off,
+#button_p_editor_off,
 #button_paste,
-#button_to_lower_case,
-#button_to_upper_case,
 #button_cut,
 #button_copy,
-#s_button_p5_login_save,
-#s_button_p6_login_save,
-#s_button_p5_login_reset,
-#s_button_p6_login_reset {
+#button_s_p5_login_save,
+#button_s_p6_login_save,
+#button_s_p5_login_reset,
+#button_s_p6_login_reset,
+#button_shortcuts {
   font-family: "Segoe Fluent Icons";
 }
 
 #button_options::before {
-  content: "\e713";
+  content: "\e713";/* Settings */
 }
 
-#s_button_login::before,
-#pmi_button_login::before {
-  content: "\e8a7";
+#button_s_login::before,
+#button_p_login::before {
+  content: "\e8a7";/* OpenInNewWindow */
 }
 
-#s_button_editor::before,
-#pmi_button_editor::before {
-  content: "\e70f";
+#button_s_editor::before,
+#button_p_editor::before {
+  content: "\e70f";/* Edit */
 }
 
-#s_button_editor_off::before,
-#pmi_button_editor_off::before {
-  content: "\e890";
+#button_s_editor_off::before,
+#button_p_editor_off::before {
+  content: "\e890";/* View */
 }
 
 #button_paste::before {
-  content: "\e77f";
-}
-
-#button_to_lower_case::before {
-  content: "\e74b";
-  content: "\e84a";
-}
-
-#button_to_upper_case::before {
-  content: "\e74a";
-  content: "\e84b";
+  content: "\e77f";/* Paste */
 }
 
 #button_cut::before {
-  content: "\e8c6";
+  content: "\e8c6";/* Cut */
 }
 
 #button_copy::before {
-  content: "\e8c8";
+  content: "\e8c8";/* Copy */
 }
 
-#s_button_p5_login_save::before,
-#s_button_p6_login_save::before {
-  content: "\e74e";
+#button_s_p5_login_save::before,
+#button_s_p6_login_save::before {
+  content: "\e74e";/* Save */
 }
 
-#s_button_p5_login_reset::before,
-#s_button_p6_login_reset::before {
-  content: "\e777";
+#button_s_p5_login_reset::before,
+#button_s_p6_login_reset::before {
+  content: "\e777";/* UpdateRestore */
+}
+
+#button_shortcuts::before {
+  content: "\e8a7";/* OpenInNewWindow */
+}
+
+#icon_vis_s_aem,
+#icon_vis_p_aem,
+#icon_vis_utilities,
+#icon_s_p5_login,
+#icon_s_p6_login,
+#icon_p_age_gate,
+#icon_theme,
+#icon_shortcuts {
+  font-family: "Segoe Fluent Icons";
+}
+
+#icon_vis_s_aem::before,
+#icon_vis_p_aem::before,
+#icon_vis_utilities::before {
+  content: "\e890";/* View */
+}
+
+#icon_s_p5_login::before,
+#icon_s_p6_login::before {
+  content: "\f32a";/* PassiveAuthentication */
+}
+
+#icon_p_age_gate::before {
+  content: "\e99a";/* Robot */
+}
+
+#icon_theme::before {
+  content: "\e790";/* Color */
+  content: "\e771";/* Personalize */
+}
+
+#icon_shortcuts::before {
+  content: "\eda7";/* KeyboardShortcut */
+}
+
+.btn.icon,
+.accordion-body .btn.icon,
+.toast-body .icon {
+  font-size: 14px;
+}
+
+.accordion-body .icon {
+  font-size: 24px;
+  margin-right: 1.25rem;
+}
+
+.accordion-body .btn.icon {
+  margin-right: unset;
+}
+
+.toast-body .icon {
+  margin-right: 0.75rem;
 }

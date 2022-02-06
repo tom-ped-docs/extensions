@@ -8,404 +8,410 @@ BUTTON_OPTIONS.addEventListener("click", () => {
   chrome.runtime.openOptionsPage();
 });
 
-const S_DIV_AEM = document.querySelector("#s_div_aem");
-const PMI_DIV_AEM = document.querySelector("#pmi_div_aem");
-const DIV_UTILITIES = document.querySelector("#div_utilities");
+const MODULE_S_AEM = document.querySelector("#module_s_aem");
+const MODULE_P_AEM = document.querySelector("#module_p_aem");
+const MODULE_UTILITIES = document.querySelector("#module_utilities");
 
 const setLight = () => {
-  document.documentElement.classList.remove("dark");
   document.documentElement.classList.add("light");
 }
 
 const setDark = () => {
-  document.documentElement.classList.remove("light");
   document.documentElement.classList.add("dark");
 }
 
 // on popup ...
-const setThemes = () => {
-  chrome.storage.local.get(["s_display_aem", "pmi_display_aem", "display_utilities", "selected_theme"], ({ s_display_aem, pmi_display_aem, display_utilities, selected_theme }) => {
-    if (s_display_aem === false) {
-      S_DIV_AEM.classList.add("d-none");
-    }
-    if (pmi_display_aem === false) {
-      PMI_DIV_AEM.classList.add("d-none");
-    }
-    if (display_utilities === false) {
-      DIV_UTILITIES.classList.add("d-none");
-    }
+chrome.storage.local.get(["vis_s_aem", "vis_p_aem", "vis_utilities", "theme"], ({ vis_s_aem, vis_p_aem, vis_utilities, theme }) => {
+  // ------------------------- visibility -------------------------
 
-    // ------------------------- set theme -------------------------
+  if (vis_s_aem === false) {
+    MODULE_S_AEM.classList.add("d-none");
+  }
 
-    if (selected_theme === "light") {
+  if (vis_p_aem === false) {
+    MODULE_P_AEM.classList.add("d-none");
+  }
+
+  if (vis_utilities === false) {
+    MODULE_UTILITIES.classList.add("d-none");
+  }
+
+  // ------------------------- theme -------------------------
+
+  if (theme === "light") {
+    setLight();
+  } else if (theme === "dark") {
+    setDark();
+  } else {
+    const PREFERS_COLOR_SCHEME = window.matchMedia("(prefers-color-scheme: light)");
+
+    if (PREFERS_COLOR_SCHEME.matches) {
       setLight();
-    } else if (selected_theme === "dark") {
+    } else {
       setDark();
-    } else {
-      const PREFERS_COLOR_SCHEME = window.matchMedia("(prefers-color-scheme: light)");
-
-      if (PREFERS_COLOR_SCHEME.matches) {
-        setLight();
-      } else {
-        setDark();
-      }
     }
-  });
-}
-setThemes();
+  }
+});
 
 /*
- * ------------------------- samsung aem -------------------------
+ * ------------------------- samsung -------------------------
  */
 
-const S_SELECT_AEM = document.querySelector("#s_select_aem");
-const S_BUTTON_LOGIN = document.querySelector("#s_button_login");
-const S_INPUT_URL = document.querySelector("#s_input_url");
+const SELECT_S_AEM = document.querySelector("#select_s_aem");
+const BUTTON_S_LOGIN = document.querySelector("#button_s_login");
+const INPUT_S_URL = document.querySelector("#input_s_url");
 
-const S_BUTTON_EDITOR = document.querySelector("#s_button_editor");
-const S_BUTTON_EDITOR_OFF = document.querySelector("#s_button_editor_off");
-const S_BUTTON_QA = document.querySelector("#s_button_qa");
-const S_BUTTON_LIVE = document.querySelector("#s_button_live");
-const S_BUTTON_SITES = document.querySelector("#s_button_sites");
-const S_BUTTON_ASSETS = document.querySelector("#s_button_assets");
+const BUTTON_S_EDITOR = document.querySelector("#button_s_editor");
+const BUTTON_S_EDITOR_OFF = document.querySelector("#button_s_editor_off");
+const BUTTON_S_QA = document.querySelector("#button_s_qa");
+const BUTTON_S_LIVE = document.querySelector("#button_s_live");
+const BUTTON_S_SITES = document.querySelector("#button_s_sites");
+const BUTTON_S_ASSETS = document.querySelector("#button_s_assets");
 
-const S_BUTTON_TASK_MANAGEMENT = document.querySelector("#s_button_task_management");
-const S_BUTTON_WORKFLOWS = document.querySelector("#s_button_workflows");
-const S_BUTTON_PURGING = document.querySelector("#s_button_purging");
-const S_BUTTON_PIM_B2C = document.querySelector("#s_button_pim_b2c");
-const S_BUTTON_PIM_B2B = document.querySelector("#s_button_pim_b2b");
+const BUTTON_S_TASK_MANAGEMENT = document.querySelector("#button_s_task_management");
+const BUTTON_S_WORKFLOWS = document.querySelector("#button_s_workflows");
+const BUTTON_S_PURGING = document.querySelector("#button_s_purging");
+const BUTTON_S_PIM_B2C = document.querySelector("#button_s_pim_b2c");
+const BUTTON_S_PIM_B2B = document.querySelector("#button_s_pim_b2b");
 
+// on popup ...
+chrome.storage.local.get(["s_aem", "s_url"], ({ s_aem, s_url }) => {
+  for (let option of Array.from(SELECT_S_AEM.options)) {
+    if (option.value === s_aem) {
+      option.selected = true;
+    }
+  }
+
+  INPUT_S_URL.placeholder = s_url;
+  INPUT_S_URL.value = s_url;
+});
+
+// ------------------------- select -------------------------
+
+// on popup ...
 const setSAttributes = () => {
-  chrome.storage.local.get("s_selected_aem", ({ s_selected_aem }) => {
-    if (s_selected_aem === "p6_aem_ap" || s_selected_aem === "p6_aem_eu" || s_selected_aem === "p6_aem_us") {
-      S_BUTTON_TASK_MANAGEMENT.setAttribute("disabled", "");
+  chrome.storage.local.get("s_aem", ({ s_aem }) => {
+    if (s_aem === "p6_aem_ap" || s_aem === "p6_aem_eu" || s_aem === "p6_aem_us") {
+      BUTTON_S_TASK_MANAGEMENT.setAttribute("disabled", "");
     } else {
-      S_BUTTON_TASK_MANAGEMENT.removeAttribute("disabled");
+      BUTTON_S_TASK_MANAGEMENT.removeAttribute("disabled");
     }
   });
 }
+setSAttributes();
 
-// on popup ...
-const setSAem = () => {
-  chrome.storage.local.get(["s_selected_aem", "s_input_url"], ({ s_selected_aem, s_input_url }) => {
-    for (let option of Array.from(S_SELECT_AEM.options)) {
-      if (option.value === s_selected_aem) {
-        option.selected = true;
-      }
-    }
-
-    S_INPUT_URL.placeholder = s_input_url;
-    S_INPUT_URL.value = s_input_url;
-  });
-
-  setSAttributes();
-}
-setSAem();
-
-// ------------------------- samsung aem select -------------------------
-
-// set "s_selected_aem" var
-S_SELECT_AEM.addEventListener("change", () => {
-  chrome.storage.local.set({ s_selected_aem: S_SELECT_AEM.selectedOptions[0].value });
-
+// set "s_aem" var
+SELECT_S_AEM.addEventListener("change", () => {
+  chrome.storage.local.set({ s_aem: SELECT_S_AEM.selectedOptions[0].value });
   setSAttributes();
 });
 
-// ------------------------- samsung aem button -------------------------
+// ------------------------- button -------------------------
 
-const createTabs = (url) => {
-  chrome.tabs.create({ url: url });
+BUTTON_S_LOGIN.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem", "s_p5_login", "s_p6_login"], ({ S_URL, s_aem, s_p5_login, s_p6_login }) => {
+    if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_login + s_p5_login });
+    } else {
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_login + s_p6_login });
+    }
+  });
+});
+
+// ------------------------- input -------------------------
+
+const setUrl = (url) => {
+  url = url.trim();
+
+  if (url.startsWith("/")) {
+    url = url.slice(1);
+  }
+
+  if (url.endsWith("/")) {
+    url = url.slice(0, url.length - 1);
+  }
+
+  if (url.endsWith("?gr=false")) {
+    url = url.slice(0, url.length - 9);
+  }
+
+  if (url.endsWith("?wcmmode=disabled")) {
+    url = url.slice(0, url.length - 17);
+  }
+
+  if (url.endsWith(".html")) {
+    url = url.slice(0, url.length - 5);
+  }
+
+  url = url.toLowerCase();
+  return url;
 }
 
-S_BUTTON_LOGIN.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_p5_login", "s_p6_login", "s_selected_aem"], ({ S_URL, s_p5_login, s_p6_login, s_selected_aem }) => {
-    if (s_selected_aem === "p5_aem" || s_selected_aem === "p5_aem_eu" || s_selected_aem === "p5_aem_eu_shop") {
-      createTabs(S_URL[s_selected_aem] + S_URL.p5_login_start + s_p5_login);
+// set "s_url" var
+INPUT_S_URL.addEventListener("input", () => {
+  let url = INPUT_S_URL.value;
+
+  url = setUrl(url);
+  chrome.storage.local.set({ s_url: url });
+});
+
+// ------------------------- buttons -------------------------
+
+BUTTON_S_EDITOR.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
+    chrome.tabs.create({ url: S_URL[s_aem] + S_URL.editor_s + s_url + S_URL.editor_e });
+  });
+});
+
+BUTTON_S_EDITOR_OFF.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
+    chrome.tabs.create({ url: S_URL[s_aem] + S_URL.editor_off_s + s_url + S_URL.editor_off_e });
+  });
+});
+
+BUTTON_S_QA.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
+    if (s_aem === "p5_aem" || s_aem === "p5_aem_eu") {
+      chrome.tabs.create({ url: S_URL.p5_qa + s_url });
+    } else if (s_aem === "p5_aem_eu_shop") {
+      chrome.tabs.create({ url: S_URL.p5_qa_shop + s_url });
     } else {
-      createTabs(S_URL[s_selected_aem] + S_URL.p6_login_start + s_p6_login);
+      chrome.tabs.create({ url: S_URL.p6_qa + s_url });
     }
   });
 });
 
-// ------------------------- samsung url input -------------------------
-
-const setInputUrl = (input_url) => {
-  input_url = input_url.trim();
-
-  if (input_url.startsWith("/")) {
-    input_url = input_url.slice(1);
-  }
-
-  if (input_url.endsWith("/")) {
-    input_url = input_url.slice(0, input_url.length - 1);
-  }
-
-  if (input_url.endsWith("?gr=false")) {
-    input_url = input_url.slice(0, input_url.length - 9);
-  }
-
-  if (input_url.endsWith("?wcmmode=disabled")) {
-    input_url = input_url.slice(0, input_url.length - 17);
-  }
-
-  if (input_url.endsWith(".html")) {
-    input_url = input_url.slice(0, input_url.length - 5);
-  }
-
-  input_url = input_url.toLowerCase();
-  return input_url;
-}
-
-// set "s_input_url" var
-S_INPUT_URL.addEventListener("input", () => {
-  let input_url = S_INPUT_URL.value;
-  input_url = setInputUrl(input_url);
-  chrome.storage.local.set({ s_input_url: input_url });
-});
-
-// ------------------------- samsung url buttons -------------------------
-
-S_BUTTON_EDITOR.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem", "s_input_url"], ({ S_URL, s_selected_aem, s_input_url }) => {
-    createTabs(S_URL[s_selected_aem] + S_URL.editor_start + s_input_url + S_URL.editor_end);
+BUTTON_S_LIVE.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_url"], ({ S_URL, s_url }) => {
+    chrome.tabs.create({ url: S_URL.live + s_url });
   });
 });
 
-S_BUTTON_EDITOR_OFF.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem", "s_input_url"], ({ S_URL, s_selected_aem, s_input_url }) => {
-    createTabs(S_URL[s_selected_aem] + S_URL.editor_off_start + s_input_url + S_URL.editor_end + S_URL.editor_off_end);
+BUTTON_S_SITES.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
+    chrome.tabs.create({ url: S_URL[s_aem] + S_URL.sites + s_url });
   });
 });
 
-S_BUTTON_QA.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem", "s_input_url"], ({ S_URL, s_selected_aem, s_input_url }) => {
-    if (s_selected_aem === "p5_aem" || s_selected_aem === "p5_aem_eu") {
-      createTabs(S_URL.p5_qa + s_input_url);
-    } else if (s_selected_aem === "p5_aem_eu_shop") {
-      createTabs(S_URL.p5_qa_shop + s_input_url);
+BUTTON_S_ASSETS.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
+    chrome.tabs.create({ url: S_URL[s_aem] + S_URL.assets + s_url });
+  });
+});
+
+BUTTON_S_TASK_MANAGEMENT.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
+    chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_task_management });
+  });
+});
+
+BUTTON_S_WORKFLOWS.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
+    if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_workflows });
     } else {
-      createTabs(S_URL.p6_qa + s_input_url);
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_workflows });
     }
   });
 });
 
-S_BUTTON_LIVE.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_input_url"], ({ S_URL, s_input_url }) => {
-    createTabs(S_URL.live + s_input_url);
-  });
-});
-
-S_BUTTON_SITES.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem", "s_input_url"], ({ S_URL, s_selected_aem, s_input_url }) => {
-    createTabs(S_URL[s_selected_aem] + S_URL.sites + s_input_url);
-  });
-});
-
-S_BUTTON_ASSETS.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem", "s_input_url"], ({ S_URL, s_selected_aem, s_input_url }) => {
-    createTabs(S_URL[s_selected_aem] + S_URL.assets + s_input_url);
-  });
-});
-
-// ------------------------- samsung aem buttons -------------------------
-
-S_BUTTON_TASK_MANAGEMENT.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem"], ({ S_URL, s_selected_aem }) => {
-    createTabs(S_URL[s_selected_aem] + S_URL.p5_task_management);
-  });
-});
-
-S_BUTTON_WORKFLOWS.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem"], ({ S_URL, s_selected_aem }) => {
-    if (s_selected_aem === "p5_aem" || s_selected_aem === "p5_aem_eu" || s_selected_aem === "p5_aem_eu_shop") {
-      createTabs(S_URL[s_selected_aem] + S_URL.p5_workflows);
+BUTTON_S_PURGING.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
+    if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_purging });
     } else {
-      createTabs(S_URL[s_selected_aem] + S_URL.p6_workflows);
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_purging });
     }
   });
 });
 
-S_BUTTON_PURGING.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem"], ({ S_URL, s_selected_aem }) => {
-    if (s_selected_aem === "p5_aem" || s_selected_aem === "p5_aem_eu" || s_selected_aem === "p5_aem_eu_shop") {
-      createTabs(S_URL[s_selected_aem] + S_URL.p5_purging);
+BUTTON_S_PIM_B2C.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
+    if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_pim_b2c });
     } else {
-      createTabs(S_URL[s_selected_aem] + S_URL.p6_purging);
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_pim_b2c });
     }
   });
 });
 
-S_BUTTON_PIM_B2C.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem"], ({ S_URL, s_selected_aem }) => {
-    if (s_selected_aem === "p5_aem" || s_selected_aem === "p5_aem_eu" || s_selected_aem === "p5_aem_eu_shop") {
-      createTabs(S_URL[s_selected_aem] + S_URL.p5_pim_b2c);
+BUTTON_S_PIM_B2B.addEventListener("click", () => {
+  chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
+    if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_pim_b2b });
     } else {
-      createTabs(S_URL[s_selected_aem] + S_URL.p6_pim_b2c);
+      chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_pim_b2b });
     }
   });
 });
-
-S_BUTTON_PIM_B2B.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_selected_aem"], ({ S_URL, s_selected_aem }) => {
-    if (s_selected_aem === "p5_aem" || s_selected_aem === "p5_aem_eu" || s_selected_aem === "p5_aem_eu_shop") {
-      createTabs(S_URL[s_selected_aem] + S_URL.p5_pim_b2b);
-    } else {
-      createTabs(S_URL[s_selected_aem] + S_URL.p6_pim_b2b);
-    }
-  });
-});
-
-// ------------------------- samsung helpers -------------------------
-
-const setInputCheckbox = () => {
-  const INPUT_CHECKBOX_1 = document.querySelector("#selfCheck1");
-  const INPUT_CHECKBOX_2 = document.querySelector("#selfCheck2");
-  const INPUT_CHECKBOX_3 = document.querySelector("#selfCheck3");
-  const INPUT_CHECKBOX_4 = document.querySelector("#selfCheck4");
-
-  if (INPUT_CHECKBOX_1 !== null && INPUT_CHECKBOX_2 !== null && INPUT_CHECKBOX_3 !== null && INPUT_CHECKBOX_4 !== null) {
-    INPUT_CHECKBOX_1.checked = true;
-    INPUT_CHECKBOX_2.checked = true;
-    INPUT_CHECKBOX_3.checked = true;
-    INPUT_CHECKBOX_4.checked = true;
-  }
-}
-
-// on popup ...
-const queryTabs = async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-  chrome.storage.local.get("S_URL", ({ S_URL }) => {
-    if (tab.url.includes(S_URL.p5_workflows)) {
-      chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        function: setInputCheckbox,
-      });
-    }
-  });
-}
-// queryTabs();
 
 /*
- * ------------------------- pmi aem -------------------------
+ * ------------------------- pmi -------------------------
  */
 
-const PMI_SELECT_AEM = document.querySelector("#pmi_select_aem");
-const PMI_BUTTON_LOGIN = document.querySelector("#pmi_button_login");
-const PMI_INPUT_URL = document.querySelector("#pmi_input_url");
+const SELECT_P_AEM = document.querySelector("#select_p_aem");
+const BUTTON_P_LOGIN = document.querySelector("#button_p_login");
+const INPUT_P_URL = document.querySelector("#input_p_url");
 
-const PMI_BUTTON_EDITOR = document.querySelector("#pmi_button_editor");
-const PMI_BUTTON_EDITOR_OFF = document.querySelector("#pmi_button_editor_off");
-const PMI_BUTTON_LIVE_LOGIN = document.querySelector("#pmi_button_live_login");
-const PMI_BUTTON_LIVE = document.querySelector("#pmi_button_live");
-const PMI_BUTTON_SITES = document.querySelector("#pmi_button_sites");
-const PMI_BUTTON_ASSETS = document.querySelector("#pmi_button_assets");
-const PMI_BUTTON_GRFALSE = document.querySelector("#pmi_button_grfalse");
-
-const setPmiAttributes = () => {
-  chrome.storage.local.get("pmi_selected_aem", ({ pmi_selected_aem }) => {
-    if (pmi_selected_aem === "prod_aem") {
-      PMI_DIV_AEM.classList.add("f-critical-background");
-      PMI_BUTTON_LIVE_LOGIN.setAttribute("disabled", "");
-    } else {
-      PMI_DIV_AEM.classList.remove("f-critical-background");
-      PMI_BUTTON_LIVE_LOGIN.removeAttribute("disabled");
-    }
-  });
-}
+const BUTTON_P_EDITOR = document.querySelector("#button_p_editor");
+const BUTTON_P_EDITOR_OFF = document.querySelector("#button_p_editor_off");
+const BUTTON_P_LIVE_LOGIN = document.querySelector("#button_p_live_login");
+const BUTTON_P_LIVE = document.querySelector("#button_p_live");
+const BUTTON_P_SITES = document.querySelector("#button_p_sites");
+const BUTTON_P_ASSETS_LOCAL = document.querySelector("#button_p_assets_local");
+const BUTTON_P_GRFALSE = document.querySelector("#button_p_grfalse");
 
 // on popup ...
-const setPmiAem = () => {
-  chrome.storage.local.get(["pmi_selected_aem", "pmi_input_url"], ({ pmi_selected_aem, pmi_input_url }) => {
-    for (let option of Array.from(PMI_SELECT_AEM.options)) {
-      if (option.value === pmi_selected_aem) {
-        option.selected = true;
-      }
+chrome.storage.local.get(["p_aem", "p_url"], ({ p_aem, p_url }) => {
+  for (let option of Array.from(SELECT_P_AEM.options)) {
+    if (option.value === p_aem) {
+      option.selected = true;
     }
+  }
 
-    PMI_INPUT_URL.placeholder = pmi_input_url;
-    PMI_INPUT_URL.value = pmi_input_url;
-  });
-
-  setPmiAttributes();
-}
-setPmiAem();
-
-// ------------------------- pmi aem select -------------------------
-
-// set "pmi_selected_aem" var
-PMI_SELECT_AEM.addEventListener("change", () => {
-  chrome.storage.local.set({ pmi_selected_aem: PMI_SELECT_AEM.selectedOptions[0].value });
-
-  setPmiAttributes();
+  INPUT_P_URL.placeholder = p_url;
+  INPUT_P_URL.value = p_url;
 });
 
-// ------------------------- pmi aem button -------------------------
+// ------------------------- select -------------------------
 
-PMI_BUTTON_LOGIN.addEventListener("click", () => {
-  chrome.storage.local.get(["PMI_URL", "pmi_selected_aem"], ({ PMI_URL, pmi_selected_aem }) => {
-    createTabs(PMI_URL[pmi_selected_aem] + PMI_URL.login);
-  });
-});
-
-// ------------------------- pmi url input -------------------------
-
-// set "pmi_input_url" var
-PMI_INPUT_URL.addEventListener("input", () => {
-  let input_url = PMI_INPUT_URL.value;
-  input_url = setInputUrl(input_url);
-  chrome.storage.local.set({ pmi_input_url: input_url });
-});
-
-// ------------------------- pmi url buttons -------------------------
-
-PMI_BUTTON_EDITOR.addEventListener("click", () => {
-  chrome.storage.local.get(["PMI_URL", "pmi_selected_aem", "pmi_input_url"], ({ PMI_URL, pmi_selected_aem, pmi_input_url }) => {
-    createTabs(PMI_URL[pmi_selected_aem] + PMI_URL.editor_start + pmi_input_url + PMI_URL.editor_end);
-  });
-});
-
-PMI_BUTTON_EDITOR_OFF.addEventListener("click", () => {
-  chrome.storage.local.get(["PMI_URL", "pmi_selected_aem", "pmi_input_url"], ({ PMI_URL, pmi_selected_aem, pmi_input_url }) => {
-    createTabs(PMI_URL[pmi_selected_aem] + PMI_URL.editor_off_start + pmi_input_url + PMI_URL.editor_end + PMI_URL.editor_off_end);
-  });
-});
-
-PMI_BUTTON_LIVE_LOGIN.addEventListener("click", () => {
-  chrome.storage.local.get("PMI_URL", ({ PMI_URL }) => {
-    createTabs(PMI_URL.pre_prod_live + PMI_URL.pre_prod_live_login);
-  });
-});
-
-PMI_BUTTON_LIVE.addEventListener("click", () => {
-  chrome.storage.local.get(["PMI_URL", "pmi_selected_aem", "pmi_input_url"], ({ PMI_URL, pmi_selected_aem, pmi_input_url }) => {
-    if (pmi_selected_aem === "pre_prod_aem") {
-      createTabs(PMI_URL.pre_prod_live + pmi_input_url + PMI_URL.live);
+// on popup ...
+const setPAttributes = () => {
+  chrome.storage.local.get("p_aem", ({ p_aem }) => {
+    if (p_aem === "prod_aem") {
+      MODULE_P_AEM.classList.add("f-critical-background");
+      BUTTON_P_LIVE_LOGIN.setAttribute("disabled", "");
     } else {
-      createTabs(PMI_URL.prod_live + pmi_input_url + PMI_URL.live);
+      MODULE_P_AEM.classList.remove("f-critical-background");
+      BUTTON_P_LIVE_LOGIN.removeAttribute("disabled");
+    }
+  });
+}
+setPAttributes();
+
+// set "p_aem" var
+SELECT_P_AEM.addEventListener("change", () => {
+  chrome.storage.local.set({ p_aem: SELECT_P_AEM.selectedOptions[0].value });
+  setPAttributes();
+});
+
+// ------------------------- button -------------------------
+
+BUTTON_P_LOGIN.addEventListener("click", () => {
+  chrome.storage.local.get(["P_URL", "p_aem"], ({ P_URL, p_aem }) => {
+    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.login });
+  });
+});
+
+// ------------------------- input -------------------------
+
+// set "p_url" var
+INPUT_P_URL.addEventListener("input", () => {
+  let url = INPUT_P_URL.value;
+
+  url = setUrl(url);
+  chrome.storage.local.set({ p_url: url });
+});
+
+// ------------------------- buttons -------------------------
+
+BUTTON_P_EDITOR.addEventListener("click", () => {
+  chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
+    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.editor_s + p_url + P_URL.editor_e });
+  });
+});
+
+BUTTON_P_EDITOR_OFF.addEventListener("click", () => {
+  chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
+    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.editor_off_s + p_url + P_URL.editor_off_e });
+  });
+});
+
+BUTTON_P_LIVE_LOGIN.addEventListener("click", () => {
+  chrome.storage.local.get("P_URL", ({ P_URL }) => {
+    chrome.tabs.create({ url: P_URL.pre_prod_live + P_URL.pre_prod_live_login });
+  });
+});
+
+BUTTON_P_LIVE.addEventListener("click", () => {
+  chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
+    if (p_aem === "pre_prod_aem") {
+      chrome.tabs.create({ url: P_URL.pre_prod_live + p_url + P_URL.live });
+    } else {
+      chrome.tabs.create({ url: P_URL.prod_live + p_url + P_URL.live });
     }
   });
 });
 
-PMI_BUTTON_SITES.addEventListener("click", () => {
-  chrome.storage.local.get(["PMI_URL", "pmi_selected_aem", "pmi_input_url"], ({ PMI_URL, pmi_selected_aem, pmi_input_url }) => {
-    createTabs(PMI_URL[pmi_selected_aem] + PMI_URL.sites + pmi_input_url);
+BUTTON_P_SITES.addEventListener("click", () => {
+  chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
+    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.sites + p_url });
   });
 });
 
-PMI_BUTTON_ASSETS.addEventListener("click", () => {
-  chrome.storage.local.get(["PMI_URL", "pmi_selected_aem"], ({ PMI_URL, pmi_selected_aem }) => {
-    createTabs(PMI_URL[pmi_selected_aem] + PMI_URL.assets);
+BUTTON_P_ASSETS_LOCAL.addEventListener("click", () => {
+  chrome.storage.local.get(["P_URL", "p_aem"], ({ P_URL, p_aem }) => {
+    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.assets_local });
   });
 });
 
-PMI_BUTTON_GRFALSE.addEventListener("click", () => {
-  const updateTabs = async () => {
+BUTTON_P_GRFALSE.addEventListener("click", () => {
+  const query_1 = async () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    chrome.tabs.update({ url: tab.url + "?gr=false" });
+    chrome.storage.local.get(["P_URL"], ({ P_URL }) => {
+      chrome.tabs.update({ url: tab.url + P_URL.grfalse });
+    });
+
+    window.close();
   }
-  updateTabs();
+  query_1();
+});
+
+// ------------------------- helpers -------------------------
+
+const TOAST_P_AGE_GATE = document.querySelector("#toast_p_age_gate");
+
+const setSelect = () => {
+  const SELECT_1 = document.querySelector("#months-select");
+  const SELECT_2 = document.querySelector("#years-select");
+
+  if (SELECT_1 !== null && SELECT_2 !== null) {
+    for (let option of Array.from(SELECT_1.options)) {
+      if (option.value === "07") {
+        option.selected = true;
+      }
+    }
+
+    for (let option of Array.from(SELECT_2.options)) {
+      if (option.value === "1992") {
+        option.selected = true;
+      }
+    }
+  }
+}
+
+// on popup ...
+const query_2 = async () => {
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+  chrome.storage.local.get("P_URL", ({ P_URL }) => {
+    if (tab.url.includes(P_URL.pre_prod_live) || tab.url.includes(P_URL.prod_live)) {
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        function: setSelect,
+      });
+
+      const TOAST = new bootstrap.Toast(TOAST_P_AGE_GATE);
+      setTimeout(() => { TOAST.show(); }, 250);
+    }
+  });
+}
+
+chrome.storage.local.get("p_age_gate", ({ p_age_gate }) => {
+  if (p_age_gate === true) {
+    query_2();
+  }
 });
 
 /*
@@ -416,8 +422,9 @@ const BUTTON_PASTE = document.querySelector("#button_paste");
 const INPUT_TEXT = document.querySelector("#input_text");
 const BUTTON_TO_LOWER_CASE = document.querySelector("#button_to_lower_case");
 const BUTTON_TO_UPPER_CASE = document.querySelector("#button_to_upper_case");
-const BUTTON_COPY = document.querySelector("#button_copy");
+const BUTTON_TO_TITLE_CASE = document.querySelector("#button_to_title_case");
 const BUTTON_CUT = document.querySelector("#button_cut");
+const BUTTON_COPY = document.querySelector("#button_copy");
 
 BUTTON_PASTE.addEventListener("click", () => {
   INPUT_TEXT.focus();
@@ -432,6 +439,18 @@ BUTTON_TO_UPPER_CASE.addEventListener("click", () => {
   INPUT_TEXT.value = INPUT_TEXT.value.toUpperCase();
 });
 
+BUTTON_TO_TITLE_CASE.addEventListener("click", () => {
+  const VALUE = INPUT_TEXT.value.trim();
+  let values = VALUE.split(" ");
+  let text = "";
+
+  for (let value of values) {
+    text += value.charAt(0).toUpperCase() + value.slice(1).toLowerCase() + " ";
+  }
+
+  INPUT_TEXT.value = text.trimEnd();
+});
+
 BUTTON_CUT.addEventListener("click", () => {
   INPUT_TEXT.select();
   document.execCommand("cut");
@@ -441,3 +460,17 @@ BUTTON_COPY.addEventListener("click", () => {
   INPUT_TEXT.select();
   document.execCommand("copy");
 });
+
+// ------------------------- tooltips -------------------------
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+// ------------------------- toasts -------------------------
+
+var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+var toastList = toastElList.map(function (toastEl) {
+  return new bootstrap.Toast(toastEl)
+})

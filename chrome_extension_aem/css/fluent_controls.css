@@ -339,6 +339,11 @@
   box-shadow: none;
 }
 
+.accordion-body {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 /* ------------------------- Mode: Light, Expanded: False & True ------------------------- */
 
 .light .accordion-item {
@@ -484,7 +489,7 @@ html.light ::-webkit-scrollbar {
 
 html.light ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.45);
-  border-radius: 9999px;
+  border-radius: 999px;
 }
 
 /* ------------------------- Mode: Dark, Orientation: Bidirectional, Expanded: False ------------------------- */
@@ -495,7 +500,88 @@ html.dark ::-webkit-scrollbar {
 
 html.dark ::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.54);
-  border-radius: 9999px;
+  border-radius: 999px;
+}
+
+/*
+ * ------------------------- Info Bar -------------------------
+ */
+
+#toasts {
+  z-index: 999;
+}
+
+/* ------------------------- Mode: Light, Layout: Single Line, Severity: Informational, Action: None ------------------------- */
+
+.light .toast {
+  background: rgba(246, 246, 246, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ------------------------- Mode: Dark, Layout: Single Line, Severity: Informational, Action: None ------------------------- */
+
+.dark .toast {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*
+ * ------------------------- Tooltip -------------------------
+ */
+
+.tooltip {
+  /* .f-caption */
+  font-family: "Segoe UI VF";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.tooltip .tooltip-arrow {
+  display: none;
+}
+
+/* ------------------------- Mode: Light ------------------------- */
+
+.light .tooltip-inner {
+  /* .light .f-text */
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.light .tooltip-inner {
+  /* background: rgba(255, 255, 255, 0.75); */
+  /* background-blend-mode: overlay; */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  /* background: url(NoiseAsset_256.png), rgba(252, 252, 252, 0.85); */
+  background-color: rgba(252, 252, 252, 0.85);
+  background-color: rgba(252, 252, 252, 0);
+  /* background-blend-mode: normal, luminosity; */
+  /* backdrop-filter: blur(60px); */
+}
+
+/* ------------------------- Mode: Dark ------------------------- */
+
+.dark .tooltip-inner {
+  /* .dark .f-text */
+  color: rgba(255, 255, 255, 1);
+}
+
+.dark .tooltip-inner {
+  /* background: rgba(255, 255, 255, 0.75); */
+  /* background-blend-mode: overlay; */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.26);
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  /* background: url(NoiseAsset_256.png), linear-gradient(0deg, rgba(44, 44, 44, 0.15), rgba(44, 44, 44, 0.15)), rgba(44, 44, 44, 0.96); */
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.96);
+  /* background-blend-mode: normal, color, luminosity; */
+  /* backdrop-filter: blur(60px); */
 }
 
 /*
@@ -504,14 +590,14 @@ html.dark ::-webkit-scrollbar-thumb {
 
 /* ------------------------- App Surface ------------------------- */
 
-/* Mode: Light, Part: Base (Mica), Inactive: False */
+/* ------------------------- Mode: Light, Part: Base (Mica), Inactive: False ------------------------- */
 
 .light .f-app-surface-base {
-  border: 1px solid rgba(117, 117, 117, 0.4);
+  /* border: 1px solid rgba(117, 117, 117, 0.4); */
 
   /* background: rgba(255, 255, 255, 1); */
   /* mix-blend-mode: multiply; */
-  box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.28), 0px 2px 21px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.28), 0px 2px 21px rgba(0, 0, 0, 0.22); */
 
   /* background: linear-gradient(0deg, rgba(243, 243, 243, 0.5), rgba(243, 243, 243, 0.5)), rgb(243, 243, 243); */
   background-color: rgba(243, 243, 243, 0.5);
@@ -520,7 +606,7 @@ html.dark ::-webkit-scrollbar-thumb {
   /* backdrop-filter: blur(240px); */
 }
 
-/* Mode: Light, Part: Layer, Inactive: False */
+/* ------------------------- Mode: Light, Part: Layer, Inactive: False ------------------------- */
 
 .light .f-app-surface-layer {
   border: 1px solid rgba(0, 0, 0, 0.0578);
@@ -528,14 +614,14 @@ html.dark ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* Mode: Dark, Part: Base (Mica), Inactive: False */
+/* ------------------------- Mode: Dark, Part: Base (Mica), Inactive: False ------------------------- */
 
 .dark .f-app-surface-base {
-  border: 1px solid rgba(117, 117, 117, 0.4);
+  /* border: 1px solid rgba(117, 117, 117, 0.4); */
 
   /* background: rgb(255, 255, 255); */
   /* mix-blend-mode: multiply; */
-  box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.56), 0px 2px 21px rgba(0, 0, 0, 0.55);
+  /* box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.56), 0px 2px 21px rgba(0, 0, 0, 0.55); */
 
   /* background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8)), rgb(32, 32, 32); */
   background-color: rgba(32, 32, 32, 0.8);
@@ -544,7 +630,7 @@ html.dark ::-webkit-scrollbar-thumb {
   /* backdrop-filter: blur(240px); */
 }
 
-/* Mode: Dark, Part: Layer, Inactive: False */
+/* ------------------------- Mode: Dark, Part: Layer, Inactive: False ------------------------- */
 
 .dark .f-app-surface-layer {
   border: 1px solid rgba(0, 0, 0, 0.1);

@@ -8,11 +8,11 @@
   },
   "options_page": "options.html",
   "permissions": [
-    "storage",
+    "activeTab",
     "clipboardRead",
     "clipboardWrite",
-    "activeTab",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "action": {
     "default_popup": "popup.html",
