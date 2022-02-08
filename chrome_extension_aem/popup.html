@@ -19,7 +19,7 @@
 
   <!-- ------------------------- options ------------------------- -->
 
-  <div class="rounded p-2 | f-app-surface-layer" id="module_options">
+  <div class="rounded p-2 | f-app-surface-layer" id="widget_options">
     <div class="d-flex justify-content-end">
       <button class="btn btn-sm | icon f-text" id="button_options" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="options"></button>
     </div>
@@ -27,7 +27,7 @@
 
   <!-- ------------------------- samsung ------------------------- -->
 
-  <div class="rounded mt-2 p-2 | f-app-surface-layer" id="module_s_aem">
+  <div class="rounded mt-2 p-2 | f-app-surface-layer" id="widget_s_aem">
     <div class="row g-2 mb-2">
       <div class="col">
         <div class="input-group input-group-sm" id="input_group_s_login">
@@ -69,7 +69,7 @@
 
   <!-- ------------------------- pmi ------------------------- -->
 
-  <div class="rounded mt-2 p-2 | f-app-surface-layer" id="module_p_aem">
+  <div class="rounded mt-2 p-2 | f-app-surface-layer" id="widget_p_aem">
     <div class="row g-2 mb-2">
       <div class="col">
         <div class="input-group input-group-sm" id="input_group_p_login">
@@ -97,13 +97,14 @@
     </div>
 
     <div class="d-flex">
-      <button class="btn btn-sm | width-5 f-body f-text" id="button_p_grfalse" type="button">?gr=false</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="button_p_grfalse" type="button">?gr=false</button>
+      <button class="btn btn-sm | width-5 f-body f-text" id="button_p_age_gate" type="button">age gate</button>
     </div>
   </div>
 
   <!-- ------------------------- utilities ------------------------- -->
 
-  <div class="rounded mt-2 p-2 | f-app-surface-layer" id="module_utilities">
+  <div class="rounded mt-2 p-2 | f-app-surface-layer" id="widget_utilities">
     <div class="row g-2">
       <div class="col">
         <div class="input-group input-group-sm" id="input_group_paste">
@@ -127,18 +128,6 @@
           <button class="btn btn-sm | icon f-text" id="button_cut" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="cut"></button>
           <button class="btn btn-sm | icon f-text" id="button_copy" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="copy"></button>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ------------------------- toasts ------------------------- -->
-
-  <div class="position-fixed top-0 start-50 translate-middle-x p-2" id="module_toasts">
-    <div class="toast hide" id="toast_p_age_gate" data-bs-delay="2500">
-      <div class="toast-body d-flex align-items-center">
-        <span class="| icon f-text" id="icon_p_age_gate"></span>
-        <span class="me-2 | f-body-strong f-text">PMI:</span>
-        <span class="| f-body f-text">Age gate selected automatically</span>
       </div>
     </div>
   </div>

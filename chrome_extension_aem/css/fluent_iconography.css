@@ -68,30 +68,11 @@
   content: "\e8a7";/* OpenInNewWindow */
 }
 
-#icon_vis_s_aem,
-#icon_vis_p_aem,
-#icon_vis_utilities,
-#icon_s_p5_login,
-#icon_s_p6_login,
-#icon_p_age_gate,
 #icon_theme,
-#icon_shortcuts {
+#icon_shortcuts,
+#icon_vis,
+#icon_s_aem {
   font-family: "Segoe Fluent Icons";
-}
-
-#icon_vis_s_aem::before,
-#icon_vis_p_aem::before,
-#icon_vis_utilities::before {
-  content: "\e890";/* View */
-}
-
-#icon_s_p5_login::before,
-#icon_s_p6_login::before {
-  content: "\f32a";/* PassiveAuthentication */
-}
-
-#icon_p_age_gate::before {
-  content: "\e99a";/* Robot */
 }
 
 #icon_theme::before {
@@ -103,21 +84,22 @@
   content: "\eda7";/* KeyboardShortcut */
 }
 
-.btn.icon,
-.accordion-body .btn.icon,
-.toast-body .icon {
+#icon_vis::before {
+  content: "\e890";/* View */
+}
+
+#icon_s_aem::before {
+  content: "\e99a";/* Robot */
+}
+
+/* ------------------------- ... ------------------------- */
+
+.btn.icon {
   font-size: 14px;
 }
 
-.accordion-body .icon {
+.accordion-icon,
+.card-icon {
   font-size: 24px;
   margin-right: 1.25rem;
-}
-
-.accordion-body .btn.icon {
-  margin-right: unset;
-}
-
-.toast-body .icon {
-  margin-right: 0.75rem;
 }

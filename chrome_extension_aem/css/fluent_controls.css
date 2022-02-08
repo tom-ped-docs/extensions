@@ -346,7 +346,8 @@
 
 /* ------------------------- Mode: Light, Expanded: False & True ------------------------- */
 
-.light .accordion-item {
+.light .accordion-item,
+.light .card {
   background-color: rgba(246, 246, 246, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -370,7 +371,8 @@
 
 /* ------------------------- Mode: Dark, Expanded: False & True ------------------------- */
 
-.dark .accordion-item {
+.dark .accordion-item,
+.dark .card {
   background-color: rgba(255, 255, 255, 0.03);
   /* border: 1px solid rgba(0, 0, 0, 0.1); */
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -514,14 +516,14 @@ html.dark ::-webkit-scrollbar-thumb {
 /* ------------------------- Mode: Light, Layout: Single Line, Severity: Informational, Action: None ------------------------- */
 
 .light .toast {
-  background: rgba(246, 246, 246, 0.5);
+  background-color: rgba(246, 246, 246, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* ------------------------- Mode: Dark, Layout: Single Line, Severity: Informational, Action: None ------------------------- */
 
 .dark .toast {
-  background: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -560,6 +562,8 @@ html.dark ::-webkit-scrollbar-thumb {
   background-color: rgba(252, 252, 252, 0);
   /* background-blend-mode: normal, luminosity; */
   /* backdrop-filter: blur(60px); */
+
+  background-color: rgba(252, 252, 252, 1);
 }
 
 /* ------------------------- Mode: Dark ------------------------- */
@@ -582,6 +586,8 @@ html.dark ::-webkit-scrollbar-thumb {
   background-color: rgba(44, 44, 44, 0.96);
   /* background-blend-mode: normal, color, luminosity; */
   /* backdrop-filter: blur(60px); */
+
+  background-color: rgba(44, 44, 44, 1);
 }
 
 /*

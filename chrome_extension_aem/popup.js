@@ -8,9 +8,9 @@ BUTTON_OPTIONS.addEventListener("click", () => {
   chrome.runtime.openOptionsPage();
 });
 
-const MODULE_S_AEM = document.querySelector("#module_s_aem");
-const MODULE_P_AEM = document.querySelector("#module_p_aem");
-const MODULE_UTILITIES = document.querySelector("#module_utilities");
+const WIDGET_S_AEM = document.querySelector("#widget_s_aem");
+const WIDGET_P_AEM = document.querySelector("#widget_p_aem");
+const WIDGET_UTILITIES = document.querySelector("#widgetlities");
 
 const setLight = () => {
   document.documentElement.classList.add("light");
@@ -25,15 +25,15 @@ chrome.storage.local.get(["vis_s_aem", "vis_p_aem", "vis_utilities", "theme"], (
   // ------------------------- visibility -------------------------
 
   if (vis_s_aem === false) {
-    MODULE_S_AEM.classList.add("d-none");
+    WIDGET_S_AEM.classList.add("d-none");
   }
 
   if (vis_p_aem === false) {
-    MODULE_P_AEM.classList.add("d-none");
+    WIDGET_P_AEM.classList.add("d-none");
   }
 
   if (vis_utilities === false) {
-    MODULE_UTILITIES.classList.add("d-none");
+    WIDGET_UTILITIES.classList.add("d-none");
   }
 
   // ------------------------- theme -------------------------
@@ -259,7 +259,9 @@ const BUTTON_P_LIVE_LOGIN = document.querySelector("#button_p_live_login");
 const BUTTON_P_LIVE = document.querySelector("#button_p_live");
 const BUTTON_P_SITES = document.querySelector("#button_p_sites");
 const BUTTON_P_ASSETS_LOCAL = document.querySelector("#button_p_assets_local");
+
 const BUTTON_P_GRFALSE = document.querySelector("#button_p_grfalse");
+const BUTTON_P_AGE_GATE = document.querySelector("#button_p_age_gate");
 
 // on popup ...
 chrome.storage.local.get(["p_aem", "p_url"], ({ p_aem, p_url }) => {
@@ -279,10 +281,10 @@ chrome.storage.local.get(["p_aem", "p_url"], ({ p_aem, p_url }) => {
 const setPAttributes = () => {
   chrome.storage.local.get("p_aem", ({ p_aem }) => {
     if (p_aem === "prod_aem") {
-      MODULE_P_AEM.classList.add("f-critical-background");
+      WIDGET_P_AEM.classList.add("f-critical-background");
       BUTTON_P_LIVE_LOGIN.setAttribute("disabled", "");
     } else {
-      MODULE_P_AEM.classList.remove("f-critical-background");
+      WIDGET_P_AEM.classList.remove("f-critical-background");
       BUTTON_P_LIVE_LOGIN.removeAttribute("disabled");
     }
   });
@@ -368,10 +370,6 @@ BUTTON_P_GRFALSE.addEventListener("click", () => {
   query_1();
 });
 
-// ------------------------- helpers -------------------------
-
-const TOAST_P_AGE_GATE = document.querySelector("#toast_p_age_gate");
-
 const setSelect = () => {
   const SELECT_1 = document.querySelector("#months-select");
   const SELECT_2 = document.querySelector("#years-select");
@@ -391,27 +389,18 @@ const setSelect = () => {
   }
 }
 
-// on popup ...
-const query_2 = async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+BUTTON_P_AGE_GATE.addEventListener("click", () => {
+  const query_2 = async () => {
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-  chrome.storage.local.get("P_URL", ({ P_URL }) => {
-    if (tab.url.includes(P_URL.pre_prod_live) || tab.url.includes(P_URL.prod_live)) {
-      chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        function: setSelect,
-      });
+    chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      function: setSelect,
+    });
 
-      const TOAST = new bootstrap.Toast(TOAST_P_AGE_GATE);
-      setTimeout(() => { TOAST.show(); }, 250);
-    }
-  });
-}
-
-chrome.storage.local.get("p_age_gate", ({ p_age_gate }) => {
-  if (p_age_gate === true) {
-    query_2();
+    window.close();
   }
+  query_2();
 });
 
 /*
@@ -466,11 +455,4 @@ BUTTON_COPY.addEventListener("click", () => {
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-
-// ------------------------- toasts -------------------------
-
-var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-var toastList = toastElList.map(function (toastEl) {
-  return new bootstrap.Toast(toastEl)
 })

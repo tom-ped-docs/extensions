@@ -6,6 +6,10 @@
   min-width: 2.5rem;
 }
 
+.width-5 {
+  width: 5rem;
+}
+
 .width-10 {
   width: 10rem;
 }
@@ -57,18 +61,18 @@ body {
   }
 }
 
-#module_s_aem {
+#option_theme {
   animation: 100ms 125ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#module_p_aem {
+#option_shortcuts {
   animation: 100ms 150ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#module_utilities {
+#option_vis {
   animation: 100ms 175ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 175ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#module_settings {
+#option_s_aem {
   animation: 100ms 200ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }

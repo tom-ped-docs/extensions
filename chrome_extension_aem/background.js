@@ -61,7 +61,7 @@ const P_URL = {
 };
 
 /*
- * ------------------------- settings -------------------------
+ * ------------------------- ... -------------------------
  */
 
 let s_p5_login = "542b562d2e9g30fgcg6b6422101b6e2d95333a3f2e3e49";
@@ -71,8 +71,8 @@ let s_url = "pl";
 
 let p_aem = "pre_prod_aem";
 let p_url = "de/en/home";
-let p_age_gate = true;
 
+// Visibility
 let vis_s_aem = true;
 let vis_p_aem = true;
 let vis_utilities = true;
@@ -88,7 +88,6 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.set({ s_url });
   chrome.storage.local.set({ p_aem });
   chrome.storage.local.set({ p_url });
-  chrome.storage.local.set({ p_age_gate });
   chrome.storage.local.set({ vis_s_aem });
   chrome.storage.local.set({ vis_p_aem });
   chrome.storage.local.set({ vis_utilities });

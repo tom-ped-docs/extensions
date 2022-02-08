@@ -6,8 +6,8 @@
   width: 7.5rem;
 }
 
-#module_p_aem {
-  transition: .5s ease background-color;
+#widget_p_aem {
+  transition: 0.5s ease background-color;
 }
 
 /*
@@ -34,11 +34,10 @@
   }
 }
 
-#module_options,
-#module_s_aem,
-#module_p_aem,
-#module_utilities,
-#toast_p_age_gate {
+#widget_options,
+#widget_s_aem,
+#widget_p_aem,
+#widget_utilities {
   animation: 100ms 125ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
@@ -86,7 +85,8 @@
   animation: 100ms 325ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 325ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_workflows {
+#button_s_workflows,
+#button_p_age_gate {
   animation: 100ms 350ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 350ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
