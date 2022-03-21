@@ -251,22 +251,30 @@ BUTTON_S_PIM_B2B.addEventListener("click", () => {
 
 const SELECT_P_AEM = document.querySelector("#select_p_aem");
 const BUTTON_P_LOGIN = document.querySelector("#button_p_login");
+const SELECT_P_CONTENT = document.querySelector("#select_p_content");
+
 const INPUT_P_URL = document.querySelector("#input_p_url");
 
 const BUTTON_P_EDITOR = document.querySelector("#button_p_editor");
 const BUTTON_P_EDITOR_OFF = document.querySelector("#button_p_editor_off");
-const BUTTON_P_LIVE_LOGIN = document.querySelector("#button_p_live_login");
+const BUTTON_P_QA_LOGIN = document.querySelector("#button_p_qa_login");
 const BUTTON_P_LIVE = document.querySelector("#button_p_live");
 const BUTTON_P_SITES = document.querySelector("#button_p_sites");
-const BUTTON_P_ASSETS_LOCAL = document.querySelector("#button_p_assets_local");
+const BUTTON_P_ASSETS = document.querySelector("#button_p_assets");
 
 const BUTTON_P_GRFALSE = document.querySelector("#button_p_grfalse");
 const BUTTON_P_AGE_GATE = document.querySelector("#button_p_age_gate");
 
 // on popup ...
-chrome.storage.local.get(["p_aem", "p_url"], ({ p_aem, p_url }) => {
+chrome.storage.local.get(["p_aem", "p_content", "p_url"], ({ p_aem, p_content, p_url }) => {
   for (let option of Array.from(SELECT_P_AEM.options)) {
     if (option.value === p_aem) {
+      option.selected = true;
+    }
+  }
+
+  for (let option of Array.from(SELECT_P_CONTENT.options)) {
+    if (option.value === p_content) {
       option.selected = true;
     }
   }
@@ -282,10 +290,10 @@ const setPAttributes = () => {
   chrome.storage.local.get("p_aem", ({ p_aem }) => {
     if (p_aem === "prod_aem") {
       WIDGET_P_AEM.classList.add("f-critical-background");
-      BUTTON_P_LIVE_LOGIN.setAttribute("disabled", "");
+      BUTTON_P_QA_LOGIN.setAttribute("disabled", "");
     } else {
       WIDGET_P_AEM.classList.remove("f-critical-background");
-      BUTTON_P_LIVE_LOGIN.removeAttribute("disabled");
+      BUTTON_P_QA_LOGIN.removeAttribute("disabled");
     }
   });
 }
@@ -305,6 +313,13 @@ BUTTON_P_LOGIN.addEventListener("click", () => {
   });
 });
 
+// ------------------------- select -------------------------
+
+// set "p_content" var
+SELECT_P_CONTENT.addEventListener("change", () => {
+  chrome.storage.local.set({ p_content: SELECT_P_CONTENT.selectedOptions[0].value });
+});
+
 // ------------------------- input -------------------------
 
 // set "p_url" var
@@ -318,42 +333,99 @@ INPUT_P_URL.addEventListener("input", () => {
 // ------------------------- buttons -------------------------
 
 BUTTON_P_EDITOR.addEventListener("click", () => {
-  chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
-    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.editor_s + p_url + P_URL.editor_e });
+  chrome.storage.local.get(["P_URL", "p_aem", "p_content", "p_url"], ({ P_URL, p_aem, p_content, p_url }) => {
+    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.editor_s + p_content + "/" + p_url + P_URL.editor_e });
   });
 });
 
 BUTTON_P_EDITOR_OFF.addEventListener("click", () => {
-  chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
-    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.editor_off_s + p_url + P_URL.editor_off_e });
+  chrome.storage.local.get(["P_URL", "p_aem", "p_content", "p_url"], ({ P_URL, p_aem, p_content, p_url }) => {
+    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.editor_off_s + p_content + "/" + p_url + P_URL.editor_off_e });
   });
 });
 
-BUTTON_P_LIVE_LOGIN.addEventListener("click", () => {
-  chrome.storage.local.get("P_URL", ({ P_URL }) => {
-    chrome.tabs.create({ url: P_URL.pre_prod_live + P_URL.pre_prod_live_login });
+BUTTON_P_QA_LOGIN.addEventListener("click", () => {
+  chrome.storage.local.get(["P_URL", "p_content"], ({ P_URL, p_content }) => {
+    switch (p_content) {
+      case "pmisite":
+        chrome.tabs.create({ url: P_URL.pre_prod_qa + P_URL.pre_prod_qa_login });
+        break;
+      case "veevsite":
+        chrome.tabs.create({ url: P_URL.pre_prod_veev_qa + P_URL.pre_prod_veev_qa_login });
+        break;
+      case "pmiclub":
+        chrome.tabs.create({ url: P_URL.pre_prod_club_qa + P_URL.pre_prod_club_qa_login });
+        break;
+    }
   });
 });
 
 BUTTON_P_LIVE.addEventListener("click", () => {
-  chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
+  chrome.storage.local.get(["P_URL", "p_aem", "p_content", "p_url"], ({ P_URL, p_aem, p_content, p_url }) => {
     if (p_aem === "pre_prod_aem") {
-      chrome.tabs.create({ url: P_URL.pre_prod_live + p_url + P_URL.live });
+      let pre_prod_url = "";
+
+      switch (p_content) {
+        case "pmisite": pre_prod_url = P_URL.pre_prod_qa; break;
+        case "veevsite": pre_prod_url = P_URL.pre_prod_veev_qa; break;
+        case "pmiclub": pre_prod_url = P_URL.pre_prod_club_qa; break;
+      }
+
+      chrome.tabs.create({ url: pre_prod_url + p_url + P_URL.live });
     } else {
-      chrome.tabs.create({ url: P_URL.prod_live + p_url + P_URL.live });
+      let prod_url = "";
+
+      switch (p_content) {
+        case "pmisite": prod_url = P_URL.prod_live; break;
+        case "veevsite": prod_url = P_URL.prod_veev_live; break;
+        case "pmiclub": prod_url = P_URL.prod_club_live; break;
+      }
+
+      chrome.tabs.create({ url: prod_url + p_url + P_URL.live });
     }
   });
 });
 
 BUTTON_P_SITES.addEventListener("click", () => {
-  chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
-    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.sites + p_url });
+  chrome.storage.local.get(["P_URL", "p_aem", "p_content", "p_url"], ({ P_URL, p_aem, p_content, p_url }) => {
+    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.sites + p_content + "/" + p_url });
   });
 });
 
-BUTTON_P_ASSETS_LOCAL.addEventListener("click", () => {
-  chrome.storage.local.get(["P_URL", "p_aem"], ({ P_URL, p_aem }) => {
-    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.assets_local });
+BUTTON_P_ASSETS.addEventListener("click", () => {
+  chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
+    const URL = p_url.slice(0, 3);
+    let country = "";
+
+    switch (URL) {
+      case "cr/": country = "/costa-rica"; break;
+      case "cz/": country = "/czech-republic"; break;
+      case "eg/": country = "/egypt"; break;
+      case "fi/": country = "/finland"; break;
+      case "fr/": country = "/france"; break;
+      case "de/": country = "/germany"; break;
+      case "id/": country = "/indonesia"; break;
+      case "jp/": country = "/japan"; break;
+      case "kg/": country = "/kyrgyzstan"; break;
+      case "mv/": country = "/maldives"; break;
+      case "ma/": country = "/morocountryo"; break;
+      case "mx/": country = "/mx"; break;
+      case "ph/": country = "/philippines"; break;
+      case "pl/": country = "/poland"; break;
+      case "pt/": country = "/portugal"; break;
+      case "sk/": country = "/slovakia"; break;
+      case "tw/": country = "/taiwan"; break;
+      case "tn/": country = "/tunisia"; break;
+      case "gb/": country = "/uk"; break;
+      case "ae/": country = "/united-arab-emirates"; break;
+      // case "/": country = "/vanuatu"; break;
+      case "vn/": country = "/vietnam"; break;
+
+      default:
+        break;
+    }
+
+    chrome.tabs.create({ url: P_URL[p_aem] + P_URL.assets + country });
   });
 });
 
@@ -371,6 +443,9 @@ BUTTON_P_GRFALSE.addEventListener("click", () => {
 });
 
 const setSelect = () => {
+  // pmisite & pmiclub
+  const SPAN_1 = document.querySelector(".label-placeholder--month");
+  const SPAN_2 = document.querySelector(".label-placeholder--year");
   const SELECT_1 = document.querySelector("#months-select");
   const SELECT_2 = document.querySelector("#years-select");
 
@@ -378,10 +453,30 @@ const setSelect = () => {
     for (let option of Array.from(SELECT_1.options)) {
       if (option.value === "07") {
         option.selected = true;
+        SPAN_1.textContent = option.label;
       }
     }
 
     for (let option of Array.from(SELECT_2.options)) {
+      if (option.value === "1992") {
+        option.selected = true;
+        SPAN_2.textContent = option.label;
+      }
+    }
+  }
+
+  // veevsite
+  const SELECT_3 = document.querySelector(".birth-month");
+  const SELECT_4 = document.querySelector(".birth-year");
+
+  if (SELECT_3 !== null && SELECT_4 !== null) {
+    for (let option of Array.from(SELECT_3.options)) {
+      if (option.value === "07") {
+        option.selected = true;
+      }
+    }
+
+    for (let option of Array.from(SELECT_4.options)) {
       if (option.value === "1992") {
         option.selected = true;
       }

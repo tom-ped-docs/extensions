@@ -41,23 +41,28 @@ const S_URL = {
  */
 
 const P_URL = {
-  pre_prod_aem:         "https://author.pp.iqos.com/",
-  pre_prod_live:        "https://www.pp.iqos.com/",
-  pre_prod_live_login:  "cgi-bin/authorize.cgi?gr=false",
-  // pre_prod_live_password: "EI9fwDw7cuEA5qEkcrbr",
+  pre_prod_aem:           "https://author.pp.iqos.com/",
+  pre_prod_qa:            "https://www.pp.iqos.com/",
+  pre_prod_qa_login:      "cgi-bin/authorize.cgi",
+  pre_prod_veev_qa:       "https://www.pp.veev-vape.com/",
+  pre_prod_veev_qa_login: "edgeauth",
+  pre_prod_club_qa:       "https://club.pp.iqos.com/",
+  pre_prod_club_qa_login: "edgeauth",
 
-  prod_aem:             "https://author.iqos.com/",
-  prod_live:            "https://www.iqos.com/",
+  prod_aem:               "https://author.iqos.com/",
+  prod_live:              "https://www.iqos.com/",
+  prod_veev_live:         "https://www.veev-vape.com/",
+  prod_club_live:         "https://www.iqosclub.com/",
 
-  login:                "aem/start.html",
-  editor_s:             "editor.html/content/pmisite/",
-  editor_e:             ".html",
-  editor_off_s:         "content/pmisite/",
-  editor_off_e:         ".html?wcmmode=disabled",
-  live:                 ".html?gr=false",
-  sites:                "sites.html/content/pmisite/",
-  assets_local:         "assets.html/content/dam/iqos/local",
-  grfalse:              "?gr=false"
+  login:                  "aem/start.html",
+  editor_s:               "editor.html/content/",
+  editor_e:               ".html",
+  editor_off_s:           "content/",
+  editor_off_e:           ".html?wcmmode=disabled",
+  live:                   ".html?gr=false",
+  sites:                  "sites.html/content/",
+  assets:                 "assets.html/content/dam/iqos/local",
+  grfalse:                "?gr=false"
 };
 
 /*
@@ -70,6 +75,7 @@ let s_aem = "p5_aem_eu_shop";
 let s_url = "pl";
 
 let p_aem = "pre_prod_aem";
+let p_content = "pmisite";
 let p_url = "de/en/home";
 
 // Visibility
@@ -87,6 +93,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.set({ s_aem });
   chrome.storage.local.set({ s_url });
   chrome.storage.local.set({ p_aem });
+  chrome.storage.local.set({ p_content });
   chrome.storage.local.set({ p_url });
   chrome.storage.local.set({ vis_s_aem });
   chrome.storage.local.set({ vis_p_aem });

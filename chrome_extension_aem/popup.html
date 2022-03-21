@@ -81,8 +81,16 @@
         </div>
       </div>
       <div class="col">
-        <input class="form-control form-control-sm | f-body f-text" id="input_p_url" type="url">
+        <select class="form-select form-select-sm | f-body f-text" id="select_p_content">
+          <option value="pmisite">pmi site</option>
+          <option value="veevsite">veev site</option>
+          <option value="pmiclub">pmi club</option>
+        </select>
       </div>
+    </div>
+
+    <div class="mb-2">
+      <input class="form-control form-control-sm | f-body f-text" id="input_p_url" type="url">
     </div>
 
     <div class="d-flex mb-2">
@@ -90,10 +98,10 @@
         <button class="btn btn-sm | icon f-text" id="button_p_editor" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="editor"></button>
         <button class="btn btn-sm | icon f-text" id="button_p_editor_off" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="editor off"></button>
       </div>
-      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="button_p_live_login" type="button">live login</button>
-      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="button_p_live" type="button">live</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="button_p_qa_login" type="button">qa login</button>
+      <button class="btn btn-sm me-2 | width-5 f-body f-text" id="button_p_live" type="button">qa / live</button>
       <button class="btn btn-sm me-2 | width-5 f-body f-text" id="button_p_sites" type="button">sites</button>
-      <button class="btn btn-sm text-truncate | width-5 f-body f-text" id="button_p_assets_local" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="assets local">assets local</button>
+      <button class="btn btn-sm | width-5 f-body f-text" id="button_p_assets" type="button">assets</button>
     </div>
 
     <div class="d-flex">

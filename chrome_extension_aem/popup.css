@@ -43,7 +43,7 @@
 
 #button_options,
 #input_group_s_login,
-#input_group_p_login,
+#input_group_p_login, #select_p_content,
 #input_group_paste {
   animation: 100ms 150ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
@@ -61,7 +61,7 @@
 }
 
 #button_s_qa,
-#button_p_live_login {
+#button_p_qa_login {
   animation: 100ms 225ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 225ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
@@ -76,7 +76,7 @@
 }
 
 #button_s_assets,
-#button_p_assets_local {
+#button_p_assets {
   animation: 100ms 300ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 300ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
