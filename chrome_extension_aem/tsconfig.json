@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "rootDir": "ts",
+    "outDir": "js",
+    "watch": true,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "target": "ESNext"
+  }
+}
