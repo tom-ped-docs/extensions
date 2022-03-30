@@ -1,20 +1,20 @@
-const SELECT_THEME: HTMLSelectElement = document.querySelector("#select_theme");
+const SELECT_THEME = document.querySelector("#select_theme") as HTMLSelectElement;
 
-const BUTTON_SHORTCUTS: HTMLButtonElement = document.querySelector("#button_shortcuts");
+const BUTTON_SHORTCUTS = document.querySelector("#button_shortcuts") as HTMLButtonElement;
 
-const SPAN_VIS_S_AEM: HTMLSpanElement = document.querySelector("#span_vis_s_aem");
-const INPUT_VIS_S_AEM: HTMLInputElement = document.querySelector("#input_vis_s_aem");
-const SPAN_VIS_P_AEM: HTMLSpanElement = document.querySelector("#span_vis_p_aem");
-const INPUT_VIS_P_AEM: HTMLInputElement = document.querySelector("#input_vis_p_aem");
-const SPAN_VIS_UTILITIES: HTMLSpanElement = document.querySelector("#span_vis_utilities");
-const INPUT_VIS_UTILITIES: HTMLInputElement = document.querySelector("#input_vis_utilities");
+const SPAN_VIS_S_AEM = document.querySelector("#span_vis_s_aem") as HTMLSpanElement;
+const INPUT_VIS_S_AEM = document.querySelector("#input_vis_s_aem") as HTMLInputElement;
+const SPAN_VIS_P_AEM = document.querySelector("#span_vis_p_aem") as HTMLSpanElement;
+const INPUT_VIS_P_AEM = document.querySelector("#input_vis_p_aem") as HTMLInputElement;
+const SPAN_VIS_UTILITIES = document.querySelector("#span_vis_utilities") as HTMLSpanElement;
+const INPUT_VIS_UTILITIES = document.querySelector("#input_vis_utilities") as HTMLInputElement;
 
-const INPUT_S_P5_LOGIN: HTMLInputElement = document.querySelector("#input_s_p5_login");
-const INPUT_S_P6_LOGIN: HTMLInputElement = document.querySelector("#input_s_p6_login");
-const BUTTON_S_P5_LOGIN_SAVE: HTMLButtonElement = document.querySelector("#button_s_p5_login_save");
-const BUTTON_S_P6_LOGIN_SAVE: HTMLButtonElement = document.querySelector("#button_s_p6_login_save");
-const BUTTON_S_P5_LOGIN_RESET: HTMLButtonElement = document.querySelector("#button_s_p5_login_reset");
-const BUTTON_S_P6_LOGIN_RESET: HTMLButtonElement = document.querySelector("#button_s_p6_login_reset");
+const INPUT_S_P5_LOGIN = document.querySelector("#input_s_p5_login") as HTMLInputElement;
+const INPUT_S_P6_LOGIN = document.querySelector("#input_s_p6_login") as HTMLInputElement;
+const BUTTON_S_P5_LOGIN_SAVE = document.querySelector("#button_s_p5_login_save") as HTMLButtonElement;
+const BUTTON_S_P6_LOGIN_SAVE = document.querySelector("#button_s_p6_login_save") as HTMLButtonElement;
+const BUTTON_S_P5_LOGIN_RESET = document.querySelector("#button_s_p5_login_reset") as HTMLButtonElement;
+const BUTTON_S_P6_LOGIN_RESET = document.querySelector("#button_s_p6_login_reset") as HTMLButtonElement;
 
 // @ts-ignore
 const setLight = () => {
@@ -86,7 +86,7 @@ const setShortcuts = () => {
   const KEYS: string[] = COMMANDS.split("+");
 
   for (let key of KEYS) {
-    const BUTTON: HTMLButtonElement = document.createElement("button");
+    const BUTTON = document.createElement("button") as HTMLButtonElement;
 
     BUTTON.setAttribute("class", "btn btn-sm me-2 | min-width-2 f-body f-text-on-accent");
     BUTTON.textContent = key;
@@ -182,5 +182,6 @@ BUTTON_S_P6_LOGIN_RESET.addEventListener("click", () => {
 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  // @ts-ignore
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })

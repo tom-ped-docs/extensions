@@ -1,16 +1,48 @@
 /*
+ * ------------------------- image export -------------------------
+ */
+
+const BUTTON_IMAGE_EXPORT = document.querySelector("#button_image_export") as HTMLButtonElement;
+
+BUTTON_IMAGE_EXPORT.addEventListener("click", () => {
+  const query_3 = async () => {
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.scripting.insertCSS({
+      target: { tabId: tab.id },
+      files: [
+        "node_modules/bootstrap/dist/css/bootstrap.css",
+        "css/fluent_typography.css",
+        "css/fluent_color.css",
+        "css/fluent_controls.css",
+        "css/fluent_iconography.css",
+        "css/image_export.css"
+      ],
+    });
+
+    chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: [ "js/image_export.js" ],
+    });
+
+    window.close();
+  }
+  query_3();
+});
+
+/*
  * ------------------------- options -------------------------
  */
 
-const BUTTON_OPTIONS: HTMLButtonElement = document.querySelector("#button_options");
+const BUTTON_OPTIONS = document.querySelector("#button_options") as HTMLButtonElement;
 
 BUTTON_OPTIONS.addEventListener("click", () => {
   chrome.runtime.openOptionsPage();
 });
 
-const WIDGET_S_AEM: HTMLDivElement = document.querySelector("#widget_s_aem");
-const WIDGET_P_AEM: HTMLDivElement = document.querySelector("#widget_p_aem");
-const WIDGET_UTILITIES: HTMLDivElement = document.querySelector("#widget_utilities");
+const WIDGET_S_AEM = document.querySelector("#widget_s_aem") as HTMLDivElement;
+const WIDGET_P_AEM = document.querySelector("#widget_p_aem") as HTMLDivElement;
+const WIDGET_UTILITIES = document.querySelector("#widget_utilities") as HTMLDivElement;
 
 // @ts-ignore
 const setLight = () => {
@@ -59,22 +91,22 @@ chrome.storage.local.get(["vis_s_aem", "vis_p_aem", "vis_utilities", "theme"], (
  * ------------------------- samsung -------------------------
  */
 
-const SELECT_S_AEM: HTMLSelectElement = document.querySelector("#select_s_aem");
-const BUTTON_S_LOGIN: HTMLButtonElement = document.querySelector("#button_s_login");
-const INPUT_S_URL: HTMLInputElement = document.querySelector("#input_s_url");
+const SELECT_S_AEM = document.querySelector("#select_s_aem") as HTMLSelectElement;
+const BUTTON_S_LOGIN = document.querySelector("#button_s_login") as HTMLButtonElement;
+const INPUT_S_URL = document.querySelector("#input_s_url") as HTMLInputElement;
 
-const BUTTON_S_EDITOR: HTMLButtonElement = document.querySelector("#button_s_editor");
-const BUTTON_S_EDITOR_OFF: HTMLButtonElement = document.querySelector("#button_s_editor_off");
-const BUTTON_S_QA: HTMLButtonElement = document.querySelector("#button_s_qa");
-const BUTTON_S_LIVE: HTMLButtonElement = document.querySelector("#button_s_live");
-const BUTTON_S_SITES: HTMLButtonElement = document.querySelector("#button_s_sites");
-const BUTTON_S_ASSETS: HTMLButtonElement = document.querySelector("#button_s_assets");
+const BUTTON_S_EDITOR = document.querySelector("#button_s_editor") as HTMLButtonElement;
+const BUTTON_S_EDITOR_OFF = document.querySelector("#button_s_editor_off") as HTMLButtonElement;
+const BUTTON_S_QA = document.querySelector("#button_s_qa") as HTMLButtonElement;
+const BUTTON_S_LIVE = document.querySelector("#button_s_live") as HTMLButtonElement;
+const BUTTON_S_SITES = document.querySelector("#button_s_sites") as HTMLButtonElement;
+const BUTTON_S_ASSETS = document.querySelector("#button_s_assets") as HTMLButtonElement;
 
-const BUTTON_S_TASK_MANAGEMENT: HTMLButtonElement = document.querySelector("#button_s_task_management");
-const BUTTON_S_WORKFLOWS: HTMLButtonElement = document.querySelector("#button_s_workflows");
-const BUTTON_S_PURGING: HTMLButtonElement = document.querySelector("#button_s_purging");
-const BUTTON_S_PIM_B2C: HTMLButtonElement = document.querySelector("#button_s_pim_b2c");
-const BUTTON_S_PIM_B2B: HTMLButtonElement = document.querySelector("#button_s_pim_b2b");
+const BUTTON_S_TASK_MANAGEMENT = document.querySelector("#button_s_task_management") as HTMLButtonElement;
+const BUTTON_S_WORKFLOWS = document.querySelector("#button_s_workflows") as HTMLButtonElement;
+const BUTTON_S_PURGING = document.querySelector("#button_s_purging") as HTMLButtonElement;
+const BUTTON_S_PIM_B2C = document.querySelector("#button_s_pim_b2c") as HTMLButtonElement;
+const BUTTON_S_PIM_B2B = document.querySelector("#button_s_pim_b2b") as HTMLButtonElement;
 
 // on popup ...
 chrome.storage.local.get(["s_aem", "s_url"], ({ s_aem, s_url }) => {
@@ -251,21 +283,21 @@ BUTTON_S_PIM_B2B.addEventListener("click", () => {
  * ------------------------- pmi -------------------------
  */
 
-const SELECT_P_AEM: HTMLSelectElement = document.querySelector("#select_p_aem");
-const BUTTON_P_LOGIN: HTMLButtonElement = document.querySelector("#button_p_login");
-const SELECT_P_CONTENT: HTMLSelectElement = document.querySelector("#select_p_content");
+const SELECT_P_AEM = document.querySelector("#select_p_aem") as HTMLSelectElement;
+const BUTTON_P_LOGIN = document.querySelector("#button_p_login") as HTMLButtonElement;
+const SELECT_P_CONTENT = document.querySelector("#select_p_content") as HTMLSelectElement;
 
-const INPUT_P_URL: HTMLInputElement = document.querySelector("#input_p_url");
+const INPUT_P_URL = document.querySelector("#input_p_url") as HTMLInputElement;
 
-const BUTTON_P_EDITOR: HTMLButtonElement = document.querySelector("#button_p_editor");
-const BUTTON_P_EDITOR_OFF: HTMLButtonElement = document.querySelector("#button_p_editor_off");
-const BUTTON_P_QA_LOGIN: HTMLButtonElement = document.querySelector("#button_p_qa_login");
-const BUTTON_P_LIVE: HTMLButtonElement = document.querySelector("#button_p_live");
-const BUTTON_P_SITES: HTMLButtonElement = document.querySelector("#button_p_sites");
-const BUTTON_P_ASSETS: HTMLButtonElement = document.querySelector("#button_p_assets");
+const BUTTON_P_EDITOR = document.querySelector("#button_p_editor") as HTMLButtonElement;
+const BUTTON_P_EDITOR_OFF = document.querySelector("#button_p_editor_off") as HTMLButtonElement;
+const BUTTON_P_QA_LOGIN = document.querySelector("#button_p_qa_login") as HTMLButtonElement;
+const BUTTON_P_LIVE = document.querySelector("#button_p_live") as HTMLButtonElement;
+const BUTTON_P_SITES = document.querySelector("#button_p_sites") as HTMLButtonElement;
+const BUTTON_P_ASSETS = document.querySelector("#button_p_assets") as HTMLButtonElement;
 
-const BUTTON_P_GRFALSE: HTMLButtonElement = document.querySelector("#button_p_grfalse");
-const BUTTON_P_AGE_GATE: HTMLButtonElement = document.querySelector("#button_p_age_gate");
+const BUTTON_P_GRFALSE = document.querySelector("#button_p_grfalse") as HTMLButtonElement;
+const BUTTON_P_AGE_GATE = document.querySelector("#button_p_age_gate") as HTMLButtonElement;
 
 // on popup ...
 chrome.storage.local.get(["p_aem", "p_content", "p_url"], ({ p_aem, p_content, p_url }) => {
@@ -446,10 +478,10 @@ BUTTON_P_GRFALSE.addEventListener("click", () => {
 
 const setSelect = () => {
   // pmisite & pmiclub
-  const SPAN_1: HTMLSpanElement = document.querySelector(".label-placeholder--month");
-  const SPAN_2: HTMLSpanElement = document.querySelector(".label-placeholder--year");
-  const SELECT_1: HTMLSelectElement = document.querySelector("#months-select");
-  const SELECT_2: HTMLSelectElement = document.querySelector("#years-select");
+  const SPAN_1 = document.querySelector(".label-placeholder--month") as HTMLSpanElement;
+  const SPAN_2 = document.querySelector(".label-placeholder--year") as HTMLSpanElement;
+  const SELECT_1 = document.querySelector("#months-select") as HTMLSelectElement;
+  const SELECT_2 = document.querySelector("#years-select") as HTMLSelectElement;
 
   if (SELECT_1 !== null && SELECT_2 !== null) {
     for (let option of Array.from(SELECT_1.options)) {
@@ -468,8 +500,8 @@ const setSelect = () => {
   }
 
   // veevsite
-  const SELECT_3: HTMLSelectElement = document.querySelector(".birth-month");
-  const SELECT_4: HTMLSelectElement = document.querySelector(".birth-year");
+  const SELECT_3 = document.querySelector(".birth-month") as HTMLSelectElement;
+  const SELECT_4 = document.querySelector(".birth-year") as HTMLSelectElement;
 
   if (SELECT_3 !== null && SELECT_4 !== null) {
     for (let option of Array.from(SELECT_3.options)) {
@@ -504,13 +536,13 @@ BUTTON_P_AGE_GATE.addEventListener("click", () => {
  * ------------------------- utilities -------------------------
  */
 
-const BUTTON_PASTE: HTMLButtonElement = document.querySelector("#button_paste");
-const INPUT_TEXT: HTMLInputElement = document.querySelector("#input_text");
-const BUTTON_TO_LOWER_CASE: HTMLButtonElement = document.querySelector("#button_to_lower_case");
-const BUTTON_TO_UPPER_CASE: HTMLButtonElement = document.querySelector("#button_to_upper_case");
-const BUTTON_TO_TITLE_CASE: HTMLButtonElement = document.querySelector("#button_to_title_case");
-const BUTTON_CUT: HTMLButtonElement = document.querySelector("#button_cut");
-const BUTTON_COPY: HTMLButtonElement = document.querySelector("#button_copy");
+const BUTTON_PASTE = document.querySelector("#button_paste") as HTMLButtonElement;
+const INPUT_TEXT = document.querySelector("#input_text") as HTMLInputElement;
+const BUTTON_TO_LOWER_CASE = document.querySelector("#button_to_lower_case") as HTMLButtonElement;
+const BUTTON_TO_UPPER_CASE = document.querySelector("#button_to_upper_case") as HTMLButtonElement;
+const BUTTON_TO_TITLE_CASE = document.querySelector("#button_to_title_case") as HTMLButtonElement;
+const BUTTON_CUT = document.querySelector("#button_cut") as HTMLButtonElement;
+const BUTTON_COPY = document.querySelector("#button_copy") as HTMLButtonElement;
 
 BUTTON_PASTE.addEventListener("click", () => {
   INPUT_TEXT.focus();
@@ -551,5 +583,6 @@ BUTTON_COPY.addEventListener("click", () => {
 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  // @ts-ignore
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })

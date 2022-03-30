@@ -152,5 +152,6 @@ BUTTON_S_P6_LOGIN_RESET.addEventListener("click", () => {
 // ------------------------- tooltips -------------------------
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    // @ts-ignore
     return new bootstrap.Tooltip(tooltipTriggerEl);
 });

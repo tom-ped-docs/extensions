@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" class="| light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <link rel="stylesheet" href="../css/fluent_typography.css">
+  <link rel="stylesheet" href="../css/fluent_color.css">
+  <link rel="stylesheet" href="../css/fluent_controls.css">
+  <link rel="stylesheet" href="../css/fluent_iconography.css">
+
+  <link rel="stylesheet" href="../css/image_export.css">
+
+  <title>Image Export</title>
+</head>
+
+<body>
+
+  <div class="position-fixed bottom-0 start-0 rounded m-2 p-2 | f-app-surface-base ms-motion-slideUpIn" id="div_ie_0"><!-- DIV_0 -->
+
+    <button class="btn btn-sm position-absolute top-0 start-100 translate-middle | icon f-text" id="button_ie_chrome_close" type="button"></button>
+
+    <!-- ------------------------- select, input ------------------------- -->
+
+    <div class="rounded p-2 | f-app-surface-layer"><!-- DIV_1 -->
+      <div class="row g-2"><!-- DIV_2 -->
+        <div class="col"><!-- DIV_3 -->
+          <select class="form-select form-select-sm | f-body f-text" id="select_ie">
+            <option value="contains">contains</option>
+            <option value="not contains">not contains</option>
+          </select>
+        </div>
+        <div class="col"><!-- DIV_4 -->
+          <input class="form-control form-control-sm | f-body f-text" id="input_ie" type="text" placeholder="/pl/">
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded mt-2 p-2 | f-app-surface-layer" id="div_ie_5"><!-- DIV_5 -->
+      <div class="overflow-scroll" id="div_ie_6"><!-- DIV_6 -->
+        <div class="d-flex flex-column mb-2">
+          <span class="text-nowrap | f-body f-text">img 0:</span>
+          <span class="text-nowrap | f-caption f-text">src: https://www.samsung.com/pl/</span>
+          <span class="text-nowrap | f-caption f-text">alt: samsung</span>
+        </div>
+        <div style="height: 25rem;"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <!-- <script src="../js/image_export.js"></script> -->
+</body>
+
+</html>

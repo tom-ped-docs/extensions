@@ -4,9 +4,9 @@
   "version": "1.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "./js/background.js"
+    "service_worker": "js/background.js"
   },
-  "options_page": "./html/options.html",
+  "options_page": "html/options.html",
   "permissions": [
     "activeTab",
     "clipboardRead",
@@ -15,14 +15,14 @@
     "storage"
   ],
   "action": {
-    "default_popup": "./html/popup.html",
+    "default_popup": "html/popup.html",
     "default_icon": {
-      "176": "./assets/png/icon_176.png"
+      "176": "assets/png/icon_176.png"
     },
     "default_title": "Adobe Experience Manager extension."
   },
   "icons": {
-    "176": "./assets/png/icon_176.png"
+    "176": "assets/png/icon_176.png"
   },
   "commands": {
     "_execute_action": {
@@ -32,5 +32,17 @@
       },
       "description": "Activate the extension."
     }
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/fonts/segoe_ui_variable.ttf",
+        "assets/fonts/segoe_fluent_icons.ttf"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ]
 }

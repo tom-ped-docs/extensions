@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "checkJs": true,
+    // "strict": true,
     "rootDir": "ts",
     "outDir": "js",
-    "watch": true,
+    "checkJs": true,
+    // "forceConsistentCasingInFileNames": true,
     "lib": [
       "ESNext",
       "DOM"
     ],
-    "target": "ESNext"
+    "target": "ESNext",
+    "watch": true
   }
 }

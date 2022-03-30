@@ -2,9 +2,10 @@
 
 @font-face {
   font-family: "Segoe Fluent Icons";
-  src: url(../assets/fonts/Segoe\ Fluent\ Icons.ttf) format("truetype");
+  src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
 }
 
+#button_image_export,
 #button_options,
 #button_s_login,
 #button_p_login,
@@ -21,6 +22,10 @@
 #button_s_p6_login_reset,
 #button_shortcuts {
   font-family: "Segoe Fluent Icons";
+}
+
+#button_image_export::before {
+  content: "\ee71";/* ImageExport */
 }
 
 #button_options::before {
@@ -90,6 +95,14 @@
 
 #icon_s_aem::before {
   content: "\e99a";/* Robot */
+}
+
+#button_ie_chrome_close {
+  font-family: "Segoe Fluent Icons";
+}
+
+#button_ie_chrome_close::before {
+  content: "\e8bb";/* ChromeClose */
 }
 
 /* ------------------------- ... ------------------------- */

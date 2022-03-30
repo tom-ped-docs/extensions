@@ -1,4 +1,30 @@
 /*
+ * ------------------------- image export -------------------------
+ */
+const BUTTON_IMAGE_EXPORT = document.querySelector("#button_image_export");
+BUTTON_IMAGE_EXPORT.addEventListener("click", () => {
+    const query_3 = async () => {
+        let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+        chrome.scripting.insertCSS({
+            target: { tabId: tab.id },
+            files: [
+                "node_modules/bootstrap/dist/css/bootstrap.css",
+                "css/fluent_typography.css",
+                "css/fluent_color.css",
+                "css/fluent_controls.css",
+                "css/fluent_iconography.css",
+                "css/image_export.css"
+            ],
+        });
+        chrome.scripting.executeScript({
+            target: { tabId: tab.id },
+            files: ["js/image_export.js"],
+        });
+        window.close();
+    };
+    query_3();
+});
+/*
  * ------------------------- options -------------------------
  */
 const BUTTON_OPTIONS = document.querySelector("#button_options");
@@ -517,5 +543,6 @@ BUTTON_COPY.addEventListener("click", () => {
 // ------------------------- tooltips -------------------------
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    // @ts-ignore
     return new bootstrap.Tooltip(tooltipTriggerEl);
 });

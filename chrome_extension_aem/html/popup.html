@@ -7,12 +7,15 @@
   <meta name="color-scheme" content="light dark">
 
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="../css/popup.css">
 
   <link rel="stylesheet" href="../css/fluent_typography.css">
   <link rel="stylesheet" href="../css/fluent_color.css">
   <link rel="stylesheet" href="../css/fluent_controls.css">
   <link rel="stylesheet" href="../css/fluent_iconography.css">
+
+  <link rel="stylesheet" href="../css/popup.css">
+
+  <title>Popup</title>
 </head>
 
 <body class="p-2 | f-app-surface-base">
@@ -21,6 +24,7 @@
 
   <div class="rounded p-2 | f-app-surface-layer" id="widget_options">
     <div class="d-flex justify-content-end">
+      <button class="btn btn-sm me-2 | icon f-text" id="button_image_export" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="image export"></button>
       <button class="btn btn-sm | icon f-text" id="button_options" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="options"></button>
     </div>
   </div>

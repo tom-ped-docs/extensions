@@ -2,7 +2,7 @@
  * ------------------------- samsung -------------------------
  */
 
-const S_URL: object = {
+const S_URL = {
   p5_aem: "https://aem.samsung.com/",
   p5_aem_eu: "https://aem-eu.samsung.com/",
   p5_aem_eu_shop: "https://aem-eu-shop.samsung.com/",
@@ -40,7 +40,7 @@ const S_URL: object = {
  * ------------------------- pmi -------------------------
  */
 
-const P_URL: object = {
+const P_URL = {
   pre_prod_aem: "https://author.pp.iqos.com/",
   pre_prod_qa: "https://www.pp.iqos.com/",
   pre_prod_qa_login: "cgi-bin/authorize.cgi",
@@ -69,21 +69,21 @@ const P_URL: object = {
  * ------------------------- ... -------------------------
  */
 
-let s_p5_login: string = "542b562d2e9g30fgcg6b6422101b6e2d95333a3f2e3e49";
-let s_p6_login: string = "pedzich.t@samsung.com";
-let s_aem: string = "p5_aem_eu_shop";
-let s_url: string = "pl";
+let s_p5_login = "542b562d2e9g30fgcg6b6422101b6e2d95333a3f2e3e49";
+let s_p6_login = "pedzich.t@samsung.com";
+let s_aem = "p5_aem_eu_shop";
+let s_url = "pl";
 
-let p_aem: string = "pre_prod_aem";
-let p_content: string = "pmisite";
-let p_url: string = "de/en/home";
+let p_aem = "pre_prod_aem";
+let p_content = "pmisite";
+let p_url = "de/en/home";
 
 // Visibility
-let vis_s_aem: boolean = true;
-let vis_p_aem: boolean = true;
-let vis_utilities: boolean = true;
+let vis_s_aem = true;
+let vis_p_aem = true;
+let vis_utilities = true;
 
-let theme: string = "auto";
+let theme = "auto";
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.set({ S_URL });
