@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "git": "git add . && git commit --message='message' && git push --set-upstream origin main",
     "ts": "node node_modules/typescript/bin/tsc"
   },
   "keywords": [],

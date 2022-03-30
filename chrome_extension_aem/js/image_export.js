@@ -88,18 +88,18 @@ if (IMGS !== null) {
         DIV.setAttribute("class", "d-flex flex-column mb-2");
         DIV_6.appendChild(DIV);
         const SPAN_0 = document.createElement("span");
-        SPAN_0.setAttribute("class", "text-nowrap | f-body f-text");
+        SPAN_0.setAttribute("class", "text-nowrap | f-body f-text cascadia_code");
         DIV.appendChild(SPAN_0);
         const SPAN_0_CTN = document.createTextNode(`img ${i}:`);
         SPAN_0.appendChild(SPAN_0_CTN);
         i++;
         const SPAN_1 = document.createElement("span");
-        SPAN_1.setAttribute("class", "text-nowrap | f-caption f-text");
+        SPAN_1.setAttribute("class", "text-nowrap | f-caption f-text cascadia_code_italic");
         DIV.appendChild(SPAN_1);
         const SPAN_1_CTN = document.createTextNode(`src: ${img.src}`);
         SPAN_1.appendChild(SPAN_1_CTN);
         const SPAN_2 = document.createElement("span");
-        SPAN_2.setAttribute("class", "text-nowrap | f-caption f-text");
+        SPAN_2.setAttribute("class", "text-muted text-nowrap | f-caption f-text cascadia_code_italic");
         DIV.appendChild(SPAN_2);
         const SPAN_2_CTN = document.createTextNode(`alt: ${img.alt}`);
         SPAN_2.appendChild(SPAN_2_CTN);
@@ -111,6 +111,7 @@ BUTTON.addEventListener("click", () => {
     // .ms-motion-slideDownOut animation
     setTimeout(() => {
         BODY.removeChild(DIV_0);
+        location.reload();
     }, 100);
 });
 const setFilters = () => {

@@ -37,7 +37,9 @@
     {
       "resources": [
         "assets/fonts/segoe_ui_variable.ttf",
-        "assets/fonts/segoe_fluent_icons.ttf"
+        "assets/fonts/segoe_fluent_icons.ttf",
+        "assets/fonts/CascadiaCode.ttf",
+        "assets/fonts/CascadiaCodeItalic.ttf"
       ],
       "matches": [
         "http://*/*",

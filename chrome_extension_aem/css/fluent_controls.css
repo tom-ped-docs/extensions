@@ -612,6 +612,8 @@
   background-color: rgba(243, 243, 243, 0.5);
   /* background-blend-mode: color, luminosity; */
   /* backdrop-filter: blur(240px); */
+
+  background-color: rgba(243, 243, 243, 1);
 }
 
 /* ------------------------- Mode: Light, Part: Layer, Inactive: False ------------------------- */
@@ -636,6 +638,8 @@
   background-color: rgba(32, 32, 32, 0.8);
   /* background-blend-mode: color, luminosity; */
   /* backdrop-filter: blur(240px); */
+
+  background-color: rgba(32, 32, 32, 1);
 }
 
 /* ------------------------- Mode: Dark, Part: Layer, Inactive: False ------------------------- */

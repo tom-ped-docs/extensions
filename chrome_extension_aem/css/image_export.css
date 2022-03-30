@@ -11,6 +11,24 @@
   height: 100%;
 }
 
+@font-face {
+  font-family: "Cascadia Code";
+  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/CascadiaCode.ttf) format("truetype");
+}
+
+.cascadia_code {
+  font-family: "Cascadia Code";
+}
+
+@font-face {
+  font-family: "Cascadia Code Italic";
+  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
+}
+
+.cascadia_code_italic {
+  font-family: "Cascadia Code Italic";
+}
+
 /*
  * ------------------------- Motion -------------------------
  */
