@@ -1,0 +1,49 @@
+/* ------------------------- Light & Dark Theme Colors ------------------------- */
+
+// ------------------------- Text & System -------------------------
+
+.light {
+  // Text / Primary & Disabled
+  .text-background-color { background-color: rgba(246, 246, 246, 0.5); }
+  .f-text { color: rgba(0, 0, 0, 0.9); }
+  .f-text:disabled { color: rgba(0, 0, 0, 0.36); }
+
+  // Accent Text / Primary & Disabled
+  .accent-text-background-color { background-color: rgba(246, 246, 246, 0.5); }
+  .f-accent-text { color: rgba(0, 62, 146, 1); }
+  .f-accent-text:disabled { color: rgba(0, 0, 0, 0.36); }
+
+  // Text on Accent / Primary & Disabled
+  .text-on-accent-background-color { background-color: rgba(0, 95, 184, 1); }
+  .light .f-text-on-accent { color: rgba(255, 255, 255, 1); }
+  .f-text-on-accent:disabled { color: rgba(255, 255, 255, 0.7); }
+
+  // System / Critical & Critical Background
+  .f-critical-background {
+    // background-color: rgba(196, 43, 28, 1) !important;
+    background-color: rgba(253, 231, 233, 1) !important;
+  }
+}
+
+.dark {
+  // Text / Primary & Disabled
+  .text-background-color { background-color: rgba(255, 255, 255, 0.03); }
+  .f-text { color: rgba(255, 255, 255, 1); }
+  .f-text:disabled { color: rgba(255, 255, 255, 0.36); }
+
+  // Accent Text / Primary & Disabled
+  .accent-text-background-color { background-color: rgba(255, 255, 255, 0.03); }
+  .f-accent-text { color: rgba(153, 235, 255, 1); }
+  .f-accent-text:disabled { color: rgba(255, 255, 255, 0.36); }
+
+  // Text on Accent / Primary & Disabled
+  .text-on-accent-background-color { background-color: rgba(96, 205, 255, 1); }
+  .f-text-on-accent { color: rgba(0, 0, 0, 1); }
+  .f-text-on-accent:disabled { color: rgba(0, 0, 0, 0.5); }
+
+  // System / Critical & Critical Background
+  .f-critical-background {
+    // background-color: rgba(255, 153, 164, 1) !important;
+    background-color: rgba(68, 39, 38, 1) !important;
+  }
+}

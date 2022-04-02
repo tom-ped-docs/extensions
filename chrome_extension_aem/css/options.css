@@ -1,3 +1,535 @@
+/* ------------------------- Typography ------------------------- */
+@font-face {
+  font-family: "Segoe UI Variable";
+  src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
+}
+.f-caption {
+  font-family: "Segoe UI Variable";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.f-body {
+  font-family: "Segoe UI Variable";
+  font-feature-settings: "rclt" off;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.f-body-strong {
+  font-family: "Segoe UI Variable";
+  font-feature-settings: "fina" on, "init" on;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.f-body-large {
+  font-family: "Segoe UI Variable";
+  font-feature-settings: "fina" on, "init" on;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.f-subtitle {
+  font-family: "Segoe UI Variable";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.f-title {
+  font-family: "Segoe UI Variable";
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.f-title-large {
+  font-family: "Segoe UI Variable";
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 52px;
+}
+
+.f-display {
+  font-family: "Segoe UI Variable";
+  font-size: 68px;
+  font-weight: 600;
+  line-height: 92px;
+}
+
+/* ------------------------- Light & Dark Theme Colors ------------------------- */
+.light .text-background-color {
+  background-color: rgba(246, 246, 246, 0.5);
+}
+.light .f-text {
+  color: rgba(0, 0, 0, 0.9);
+}
+.light .f-text:disabled {
+  color: rgba(0, 0, 0, 0.36);
+}
+.light .accent-text-background-color {
+  background-color: rgba(246, 246, 246, 0.5);
+}
+.light .f-accent-text {
+  color: rgb(0, 62, 146);
+}
+.light .f-accent-text:disabled {
+  color: rgba(0, 0, 0, 0.36);
+}
+.light .text-on-accent-background-color {
+  background-color: rgb(0, 95, 184);
+}
+.light .light .f-text-on-accent {
+  color: rgb(255, 255, 255);
+}
+.light .f-text-on-accent:disabled {
+  color: rgba(255, 255, 255, 0.7);
+}
+.light .f-critical-background {
+  background-color: rgb(253, 231, 233) !important;
+}
+
+.dark .text-background-color {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+.dark .f-text {
+  color: rgb(255, 255, 255);
+}
+.dark .f-text:disabled {
+  color: rgba(255, 255, 255, 0.36);
+}
+.dark .accent-text-background-color {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+.dark .f-accent-text {
+  color: rgb(153, 235, 255);
+}
+.dark .f-accent-text:disabled {
+  color: rgba(255, 255, 255, 0.36);
+}
+.dark .text-on-accent-background-color {
+  background-color: rgb(96, 205, 255);
+}
+.dark .f-text-on-accent {
+  color: rgb(0, 0, 0);
+}
+.dark .f-text-on-accent:disabled {
+  color: rgba(0, 0, 0, 0.5);
+}
+.dark .f-critical-background {
+  background-color: rgb(68, 39, 38) !important;
+}
+
+/* ------------------------- Button ------------------------- */
+.light .btn.f-text {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.16);
+}
+.light .btn.f-text:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+}
+.light .btn.f-text:active {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .btn.f-text:disabled {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .btn.f-text:focus {
+  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
+}
+.light .btn.f-text-on-accent {
+  background-color: rgb(0, 95, 184);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.light .btn.f-text-on-accent:hover {
+  background-color: rgba(0, 95, 184, 0.9);
+}
+.light .btn.f-text-on-accent:active {
+  background-color: rgba(0, 95, 184, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.light .btn.f-text-on-accent:disabled {
+  background-color: rgba(0, 0, 0, 0.22);
+  border: unset;
+}
+.light .btn.f-text-on-accent:focus {
+  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
+}
+
+.dark .btn.f-text {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.07);
+}
+.dark .btn.f-text:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark .btn.f-text:active {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.dark .btn.f-text:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.dark .btn.f-text:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
+}
+.dark .btn.f-text-on-accent {
+  background-color: rgb(96, 205, 255);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+.dark .btn.f-text-on-accent:hover {
+  background-color: rgba(96, 205, 255, 0.9);
+}
+.dark .btn.f-text-on-accent:active {
+  background-color: rgba(96, 205, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.dark .btn.f-text-on-accent:disabled {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: unset;
+}
+.dark .btn.f-text-on-accent:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
+}
+
+/* ------------------------- Dropdown ------------------------- */
+.light .form-select {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.16);
+}
+.light .form-select:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+}
+.light .form-select:active {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .form-select:disabled {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .form-select:focus {
+  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
+}
+.light .form-select option {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+  background-color: rgba(252, 252, 252, 0.85);
+}
+
+.dark .form-select {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.07);
+}
+.dark .form-select:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark .form-select:active {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.dark .form-select:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.dark .form-select:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
+}
+.dark .form-select option {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.96);
+}
+
+/* ------------------------- Toggle Switch ------------------------- */
+.light .form-switch .form-check-input {
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.45);
+}
+.light .form-switch .form-check-input:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+.light .form-switch .form-check-input:active {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+.light .form-switch .form-check-input:disabled {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+.light .form-switch .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgb(255, 255, 255), 0 0 0 5px rgba(0, 0, 0, 0.9);
+}
+.light .form-switch .form-check-input:checked {
+  background-color: rgb(0, 95, 184);
+  border: 1px solid rgb(0, 95, 184);
+}
+.light .form-switch .form-check-input:checked:hover {
+  background-color: rgba(0, 95, 184, 0.9);
+  border: 1px solid rgba(0, 95, 184, 0.9);
+}
+.light .form-switch .form-check-input:checked:active {
+  background-color: rgba(0, 95, 184, 0.8);
+  border: 1px solid rgba(0, 95, 184, 0.8);
+}
+.light .form-switch .form-check-input:checked:disabled {
+  background-color: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+.light .form-switch .form-check-input:checked:focus {
+  box-shadow: 0 0 0 3px rgb(255, 255, 255), 0 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.dark .form-switch .form-check-input {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.54);
+}
+.dark .form-switch .form-check-input:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.dark .form-switch .form-check-input:active {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+.dark .form-switch .form-check-input:disabled {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.dark .form-switch .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgb(255, 255, 255);
+}
+.dark .form-switch .form-check-input:checked {
+  background-color: rgb(96, 205, 255);
+  border: 1px solid rgb(96, 205, 255);
+}
+.dark .form-switch .form-check-input:checked:hover {
+  background-color: rgba(96, 205, 255, 0.9);
+  border: 1px solid rgba(96, 205, 255, 0.9);
+}
+.dark .form-switch .form-check-input:checked:active {
+  background-color: rgba(96, 205, 255, 0.8);
+  border: 1px solid rgba(96, 205, 255, 0.8);
+}
+.dark .form-switch .form-check-input:checked:disabled {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.dark .form-switch .form-check-input:checked:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgb(255, 255, 255);
+}
+
+/* ------------------------- Expander ------------------------- */
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.light .accordion-item,
+.light .card {
+  background-color: rgba(246, 246, 246, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .accordion-button {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.light .accordion-button:not(.collapsed) {
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+}
+.light .accordion-body {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .accordion-body:last-of-type {
+  border-bottom: none;
+}
+
+.dark .accordion-item,
+.dark .card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.dark .accordion-button {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.dark .accordion-button:not(.collapsed) {
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+}
+.dark .accordion-body {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.dark .accordion-body:last-of-type {
+  border-bottom: none;
+}
+
+/* ------------------------- Text Box ------------------------- */
+.light input.form-control {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.06);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+}
+.light input.form-control:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+}
+.light input.form-control:active,
+.light input.form-control:focus {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(0, 95, 184);
+  box-shadow: unset;
+}
+.light input.form-control:disabled {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark input.form-control {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.54);
+}
+.dark input.form-control:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark input.form-control:active,
+.dark input.form-control:focus {
+  background-color: rgba(30, 30, 30, 0.7);
+  border-bottom: 2px solid rgb(96, 205, 255);
+  box-shadow: unset;
+}
+.dark input.form-control:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ------------------------- Scroll Bar (Scroll Viewer) ------------------------- */
+html {
+  overflow: auto;
+}
+
+body {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  padding: 4px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+html.light ::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 999px;
+}
+
+html.dark ::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 999px;
+}
+
+/* ------------------------- Tooltip ------------------------- */
+.tooltip {
+  font-family: "Segoe UI Variable";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.tooltip .tooltip-arrow {
+  display: none;
+}
+
+.light .tooltip-inner {
+  color: rgba(0, 0, 0, 0.9);
+}
+.light .tooltip-inner {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: rgba(252, 252, 252, 0.85);
+  background-color: rgba(252, 252, 252, 0);
+  background-color: rgb(252, 252, 252);
+}
+
+.dark .tooltip-inner {
+  color: rgb(255, 255, 255);
+}
+.dark .tooltip-inner {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.26);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.96);
+  background-color: rgb(44, 44, 44);
+}
+
+/* ------------------------- Surfaces ------------------------- */
+.light .f-app-surface-base {
+  background-color: rgba(243, 243, 243, 0.5);
+  background-color: rgba(243, 243, 243, 0.5);
+  background-color: rgb(243, 243, 243);
+}
+.light .f-app-surface-layer {
+  border: 1px solid rgba(0, 0, 0, 0.0578);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dark .f-app-surface-base {
+  background-color: rgba(32, 32, 32, 0.8);
+  background-color: rgba(32, 32, 32, 0.8);
+  background-color: rgb(32, 32, 32);
+}
+.dark .f-app-surface-layer {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(58, 58, 58, 0.3);
+}
+
+/* ------------------------- Iconography ------------------------- */
+@font-face {
+  font-family: "Segoe Fluent Icons";
+  src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
+}
+.btn.icon {
+  font-size: 14px;
+}
+
+.accordion-icon,
+.card-icon {
+  font-size: 24px;
+  margin-right: 1.25rem;
+}
+
+/* ------------------------- options.html ------------------------- */
 .container {
   border-radius: 8px;
 }
@@ -18,85 +550,79 @@
   width: 20rem;
 }
 
-/*
- * ------------------------- Motion -------------------------
- */
+/* ------------------------- Iconography 2 ------------------------- */
+#icon_theme,
+#icon_shortcuts,
+#icon_vis,
+#icon_s_aem,
+#button_s_p5_login_save,
+#button_s_p6_login_save,
+#button_s_p5_login_reset,
+#button_s_p6_login_reset,
+#button_shortcuts {
+  font-family: "Segoe Fluent Icons";
+}
 
+#icon_theme::before {
+  content: "\e790";
+  content: "\e771";
+}
+
+#icon_shortcuts::before {
+  content: "\eda7";
+}
+
+#icon_vis::before {
+  content: "\e890";
+}
+
+#icon_s_aem::before {
+  content: "\e99a";
+}
+
+#button_s_p5_login_save::before,
+#button_s_p6_login_save::before {
+  content: "\e74e";
+}
+
+#button_s_p5_login_reset::before,
+#button_s_p6_login_reset::before {
+  content: "\e777";
+}
+
+#button_shortcuts::before {
+  content: "\e8a7";
+}
+
+/* ------------------------- Motion ------------------------- */
 @keyframes ms-motion-slideDownIn {
   from {
     transform: translate3d(0, -48px, 0);
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 @keyframes ms-motion-fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
-
 #option_theme {
-  animation: 100ms 125ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  animation: 100ms 125ms ms-motion-slideDownIn both cubic-bezier(0.1, 0.9, 0.2, 1), 100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
 #option_shortcuts {
-  animation: 100ms 150ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  animation: 100ms 150ms ms-motion-slideDownIn both cubic-bezier(0.1, 0.9, 0.2, 1), 100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
 #option_vis {
-  animation: 100ms 175ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 175ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  animation: 100ms 175ms ms-motion-slideDownIn both cubic-bezier(0.1, 0.9, 0.2, 1), 100ms 175ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
 #option_s_aem {
-  animation: 100ms 200ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1), 100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
-}
-
-/*
- * ------------------------- Scroll Bar (Scroll Viewer) -------------------------
- */
-
-html {
-  overflow: auto;
-}
-
-body {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  bottom: 4px;
-  left: 4px;
-  padding: 4px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-/* ------------------------- Mode: Light, Orientation: Bidirectional, Expanded: False ------------------------- */
-
-html.light ::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
-}
-
-html.light ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.45);
-  border-radius: 999px;
-}
-
-/* ------------------------- Mode: Dark, Orientation: Bidirectional, Expanded: False ------------------------- */
-
-html.dark ::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
-}
-
-html.dark ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.54);
-  border-radius: 999px;
+  animation: 100ms 200ms ms-motion-slideDownIn both cubic-bezier(0.1, 0.9, 0.2, 1), 100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }

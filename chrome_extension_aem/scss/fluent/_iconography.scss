@@ -1,0 +1,18 @@
+/* ------------------------- Iconography ------------------------- */
+
+// Microsoft Docs / ... / Segoe Fluent Icons font https://docs.microsoft.com/en-us/windows/apps/design/style/segoe-fluent-icons-font
+
+@font-face {
+  font-family: "Segoe Fluent Icons";
+  src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
+}
+
+.btn.icon {
+  font-size: 14px;
+}
+
+.accordion-icon,
+.card-icon {
+  font-size: 24px;
+  margin-right: 1.25rem;
+}

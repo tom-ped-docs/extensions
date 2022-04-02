@@ -1,0 +1,64 @@
+/* ------------------------- Tooltip ------------------------- */
+
+.tooltip {
+  // .f-caption
+  font-family: "Segoe UI Variable";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+
+  .tooltip-arrow {
+    display: none;
+  }
+}
+
+.light {
+  // ------------------------- Mode: Light -------------------------
+
+  .tooltip-inner {
+    // .light .f-text
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  .tooltip-inner {
+    // background: rgba(255, 255, 255, 0.75);
+    // background-blend-mode: overlay;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    // background: url(NoiseAsset_256.png), rgba(252, 252, 252, 0.85);
+    background-color: rgba(252, 252, 252, 0.85);
+    background-color: rgba(252, 252, 252, 0);
+    // background-blend-mode: normal, luminosity;
+    // backdrop-filter: blur(60px);
+
+    background-color: rgba(252, 252, 252, 1);
+  }
+}
+
+.dark {
+  // ------------------------- Mode: Dark -------------------------
+
+  .tooltip-inner {
+    // .dark .f-text
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .tooltip-inner {
+    // background: rgba(255, 255, 255, 0.75);
+    // background-blend-mode: overlay;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.26);
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    // background: url(NoiseAsset_256.png), linear-gradient(0deg, rgba(44, 44, 44, 0.15), rgba(44, 44, 44, 0.15)), rgba(44, 44, 44, 0.96);
+    background-color: rgba(44, 44, 44, 0.15);
+    background-color: rgba(44, 44, 44, 0.15);
+    background-color: rgba(44, 44, 44, 0.96);
+    // background-blend-mode: normal, color, luminosity;
+    // backdrop-filter: blur(60px);
+
+    background-color: rgba(44, 44, 44, 1);
+  }
+}

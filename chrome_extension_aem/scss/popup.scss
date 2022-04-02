@@ -1,0 +1,188 @@
+@use "fluent/typography.scss";
+@use "fluent/color.scss";
+
+@use "fluent/button.scss";
+@use "fluent/dropdown.scss";
+// @use "fluent/toggle_switch.scss";
+// @use "fluent/expander.scss";
+@use "fluent/text_box.scss";
+// @use "fluent/scroll_viewer.scss";
+// @use "fluent/info_bar.scss";
+@use "fluent/tooltip.scss";
+@use "fluent/surfaces.scss";
+
+@use "fluent/iconography";
+
+/* ------------------------- popup.html ------------------------- */
+
+.width-5 { width: 5rem; }
+
+.width-7 { width: 7.5rem; }
+
+#widget_p_aem { transition: 0.5s ease background-color; }
+
+/* ------------------------- Iconography 2 ------------------------- */
+
+#button_image_export,
+#button_options,
+#button_s_login,
+#button_p_login,
+#button_s_editor,
+#button_p_editor,
+#button_s_editor_off,
+#button_p_editor_off,
+#button_paste,
+#button_cut,
+#button_copy {
+  font-family: "Segoe Fluent Icons";
+}
+
+#button_image_export::before {
+  // ImageExport
+  content: "\ee71";
+}
+
+#button_options::before {
+  // Settings
+  content: "\e713";
+}
+
+#button_s_login::before,
+#button_p_login::before {
+  // OpenInNewWindow
+  content: "\e8a7";
+}
+
+#button_s_editor::before,
+#button_p_editor::before {
+  // Edit
+  content: "\e70f";
+}
+
+#button_s_editor_off::before,
+#button_p_editor_off::before {
+  // View
+  content: "\e890";
+}
+
+#button_paste::before {
+  // Paste
+  content: "\e77f";
+}
+
+#button_cut::before {
+  // Cut
+  content: "\e8c6";
+}
+
+#button_copy::before {
+  // Copy
+  content: "\e8c8";
+}
+
+/* ------------------------- Motion ------------------------- */
+
+@keyframes ms-motion-slideDownIn {
+  from { transform: translate3d(0, -48px, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes ms-motion-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#widget_options,
+#widget_s_aem,
+#widget_p_aem,
+#widget_utilities {
+  animation:
+  100ms 125ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_options,
+#input_group_s_login,
+#input_group_p_login,
+#select_p_content,
+#input_group_paste {
+  animation:
+  100ms 150ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#input_s_url,
+#input_p_url,
+#btn_group_capitalization {
+  animation:
+  100ms 175ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 175ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#btn_group_s_editor,
+#btn_group_p_editor,
+#btn_group_cut_copy {
+  animation:
+  100ms 200ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_s_qa,
+#button_p_qa_login {
+  animation:
+  100ms 225ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 225ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_s_live,
+#button_p_live {
+  animation:
+  100ms 250ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 250ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_s_sites,
+#button_p_sites {
+  animation:
+  100ms 275ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 275ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_s_assets,
+#button_p_assets {
+  animation:
+  100ms 300ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 300ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_s_task_management,
+#button_p_grfalse {
+  animation:
+  100ms 325ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 325ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_s_workflows,
+#button_p_age_gate {
+  animation:
+  100ms 350ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 350ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_s_purging {
+  animation:
+  100ms 375ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 375ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_s_pim_b2c {
+  animation:
+  100ms 400ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 400ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#button_s_pim_b2b {
+  animation:
+  100ms 425ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 425ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}

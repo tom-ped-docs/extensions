@@ -1,0 +1,115 @@
+@use "fluent/typography.scss";
+@use "fluent/color.scss";
+
+@use "fluent/button.scss";
+@use "fluent/dropdown.scss";
+@use "fluent/toggle_switch.scss";
+@use "fluent/expander.scss";
+@use "fluent/text_box.scss";
+@use "fluent/scroll_viewer.scss";
+// @use "fluent/info_bar.scss";
+@use "fluent/tooltip.scss";
+@use "fluent/surfaces.scss";
+
+@use "fluent/iconography";
+
+/* ------------------------- options.html ------------------------- */
+
+.container { border-radius: 8px; }
+
+.min-width-2 { min-width: 2.5rem; }
+
+.width-5 { width: 5rem; }
+
+.width-10 { width: 10rem; }
+
+.width-20 { width: 20rem; }
+
+/* ------------------------- Iconography 2 ------------------------- */
+
+#icon_theme,
+#icon_shortcuts,
+#icon_vis,
+#icon_s_aem,
+#button_s_p5_login_save,
+#button_s_p6_login_save,
+#button_s_p5_login_reset,
+#button_s_p6_login_reset,
+#button_shortcuts {
+  font-family: "Segoe Fluent Icons";
+}
+
+#icon_theme::before {
+  // Color
+  content: "\e790";
+  // Personalize
+  content: "\e771";
+}
+
+#icon_shortcuts::before {
+  // KeyboardShortcut
+  content: "\eda7";
+}
+
+#icon_vis::before {
+  // View
+  content: "\e890";
+}
+
+#icon_s_aem::before {
+  // Robot
+  content: "\e99a";
+}
+
+#button_s_p5_login_save::before,
+#button_s_p6_login_save::before {
+  // Save
+  content: "\e74e";
+}
+
+#button_s_p5_login_reset::before,
+#button_s_p6_login_reset::before {
+  // UpdateRestore
+  content: "\e777";
+}
+
+#button_shortcuts::before {
+  // OpenInNewWindow
+  content: "\e8a7";
+}
+
+/* ------------------------- Motion ------------------------- */
+
+@keyframes ms-motion-slideDownIn {
+  from { transform: translate3d(0, -48px, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes ms-motion-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#option_theme {
+  animation:
+  100ms 125ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#option_shortcuts {
+  animation:
+  100ms 150ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#option_vis {
+  animation:
+  100ms 175ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 175ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+#option_s_aem {
+  animation:
+  100ms 200ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
+  100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}

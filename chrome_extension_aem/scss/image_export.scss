@@ -1,0 +1,158 @@
+@use "fluent/typography.scss";
+@use "fluent/color.scss";
+
+@use "fluent/button.scss";
+@use "fluent/dropdown.scss";
+// @use "fluent/toggle_switch.scss";
+// @use "fluent/expander.scss";
+@use "fluent/text_box.scss";
+// @use "fluent/scroll_viewer.scss";
+// @use "fluent/info_bar.scss";
+// @use "fluent/tooltip.scss";
+@use "fluent/surfaces.scss";
+
+@use "fluent/iconography";
+
+/* ------------------------- image_export.html ------------------------- */
+
+#div_0 { z-index: 999; }
+
+#div_6 {
+  width: 25rem;
+  height: 25rem;
+}
+
+#div_7 { height: 100%; }
+
+/* ------------------------- Typography 2 ------------------------- */
+
+@font-face {
+  font-family: "Segoe UI Variable";
+  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
+}
+
+@font-face {
+  font-family: "Cascadia Code";
+  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/CascadiaCode.ttf) format("truetype");
+}
+
+.cascadia_code { font-family: "Cascadia Code"; }
+
+@font-face {
+  font-family: "Cascadia Code Italic";
+  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
+}
+
+.cascadia_code_italic { font-family: "Cascadia Code Italic"; }
+
+/* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
+
+.light {
+  #div_0 {
+    ::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.45);
+      border-radius: 999px;
+    }
+
+    ::-webkit-scrollbar-corner {
+      background-color: unset;
+    }
+  }
+}
+
+.dark {
+  #div_0 {
+    ::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.54);
+      border-radius: 999px;
+    }
+
+    ::-webkit-scrollbar-corner {
+      background-color: unset;
+    }
+  }
+}
+
+/* ------------------------- Surfaces 2 ------------------------- */
+
+.light {
+  .f-app-surface-base {
+    border: 1px solid rgba(117, 117, 117, 0.4);
+  }
+
+  #div_0.f-app-surface-base,
+  #button_chrome_close {
+    background-color: rgba(243, 243, 243, 1);
+  }
+}
+
+.dark {
+  .f-app-surface-base {
+    border: 1px solid rgba(117, 117, 117, 0.4);
+  }
+
+  #div_0.f-app-surface-base,
+  #button_chrome_close {
+    background-color: rgba(32, 32, 32, 1);
+  }
+}
+
+/* ------------------------- Iconography 2 ------------------------- */
+
+@font-face {
+  font-family: "Segoe Fluent Icons";
+  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/segoe_fluent_icons.ttf) format("truetype");
+}
+
+#button_chrome_close {
+  font-family: "Segoe Fluent Icons";
+}
+
+#button_chrome_close::before {
+  // ChromeClose
+  content: "\e8bb";
+}
+
+/* ------------------------- Motion ------------------------- */
+
+@keyframes ms-motion-slideUpIn {
+  from { transform: translate3d(0, 48px, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes ms-motion-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.ms-motion-slideUpIn {
+  animation:
+  100ms ms-motion-slideUpIn both cubic-bezier(0.1, 0.9, 0.2, 1),
+  100ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+}
+
+@keyframes ms-motion-slideDownOut {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, 48px, 0); }
+}
+
+@keyframes ms-motion-fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.ms-motion-slideDownOut {
+  animation:
+  100ms ms-motion-slideDownOut both cubic-bezier(0.9, 0.1, 1, 0.2),
+  100ms ms-motion-fadeOut both cubic-bezier(0, 0, 1, 1);
+}

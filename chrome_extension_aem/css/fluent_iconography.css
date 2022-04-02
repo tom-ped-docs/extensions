@@ -5,6 +5,8 @@
   src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
 }
 
+/* ------------------------- popup ------------------------- */
+
 #button_image_export,
 #button_options,
 #button_s_login,
@@ -15,12 +17,7 @@
 #button_p_editor_off,
 #button_paste,
 #button_cut,
-#button_copy,
-#button_s_p5_login_save,
-#button_s_p6_login_save,
-#button_s_p5_login_reset,
-#button_s_p6_login_reset,
-#button_shortcuts {
+#button_copy {
   font-family: "Segoe Fluent Icons";
 }
 
@@ -59,24 +56,17 @@
   content: "\e8c8";/* Copy */
 }
 
-#button_s_p5_login_save::before,
-#button_s_p6_login_save::before {
-  content: "\e74e";/* Save */
-}
-
-#button_s_p5_login_reset::before,
-#button_s_p6_login_reset::before {
-  content: "\e777";/* UpdateRestore */
-}
-
-#button_shortcuts::before {
-  content: "\e8a7";/* OpenInNewWindow */
-}
+/* ------------------------- options ------------------------- */
 
 #icon_theme,
 #icon_shortcuts,
 #icon_vis,
-#icon_s_aem {
+#icon_s_aem,
+#button_s_p5_login_save,
+#button_s_p6_login_save,
+#button_s_p5_login_reset,
+#button_s_p6_login_reset,
+#button_shortcuts {
   font-family: "Segoe Fluent Icons";
 }
 
@@ -97,11 +87,27 @@
   content: "\e99a";/* Robot */
 }
 
-#button_ie_chrome_close {
+#button_s_p5_login_save::before,
+#button_s_p6_login_save::before {
+  content: "\e74e";/* Save */
+}
+
+#button_s_p5_login_reset::before,
+#button_s_p6_login_reset::before {
+  content: "\e777";/* UpdateRestore */
+}
+
+#button_shortcuts::before {
+  content: "\e8a7";/* OpenInNewWindow */
+}
+
+/* ------------------------- image_export ------------------------- */
+
+#button_chrome_close {
   font-family: "Segoe Fluent Icons";
 }
 
-#button_ie_chrome_close::before {
+#button_chrome_close::before {
   content: "\e8bb";/* ChromeClose */
 }
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="| dark">
+<html lang="en" class="| light">
 
 <head>
   <meta charset="utf-8">
@@ -7,54 +7,49 @@
   <meta name="color-scheme" content="light dark">
 
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-
-  <link rel="stylesheet" href="../css/fluent_typography.css">
-  <link rel="stylesheet" href="../css/fluent_color.css">
-  <link rel="stylesheet" href="../css/fluent_controls.css">
-  <link rel="stylesheet" href="../css/fluent_iconography.css">
-
   <link rel="stylesheet" href="../css/image_export.css">
 
   <title>Image Export</title>
 </head>
 
 <body>
+  <div class="position-fixed bottom-0 start-0 rounded m-2 p-2 | f-app-surface-base ms-motion-slideUpIn" id="div_0"><!-- DIV_0 -->
 
-  <div class="position-fixed bottom-0 start-0 rounded m-2 p-2 | f-app-surface-base ms-motion-slideUpIn" id="div_ie_0"><!-- DIV_0 -->
-
-    <button class="btn btn-sm position-absolute top-0 start-100 translate-middle | icon f-text" id="button_ie_chrome_close" type="button"></button>
-
-    <!-- ------------------------- select, input ------------------------- -->
+    <button class="btn btn-sm position-absolute top-0 start-100 translate-middle | icon f-text" id="button_chrome_close" type="button"></button>
 
     <div class="rounded p-2 | f-app-surface-layer"><!-- DIV_1 -->
       <div class="row g-2"><!-- DIV_2 -->
         <div class="col"><!-- DIV_3 -->
-          <select class="form-select form-select-sm | f-body f-text" id="select_ie">
-            <option value="contains">contains</option>
-            <option value="not contains">not contains</option>
-          </select>
+          <div class="input-group input-group-sm"><!-- DIV_4 -->
+            <span class="input-group-text | f-body f-text | f-body f-text">src</span>
+            <select class="form-select form-select-sm | f-body f-text">
+              <option value="contains">contains</option>
+              <option value="not_contains">not contains</option>
+            </select>
+          </div>
         </div>
-        <div class="col"><!-- DIV_4 -->
-          <input class="form-control form-control-sm | f-body f-text" id="input_ie" type="text" placeholder="/pl/">
+        <div class="col"><!-- DIV_5 -->
+          <input class="form-control form-control-sm | f-body f-text" type="text" placeholder="/pl">
         </div>
       </div>
     </div>
 
-    <div class="rounded mt-2 p-2 | f-app-surface-layer" id="div_ie_5"><!-- DIV_5 -->
-      <div class="overflow-scroll" id="div_ie_6"><!-- DIV_6 -->
+    <div class="rounded mt-2 p-2 | f-app-surface-layer" id="div_6"><!-- DIV_6 -->
+      <div class="overflow-scroll" id="div_7"><!-- DIV_7 -->
         <div class="d-flex flex-column mb-2">
           <span class="text-nowrap | f-body f-text cascadia_code">img 0:</span>
           <span class="text-nowrap | f-caption f-text cascadia_code_italic">src: https://www.samsung.com/pl/</span>
           <span class="text-muted text-nowrap | f-caption f-text cascadia_code_italic">alt: samsung</span>
         </div>
-        <div style="height: 25rem;"></div>
+        <div class="d-flex flex-column">
+          <span class="text-nowrap | f-body f-text cascadia_code">img 1:</span>
+          <span class="text-nowrap | f-caption f-text cascadia_code_italic">src: https://www.samsung.com/pl/</span>
+          <span class="text-muted text-nowrap | f-caption f-text cascadia_code_italic">alt: samsung</span>
+        </div>
       </div>
     </div>
 
   </div>
-
-  <!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> -->
-  <!-- <script src="../js/image_export.js"></script> -->
 </body>
 
 </html>

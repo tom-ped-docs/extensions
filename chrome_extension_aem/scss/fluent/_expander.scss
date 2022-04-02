@@ -1,0 +1,65 @@
+/* ------------------------- Expander ------------------------- */
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.light {
+  // ------------------------- Mode: Light, Expanded: False & True -------------------------
+
+  .accordion-item,
+  .card {
+    background-color: rgba(246, 246, 246, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .accordion-button {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .accordion-button:not(.collapsed) {
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .accordion-body {
+    // border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .accordion-body:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.dark {
+  // ------------------------- Mode: Dark, Expanded: False & True -------------------------
+
+  .accordion-item,
+  .card {
+    background-color: rgba(255, 255, 255, 0.03);
+    // border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .accordion-button {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .accordion-button:not(.collapsed) {
+    // box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .accordion-body {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .accordion-body:last-of-type {
+    border-bottom: none;
+  }
+}

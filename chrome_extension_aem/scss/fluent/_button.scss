@@ -1,0 +1,130 @@
+/* ------------------------- Button ------------------------- */
+
+// .btn {
+//   height: 32px;
+//   width: 120px;
+// }
+
+.light {
+  // ------------------------- Mode: Light, Style: Standard -------------------------
+
+  .btn.f-text {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.16);
+  }
+
+  .btn.f-text:hover {
+    background-color: rgba(249, 249, 249, 0.5);
+    // border: 1px solid;
+    // border-color: rgba(0, 0, 0, 0.06);
+    // border-color: rgba(0, 0, 0, 0.16);
+  }
+
+  .btn.f-text:active {
+    background-color: rgba(249, 249, 249, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .btn.f-text:disabled {
+    background-color: rgba(249, 249, 249, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .btn.f-text:focus {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+  }
+
+  // ------------------------- Mode: Light, Style: Accent -------------------------
+
+  .btn.f-text-on-accent {
+    background-color: rgba(0, 95, 184, 1);
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .btn.f-text-on-accent:hover {
+    background-color: rgba(0, 95, 184, 0.9);
+    // border: 1px solid;
+    // border-color: rgba(255, 255, 255, 0.08);
+    // border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .btn.f-text-on-accent:active {
+    background-color: rgba(0, 95, 184, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .btn.f-text-on-accent:disabled {
+    background-color: rgba(0, 0, 0, 0.22);
+    border: unset;
+  }
+
+  .btn.f-text-on-accent:focus {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+  }
+}
+
+.dark {
+  // ------------------------- Mode: Dark, Style: Standard -------------------------
+
+  .btn.f-text {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.07);
+  }
+
+  .btn.f-text:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    // border: 1px solid;
+    // border-color: rgba(255, 255, 255, 0.09);
+    // border-color: rgba(255, 255, 255, 0.07);
+  }
+
+  .btn.f-text:active {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .btn.f-text:disabled {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .btn.f-text:focus {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+  }
+
+  // ------------------------- Mode: Dark, Style: Accent -------------------------
+
+  .btn.f-text-on-accent {
+    background-color: rgba(96, 205, 255, 1);
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 0, 0, 0.14);
+  }
+
+  .btn.f-text-on-accent:hover {
+    background-color: rgba(96, 205, 255, 0.9);
+    // border: 1px solid;
+    // border-color: rgba(255, 255, 255, 0.08);
+    // border-color: rgba(0, 0, 0, 0.14);
+  }
+
+  .btn.f-text-on-accent:active {
+    background-color: rgba(96, 205, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .btn.f-text-on-accent:disabled {
+    background-color: rgba(255, 255, 255, 0.16);
+    border: unset;
+  }
+
+  .btn.f-text-on-accent:focus {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+  }
+}
