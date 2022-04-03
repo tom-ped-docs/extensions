@@ -1,11 +1,7 @@
 /* ------------------------- Info Bar ------------------------- */
 
-#toasts {
-  z-index: 999;
-}
-
 .light {
-  // ------------------------- Mode: Light, Layout: Single Line, Severity: Informational, Action: None -------------------------
+  // Mode: Light, Layout: Single Line, Severity: Informational, Action: None
 
   .toast {
     background-color: rgba(246, 246, 246, 0.5);
@@ -14,7 +10,7 @@
 }
 
 .dark {
-  // ------------------------- Mode: Dark, Layout: Single Line, Severity: Informational, Action: None -------------------------
+  // Mode: Dark, Layout: Single Line, Severity: Informational, Action: None
 
   .toast {
     background-color: rgba(255, 255, 255, 0.03);

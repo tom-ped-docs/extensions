@@ -9,10 +9,6 @@ BUTTON_IMAGE_EXPORT.addEventListener("click", () => {
             target: { tabId: tab.id },
             files: [
                 "node_modules/bootstrap/dist/css/bootstrap.css",
-                "css/fluent_typography.css",
-                "css/fluent_color.css",
-                "css/fluent_controls.css",
-                "css/fluent_iconography.css",
                 "css/image_export.css"
             ],
         });

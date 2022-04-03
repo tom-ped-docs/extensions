@@ -1,16 +1,11 @@
-@use "fluent/typography.scss";
-@use "fluent/color.scss";
+@use "bootstrap";
 
-@use "fluent/button.scss";
-@use "fluent/dropdown.scss";
-// @use "fluent/toggle_switch.scss";
-// @use "fluent/expander.scss";
-@use "fluent/text_box.scss";
-// @use "fluent/scroll_viewer.scss";
-// @use "fluent/info_bar.scss";
-// @use "fluent/tooltip.scss";
-@use "fluent/surfaces.scss";
-
+@use "fluent/typography";
+@use "fluent/color";
+@use "fluent/button";
+@use "fluent/dropdown";
+@use "fluent/text_box";
+@use "fluent/surfaces";
 @use "fluent/iconography";
 
 /* ------------------------- image_export.html ------------------------- */
@@ -27,7 +22,7 @@
 /* ------------------------- Typography 2 ------------------------- */
 
 @font-face {
-  font-family: "Segoe UI Variable";
+  font-family: typography.$font-family;
   src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
 }
 
@@ -114,14 +109,9 @@
   src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/segoe_fluent_icons.ttf) format("truetype");
 }
 
-#button_chrome_close {
-  font-family: "Segoe Fluent Icons";
-}
+#button_chrome_close { font-family: iconography.$font-family; }
 
-#button_chrome_close::before {
-  // ChromeClose
-  content: "\e8bb";
-}
+#button_chrome_close::before { content: "\e8bb"; }// ChromeClose
 
 /* ------------------------- Motion ------------------------- */
 

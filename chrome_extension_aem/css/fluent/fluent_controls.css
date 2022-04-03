@@ -468,11 +468,11 @@
  * ------------------------- Scroll Bar (Scroll Viewer) -------------------------
  */
 
-/* html {
+html {
   overflow: auto;
-} */
+}
 
-/* body {
+body {
   position: absolute;
   top: 4px;
   right: 4px;
@@ -481,39 +481,39 @@
   padding: 4px;
   overflow-x: hidden;
   overflow-y: scroll;
-} */
+}
 
 /* ------------------------- Mode: Light, Orientation: Bidirectional, Expanded: False ------------------------- */
 
-/* html.light ::-webkit-scrollbar {
+html.light ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
-} */
+}
 
-/* html.light ::-webkit-scrollbar-thumb {
+html.light ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.45);
   border-radius: 999px;
-} */
+}
 
 /* ------------------------- Mode: Dark, Orientation: Bidirectional, Expanded: False ------------------------- */
 
-/* html.dark ::-webkit-scrollbar {
+html.dark ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
-} */
+}
 
-/* html.dark ::-webkit-scrollbar-thumb {
+html.dark ::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.54);
   border-radius: 999px;
-} */
+}
 
 /*
  * ------------------------- Info Bar -------------------------
  */
 
-#toasts {
+/* #toasts {
   z-index: 999;
-}
+} */
 
 /* ------------------------- Mode: Light, Layout: Single Line, Severity: Informational, Action: None ------------------------- */
 
@@ -548,7 +548,7 @@
 /* ------------------------- Mode: Light ------------------------- */
 
 .light .tooltip-inner {
-  /* .light .f-text */
+  /* .f-text */
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -571,7 +571,7 @@
 /* ------------------------- Mode: Dark ------------------------- */
 
 .dark .tooltip-inner {
-  /* .dark .f-text */
+  /* .f-text */
   color: rgba(255, 255, 255, 1);
 }
 

@@ -2,7 +2,7 @@
 
 .light {
   .form-switch {
-    // ------------------------- Mode: Light, Selected: False -------------------------
+    // Mode: Light, Selected: False
 
     .form-check-input {
       background-color: rgba(0, 0, 0, 0.02);
@@ -29,7 +29,7 @@
       box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
     }
 
-    // ------------------------- Mode: Light, Selected: True -------------------------
+    // Mode: Light, Selected: True
 
     .form-check-input:checked {
       background-color: rgba(0, 95, 184, 1);
@@ -60,7 +60,7 @@
 
 .dark {
   .form-switch {
-    // ------------------------- Mode: Dark, Selected: False -------------------------
+    // Mode: Dark, Selected: False
 
     .form-check-input {
       background-color: rgba(0, 0, 0, 0.1);
@@ -87,7 +87,7 @@
       box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgba(255, 255, 255, 1);
     }
 
-    // ------------------------- Mode: Dark, Selected: True -------------------------
+    // Mode: Dark, Selected: True
 
     .form-check-input:checked {
       background-color: rgba(96, 205, 255, 1);

@@ -1,83 +1,142 @@
-@use "fluent/typography.scss";
-@use "fluent/color.scss";
+@use "bootstrap";
 
-@use "fluent/button.scss";
-@use "fluent/dropdown.scss";
-// @use "fluent/toggle_switch.scss";
-// @use "fluent/expander.scss";
-@use "fluent/text_box.scss";
-// @use "fluent/scroll_viewer.scss";
-// @use "fluent/info_bar.scss";
-@use "fluent/tooltip.scss";
-@use "fluent/surfaces.scss";
-
+@use "fluent/typography";
+@use "fluent/color";
+@use "fluent/button";
+@use "fluent/dropdown";
+@use "fluent/text_box";
+@use "fluent/tooltip";
+@use "fluent/surfaces";
 @use "fluent/iconography";
-
-/* ------------------------- popup.html ------------------------- */
 
 .width-5 { width: 5rem; }
 
 .width-7 { width: 7.5rem; }
 
-#widget_p_aem { transition: 0.5s ease background-color; }
+.body { @extend .p-2, .f-app-surface-base; }
 
-/* ------------------------- Iconography 2 ------------------------- */
+.block1                 {
+  @extend .rounded, .p-2, .f-app-surface-layer;
 
-#button_image_export,
-#button_options,
-#button_s_login,
-#button_p_login,
-#button_s_editor,
-#button_p_editor,
-#button_s_editor_off,
-#button_p_editor_off,
-#button_paste,
-#button_cut,
-#button_copy {
-  font-family: "Segoe Fluent Icons";
-}
+  &__container      { @extend .d-flex, .justify-content-end; }
+  &__button-images  { @extend .btn, .btn-sm, .me-2, .icon, .f-text, .btn--f-standard; }
+  &__button-options { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
 
-#button_image_export::before {
   // ImageExport
-  content: "\ee71";
-}
-
-#button_options::before {
+  &__button-images::before  { font-family: iconography.$font-family; content: "\ee71"; }
   // Settings
-  content: "\e713";
+  &__button-options::before { font-family: iconography.$font-family; content: "\e713"; }
 }
 
-#button_s_login::before,
-#button_p_login::before {
+.block2               {
+  @extend .rounded, .mt-2, .p-2, .f-app-surface-layer;
+
+  &__container1         { @extend .row, .g-2, .mb-2; }
+  &__container2         { @extend .col; }
+  &__input-group-login  { @extend .input-group, .input-group-sm; }
+  &__select-aem         { @extend .form-select, .form-select-sm, .f-body, .f-text; }
+  &__button-login       { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  &__container3         { @extend .col; }
+  &__input-url          { @extend .form-control, .form-control-sm, .f-body, .f-text; }
+
+  &__container4         { @extend .d-flex, .mb-2; }
+  &__btn-group-editor   { @extend .btn-group, .btn-group-sm, .me-2, .width-5; }
+  &__button-editor      { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  &__button-editor-off  { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  &__button-qa          { @extend .btn, .btn-sm, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-live        { @extend .btn, .btn-sm, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-sites       { @extend .btn, .btn-sm, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-assets      { @extend .btn, .btn-sm, .width-5, .f-body, .f-text, .btn--f-standard; }
+
+  &__container5             { @extend .d-flex; }
+  &__button-task-management { @extend .btn, .btn-sm, .text-truncate, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-workflows       { @extend .btn, .btn-sm, .text-truncate, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-purging         { @extend .btn, .btn-sm, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-pim-b2c         { @extend .btn, .btn-sm, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-pim-b2b         { @extend .btn, .btn-sm, .width-5, .f-body, .f-text, .btn--f-standard; }
+
   // OpenInNewWindow
-  content: "\e8a7";
-}
-
-#button_s_editor::before,
-#button_p_editor::before {
+  &__button-login::before       { font-family: iconography.$font-family; content: "\e8a7"; }
   // Edit
-  content: "\e70f";
-}
-
-#button_s_editor_off::before,
-#button_p_editor_off::before {
+  &__button-editor::before      { font-family: iconography.$font-family; content: "\e70f"; }
   // View
-  content: "\e890";
+  &__button-editor-off::before  { font-family: iconography.$font-family; content: "\e890"; }
 }
 
-#button_paste::before {
+.block3 {
+  @extend .rounded, .mt-2, .p-2, .f-app-surface-layer;
+  transition: 0.5s ease background-color;
+
+  &__container1         { @extend .row, .g-2, .mb-2; }
+  &__container2         { @extend .col; }
+  &__input-group-login  { @extend .input-group, .input-group-sm; }
+  &__select-aem         { @extend .form-select, .form-select-sm, .f-body, .f-text; }
+  &__button-login       { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  &__container3         { @extend .col; }
+  &__select-content     { @extend .form-select, .form-select-sm, .f-body, .f-text; }
+
+  &__container4 { @extend .mb-2; }
+  &__input-url  { @extend .form-control, .form-control-sm, .f-body, .f-text; }
+
+  &__container5         { @extend .d-flex, .mb-2; }
+  &__btn-group-editor   { @extend .btn-group, .btn-group-sm, .me-2, .width-5; }
+  &__button-editor      { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  &__button-editor-off  { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  &__button-qa-login    { @extend .btn, .btn-sm, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-live        { @extend .btn, .btn-sm, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-sites       { @extend .btn, .btn-sm, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-assets      { @extend .btn, .btn-sm, .width-5, .f-body, .f-text, .btn--f-standard; }
+
+  &__container6       { @extend .d-flex; }
+  &__button-grfalse   { @extend .btn, .btn-sm, .me-2, .width-5, .f-body, .f-text, .btn--f-standard; }
+  &__button-age-gate  { @extend .btn, .btn-sm, .width-5, .f-body, .f-text, .btn--f-standard; }
+
+  // OpenInNewWindow
+  &__button-login::before       { font-family: iconography.$font-family; content: "\e8a7"; }
+  // Edit
+  &__button-editor::before      { font-family: iconography.$font-family; content: "\e70f"; }
+  // View
+  &__button-editor-off::before  { font-family: iconography.$font-family; content: "\e890"; }
+}
+
+.block4 {
+  @extend .rounded, .mt-2, .p-2, .f-app-surface-layer;
+
+  &__container1         { @extend .row, .g-2; }
+  &__container2         { @extend .col; }
+  &__input-group-paste  { @extend .input-group, .input-group-sm; }
+  // &__button-paste       { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  &__input-text         { @extend .form-control, .form-control-sm, .f-body, .f-text; }
+
+  &__container3               { @extend .col, .d-flex; }
+  &__btn-group-capitalization { @extend .btn-group, .btn-group-sm, .me-2, .width-7; }
+  // &__button-to-lower-case     { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  // &__span-to-lower-case       { @extend .f-body, .f-text; }
+  // &__button-to-upper-case     { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  // &__span-to-upper-case       { @extend .f-body, .f-text; }
+  // &__button-to-title-case     { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  // &__span-to-title-case       { @extend .f-body, .f-text; }
+  &__btn-group-cut-copy       { @extend .btn-group, .btn-group-sm, .width-5; }
+  // &__button-cut               { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  // &__button-copy              { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+
+  &__button-paste,
+  &__button-to-lower-case,
+  &__button-to-upper-case,
+  &__button-to-title-case,
+  &__button-cut,
+  &__button-copy        { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+
+  &__span-to-lower-case,
+  &__span-to-upper-case,
+  &__span-to-title-case { @extend .f-body, .f-text; }
+
   // Paste
-  content: "\e77f";
-}
-
-#button_cut::before {
+  &__button-paste::before { font-family: iconography.$font-family; content: "\e77f"; }
   // Cut
-  content: "\e8c6";
-}
-
-#button_copy::before {
+  &__button-cut::before   { font-family: iconography.$font-family; content: "\e8c6"; }
   // Copy
-  content: "\e8c8";
+  &__button-copy::before  { font-family: iconography.$font-family; content: "\e8c8"; }
 }
 
 /* ------------------------- Motion ------------------------- */
@@ -92,96 +151,97 @@
   to { opacity: 1; }
 }
 
-#widget_options,
-#widget_s_aem,
-#widget_p_aem,
-#widget_utilities {
+.block1,
+.block2,
+.block3,
+.block4 {
   animation:
   100ms 125ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_options,
-#input_group_s_login,
-#input_group_p_login,
-#select_p_content,
-#input_group_paste {
+// ? block1__button-images
+.block1__button-options,
+.block2__input-group-login,
+.block3__input-group-login,
+.block3__select-content,
+.block4__input-group-paste {
   animation:
   100ms 150ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#input_s_url,
-#input_p_url,
-#btn_group_capitalization {
+.block2__input-url,
+.block3__input-url,
+.block4__btn-group-capitalization {
   animation:
   100ms 175ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 175ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#btn_group_s_editor,
-#btn_group_p_editor,
-#btn_group_cut_copy {
+.block2__btn-group-editor,
+.block3__btn-group-editor,
+.block4__btn-group-cut-copy {
   animation:
   100ms 200ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_qa,
-#button_p_qa_login {
+.block2__button-qa,
+.block3__button-qa-login {
   animation:
   100ms 225ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 225ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_live,
-#button_p_live {
+.block2__button-live,
+.block3__button-live {
   animation:
   100ms 250ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 250ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_sites,
-#button_p_sites {
+.block2__button-sites,
+.block3__button-sites {
   animation:
   100ms 275ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 275ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_assets,
-#button_p_assets {
+.block2__button-assets,
+.block3__button-assets {
   animation:
   100ms 300ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 300ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_task_management,
-#button_p_grfalse {
+.block2__button-task-management,
+.block3__button-grfalse {
   animation:
   100ms 325ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 325ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_workflows,
-#button_p_age_gate {
+.block2__button-workflows,
+.block3__button-age-gate {
   animation:
   100ms 350ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 350ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_purging {
+.block2__button-purging {
   animation:
   100ms 375ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 375ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_pim_b2c {
+.block2__button-pim-b2c {
   animation:
   100ms 400ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 400ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-#button_s_pim_b2b {
+.block2__button-pim-b2b {
   animation:
   100ms 425ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 425ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);

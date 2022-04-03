@@ -3,7 +3,7 @@
 // ------------------------- App Surface -------------------------
 
 .light {
-  // ------------------------- Mode: Light, Part: Base (Mica), Inactive: False -------------------------
+  // Mode: Light, Part: Base (Mica), Inactive: False
 
   .f-app-surface-base {
     // border: 1px solid rgba(117, 117, 117, 0.4);
@@ -21,7 +21,7 @@
     background-color: rgba(243, 243, 243, 1);
   }
 
-  // ------------------------- Mode: Light, Part: Layer, Inactive: False -------------------------
+  // Mode: Light, Part: Layer, Inactive: False
 
   .f-app-surface-layer {
     border: 1px solid rgba(0, 0, 0, 0.0578);
@@ -31,7 +31,7 @@
 }
 
 .dark {
-  // ------------------------- Mode: Dark, Part: Base (Mica), Inactive: False -------------------------
+  // Mode: Dark, Part: Base (Mica), Inactive: False
 
   .f-app-surface-base {
     // border: 1px solid rgba(117, 117, 117, 0.4);
@@ -49,7 +49,7 @@
     background-color: rgba(32, 32, 32, 1);
   }
 
-  // ------------------------- Mode: Dark, Part: Layer, Inactive: False -------------------------
+  // Mode: Dark, Part: Layer, Inactive: False
 
   .f-app-surface-layer {
     border: 1px solid rgba(0, 0, 0, 0.1);

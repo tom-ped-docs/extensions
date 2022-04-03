@@ -1,7 +1,7 @@
 /* ------------------------- Dropdown ------------------------- */
 
 .light {
-  // ------------------------- Mode: Light, Open: True -------------------------
+  // Mode: Light, Open: True
 
   .form-select {
     background-color: rgba(255, 255, 255, 0.7);
@@ -31,22 +31,24 @@
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
   }
 
-  .form-select option {
-    border: 1px solid rgba(0, 0, 0, 0.06);
+  .form-select {
+    option {
+      border: 1px solid rgba(0, 0, 0, 0.06);
 
-    // background: rgba(255, 255, 255, 1);
-    // mix-blend-mode: multiply;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+      // background: rgba(255, 255, 255, 1);
+      // mix-blend-mode: multiply;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
 
-    // background: url(NoiseAsset_256.png), rgba(252, 252, 252, 0.85);
-    background-color: rgba(252, 252, 252, 0.85);
-    // background-blend-mode: normal, luminosity;
-    // backdrop-filter: blur(60px);
+      // background: url(NoiseAsset_256.png), rgba(252, 252, 252, 0.85);
+      background-color: rgba(252, 252, 252, 0.85);
+      // background-blend-mode: normal, luminosity;
+      // backdrop-filter: blur(60px);
+    }
   }
 }
 
 .dark {
-  // ------------------------- Mode: Dark, Open: True -------------------------
+  // Mode: Dark, Open: True
 
   .form-select {
     background-color: rgba(255, 255, 255, 0.06);
@@ -76,18 +78,20 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
   }
 
-  .form-select option {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+  .form-select {
+    option {
+      border: 1px solid rgba(0, 0, 0, 0.2);
 
-    // background: rgba(255, 255, 255, 1);
-    // mix-blend-mode: multiply;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
+      // background: rgba(255, 255, 255, 1);
+      // mix-blend-mode: multiply;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
 
-    // background: url(NoiseAsset_256.png), linear-gradient(0deg, rgba(44, 44, 44, 0.15), rgba(44, 44, 44, 0.15)), rgba(44, 44, 44, 0.96);
-    background-color: rgba(44, 44, 44, 0.15);
-    background-color: rgba(44, 44, 44, 0.15);
-    background-color: rgba(44, 44, 44, 0.96);
-    // background-blend-mode: normal, color, luminosity;
-    // backdrop-filter: blur(60px);
+      // background: url(NoiseAsset_256.png), linear-gradient(0deg, rgba(44, 44, 44, 0.15), rgba(44, 44, 44, 0.15)), rgba(44, 44, 44, 0.96);
+      background-color: rgba(44, 44, 44, 0.15);
+      background-color: rgba(44, 44, 44, 0.15);
+      background-color: rgba(44, 44, 44, 0.96);
+      // background-blend-mode: normal, color, luminosity;
+      // backdrop-filter: blur(60px);
+    }
   }
 }
