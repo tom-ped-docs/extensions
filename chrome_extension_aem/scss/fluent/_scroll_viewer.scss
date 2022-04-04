@@ -1,19 +1,19 @@
 /* ------------------------- Scroll Bar (Scroll Viewer) ------------------------- */
 
-html {
-  overflow: auto;
-}
+// html {
+//   overflow: auto;
+// }
 
-body {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  bottom: 4px;
-  left: 4px;
-  padding: 4px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
+// body {
+//   position: absolute;
+//   top: 4px;
+//   right: 4px;
+//   bottom: 4px;
+//   left: 4px;
+//   padding: 4px;
+//   overflow-x: hidden;
+//   overflow-y: scroll;
+// }
 
 html.light {
   // Mode: Light, Orientation: Bidirectional, Expanded: False
@@ -21,6 +21,10 @@ html.light {
   ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: unset;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -35,6 +39,10 @@ html.dark {
   ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: unset;
   }
 
   ::-webkit-scrollbar-thumb {

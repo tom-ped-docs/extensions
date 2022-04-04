@@ -434,24 +434,12 @@
 }
 
 /* ------------------------- Scroll Bar (Scroll Viewer) ------------------------- */
-html {
-  overflow: auto;
-}
-
-body {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  bottom: 4px;
-  left: 4px;
-  padding: 4px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 html.light ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
+}
+html.light ::-webkit-scrollbar-corner {
+  background-color: unset;
 }
 html.light ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.45);
@@ -461,6 +449,9 @@ html.light ::-webkit-scrollbar-thumb {
 html.dark ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
+}
+html.dark ::-webkit-scrollbar-corner {
+  background-color: unset;
 }
 html.dark ::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.54);
@@ -514,6 +505,7 @@ html.dark ::-webkit-scrollbar-thumb {
 
 /* ------------------------- Surfaces ------------------------- */
 .light .f-app-surface-base {
+  border: 1px solid rgba(117, 117, 117, 0.4);
   background-color: rgba(243, 243, 243, 0.5);
   background-color: rgba(243, 243, 243, 0.5);
   background-color: rgb(243, 243, 243);
@@ -524,6 +516,7 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 
 .dark .f-app-surface-base {
+  border: 1px solid rgba(117, 117, 117, 0.4);
   background-color: rgba(32, 32, 32, 0.8);
   background-color: rgba(32, 32, 32, 0.8);
   background-color: rgb(32, 32, 32);

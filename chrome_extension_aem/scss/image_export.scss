@@ -5,113 +5,84 @@
 @use "fluent/button";
 @use "fluent/dropdown";
 @use "fluent/text_box";
+@use "fluent/scroll_viewer";
 @use "fluent/surfaces";
+
 @use "fluent/iconography";
-
-/* ------------------------- image_export.html ------------------------- */
-
-#div_0 { z-index: 999; }
-
-#div_6 {
-  width: 25rem;
-  height: 25rem;
-}
-
-#div_7 { height: 100%; }
 
 /* ------------------------- Typography 2 ------------------------- */
 
+$chrome-extension-url: "chrome-extension://__MSG_@@extension_id__";
+
 @font-face {
   font-family: typography.$font-family;
-  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
+  src: url($chrome-extension-url + "/assets/fonts/segoe_ui_variable.ttf") format("truetype-variations");
 }
 
 @font-face {
   font-family: "Cascadia Code";
-  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/cascadia_code.ttf) format("truetype");
+  src: url($chrome-extension-url + "/assets/fonts/CascadiaCode.ttf") format("truetype");
 }
 
 .cascadia_code { font-family: "Cascadia Code"; }
 
 @font-face {
   font-family: "Cascadia Code Italic";
-  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/cascadia_code_italic.ttf) format("truetype");
+  src: url($chrome-extension-url + "/assets/fonts/CascadiaCodeItalic.ttf") format("truetype");
 }
 
 .cascadia_code_italic { font-family: "Cascadia Code Italic"; }
 
-/* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
-
-.light {
-  #div_0 {
-    ::-webkit-scrollbar {
-      width: 2px;
-      height: 2px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.45);
-      border-radius: 999px;
-    }
-
-    ::-webkit-scrollbar-corner {
-      background-color: unset;
-    }
-  }
-}
-
-.dark {
-  #div_0 {
-    ::-webkit-scrollbar {
-      width: 2px;
-      height: 2px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.54);
-      border-radius: 999px;
-    }
-
-    ::-webkit-scrollbar-corner {
-      background-color: unset;
-    }
-  }
-}
-
-/* ------------------------- Surfaces 2 ------------------------- */
-
-.light {
-  .f-app-surface-base {
-    border: 1px solid rgba(117, 117, 117, 0.4);
-  }
-
-  #div_0.f-app-surface-base,
-  #button_chrome_close {
-    background-color: rgba(243, 243, 243, 1);
-  }
-}
-
-.dark {
-  .f-app-surface-base {
-    border: 1px solid rgba(117, 117, 117, 0.4);
-  }
-
-  #div_0.f-app-surface-base,
-  #button_chrome_close {
-    background-color: rgba(32, 32, 32, 1);
-  }
-}
-
-/* ------------------------- Iconography 2 ------------------------- */
-
 @font-face {
   font-family: "Segoe Fluent Icons";
-  src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/segoe_fluent_icons.ttf) format("truetype");
+  src: url($chrome-extension-url + "/assets/fonts/segoe_fluent_icons.ttf") format("truetype");
 }
 
-#button_chrome_close { font-family: iconography.$font-family; }
+/* ------------------------- image_export.html ------------------------- */
 
-#button_chrome_close::before { content: "\e8bb"; }// ChromeClose
+.body {
+  &__container {
+    @extend .position-fixed, .bottom-0, .start-0, .rounded, .m-2, .p-2, .f-app-surface-base, .ms-motion-slideUpIn;
+    z-index: 999;
+  }
+}
+
+.button-close {
+  @extend .btn, .btn-sm, .position-absolute, .top-0, .start-100, .translate-middle, .icon, .f-text, .btn--f-standard, .f-app-surface-base;
+
+  &::before {
+    font-family: iconography.$font-family;
+    // ChromeClose
+    content: "\e8bb";
+  }
+}
+
+.block1 {
+  @extend .rounded, .p-2, .f-app-surface-layer;
+
+  &__container1       { @extend .row, .g-2; }
+  &__container2,
+  &__container3       { @extend .col; }
+  &__input-group      { @extend .input-group, .input-group-sm; }
+  &__input-group-text { @extend .input-group-text, .f-body, .f-text, .f-body, .f-text; }
+  &__select           { @extend .form-select, .form-select-sm, .f-body, .f-text; }
+  &__input            { @extend .form-control, .form-control-sm, .f-body, .f-text; }
+}
+
+.block2 {
+  @extend .rounded, .mt-2, .p-2, .f-app-surface-layer;
+  width: 25rem;
+  height: 25rem;
+
+  &__container1 {
+    @extend .overflow-scroll;
+    height: 100%;
+  }
+  &__container2   { @extend .d-flex, .flex-column, .mb-2; }
+  &__title        { @extend .text-nowrap, .f-body, .f-text, .cascadia_code; }
+  &__subtitle-src { @extend .text-nowrap, .f-caption, .f-text, .cascadia_code_italic; }
+  &__subtitle-alt { @extend .text-muted, .text-nowrap, .f-caption, .f-text, .cascadia_code_italic; }
+}
 
 /* ------------------------- Motion ------------------------- */
 

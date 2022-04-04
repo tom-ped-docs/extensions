@@ -6,41 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
 
-  <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="../css/options.css">
 
   <title>Options</title>
 </head>
 
-<body class="| f-app-surface-base">
-  <div class="container p-2 | f-app-surface-layer">
+<body class="body">
+  <div class="body__container">
+    <span class="heading1">Options</span>
 
-    <!-- ------------------------- options ------------------------- -->
+    <!-- ------------------------- block1 ------------------------- -->
 
-    <span class="d-block mb-2 | f-title f-text">Options</span>
-
-    <div class="mb-2">
-      <div class="d-flex align-items-center">
-        <div class="d-flex justify-content-center align-items-center me-2" style="height: 100px; width: 200px;">
+    <div class="block1">
+      <div class="block1__container1">
+        <div class="block1__container2">
           <img src="../assets/png/icon_176.png" alt="icon" height="64" width="64">
         </div>
-        <div class="d-flex flex-column">
-          <span class="text-muted | f-body f-text">Cheil extension is a set of utilities for Content Publishers to tune and streamline their AEM experience for greater productivity.</span>
-          <span class="text-muted | f-body f-text">Made with ❤ by Tomasz Pędzich.</span>
+        <div class="block1__container3">
+          <span class="block1__title">Cheil extension is a set of utilities for Content Publishers to tune and streamline their AEM experience for greater productivity.</span>
+          <span class="block1__title">Made with ❤ by Tomasz Pędzich.</span>
         </div>
       </div>
     </div>
 
-    <div class="card mb-2" id="option_theme">
-      <div class="card-body d-flex justify-content-between align-items-center">
-        <div class="d-flex">
-          <span class="| card-icon f-text" id="icon_theme"></span>
-          <div class="d-flex flex-column">
-            <span class="| f-body f-text">Choose your mode</span>
-            <span class="| f-caption f-text">Change the colors that appear in popup and options page</span>
+    <!-- ------------------------- block2 ------------------------- -->
+
+    <div class="card block2">
+      <div class="card__body">
+        <div class="card__container1">
+          <span class="card__icon block2__icon--theme"></span>
+          <div class="card__container2">
+            <span class="card__title">Choose your mode</span>
+            <span class="card__subtitle">Change the colors that appear in popup and options page</span>
           </div>
         </div>
-        <select class="form-select form-select-sm | width-10 f-body f-text" id="select_theme">
+        <select class="block2__select-theme" id="select_theme">
           <option value="auto">auto</option>
           <option value="light">Light</option>
           <option value="dark">Dark</option>
@@ -48,106 +48,110 @@
       </div>
     </div>
 
-    <div class="card mb-2" id="option_shortcuts">
-      <div class="card-body d-flex justify-content-between align-items-center">
-        <div class="d-flex">
-          <span class="| card-icon f-text" id="icon_shortcuts"></span>
-          <div class="d-flex flex-column">
-            <span class="| f-body f-text">Activation shortcut</span>
-            <span class="| f-caption f-text">Customize the shortcut to activate this extension</span>
+    <!-- ------------------------- block3 ------------------------- -->
+
+    <div class="card block3">
+      <div class="card__body">
+        <div class="card__container1">
+          <span class="card__icon block3__icon--shortcuts"></span>
+          <div class="card__container2">
+            <span class="card__title">Activation shortcut</span>
+            <span class="card__subtitle">Customize the shortcut to activate this extension</span>
           </div>
         </div>
-        <div class="d-flex">
-          <button class="btn btn-sm | icon f-text btn--f-standard" id="button_shortcuts" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="open"></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="mb-2" id="option_vis">
-      <div class="accordion-item">
-        <span class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-target="#accordion_vis" data-bs-toggle="collapse" type="button">
-            <span class="| accordion-icon f-text" id="icon_vis"></span>
-            <div class="d-flex flex-column">
-              <span class="| f-body f-text">Extension items</span>
-              <span class="| f-caption f-text">Show or hide widgets that appear on the popup</span>
-            </div>
-          </button>
-        </span>
-        <div class="accordion-collapse collapse" id="accordion_vis">
-
-          <div class="accordion-body d-flex justify-content-between align-items-center">
-            <span class="| f-body f-text">AEM Samsung</span>
-            <div class="d-flex align-items-center">
-              <span class="me-2 | f-body f-text" id="span_vis_s_aem">Off</span>
-              <div class="form-check form-switch">
-                <input class="form-check-input" id="input_vis_s_aem" type="checkbox">
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-body d-flex justify-content-between align-items-center">
-            <span class="| f-body f-text">AEM PMI</span>
-            <div class="d-flex align-items-center">
-              <span class="me-2 | f-body f-text" id="span_vis_p_aem">Off</span>
-              <div class="form-check form-switch">
-                <input class="form-check-input" id="input_vis_p_aem" type="checkbox">
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-body d-flex justify-content-between align-items-center">
-            <span class="| f-body f-text">Utilities (Text Capitalization)</span>
-            <div class="d-flex align-items-center">
-              <span class="me-2 | f-body f-text" id="span_vis_utilities">Off</span>
-              <div class="form-check form-switch">
-                <input class="form-check-input" id="input_vis_utilities" type="checkbox">
-              </div>
-            </div>
-          </div>
-
+        <div class="block3__container">
+          <button class="block3__button--shortcuts" id="button_shortcuts" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="open"></button>
         </div>
       </div>
     </div>
 
-    <!-- ------------------------- samsung ------------------------- -->
+    <!-- ------------------------- block4 ------------------------- -->
 
-    <span class="d-block mb-2 | f-body-strong f-text">Widgets</span>
-
-    <div id="option_s_aem">
-      <div class="accordion-item">
-        <span class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-target="#accordion_s_aem" data-bs-toggle="collapse" type="button">
-            <span class="| accordion-icon f-text" id="icon_s_aem"></span>
-            <span class="| f-body f-text">AEM Samsung</span>
+    <div class="block4" id="option_vis">
+      <div class="expander__item">
+        <span class="expander__header">
+          <button class="expander__button collapsed" data-bs-target="#accordion_vis" data-bs-toggle="collapse" type="button">
+            <span class="expander__icon block4__icon--view"></span>
+            <div class="expander__container1">
+              <span class="expander__title">Extension items</span>
+              <span class="expander__subtitle">Show or hide widgets that appear on the popup</span>
+            </div>
           </button>
         </span>
-        <div class="accordion-collapse collapse" id="accordion_s_aem">
+        <div class="expander__collapse collapse" id="accordion_vis">
 
-          <div class="accordion-body d-flex justify-content-between align-items-center">
-            <div class="d-flex flex-column">
-              <span class="| f-body f-text">AEM P5</span>
-              <span class="| f-caption f-text">user_id</span>
-            </div>
-            <div class="d-flex">
-              <input class="form-control form-control-sm me-2 | width-20 f-body f-text" id="input_s_p5_login" type="text" placeholder="user_id">
-              <div class="btn-group btn-group-sm">
-                <button class="btn btn-sm | icon f-text btn--f-standard" id="button_s_p5_login_save" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="save"></button>
-                <button class="btn btn-sm | icon f-text btn--f-standard" id="button_s_p5_login_reset" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="reset"></button>
+          <div class="expander__body">
+            <span class="expander__title">AEM Samsung</span>
+            <div class="block4__container">
+              <span class="block4__title" id="span_vis_s_aem">Off</span>
+              <div class="block4__switch">
+                <input class="block4__input" id="input_vis_s_aem" type="checkbox">
               </div>
             </div>
           </div>
 
-          <div class="accordion-body d-flex justify-content-between align-items-center">
-            <div class="d-flex flex-column">
-              <span class="| f-body f-text">AEM P6</span>
-              <span class="| f-caption f-text">user_email</span>
+          <div class="expander__body">
+            <span class="expander__title">AEM PMI</span>
+            <div class="block4__container">
+              <span class="block4__title" id="span_vis_p_aem">Off</span>
+              <div class="block4__switch">
+                <input class="block4__input" id="input_vis_p_aem" type="checkbox">
+              </div>
             </div>
-            <div class="d-flex">
-              <input class="form-control form-control-sm me-2 | width-20 f-body f-text" id="input_s_p6_login" type="text" placeholder="user_email">
-              <div class="btn-group btn-group-sm">
-                <button class="btn btn-sm | icon f-text btn--f-standard" id="button_s_p6_login_save" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="save"></button>
-                <button class="btn btn-sm | icon f-text btn--f-standard" id="button_s_p6_login_reset" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="reset"></button>
+          </div>
+
+          <div class="expander__body">
+            <span class="expander__title">Utilities (Text Capitalization)</span>
+            <div class="block4__container">
+              <span class="block4__title" id="span_vis_utilities">Off</span>
+              <div class="block4__switch">
+                <input class="block4__input" id="input_vis_utilities" type="checkbox">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------- block5 ------------------------- -->
+
+    <span class="heading2">Widgets</span>
+
+    <div class="block5">
+      <div class="expander__item">
+        <span class="expander__header">
+          <button class="expander__button collapsed" data-bs-target="#accordion_s_aem" data-bs-toggle="collapse" type="button">
+            <span class="expander__icon block5__icon--robot"></span>
+            <span class="expander__title">AEM Samsung</span>
+          </button>
+        </span>
+        <div class="expander__collapse collapse" id="accordion_s_aem">
+
+          <div class="expander__body">
+            <div class="expander__container2">
+              <span class="expander__title">AEM P5</span>
+              <span class="expander__subtitle">user_id</span>
+            </div>
+            <div class="block5__container">
+              <input class="block5__input" id="input_s_p5_login" type="text" placeholder="user_id">
+              <div class="block5__btn-group">
+                <button class="block5__button block5__button--login-save" id="button_s_p5_login_save" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="save"></button>
+                <button class="block5__button block5__button--login-reset" id="button_s_p5_login_reset" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="reset"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="expander__body">
+            <div class="expander__container2">
+              <span class="expander__title">AEM P6</span>
+              <span class="expander__subtitle">user_email</span>
+            </div>
+            <div class="block5__container">
+              <input class="block5__input" id="input_s_p6_login" type="text" placeholder="user_email">
+              <div class="block5__btn-group">
+                <button class="block5__button block5__button--login-save" id="button_s_p6_login_save" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="save"></button>
+                <button class="block5__button block5__button--login-reset" id="button_s_p6_login_reset" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="reset"></button>
               </div>
             </div>
           </div>
