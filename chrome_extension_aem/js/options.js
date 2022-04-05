@@ -1,17 +1,17 @@
-const SELECT_THEME = document.querySelector("#select_theme");
-const BUTTON_SHORTCUTS = document.querySelector("#button_shortcuts");
-const SPAN_VIS_S_AEM = document.querySelector("#span_vis_s_aem");
-const INPUT_VIS_S_AEM = document.querySelector("#input_vis_s_aem");
-const SPAN_VIS_P_AEM = document.querySelector("#span_vis_p_aem");
-const INPUT_VIS_P_AEM = document.querySelector("#input_vis_p_aem");
-const SPAN_VIS_UTILITIES = document.querySelector("#span_vis_utilities");
-const INPUT_VIS_UTILITIES = document.querySelector("#input_vis_utilities");
-const INPUT_S_P5_LOGIN = document.querySelector("#input_s_p5_login");
-const INPUT_S_P6_LOGIN = document.querySelector("#input_s_p6_login");
-const BUTTON_S_P5_LOGIN_SAVE = document.querySelector("#button_s_p5_login_save");
-const BUTTON_S_P6_LOGIN_SAVE = document.querySelector("#button_s_p6_login_save");
-const BUTTON_S_P5_LOGIN_RESET = document.querySelector("#button_s_p5_login_reset");
-const BUTTON_S_P6_LOGIN_RESET = document.querySelector("#button_s_p6_login_reset");
+const BLOCK2__SELECT_THEME = document.querySelector("#block2__select_theme");
+const BLOCK3__BUTTON_SHORTCUTS = document.querySelector("#block3__button_shortcuts");
+const BLOCK4__SPAN1 = document.querySelector("#block4__span1");
+const BLOCK4__SPAN2 = document.querySelector("#block4__span2");
+const BLOCK4__SPAN3 = document.querySelector("#block4__span3");
+const BLOCK4__INPUT1 = document.querySelector("#block4__input1");
+const BLOCK4__INPUT2 = document.querySelector("#block4__input2");
+const BLOCK4__INPUT3 = document.querySelector("#block4__input3");
+const BLOCK5__INPUT_LOGIN_P5 = document.querySelector("#block5__input_login_p5");
+const BLOCK5__INPUT_LOGIN_P6 = document.querySelector("#block5__input_login_p6");
+// const BLOCK5__BUTTON_LOGIN_SAVE_P5 = document.querySelector("#block5__button_login_save_p5") as HTMLButtonElement;
+// const BLOCK5__BUTTON_LOGIN_SAVE_P6 = document.querySelector("#block5__button_login_save_p6") as HTMLButtonElement;
+// const BLOCK5__BUTTON_LOGIN_RESET_P5 = document.querySelector("#block5__button_login_reset_p5") as HTMLButtonElement;
+// const BLOCK5__BUTTON_LOGIN_RESET_P6 = document.querySelector("#block5__button_login_reset_p6") as HTMLButtonElement;
 // @ts-ignore
 const setLight = () => {
     document.documentElement.classList.add("light");
@@ -22,25 +22,25 @@ const setDark = () => {
 };
 // on popup ...
 chrome.storage.local.get(["s_p5_login", "s_p6_login", "vis_s_aem", "vis_p_aem", "vis_utilities", "theme"], ({ s_p5_login, s_p6_login, vis_s_aem, vis_p_aem, vis_utilities, theme }) => {
-    for (let option of Array.from(SELECT_THEME.options)) {
+    for (let option of Array.from(BLOCK2__SELECT_THEME.options)) {
         if (option.value === theme) {
             option.selected = true;
         }
     }
     if (vis_s_aem === true) {
-        SPAN_VIS_S_AEM.textContent = "On";
-        INPUT_VIS_S_AEM.setAttribute("checked", "");
+        BLOCK4__SPAN1.textContent = "On";
+        BLOCK4__INPUT1.setAttribute("checked", "");
     }
     if (vis_p_aem === true) {
-        SPAN_VIS_P_AEM.textContent = "On";
-        INPUT_VIS_P_AEM.setAttribute("checked", "");
+        BLOCK4__SPAN2.textContent = "On";
+        BLOCK4__INPUT2.setAttribute("checked", "");
     }
     if (vis_utilities === true) {
-        SPAN_VIS_UTILITIES.textContent = "On";
-        INPUT_VIS_UTILITIES.setAttribute("checked", "");
+        BLOCK4__SPAN3.textContent = "On";
+        BLOCK4__INPUT3.setAttribute("checked", "");
     }
-    INPUT_S_P5_LOGIN.value = s_p5_login;
-    INPUT_S_P6_LOGIN.value = s_p6_login;
+    BLOCK5__INPUT_LOGIN_P5.value = s_p5_login;
+    BLOCK5__INPUT_LOGIN_P6.value = s_p6_login;
     // ------------------------- theme -------------------------
     if (theme === "light") {
         setLight();
@@ -59,13 +59,16 @@ chrome.storage.local.get(["s_p5_login", "s_p6_login", "vis_s_aem", "vis_p_aem", 
     }
 });
 /*
- * ------------------------- ... -------------------------
+ * ------------------------- block2 -------------------------
  */
 // set "theme" var
-SELECT_THEME.addEventListener("change", () => {
-    chrome.storage.local.set({ theme: SELECT_THEME.selectedOptions[0].value });
+BLOCK2__SELECT_THEME.addEventListener("change", () => {
+    chrome.storage.local.set({ theme: BLOCK2__SELECT_THEME.selectedOptions[0].value });
     location.reload();
 });
+/*
+ * ------------------------- block3 -------------------------
+ */
 // on popup ...
 const setShortcuts = () => {
     const MANIFEST = chrome.runtime.getManifest();
@@ -75,77 +78,79 @@ const setShortcuts = () => {
         const BUTTON = document.createElement("button");
         BUTTON.setAttribute("class", "btn btn-sm me-2 | min-width-2 f-body f-text-on-accent");
         BUTTON.textContent = key;
-        BUTTON_SHORTCUTS.parentElement.insertBefore(BUTTON, BUTTON_SHORTCUTS);
+        BLOCK3__BUTTON_SHORTCUTS.parentElement.insertBefore(BUTTON, BLOCK3__BUTTON_SHORTCUTS);
     }
 };
 setShortcuts();
-BUTTON_SHORTCUTS.addEventListener("click", () => {
+BLOCK3__BUTTON_SHORTCUTS.addEventListener("click", () => {
     chrome.tabs.create({ url: "brave://extensions/shortcuts" });
 });
-// ------------------------- visibility -------------------------
+/*
+ * ------------------------- block4 -------------------------
+ */
 // set "vis_s_aem" var
-INPUT_VIS_S_AEM.addEventListener("click", (e) => {
+BLOCK4__INPUT1.addEventListener("click", (e) => {
     if (e.target.hasAttribute("checked")) {
         chrome.storage.local.set({ vis_s_aem: false });
-        SPAN_VIS_S_AEM.textContent = "Off";
-        INPUT_VIS_S_AEM.removeAttribute("checked");
+        BLOCK4__SPAN1.textContent = "Off";
+        BLOCK4__INPUT1.removeAttribute("checked");
     }
     else {
         chrome.storage.local.set({ vis_s_aem: true });
-        SPAN_VIS_S_AEM.textContent = "On";
-        INPUT_VIS_S_AEM.setAttribute("checked", "");
+        BLOCK4__SPAN1.textContent = "On";
+        BLOCK4__INPUT1.setAttribute("checked", "");
     }
 });
 // set "vis_p_aem" var
-INPUT_VIS_P_AEM.addEventListener("click", (e) => {
+BLOCK4__INPUT2.addEventListener("click", (e) => {
     if (e.target.hasAttribute("checked")) {
         chrome.storage.local.set({ vis_p_aem: false });
-        SPAN_VIS_P_AEM.textContent = "Off";
-        INPUT_VIS_P_AEM.removeAttribute("checked");
+        BLOCK4__SPAN2.textContent = "Off";
+        BLOCK4__INPUT2.removeAttribute("checked");
     }
     else {
         chrome.storage.local.set({ vis_p_aem: true });
-        SPAN_VIS_P_AEM.textContent = "On";
-        INPUT_VIS_P_AEM.setAttribute("checked", "");
+        BLOCK4__SPAN2.textContent = "On";
+        BLOCK4__INPUT2.setAttribute("checked", "");
     }
 });
 // set "vis_utilities" var
-INPUT_VIS_UTILITIES.addEventListener("click", (e) => {
+BLOCK4__INPUT3.addEventListener("click", (e) => {
     if (e.target.hasAttribute("checked")) {
         chrome.storage.local.set({ vis_utilities: false });
-        SPAN_VIS_UTILITIES.textContent = "Off";
-        INPUT_VIS_UTILITIES.removeAttribute("checked");
+        BLOCK4__SPAN3.textContent = "Off";
+        BLOCK4__INPUT3.removeAttribute("checked");
     }
     else {
         chrome.storage.local.set({ vis_utilities: true });
-        SPAN_VIS_UTILITIES.textContent = "On";
-        INPUT_VIS_UTILITIES.setAttribute("checked", "");
+        BLOCK4__SPAN3.textContent = "On";
+        BLOCK4__INPUT3.setAttribute("checked", "");
     }
 });
 /*
- * ------------------------- samsung -------------------------
+ * ------------------------- block5 -------------------------
  */
 // set "s_p5_login" var
-BUTTON_S_P5_LOGIN_SAVE.addEventListener("click", () => {
-    chrome.storage.local.set({ s_p5_login: INPUT_S_P5_LOGIN.value });
+document.querySelector("#block5__button_login_save_p5").addEventListener("click", () => {
+    chrome.storage.local.set({ s_p5_login: BLOCK5__INPUT_LOGIN_P5.value });
 });
 // set "s_p6_login" var
-BUTTON_S_P6_LOGIN_SAVE.addEventListener("click", () => {
-    chrome.storage.local.set({ s_p6_login: INPUT_S_P6_LOGIN.value });
+document.querySelector("#block5__button_login_save_p6").addEventListener("click", () => {
+    chrome.storage.local.set({ s_p6_login: BLOCK5__INPUT_LOGIN_P6.value });
 });
 // set "s_p5_login" var
-BUTTON_S_P5_LOGIN_RESET.addEventListener("click", () => {
+document.querySelector("#block5__button_login_reset_p5").addEventListener("click", () => {
     chrome.storage.local.get(["S_URL", "s_p5_login"], ({ S_URL, s_p5_login }) => {
         chrome.storage.local.set({ s_p5_login: S_URL.p5_login_reset });
-        INPUT_S_P5_LOGIN.value = s_p5_login;
+        BLOCK5__INPUT_LOGIN_P5.value = s_p5_login;
     });
     location.reload();
 });
 // set "s_p6_login" var
-BUTTON_S_P6_LOGIN_RESET.addEventListener("click", () => {
+document.querySelector("#block5__button_login_reset_p6").addEventListener("click", () => {
     chrome.storage.local.get(["S_URL", "s_p6_login"], ({ S_URL, s_p6_login }) => {
         chrome.storage.local.set({ s_p6_login: S_URL.p6_login_reset });
-        INPUT_S_P6_LOGIN.value = s_p6_login;
+        BLOCK5__INPUT_LOGIN_P6.value = s_p6_login;
     });
     location.reload();
 });

@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Segoe UI Variable";
+  src: url("chrome-extension://__MSG_@@extension_id__/assets/fonts/segoe_ui_variable.ttf") format("truetype-variations");
+}
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("chrome-extension://__MSG_@@extension_id__/assets/fonts/CascadiaCode.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cascadia Code Italic";
+  src: url("chrome-extension://__MSG_@@extension_id__/assets/fonts/CascadiaCodeItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Segoe Fluent Icons";
+  src: url("chrome-extension://__MSG_@@extension_id__/assets/fonts/segoe_fluent_icons.ttf") format("truetype");
+}

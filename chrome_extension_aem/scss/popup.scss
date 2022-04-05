@@ -11,147 +11,121 @@
 
 /* ------------------------- popup.html ------------------------- */
 
-.width-5 { width: 5rem; }
-
 .body { @extend .p-2, .f-app-surface-base; }
 
 .block1 {
   @extend .rounded, .p-2, .f-app-surface-layer;
 
-  &__button           { @extend .btn, .btn-sm, .f-text, .btn--f-standard; }
-
-  &__container        { @extend .d-flex, .justify-content-end; }
-  &__button--images   { @extend .me-2, .icon; }
-  &__button--options  { @extend .icon; }
+  &__container      { @extend .d-flex, .justify-content-end; }
+  &__button-images  { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text, .me-2; }
+  &__button-options { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text; }
 
   // ImageExport
-  &__button--images::before  { font-family: iconography.$font-family; content: "\ee71"; }
+  &__button-images::before  { font-family: iconography.$font-family; content: "\ee71"; }
   // Settings
-  &__button--options::before { font-family: iconography.$font-family; content: "\e713"; }
+  &__button-options::before { font-family: iconography.$font-family; content: "\e713"; }
 }
 
 .block2 {
   @extend .rounded, .mt-2, .p-2, .f-app-surface-layer;
 
-  &__button                   { @extend .btn, .btn-sm, .f-text, .btn--f-standard; }
-
-  &__container1               { @extend .row, .g-2, .mb-2; }
+  &__container1             { @extend .row, .g-2, .mb-2; }
   &__container2,
-  &__container3               { @extend .col; }
-  &__input-group-login        { @extend .input-group, .input-group-sm; }
-  &__select-aem               { @extend .form-select, .form-select-sm, .f-body, .f-text; }
-  &__button--login            { @extend .icon; }
-  // &__container3 { @extend .col; }
-  &__input-url                { @extend .form-control, .form-control-sm, .f-body, .f-text; }
+  &__container3             { @extend .col; }
+  &__input-group-login      { @extend .input-group, .input-group-sm; }
+  &__select-aem             { @extend .form-select, .form-select-sm, .f-body, .f-text; }
+  &__button-login           { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text,; }
+  &__input-url              { @extend .form-control, .form-control-sm, .f-body, .f-text; }
 
-  &__container4               { @extend .d-flex, .mb-2; }
-  &__btn-group-editor         { @extend .btn-group, .btn-group-sm, .me-2, .width-5; }
-  &__button--editor,
-  &__button--editor-off       { @extend .icon; }
-  // &__button--editor-off { @extend .icon; }
-  &__button--qa               { @extend .me-2, .width-5, .f-body; }
-  &__button--live             { @extend .me-2, .width-5, .f-body; }
-  &__button--sites            { @extend .me-2, .width-5, .f-body; }
-  &__button--assets           { @extend .width-5, .f-body; }
+  &__container4             { @extend .d-flex, .mb-2; }
+  &__btn-group-editor       { @extend .btn-group, .btn-group-sm, .me-2; width: 5rem; }
+  &__button-editor,
+  &__button-preview         { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text,; }
+  &__button-qa              { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .me-2; width: 5rem; }
+  &__button-live            { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .me-2; width: 5rem; }
+  &__button-sites           { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .me-2; width: 5rem; }
+  &__button-assets          { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text; width: 5rem; }
 
-  &__container5               { @extend .d-flex; }
-  &__button--task-management  { @extend .text-truncate, .me-2, .width-5, .f-body; }
-  &__button--workflows        { @extend .text-truncate, .me-2, .width-5, .f-body; }
-  &__button--purging          { @extend .me-2, .width-5, .f-body; }
-  &__button--pim-b2c          { @extend .me-2, .width-5, .f-body; }
-  &__button--pim-b2b          { @extend .width-5, .f-body; }
+  &__container5             { @extend .d-flex; }
+  &__button-task-management { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .text-truncate, .me-2; width: 5rem; }
+  &__button-workflows       { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .text-truncate, .me-2; width: 5rem; }
+  &__button-purging         { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .me-2; width: 5rem; }
+  &__button-pim-b2c         { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .me-2; width: 5rem; }
+  &__button-pim-b2b         { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text; width: 5rem; }
 
   // OpenInNewWindow
-  &__button--login::before       { font-family: iconography.$font-family; content: "\e8a7"; }
+  &__button-login::before   { font-family: iconography.$font-family; content: "\e8a7"; }
   // Edit
-  &__button--editor::before      { font-family: iconography.$font-family; content: "\e70f"; }
+  &__button-editor::before  { font-family: iconography.$font-family; content: "\e70f"; }
   // View
-  &__button--editor-off::before  { font-family: iconography.$font-family; content: "\e890"; }
+  &__button-preview::before { font-family: iconography.$font-family; content: "\e890"; }
 }
 
 .block3 {
   @extend .rounded, .mt-2, .p-2, .f-app-surface-layer;
   transition: 0.5s ease background-color;
 
-  &__button             { @extend .btn, .btn-sm, .f-text, .btn--f-standard; }
-
   &__container1         { @extend .row, .g-2, .mb-2; }
   &__container2,
   &__container3         { @extend .col; }
   &__input-group-login  { @extend .input-group, .input-group-sm; }
   &__select-aem         { @extend .form-select, .form-select-sm, .f-body, .f-text; }
-  &__button--login      { @extend .icon; }
-  // &__container3 { @extend .col; }
+  &__button-login       { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text; }
   &__select-content     { @extend .form-select, .form-select-sm, .f-body, .f-text; }
 
   &__container4         { @extend .mb-2; }
   &__input-url          { @extend .form-control, .form-control-sm, .f-body, .f-text; }
 
   &__container5         { @extend .d-flex, .mb-2; }
-  &__btn-group-editor   { @extend .btn-group, .btn-group-sm, .me-2, .width-5; }
-  &__button--editor,
-  &__button--editor-off { @extend .icon; }
-  // &__button--editor-off { @extend .icon; }
-  &__button--qa-login   { @extend .me-2, .width-5, .f-body; }
-  &__button--live       { @extend .me-2, .width-5, .f-body; }
-  &__button--sites      { @extend .me-2, .width-5, .f-body; }
-  &__button--assets     { @extend .width-5, .f-body; }
+  &__btn-group-editor   { @extend .btn-group, .btn-group-sm, .me-2; width: 5rem; }
+  &__button-editor,
+  &__button-preview     { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text; }
+  &__button-qa-login    { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .me-2; width: 5rem; }
+  &__button-live        { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .me-2; width: 5rem; }
+  &__button-sites       { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .me-2; width: 5rem; }
+  &__button-assets      { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text; width: 5rem; }
 
   &__container6         { @extend .d-flex; }
-  &__button--grfalse    { @extend .me-2, .width-5, .f-body; }
-  &__button--age-gate   { @extend .width-5, .f-body; }
+  &__button-grfalse     { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text, .me-2; width: 5rem; }
+  &__button-age-gate    { @extend .btn, .btn-sm, .btn--f-standard, .f-body, .f-text; width: 5rem; }
 
   // OpenInNewWindow
-  &__button--login::before       { font-family: iconography.$font-family; content: "\e8a7"; }
+  &__button-login::before   { font-family: iconography.$font-family; content: "\e8a7"; }
   // Edit
-  &__button--editor::before      { font-family: iconography.$font-family; content: "\e70f"; }
+  &__button-editor::before  { font-family: iconography.$font-family; content: "\e70f"; }
   // View
-  &__button--editor-off::before  { font-family: iconography.$font-family; content: "\e890"; }
+  &__button-preview::before { font-family: iconography.$font-family; content: "\e890"; }
 }
 
 .block4 {
   @extend .rounded, .mt-2, .p-2, .f-app-surface-layer;
 
-  &__button                   { @extend .btn, .btn-sm, .f-text, .btn--f-standard; }
-
   &__container1               { @extend .row, .g-2; }
   &__container2               { @extend .col; }
   &__input-group-paste        { @extend .input-group, .input-group-sm; }
-  &__button--paste            { @extend .icon; }
   &__input-text               { @extend .form-control, .form-control-sm, .f-body, .f-text; }
 
   &__container3               { @extend .col, .d-flex; }
-  &__btn-group-capitalization {
-    @extend .btn-group, .btn-group-sm, .me-2;
-    width: 7.5rem;
-  }
-  // &__button--to-lower-case { @extend .icon; }
-  // &__span-to-lower-case { @extend .f-body, .f-text; }
-  // &__button--to-upper-case { @extend .icon; }
-  // &__span-to-upper-case { @extend .f-body, .f-text; }
-  // &__button--to-title-case { @extend .icon; }
-  // &__span-to-title-case { @extend .f-body, .f-text; }
-  &__btn-group-cut-copy       { @extend .btn-group, .btn-group-sm, .width-5; }
-  // &__button--cut { @extend .icon; }
-  // &__button--copy { @extend .icon; }
+  &__btn-group-capitalization { @extend .btn-group, .btn-group-sm, .me-2; width: 7.5rem; }
+  &__btn-group-cut-copy       { @extend .btn-group, .btn-group-sm; width: 5rem; }
 
-  &__button--paste,
-  &__button--to-lower-case,
-  &__button--to-upper-case,
-  &__button--to-title-case,
-  &__button--cut,
-  &__button--copy             { @extend .icon; }
+  &__button-paste,
+  &__button-to-lower-case,
+  &__button-to-upper-case,
+  &__button-to-title-case,
+  &__button-cut,
+  &__button-copy              { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text; }
 
   &__span-to-lower-case,
   &__span-to-upper-case,
   &__span-to-title-case       { @extend .f-body, .f-text; }
 
   // Paste
-  &__button--paste::before { font-family: iconography.$font-family; content: "\e77f"; }
+  &__button-paste::before { font-family: iconography.$font-family; content: "\e77f"; }
   // Cut
-  &__button--cut::before   { font-family: iconography.$font-family; content: "\e8c6"; }
+  &__button-cut::before   { font-family: iconography.$font-family; content: "\e8c6"; }
   // Copy
-  &__button--copy::before  { font-family: iconography.$font-family; content: "\e8c8"; }
+  &__button-copy::before  { font-family: iconography.$font-family; content: "\e8c8"; }
 }
 
 /* ------------------------- Motion ------------------------- */
@@ -175,8 +149,8 @@
   100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-// ? block1__button--images
-.block1__button--options,
+.block1__button-images,
+.block1__button-options,
 .block2__input-group-login,
 .block3__input-group-login,
 .block3__select-content,
@@ -202,61 +176,61 @@
   100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-.block2__button--qa,
-.block3__button--qa-login {
+.block2__button-qa,
+.block3__button-qa-login {
   animation:
   100ms 225ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 225ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-.block2__button--live,
-.block3__button--live {
+.block2__button-live,
+.block3__button-live {
   animation:
   100ms 250ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 250ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-.block2__button--sites,
-.block3__button--sites {
+.block2__button-sites,
+.block3__button-sites {
   animation:
   100ms 275ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 275ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-.block2__button--assets,
-.block3__button--assets {
+.block2__button-assets,
+.block3__button-assets {
   animation:
   100ms 300ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 300ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-.block2__button--task-management,
-.block3__button--grfalse {
+.block2__button-task-management,
+.block3__button-grfalse {
   animation:
   100ms 325ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 325ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-.block2__button--workflows,
-.block3__button--age-gate {
+.block2__button-workflows,
+.block3__button-age-gate {
   animation:
   100ms 350ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 350ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-.block2__button--purging {
+.block2__button-purging {
   animation:
   100ms 375ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 375ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-.block2__button--pim-b2c {
+.block2__button-pim-b2c {
   animation:
   100ms 400ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 400ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
 }
 
-.block2__button--pim-b2b {
+.block2__button-pim-b2b {
   animation:
   100ms 425ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
   100ms 425ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);

@@ -2168,7 +2168,7 @@ progress {
   color: #6c757d;
 }
 
-.form-control, .block5__input {
+.form-control, .block5__input-login {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -2184,35 +2184,35 @@ progress {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control, .block5__input {
+  .form-control, .block5__input-login {
     transition: none;
   }
 }
-.form-control[type=file], [type=file].block5__input {
+.form-control[type=file], [type=file].block5__input-login {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]), [type=file].block5__input:not(:disabled):not([readonly]) {
+.form-control[type=file]:not(:disabled):not([readonly]), [type=file].block5__input-login:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control:focus, .block5__input:focus {
+.form-control:focus, .block5__input-login:focus {
   color: #212529;
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-control::-webkit-date-and-time-value, .block5__input::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value, .block5__input-login::-webkit-date-and-time-value {
   height: 1.5em;
 }
-.form-control::placeholder, .block5__input::placeholder {
+.form-control::placeholder, .block5__input-login::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .block5__input:disabled, .form-control[readonly], [readonly].block5__input {
+.form-control:disabled, .block5__input-login:disabled, .form-control[readonly], [readonly].block5__input-login {
   background-color: #e9ecef;
   opacity: 1;
 }
-.form-control::file-selector-button, .block5__input::file-selector-button {
+.form-control::file-selector-button, .block5__input-login::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -2227,14 +2227,14 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::file-selector-button, .block5__input::file-selector-button {
+  .form-control::file-selector-button, .block5__input-login::file-selector-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .block5__input:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .block5__input-login:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
-.form-control::-webkit-file-upload-button, .block5__input::-webkit-file-upload-button {
+.form-control::-webkit-file-upload-button, .block5__input-login::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -2249,11 +2249,11 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button, .block5__input::-webkit-file-upload-button {
+  .form-control::-webkit-file-upload-button, .block5__input-login::-webkit-file-upload-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .block5__input:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .block5__input-login:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
 
@@ -2268,23 +2268,23 @@ progress {
   border: solid transparent;
   border-width: 1px 0;
 }
-.form-control-plaintext.form-control-sm, .form-control-plaintext.block5__input, .form-control-plaintext.form-control-lg {
+.form-control-plaintext.form-control-sm, .form-control-plaintext.block5__input-login, .form-control-plaintext.form-control-lg {
   padding-right: 0;
   padding-left: 0;
 }
 
-.form-control-sm, .block5__input {
+.form-control-sm, .block5__input-login {
   min-height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
-.form-control-sm::file-selector-button, .block5__input::file-selector-button {
+.form-control-sm::file-selector-button, .block5__input-login::file-selector-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
   margin-inline-end: 0.5rem;
 }
-.form-control-sm::-webkit-file-upload-button, .block5__input::-webkit-file-upload-button {
+.form-control-sm::-webkit-file-upload-button, .block5__input-login::-webkit-file-upload-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
   margin-inline-end: 0.5rem;
@@ -2307,10 +2307,10 @@ progress {
   margin-inline-end: 1rem;
 }
 
-textarea.form-control, textarea.block5__input {
+textarea.form-control, textarea.block5__input-login {
   min-height: calc(1.5em + 0.75rem + 2px);
 }
-textarea.form-control-sm, textarea.block5__input {
+textarea.form-control-sm, textarea.block5__input-login {
   min-height: calc(1.5em + 0.5rem + 2px);
 }
 textarea.form-control-lg {
@@ -2391,13 +2391,13 @@ textarea.form-control-lg {
   border-radius: 0.3rem;
 }
 
-.form-check, .block4__switch {
+.form-check, .block4__toggle-switch {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
-.form-check .form-check-input, .block4__switch .form-check-input, .form-check .block4__input, .block4__switch .block4__input {
+.form-check .form-check-input, .block4__toggle-switch .form-check-input, .form-check .block4__input, .block4__toggle-switch .block4__input {
   float: left;
   margin-left: -1.5em;
 }
@@ -2453,10 +2453,10 @@ textarea.form-control-lg {
   opacity: 0.5;
 }
 
-.form-switch, .block4__switch {
+.form-switch, .block4__toggle-switch {
   padding-left: 2.5em;
 }
-.form-switch .form-check-input, .block4__switch .form-check-input, .form-switch .block4__input, .block4__switch .block4__input {
+.form-switch .form-check-input, .block4__toggle-switch .form-check-input, .form-switch .block4__input, .block4__toggle-switch .block4__input {
   width: 2em;
   margin-left: -2.5em;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
@@ -2465,14 +2465,14 @@ textarea.form-control-lg {
   transition: background-position 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-switch .form-check-input, .block4__switch .form-check-input, .form-switch .block4__input, .block4__switch .block4__input {
+  .form-switch .form-check-input, .block4__toggle-switch .form-check-input, .form-switch .block4__input, .block4__toggle-switch .block4__input {
     transition: none;
   }
 }
-.form-switch .form-check-input:focus, .block4__switch .form-check-input:focus, .form-switch .block4__input:focus, .block4__switch .block4__input:focus {
+.form-switch .form-check-input:focus, .block4__toggle-switch .form-check-input:focus, .form-switch .block4__input:focus, .block4__toggle-switch .block4__input:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
 }
-.form-switch .form-check-input:checked, .block4__switch .form-check-input:checked, .form-switch .block4__input:checked, .block4__switch .block4__input:checked {
+.form-switch .form-check-input:checked, .block4__toggle-switch .form-check-input:checked, .form-switch .block4__input:checked, .block4__toggle-switch .block4__input:checked {
   background-position: right center;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
@@ -2487,7 +2487,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check[disabled] + .block3__button--shortcuts, .btn-check[disabled] + .block5__button, .btn-check:disabled + .btn, .btn-check:disabled + .block3__button--shortcuts, .btn-check:disabled + .block5__button {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .block3__button-shortcuts, .btn-check[disabled] + .block5__button-login-save, .btn-check[disabled] + .block5__button-login-reset, .btn-check:disabled + .btn, .btn-check:disabled + .block3__button-shortcuts, .btn-check:disabled + .block5__button-login-save, .btn-check:disabled + .block5__button-login-reset {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2578,7 +2578,7 @@ textarea.form-control-lg {
 .form-floating {
   position: relative;
 }
-.form-floating > .form-control, .form-floating > .block5__input,
+.form-floating > .form-control, .form-floating > .block5__input-login,
 .form-floating > .form-select,
 .form-floating > .block2__select-theme {
   height: calc(3.5rem + 2px);
@@ -2600,17 +2600,17 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.form-floating > .form-control, .form-floating > .block5__input {
+.form-floating > .form-control, .form-floating > .block5__input-login {
   padding: 1rem 0.75rem;
 }
-.form-floating > .form-control::placeholder, .form-floating > .block5__input::placeholder {
+.form-floating > .form-control::placeholder, .form-floating > .block5__input-login::placeholder {
   color: transparent;
 }
-.form-floating > .form-control:focus, .form-floating > .block5__input:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .block5__input:not(:placeholder-shown) {
+.form-floating > .form-control:focus, .form-floating > .block5__input-login:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .block5__input-login:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:-webkit-autofill, .form-floating > .block5__input:-webkit-autofill {
+.form-floating > .form-control:-webkit-autofill, .form-floating > .block5__input-login:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
@@ -2618,15 +2618,15 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:focus ~ label, .form-floating > .block5__input:focus ~ label,
+.form-floating > .form-control:focus ~ label, .form-floating > .block5__input-login:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .block5__input:not(:placeholder-shown) ~ label,
+.form-floating > .block5__input-login:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label,
 .form-floating > .block2__select-theme ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
-.form-floating > .form-control:-webkit-autofill ~ label, .form-floating > .block5__input:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label, .form-floating > .block5__input-login:-webkit-autofill ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -2638,7 +2638,7 @@ textarea.form-control-lg {
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control, .input-group > .block5__input,
+.input-group > .form-control, .input-group > .block5__input-login,
 .input-group > .form-select,
 .input-group > .block2__select-theme {
   position: relative;
@@ -2646,16 +2646,16 @@ textarea.form-control-lg {
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus, .input-group > .block5__input:focus,
+.input-group > .form-control:focus, .input-group > .block5__input-login:focus,
 .input-group > .form-select:focus,
 .input-group > .block2__select-theme:focus {
   z-index: 3;
 }
-.input-group .btn, .input-group .block3__button--shortcuts, .input-group .block5__button {
+.input-group .btn, .input-group .block3__button-shortcuts, .input-group .block5__button-login-save, .input-group .block5__button-login-reset {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .block3__button--shortcuts:focus, .input-group .block5__button:focus {
+.input-group .btn:focus, .input-group .block3__button-shortcuts:focus, .input-group .block5__button-login-save:focus, .input-group .block5__button-login-reset:focus {
   z-index: 3;
 }
 
@@ -2674,25 +2674,27 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-control, .input-group-lg > .block5__input,
+.input-group-lg > .form-control, .input-group-lg > .block5__input-login,
 .input-group-lg > .form-select,
 .input-group-lg > .block2__select-theme,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
-.input-group-lg > .block3__button--shortcuts,
-.input-group-lg > .block5__button {
+.input-group-lg > .block3__button-shortcuts,
+.input-group-lg > .block5__button-login-save,
+.input-group-lg > .block5__button-login-reset {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control, .input-group-sm > .block5__input,
+.input-group-sm > .form-control, .input-group-sm > .block5__input-login,
 .input-group-sm > .form-select,
 .input-group-sm > .block2__select-theme,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
-.input-group-sm > .block3__button--shortcuts,
-.input-group-sm > .block5__button {
+.input-group-sm > .block3__button-shortcuts,
+.input-group-sm > .block5__button-login-save,
+.input-group-sm > .block5__button-login-reset {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -2749,7 +2751,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:valid, .was-validated .block5__input:valid, .form-control.is-valid, .is-valid.block5__input {
+.was-validated .form-control:valid, .was-validated .block5__input-login:valid, .form-control.is-valid, .is-valid.block5__input-login {
   border-color: #198754;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -2757,12 +2759,12 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:valid:focus, .was-validated .block5__input:valid:focus, .form-control.is-valid:focus, .is-valid.block5__input:focus {
+.was-validated .form-control:valid:focus, .was-validated .block5__input-login:valid:focus, .form-control.is-valid:focus, .is-valid.block5__input-login:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
-.was-validated textarea.form-control:valid, .was-validated textarea.block5__input:valid, textarea.form-control.is-valid, textarea.is-valid.block5__input {
+.was-validated textarea.form-control:valid, .was-validated textarea.block5__input-login:valid, textarea.form-control.is-valid, textarea.is-valid.block5__input-login {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -2798,14 +2800,14 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:valid, .was-validated .input-group .block5__input:valid, .input-group .form-control.is-valid, .input-group .is-valid.block5__input,
+.was-validated .input-group .form-control:valid, .was-validated .input-group .block5__input-login:valid, .input-group .form-control.is-valid, .input-group .is-valid.block5__input-login,
 .was-validated .input-group .form-select:valid,
 .was-validated .input-group .block2__select-theme:valid,
 .input-group .form-select.is-valid,
 .input-group .is-valid.block2__select-theme {
   z-index: 1;
 }
-.was-validated .input-group .form-control:valid:focus, .was-validated .input-group .block5__input:valid:focus, .input-group .form-control.is-valid:focus, .input-group .is-valid.block5__input:focus,
+.was-validated .input-group .form-control:valid:focus, .was-validated .input-group .block5__input-login:valid:focus, .input-group .form-control.is-valid:focus, .input-group .is-valid.block5__input-login:focus,
 .was-validated .input-group .form-select:valid:focus,
 .was-validated .input-group .block2__select-theme:valid:focus,
 .input-group .form-select.is-valid:focus,
@@ -2842,7 +2844,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:invalid, .was-validated .block5__input:invalid, .form-control.is-invalid, .is-invalid.block5__input {
+.was-validated .form-control:invalid, .was-validated .block5__input-login:invalid, .form-control.is-invalid, .is-invalid.block5__input-login {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -2850,12 +2852,12 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:invalid:focus, .was-validated .block5__input:invalid:focus, .form-control.is-invalid:focus, .is-invalid.block5__input:focus {
+.was-validated .form-control:invalid:focus, .was-validated .block5__input-login:invalid:focus, .form-control.is-invalid:focus, .is-invalid.block5__input-login:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated textarea.form-control:invalid, .was-validated textarea.block5__input:invalid, textarea.form-control.is-invalid, textarea.is-invalid.block5__input {
+.was-validated textarea.form-control:invalid, .was-validated textarea.block5__input-login:invalid, textarea.form-control.is-invalid, textarea.is-invalid.block5__input-login {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -2891,14 +2893,14 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:invalid, .was-validated .input-group .block5__input:invalid, .input-group .form-control.is-invalid, .input-group .is-invalid.block5__input,
+.was-validated .input-group .form-control:invalid, .was-validated .input-group .block5__input-login:invalid, .input-group .form-control.is-invalid, .input-group .is-invalid.block5__input-login,
 .was-validated .input-group .form-select:invalid,
 .was-validated .input-group .block2__select-theme:invalid,
 .input-group .form-select.is-invalid,
 .input-group .is-invalid.block2__select-theme {
   z-index: 2;
 }
-.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group .block5__input:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group .is-invalid.block5__input:focus,
+.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group .block5__input-login:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group .is-invalid.block5__input-login:focus,
 .was-validated .input-group .form-select:invalid:focus,
 .was-validated .input-group .block2__select-theme:invalid:focus,
 .input-group .form-select.is-invalid:focus,
@@ -2906,7 +2908,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.btn, .block3__button--shortcuts, .block5__button {
+.btn, .block3__button-shortcuts, .block5__button-login-save, .block5__button-login-reset {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -2924,18 +2926,18 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .block3__button--shortcuts, .block5__button {
+  .btn, .block3__button-shortcuts, .block5__button-login-save, .block5__button-login-reset {
     transition: none;
   }
 }
-.btn:hover, .block3__button--shortcuts:hover, .block5__button:hover {
+.btn:hover, .block3__button-shortcuts:hover, .block5__button-login-save:hover, .block5__button-login-reset:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .btn-check:focus + .block3__button--shortcuts, .btn-check:focus + .block5__button, .btn:focus, .block3__button--shortcuts:focus, .block5__button:focus {
+.btn-check:focus + .btn, .btn-check:focus + .block3__button-shortcuts, .btn-check:focus + .block5__button-login-save, .btn-check:focus + .block5__button-login-reset, .btn:focus, .block3__button-shortcuts:focus, .block5__button-login-save:focus, .block5__button-login-reset:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.btn:disabled, .block3__button--shortcuts:disabled, .block5__button:disabled, .btn.disabled, .disabled.block3__button--shortcuts, .disabled.block5__button, fieldset:disabled .btn, fieldset:disabled .block3__button--shortcuts, fieldset:disabled .block5__button {
+.btn:disabled, .block3__button-shortcuts:disabled, .block5__button-login-save:disabled, .block5__button-login-reset:disabled, .btn.disabled, .disabled.block3__button-shortcuts, .disabled.block5__button-login-save, .disabled.block5__button-login-reset, fieldset:disabled .btn, fieldset:disabled .block3__button-shortcuts, fieldset:disabled .block5__button-login-save, fieldset:disabled .block5__button-login-reset {
   pointer-events: none;
   opacity: 0.65;
 }
@@ -3392,13 +3394,13 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .block3__button--shortcuts, .btn-group-lg > .block5__button {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .block3__button-shortcuts, .btn-group-lg > .block5__button-login-save, .btn-group-lg > .block5__button-login-reset {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .block3__button--shortcuts, .block5__button, .btn-group-sm > .btn, .block5__btn-group > .btn, .btn-group-sm > .block3__button--shortcuts, .btn-group-sm > .block5__button {
+.btn-sm, .block3__button-shortcuts, .block5__button-login-save, .block5__button-login-reset, .btn-group-sm > .btn, .block5__btn-group > .btn, .btn-group-sm > .block3__button-shortcuts, .btn-group-sm > .block5__button-login-save, .btn-group-sm > .block5__button-login-reset {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -3447,62 +3449,79 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .block5__btn-group > .btn, .btn-group > .block3__button--shortcuts, .block5__btn-group > .block3__button--shortcuts, .btn-group > .block5__button, .block5__btn-group > .block5__button,
+.btn-group > .btn, .block5__btn-group > .btn, .btn-group > .block3__button-shortcuts, .block5__btn-group > .block3__button-shortcuts, .btn-group > .block5__button-login-save, .block5__btn-group > .block5__button-login-save, .btn-group > .block5__button-login-reset, .block5__btn-group > .block5__button-login-reset,
 .btn-group-vertical > .btn,
-.btn-group-vertical > .block3__button--shortcuts,
-.btn-group-vertical > .block5__button {
+.btn-group-vertical > .block3__button-shortcuts,
+.btn-group-vertical > .block5__button-login-save,
+.btn-group-vertical > .block5__button-login-reset {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .block5__btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .block3__button--shortcuts, .block5__btn-group > .btn-check:checked + .block3__button--shortcuts, .btn-group > .btn-check:checked + .block5__button, .block5__btn-group > .btn-check:checked + .block5__button,
+.btn-group > .btn-check:checked + .btn, .block5__btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .block3__button-shortcuts, .block5__btn-group > .btn-check:checked + .block3__button-shortcuts, .btn-group > .btn-check:checked + .block5__button-login-save, .block5__btn-group > .btn-check:checked + .block5__button-login-save, .btn-group > .btn-check:checked + .block5__button-login-reset, .block5__btn-group > .btn-check:checked + .block5__button-login-reset,
 .btn-group > .btn-check:focus + .btn,
 .block5__btn-group > .btn-check:focus + .btn,
-.btn-group > .btn-check:focus + .block3__button--shortcuts,
-.block5__btn-group > .btn-check:focus + .block3__button--shortcuts,
-.btn-group > .btn-check:focus + .block5__button,
-.block5__btn-group > .btn-check:focus + .block5__button,
+.btn-group > .btn-check:focus + .block3__button-shortcuts,
+.block5__btn-group > .btn-check:focus + .block3__button-shortcuts,
+.btn-group > .btn-check:focus + .block5__button-login-save,
+.block5__btn-group > .btn-check:focus + .block5__button-login-save,
+.btn-group > .btn-check:focus + .block5__button-login-reset,
+.block5__btn-group > .btn-check:focus + .block5__button-login-reset,
 .btn-group > .btn:hover,
 .block5__btn-group > .btn:hover,
-.btn-group > .block3__button--shortcuts:hover,
-.block5__btn-group > .block3__button--shortcuts:hover,
-.btn-group > .block5__button:hover,
-.block5__btn-group > .block5__button:hover,
+.btn-group > .block3__button-shortcuts:hover,
+.block5__btn-group > .block3__button-shortcuts:hover,
+.btn-group > .block5__button-login-save:hover,
+.block5__btn-group > .block5__button-login-save:hover,
+.btn-group > .block5__button-login-reset:hover,
+.block5__btn-group > .block5__button-login-reset:hover,
 .btn-group > .btn:focus,
 .block5__btn-group > .btn:focus,
-.btn-group > .block3__button--shortcuts:focus,
-.block5__btn-group > .block3__button--shortcuts:focus,
-.btn-group > .block5__button:focus,
-.block5__btn-group > .block5__button:focus,
+.btn-group > .block3__button-shortcuts:focus,
+.block5__btn-group > .block3__button-shortcuts:focus,
+.btn-group > .block5__button-login-save:focus,
+.block5__btn-group > .block5__button-login-save:focus,
+.btn-group > .block5__button-login-reset:focus,
+.block5__btn-group > .block5__button-login-reset:focus,
 .btn-group > .btn:active,
 .block5__btn-group > .btn:active,
-.btn-group > .block3__button--shortcuts:active,
-.block5__btn-group > .block3__button--shortcuts:active,
-.btn-group > .block5__button:active,
-.block5__btn-group > .block5__button:active,
+.btn-group > .block3__button-shortcuts:active,
+.block5__btn-group > .block3__button-shortcuts:active,
+.btn-group > .block5__button-login-save:active,
+.block5__btn-group > .block5__button-login-save:active,
+.btn-group > .block5__button-login-reset:active,
+.block5__btn-group > .block5__button-login-reset:active,
 .btn-group > .btn.active,
 .block5__btn-group > .btn.active,
-.btn-group > .active.block3__button--shortcuts,
-.block5__btn-group > .active.block3__button--shortcuts,
-.btn-group > .active.block5__button,
-.block5__btn-group > .active.block5__button,
+.btn-group > .active.block3__button-shortcuts,
+.block5__btn-group > .active.block3__button-shortcuts,
+.btn-group > .active.block5__button-login-save,
+.block5__btn-group > .active.block5__button-login-save,
+.btn-group > .active.block5__button-login-reset,
+.block5__btn-group > .active.block5__button-login-reset,
 .btn-group-vertical > .btn-check:checked + .btn,
-.btn-group-vertical > .btn-check:checked + .block3__button--shortcuts,
-.btn-group-vertical > .btn-check:checked + .block5__button,
+.btn-group-vertical > .btn-check:checked + .block3__button-shortcuts,
+.btn-group-vertical > .btn-check:checked + .block5__button-login-save,
+.btn-group-vertical > .btn-check:checked + .block5__button-login-reset,
 .btn-group-vertical > .btn-check:focus + .btn,
-.btn-group-vertical > .btn-check:focus + .block3__button--shortcuts,
-.btn-group-vertical > .btn-check:focus + .block5__button,
+.btn-group-vertical > .btn-check:focus + .block3__button-shortcuts,
+.btn-group-vertical > .btn-check:focus + .block5__button-login-save,
+.btn-group-vertical > .btn-check:focus + .block5__button-login-reset,
 .btn-group-vertical > .btn:hover,
-.btn-group-vertical > .block3__button--shortcuts:hover,
-.btn-group-vertical > .block5__button:hover,
+.btn-group-vertical > .block3__button-shortcuts:hover,
+.btn-group-vertical > .block5__button-login-save:hover,
+.btn-group-vertical > .block5__button-login-reset:hover,
 .btn-group-vertical > .btn:focus,
-.btn-group-vertical > .block3__button--shortcuts:focus,
-.btn-group-vertical > .block5__button:focus,
+.btn-group-vertical > .block3__button-shortcuts:focus,
+.btn-group-vertical > .block5__button-login-save:focus,
+.btn-group-vertical > .block5__button-login-reset:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .block3__button--shortcuts:active,
-.btn-group-vertical > .block5__button:active,
+.btn-group-vertical > .block3__button-shortcuts:active,
+.btn-group-vertical > .block5__button-login-save:active,
+.btn-group-vertical > .block5__button-login-reset:active,
 .btn-group-vertical > .btn.active,
-.btn-group-vertical > .active.block3__button--shortcuts,
-.btn-group-vertical > .active.block5__button {
+.btn-group-vertical > .active.block3__button-shortcuts,
+.btn-group-vertical > .active.block5__button-login-save,
+.btn-group-vertical > .active.block5__button-login-reset {
   z-index: 1;
 }
 
@@ -3515,48 +3534,58 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child), .block5__btn-group > .btn:not(:first-child), .btn-group > .block3__button--shortcuts:not(:first-child), .block5__btn-group > .block3__button--shortcuts:not(:first-child), .btn-group > .block5__button:not(:first-child), .block5__btn-group > .block5__button:not(:first-child),
+.btn-group > .btn:not(:first-child), .block5__btn-group > .btn:not(:first-child), .btn-group > .block3__button-shortcuts:not(:first-child), .block5__btn-group > .block3__button-shortcuts:not(:first-child), .btn-group > .block5__button-login-save:not(:first-child), .block5__btn-group > .block5__button-login-save:not(:first-child), .btn-group > .block5__button-login-reset:not(:first-child), .block5__btn-group > .block5__button-login-reset:not(:first-child),
 .btn-group > .btn-group:not(:first-child),
 .block5__btn-group > .btn-group:not(:first-child),
 .btn-group > .block5__btn-group:not(:first-child),
 .block5__btn-group > .block5__btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .block3__button--shortcuts:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block3__button--shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group > .block5__button:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block5__button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group > .block5__button-login-save:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block5__button-login-save:not(:last-child):not(.dropdown-toggle), .btn-group > .block5__button-login-reset:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block5__button-login-reset:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .block5__btn-group > .btn-group:not(:last-child) > .btn,
 .btn-group > .block5__btn-group:not(:last-child) > .btn,
 .block5__btn-group > .block5__btn-group:not(:last-child) > .btn,
-.btn-group > .btn-group:not(:last-child) > .block3__button--shortcuts,
-.block5__btn-group > .btn-group:not(:last-child) > .block3__button--shortcuts,
-.btn-group > .block5__btn-group:not(:last-child) > .block3__button--shortcuts,
-.block5__btn-group > .block5__btn-group:not(:last-child) > .block3__button--shortcuts,
-.btn-group > .btn-group:not(:last-child) > .block5__button,
-.block5__btn-group > .btn-group:not(:last-child) > .block5__button,
-.btn-group > .block5__btn-group:not(:last-child) > .block5__button,
-.block5__btn-group > .block5__btn-group:not(:last-child) > .block5__button {
+.btn-group > .btn-group:not(:last-child) > .block3__button-shortcuts,
+.block5__btn-group > .btn-group:not(:last-child) > .block3__button-shortcuts,
+.btn-group > .block5__btn-group:not(:last-child) > .block3__button-shortcuts,
+.block5__btn-group > .block5__btn-group:not(:last-child) > .block3__button-shortcuts,
+.btn-group > .btn-group:not(:last-child) > .block5__button-login-save,
+.block5__btn-group > .btn-group:not(:last-child) > .block5__button-login-save,
+.btn-group > .block5__btn-group:not(:last-child) > .block5__button-login-save,
+.block5__btn-group > .block5__btn-group:not(:last-child) > .block5__button-login-save,
+.btn-group > .btn-group:not(:last-child) > .block5__button-login-reset,
+.block5__btn-group > .btn-group:not(:last-child) > .block5__button-login-reset,
+.btn-group > .block5__btn-group:not(:last-child) > .block5__button-login-reset,
+.block5__btn-group > .block5__btn-group:not(:last-child) > .block5__button-login-reset {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), .block5__btn-group > .btn:nth-child(n+3), .btn-group > .block3__button--shortcuts:nth-child(n+3), .block5__btn-group > .block3__button--shortcuts:nth-child(n+3), .btn-group > .block5__button:nth-child(n+3), .block5__btn-group > .block5__button:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .block5__btn-group > .btn:nth-child(n+3), .btn-group > .block3__button-shortcuts:nth-child(n+3), .block5__btn-group > .block3__button-shortcuts:nth-child(n+3), .btn-group > .block5__button-login-save:nth-child(n+3), .block5__btn-group > .block5__button-login-save:nth-child(n+3), .btn-group > .block5__button-login-reset:nth-child(n+3), .block5__btn-group > .block5__button-login-reset:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
 .block5__btn-group > :not(.btn-check) + .btn,
-.btn-group > :not(.btn-check) + .block3__button--shortcuts,
-.block5__btn-group > :not(.btn-check) + .block3__button--shortcuts,
-.btn-group > :not(.btn-check) + .block5__button,
-.block5__btn-group > :not(.btn-check) + .block5__button,
+.btn-group > :not(.btn-check) + .block3__button-shortcuts,
+.block5__btn-group > :not(.btn-check) + .block3__button-shortcuts,
+.btn-group > :not(.btn-check) + .block5__button-login-save,
+.block5__btn-group > :not(.btn-check) + .block5__button-login-save,
+.btn-group > :not(.btn-check) + .block5__button-login-reset,
+.block5__btn-group > :not(.btn-check) + .block5__button-login-reset,
 .btn-group > .btn-group:not(:first-child) > .btn,
 .block5__btn-group > .btn-group:not(:first-child) > .btn,
 .btn-group > .block5__btn-group:not(:first-child) > .btn,
 .block5__btn-group > .block5__btn-group:not(:first-child) > .btn,
-.btn-group > .btn-group:not(:first-child) > .block3__button--shortcuts,
-.block5__btn-group > .btn-group:not(:first-child) > .block3__button--shortcuts,
-.btn-group > .block5__btn-group:not(:first-child) > .block3__button--shortcuts,
-.block5__btn-group > .block5__btn-group:not(:first-child) > .block3__button--shortcuts,
-.btn-group > .btn-group:not(:first-child) > .block5__button,
-.block5__btn-group > .btn-group:not(:first-child) > .block5__button,
-.btn-group > .block5__btn-group:not(:first-child) > .block5__button,
-.block5__btn-group > .block5__btn-group:not(:first-child) > .block5__button {
+.btn-group > .btn-group:not(:first-child) > .block3__button-shortcuts,
+.block5__btn-group > .btn-group:not(:first-child) > .block3__button-shortcuts,
+.btn-group > .block5__btn-group:not(:first-child) > .block3__button-shortcuts,
+.block5__btn-group > .block5__btn-group:not(:first-child) > .block3__button-shortcuts,
+.btn-group > .btn-group:not(:first-child) > .block5__button-login-save,
+.block5__btn-group > .btn-group:not(:first-child) > .block5__button-login-save,
+.btn-group > .block5__btn-group:not(:first-child) > .block5__button-login-save,
+.block5__btn-group > .block5__btn-group:not(:first-child) > .block5__button-login-save,
+.btn-group > .btn-group:not(:first-child) > .block5__button-login-reset,
+.block5__btn-group > .btn-group:not(:first-child) > .block5__button-login-reset,
+.btn-group > .block5__btn-group:not(:first-child) > .block5__button-login-reset,
+.block5__btn-group > .block5__btn-group:not(:first-child) > .block5__button-login-reset {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3572,12 +3601,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .block3__button--shortcuts + .dropdown-toggle-split, .block5__button + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .block5__btn-group > .btn + .dropdown-toggle-split, .btn-group-sm > .block3__button--shortcuts + .dropdown-toggle-split, .block5__btn-group > .block3__button--shortcuts + .dropdown-toggle-split, .btn-group-sm > .block5__button + .dropdown-toggle-split, .block5__btn-group > .block5__button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .block3__button-shortcuts + .dropdown-toggle-split, .block5__button-login-save + .dropdown-toggle-split, .block5__button-login-reset + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .block5__btn-group > .btn + .dropdown-toggle-split, .btn-group-sm > .block3__button-shortcuts + .dropdown-toggle-split, .block5__btn-group > .block3__button-shortcuts + .dropdown-toggle-split, .btn-group-sm > .block5__button-login-save + .dropdown-toggle-split, .block5__btn-group > .block5__button-login-save + .dropdown-toggle-split, .btn-group-sm > .block5__button-login-reset + .dropdown-toggle-split, .block5__btn-group > .block5__button-login-reset + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .block3__button--shortcuts + .dropdown-toggle-split, .btn-group-lg > .block5__button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .block3__button-shortcuts + .dropdown-toggle-split, .btn-group-lg > .block5__button-login-save + .dropdown-toggle-split, .btn-group-lg > .block5__button-login-reset + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3587,33 +3616,37 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .btn-group-vertical > .block3__button--shortcuts, .btn-group-vertical > .block5__button,
+.btn-group-vertical > .btn, .btn-group-vertical > .block3__button-shortcuts, .btn-group-vertical > .block5__button-login-save, .btn-group-vertical > .block5__button-login-reset,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .block5__btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .block3__button--shortcuts:not(:first-child), .btn-group-vertical > .block5__button:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .block3__button-shortcuts:not(:first-child), .btn-group-vertical > .block5__button-login-save:not(:first-child), .btn-group-vertical > .block5__button-login-reset:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child),
 .btn-group-vertical > .block5__btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block3__button--shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block5__button:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block5__button-login-save:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block5__button-login-reset:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
 .btn-group-vertical > .block5__btn-group:not(:last-child) > .btn,
-.btn-group-vertical > .btn-group:not(:last-child) > .block3__button--shortcuts,
-.btn-group-vertical > .block5__btn-group:not(:last-child) > .block3__button--shortcuts,
-.btn-group-vertical > .btn-group:not(:last-child) > .block5__button,
-.btn-group-vertical > .block5__btn-group:not(:last-child) > .block5__button {
+.btn-group-vertical > .btn-group:not(:last-child) > .block3__button-shortcuts,
+.btn-group-vertical > .block5__btn-group:not(:last-child) > .block3__button-shortcuts,
+.btn-group-vertical > .btn-group:not(:last-child) > .block5__button-login-save,
+.btn-group-vertical > .block5__btn-group:not(:last-child) > .block5__button-login-save,
+.btn-group-vertical > .btn-group:not(:last-child) > .block5__button-login-reset,
+.btn-group-vertical > .block5__btn-group:not(:last-child) > .block5__button-login-reset {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .block3__button--shortcuts ~ .btn, .btn-group-vertical > .block5__button ~ .btn, .btn-group-vertical > .btn ~ .block3__button--shortcuts, .btn-group-vertical > .block3__button--shortcuts ~ .block3__button--shortcuts, .btn-group-vertical > .block5__button ~ .block3__button--shortcuts, .btn-group-vertical > .btn ~ .block5__button, .btn-group-vertical > .block3__button--shortcuts ~ .block5__button, .btn-group-vertical > .block5__button ~ .block5__button,
+.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .block3__button-shortcuts ~ .btn, .btn-group-vertical > .block5__button-login-save ~ .btn, .btn-group-vertical > .block5__button-login-reset ~ .btn, .btn-group-vertical > .btn ~ .block3__button-shortcuts, .btn-group-vertical > .block3__button-shortcuts ~ .block3__button-shortcuts, .btn-group-vertical > .block5__button-login-save ~ .block3__button-shortcuts, .btn-group-vertical > .block5__button-login-reset ~ .block3__button-shortcuts, .btn-group-vertical > .btn ~ .block5__button-login-save, .btn-group-vertical > .block3__button-shortcuts ~ .block5__button-login-save, .btn-group-vertical > .block5__button-login-save ~ .block5__button-login-save, .btn-group-vertical > .block5__button-login-reset ~ .block5__button-login-save, .btn-group-vertical > .btn ~ .block5__button-login-reset, .btn-group-vertical > .block3__button-shortcuts ~ .block5__button-login-reset, .btn-group-vertical > .block5__button-login-save ~ .block5__button-login-reset, .btn-group-vertical > .block5__button-login-reset ~ .block5__button-login-reset,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
 .btn-group-vertical > .block5__btn-group:not(:first-child) > .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .block3__button--shortcuts,
-.btn-group-vertical > .block5__btn-group:not(:first-child) > .block3__button--shortcuts,
-.btn-group-vertical > .btn-group:not(:first-child) > .block5__button,
-.btn-group-vertical > .block5__btn-group:not(:first-child) > .block5__button {
+.btn-group-vertical > .btn-group:not(:first-child) > .block3__button-shortcuts,
+.btn-group-vertical > .block5__btn-group:not(:first-child) > .block3__button-shortcuts,
+.btn-group-vertical > .btn-group:not(:first-child) > .block5__button-login-save,
+.btn-group-vertical > .block5__btn-group:not(:first-child) > .block5__button-login-save,
+.btn-group-vertical > .btn-group:not(:first-child) > .block5__button-login-reset,
+.btn-group-vertical > .block5__btn-group:not(:first-child) > .block5__button-login-reset {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4122,7 +4155,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .placeholder.block3__button--shortcuts::before, .placeholder.block5__button::before {
+.placeholder.btn::before, .placeholder.block3__button-shortcuts::before, .placeholder.block5__button-login-save::before, .placeholder.block5__button-login-reset::before {
   display: inline-block;
   content: "";
 }
@@ -5061,7 +5094,7 @@ textarea.form-control-lg {
   margin-right: 0.25rem !important;
 }
 
-.me-2, .block1__container2, .block4__title, .block5__input {
+.me-2, .block1__container2, .block4__span, .block5__input-login {
   margin-right: 0.5rem !important;
 }
 
@@ -5495,7 +5528,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted, .block1__title {
+.text-muted, .block1__span-title {
   --bs-text-opacity: 1;
   color: #6c757d !important;
 }
@@ -9009,14 +9042,14 @@ textarea.form-control-lg {
   font-family: "Segoe UI Variable";
   src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
 }
-.f-caption, .card__subtitle, .expander__subtitle {
+.f-caption, .card__span-subtitle, .expander__span-subtitle {
   font-family: "Segoe UI Variable";
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
-.f-body, .block1__title, .card__title, .block2__select-theme, .expander__title, .block4__title, .block5__input {
+.f-body, .block1__span-title, .card__span-title, .block2__select-theme, .expander__span-title, .block4__span, .block5__input-login {
   font-family: "Segoe UI Variable";
   font-feature-settings: "rclt" off;
   font-size: 14px;
@@ -9069,10 +9102,10 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Light & Dark Theme Colors ------------------------- */
-.light .f-text, .light .heading1, .light .block1__title, .light .card__icon, .light .card__title, .light .card__subtitle, .light .block2__select-theme, .light .block3__button--shortcuts, .light .expander__icon, .light .expander__title, .light .expander__subtitle, .light .block4__title, .light .heading2, .light .block5__input, .light .block5__button {
+.light .f-text, .light .heading1, .light .block1__span-title, .light .card__icon, .light .card__span-title, .light .card__span-subtitle, .light .block2__select-theme, .light .block3__button-shortcuts, .light .expander__icon, .light .expander__span-title, .light .expander__span-subtitle, .light .block4__span, .light .heading2, .light .block5__input-login, .light .block5__button-login-save, .light .block5__button-login-reset {
   color: rgba(0, 0, 0, 0.9);
 }
-.light .f-text:disabled, .light .heading1:disabled, .light .block1__title:disabled, .light .card__icon:disabled, .light .card__title:disabled, .light .card__subtitle:disabled, .light .block2__select-theme:disabled, .light .block3__button--shortcuts:disabled, .light .expander__icon:disabled, .light .expander__title:disabled, .light .expander__subtitle:disabled, .light .block4__title:disabled, .light .heading2:disabled, .light .block5__input:disabled, .light .block5__button:disabled {
+.light .f-text:disabled, .light .heading1:disabled, .light .block1__span-title:disabled, .light .card__icon:disabled, .light .card__span-title:disabled, .light .card__span-subtitle:disabled, .light .block2__select-theme:disabled, .light .block3__button-shortcuts:disabled, .light .expander__icon:disabled, .light .expander__span-title:disabled, .light .expander__span-subtitle:disabled, .light .block4__span:disabled, .light .heading2:disabled, .light .block5__input-login:disabled, .light .block5__button-login-save:disabled, .light .block5__button-login-reset:disabled {
   color: rgba(0, 0, 0, 0.36);
 }
 .light .text-background-color {
@@ -9097,10 +9130,10 @@ textarea.form-control-lg {
   background-color: rgb(0, 95, 184);
 }
 
-.dark .f-text, .dark .heading1, .dark .block1__title, .dark .card__icon, .dark .card__title, .dark .card__subtitle, .dark .block2__select-theme, .dark .block3__button--shortcuts, .dark .expander__icon, .dark .expander__title, .dark .expander__subtitle, .dark .block4__title, .dark .heading2, .dark .block5__input, .dark .block5__button {
+.dark .f-text, .dark .heading1, .dark .block1__span-title, .dark .card__icon, .dark .card__span-title, .dark .card__span-subtitle, .dark .block2__select-theme, .dark .block3__button-shortcuts, .dark .expander__icon, .dark .expander__span-title, .dark .expander__span-subtitle, .dark .block4__span, .dark .heading2, .dark .block5__input-login, .dark .block5__button-login-save, .dark .block5__button-login-reset {
   color: rgb(255, 255, 255);
 }
-.dark .f-text:disabled, .dark .heading1:disabled, .dark .block1__title:disabled, .dark .card__icon:disabled, .dark .card__title:disabled, .dark .card__subtitle:disabled, .dark .block2__select-theme:disabled, .dark .block3__button--shortcuts:disabled, .dark .expander__icon:disabled, .dark .expander__title:disabled, .dark .expander__subtitle:disabled, .dark .block4__title:disabled, .dark .heading2:disabled, .dark .block5__input:disabled, .dark .block5__button:disabled {
+.dark .f-text:disabled, .dark .heading1:disabled, .dark .block1__span-title:disabled, .dark .card__icon:disabled, .dark .card__span-title:disabled, .dark .card__span-subtitle:disabled, .dark .block2__select-theme:disabled, .dark .block3__button-shortcuts:disabled, .dark .expander__icon:disabled, .dark .expander__span-title:disabled, .dark .expander__span-subtitle:disabled, .dark .block4__span:disabled, .dark .heading2:disabled, .dark .block5__input-login:disabled, .dark .block5__button-login-save:disabled, .dark .block5__button-login-reset:disabled {
   color: rgba(255, 255, 255, 0.36);
 }
 .dark .text-background-color {
@@ -9140,24 +9173,24 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Button ------------------------- */
-.light .btn--f-standard, .light .block3__button--shortcuts, .light .block5__button {
+.light .btn--f-standard, .light .block3__button-shortcuts, .light .block5__button-login-save, .light .block5__button-login-reset {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
-.light .btn--f-standard:hover, .light .block3__button--shortcuts:hover, .light .block5__button:hover {
+.light .btn--f-standard:hover, .light .block3__button-shortcuts:hover, .light .block5__button-login-save:hover, .light .block5__button-login-reset:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light .btn--f-standard:active, .light .block3__button--shortcuts:active, .light .block5__button:active {
+.light .btn--f-standard:active, .light .block3__button-shortcuts:active, .light .block5__button-login-save:active, .light .block5__button-login-reset:active {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn--f-standard:disabled, .light .block3__button--shortcuts:disabled, .light .block5__button:disabled {
+.light .btn--f-standard:disabled, .light .block3__button-shortcuts:disabled, .light .block5__button-login-save:disabled, .light .block5__button-login-reset:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn--f-standard:focus, .light .block3__button--shortcuts:focus, .light .block5__button:focus {
+.light .btn--f-standard:focus, .light .block3__button-shortcuts:focus, .light .block5__button-login-save:focus, .light .block5__button-login-reset:focus {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 .light .btn--f-accent {
@@ -9181,24 +9214,24 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
-.dark .btn--f-standard, .dark .block3__button--shortcuts, .dark .block5__button {
+.dark .btn--f-standard, .dark .block3__button-shortcuts, .dark .block5__button-login-save, .dark .block5__button-login-reset {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:hover, .dark .block3__button--shortcuts:hover, .dark .block5__button:hover {
+.dark .btn--f-standard:hover, .dark .block3__button-shortcuts:hover, .dark .block5__button-login-save:hover, .dark .block5__button-login-reset:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark .btn--f-standard:active, .dark .block3__button--shortcuts:active, .dark .block5__button:active {
+.dark .btn--f-standard:active, .dark .block3__button-shortcuts:active, .dark .block5__button-login-save:active, .dark .block5__button-login-reset:active {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:disabled, .dark .block3__button--shortcuts:disabled, .dark .block5__button:disabled {
+.dark .btn--f-standard:disabled, .dark .block3__button-shortcuts:disabled, .dark .block5__button-login-save:disabled, .dark .block5__button-login-reset:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:focus, .dark .block3__button--shortcuts:focus, .dark .block5__button:focus {
+.dark .btn--f-standard:focus, .dark .block3__button-shortcuts:focus, .dark .block5__button-login-save:focus, .dark .block5__button-login-reset:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
 .dark .btn--f-accent {
@@ -9278,77 +9311,77 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Toggle Switch ------------------------- */
-.light .form-switch .form-check-input, .light .block4__switch .form-check-input, .light .form-switch .block4__input, .light .block4__switch .block4__input {
+.light .form-switch .form-check-input, .light .block4__toggle-switch .form-check-input, .light .form-switch .block4__input, .light .block4__toggle-switch .block4__input {
   background-color: rgba(0, 0, 0, 0.02);
   border: 1px solid rgba(0, 0, 0, 0.45);
 }
-.light .form-switch .form-check-input:hover, .light .block4__switch .form-check-input:hover, .light .form-switch .block4__input:hover, .light .block4__switch .block4__input:hover {
+.light .form-switch .form-check-input:hover, .light .block4__toggle-switch .form-check-input:hover, .light .form-switch .block4__input:hover, .light .block4__toggle-switch .block4__input:hover {
   background-color: rgba(0, 0, 0, 0.06);
 }
-.light .form-switch .form-check-input:active, .light .block4__switch .form-check-input:active, .light .form-switch .block4__input:active, .light .block4__switch .block4__input:active {
+.light .form-switch .form-check-input:active, .light .block4__toggle-switch .form-check-input:active, .light .form-switch .block4__input:active, .light .block4__toggle-switch .block4__input:active {
   background-color: rgba(0, 0, 0, 0.09);
 }
-.light .form-switch .form-check-input:disabled, .light .block4__switch .form-check-input:disabled, .light .form-switch .block4__input:disabled, .light .block4__switch .block4__input:disabled {
+.light .form-switch .form-check-input:disabled, .light .block4__toggle-switch .form-check-input:disabled, .light .form-switch .block4__input:disabled, .light .block4__toggle-switch .block4__input:disabled {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgba(0, 0, 0, 0.22);
 }
-.light .form-switch .form-check-input:focus, .light .block4__switch .form-check-input:focus, .light .form-switch .block4__input:focus, .light .block4__switch .block4__input:focus {
+.light .form-switch .form-check-input:focus, .light .block4__toggle-switch .form-check-input:focus, .light .form-switch .block4__input:focus, .light .block4__toggle-switch .block4__input:focus {
   box-shadow: 0 0 0 3px rgb(255, 255, 255), 0 0 0 5px rgba(0, 0, 0, 0.9);
 }
-.light .form-switch .form-check-input:checked, .light .block4__switch .form-check-input:checked, .light .form-switch .block4__input:checked, .light .block4__switch .block4__input:checked {
+.light .form-switch .form-check-input:checked, .light .block4__toggle-switch .form-check-input:checked, .light .form-switch .block4__input:checked, .light .block4__toggle-switch .block4__input:checked {
   background-color: rgb(0, 95, 184);
   border: 1px solid rgb(0, 95, 184);
 }
-.light .form-switch .form-check-input:checked:hover, .light .block4__switch .form-check-input:checked:hover, .light .form-switch .block4__input:checked:hover, .light .block4__switch .block4__input:checked:hover {
+.light .form-switch .form-check-input:checked:hover, .light .block4__toggle-switch .form-check-input:checked:hover, .light .form-switch .block4__input:checked:hover, .light .block4__toggle-switch .block4__input:checked:hover {
   background-color: rgba(0, 95, 184, 0.9);
   border: 1px solid rgba(0, 95, 184, 0.9);
 }
-.light .form-switch .form-check-input:checked:active, .light .block4__switch .form-check-input:checked:active, .light .form-switch .block4__input:checked:active, .light .block4__switch .block4__input:checked:active {
+.light .form-switch .form-check-input:checked:active, .light .block4__toggle-switch .form-check-input:checked:active, .light .form-switch .block4__input:checked:active, .light .block4__toggle-switch .block4__input:checked:active {
   background-color: rgba(0, 95, 184, 0.8);
   border: 1px solid rgba(0, 95, 184, 0.8);
 }
-.light .form-switch .form-check-input:checked:disabled, .light .block4__switch .form-check-input:checked:disabled, .light .form-switch .block4__input:checked:disabled, .light .block4__switch .block4__input:checked:disabled {
+.light .form-switch .form-check-input:checked:disabled, .light .block4__toggle-switch .form-check-input:checked:disabled, .light .form-switch .block4__input:checked:disabled, .light .block4__toggle-switch .block4__input:checked:disabled {
   background-color: rgba(0, 0, 0, 0.22);
   border: 1px solid rgba(0, 0, 0, 0.22);
 }
-.light .form-switch .form-check-input:checked:focus, .light .block4__switch .form-check-input:checked:focus, .light .form-switch .block4__input:checked:focus, .light .block4__switch .block4__input:checked:focus {
+.light .form-switch .form-check-input:checked:focus, .light .block4__toggle-switch .form-check-input:checked:focus, .light .form-switch .block4__input:checked:focus, .light .block4__toggle-switch .block4__input:checked:focus {
   box-shadow: 0 0 0 3px rgb(255, 255, 255), 0 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-.dark .form-switch .form-check-input, .dark .block4__switch .form-check-input, .dark .form-switch .block4__input, .dark .block4__switch .block4__input {
+.dark .form-switch .form-check-input, .dark .block4__toggle-switch .form-check-input, .dark .form-switch .block4__input, .dark .block4__toggle-switch .block4__input {
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.54);
 }
-.dark .form-switch .form-check-input:hover, .dark .block4__switch .form-check-input:hover, .dark .form-switch .block4__input:hover, .dark .block4__switch .block4__input:hover {
+.dark .form-switch .form-check-input:hover, .dark .block4__toggle-switch .form-check-input:hover, .dark .form-switch .block4__input:hover, .dark .block4__toggle-switch .block4__input:hover {
   background-color: rgba(255, 255, 255, 0.04);
 }
-.dark .form-switch .form-check-input:active, .dark .block4__switch .form-check-input:active, .dark .form-switch .block4__input:active, .dark .block4__switch .block4__input:active {
+.dark .form-switch .form-check-input:active, .dark .block4__toggle-switch .form-check-input:active, .dark .form-switch .block4__input:active, .dark .block4__toggle-switch .block4__input:active {
   background-color: rgba(255, 255, 255, 0.07);
 }
-.dark .form-switch .form-check-input:disabled, .dark .block4__switch .form-check-input:disabled, .dark .form-switch .block4__input:disabled, .dark .block4__switch .block4__input:disabled {
+.dark .form-switch .form-check-input:disabled, .dark .block4__toggle-switch .form-check-input:disabled, .dark .form-switch .block4__input:disabled, .dark .block4__toggle-switch .block4__input:disabled {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
-.dark .form-switch .form-check-input:focus, .dark .block4__switch .form-check-input:focus, .dark .form-switch .block4__input:focus, .dark .block4__switch .block4__input:focus {
+.dark .form-switch .form-check-input:focus, .dark .block4__toggle-switch .form-check-input:focus, .dark .form-switch .block4__input:focus, .dark .block4__toggle-switch .block4__input:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgb(255, 255, 255);
 }
-.dark .form-switch .form-check-input:checked, .dark .block4__switch .form-check-input:checked, .dark .form-switch .block4__input:checked, .dark .block4__switch .block4__input:checked {
+.dark .form-switch .form-check-input:checked, .dark .block4__toggle-switch .form-check-input:checked, .dark .form-switch .block4__input:checked, .dark .block4__toggle-switch .block4__input:checked {
   background-color: rgb(96, 205, 255);
   border: 1px solid rgb(96, 205, 255);
 }
-.dark .form-switch .form-check-input:checked:hover, .dark .block4__switch .form-check-input:checked:hover, .dark .form-switch .block4__input:checked:hover, .dark .block4__switch .block4__input:checked:hover {
+.dark .form-switch .form-check-input:checked:hover, .dark .block4__toggle-switch .form-check-input:checked:hover, .dark .form-switch .block4__input:checked:hover, .dark .block4__toggle-switch .block4__input:checked:hover {
   background-color: rgba(96, 205, 255, 0.9);
   border: 1px solid rgba(96, 205, 255, 0.9);
 }
-.dark .form-switch .form-check-input:checked:active, .dark .block4__switch .form-check-input:checked:active, .dark .form-switch .block4__input:checked:active, .dark .block4__switch .block4__input:checked:active {
+.dark .form-switch .form-check-input:checked:active, .dark .block4__toggle-switch .form-check-input:checked:active, .dark .form-switch .block4__input:checked:active, .dark .block4__toggle-switch .block4__input:checked:active {
   background-color: rgba(96, 205, 255, 0.8);
   border: 1px solid rgba(96, 205, 255, 0.8);
 }
-.dark .form-switch .form-check-input:checked:disabled, .dark .block4__switch .form-check-input:checked:disabled, .dark .form-switch .block4__input:checked:disabled, .dark .block4__switch .block4__input:checked:disabled {
+.dark .form-switch .form-check-input:checked:disabled, .dark .block4__toggle-switch .form-check-input:checked:disabled, .dark .form-switch .block4__input:checked:disabled, .dark .block4__toggle-switch .block4__input:checked:disabled {
   background-color: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
-.dark .form-switch .form-check-input:checked:focus, .dark .block4__switch .form-check-input:checked:focus, .dark .form-switch .block4__input:checked:focus, .dark .block4__switch .block4__input:checked:focus {
+.dark .form-switch .form-check-input:checked:focus, .dark .block4__toggle-switch .form-check-input:checked:focus, .dark .form-switch .block4__input:checked:focus, .dark .block4__toggle-switch .block4__input:checked:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgb(255, 255, 255);
 }
 
@@ -9399,49 +9432,64 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Text Box ------------------------- */
-.light input.form-control, .light input.block5__input {
+.light input.form-control, .light input.block5__input-login {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-bottom: 2px solid rgba(0, 0, 0, 0.45);
 }
-.light input.form-control:hover, .light input.block5__input:hover {
+.light input.form-control:hover, .light input.block5__input-login:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light input.form-control:active, .light input.block5__input:active,
+.light input.form-control:active, .light input.block5__input-login:active,
 .light input.form-control:focus,
-.light input.block5__input:focus {
+.light input.block5__input-login:focus {
   background-color: rgb(255, 255, 255);
   border-bottom: 2px solid rgb(0, 95, 184);
   box-shadow: unset;
 }
-.light input.form-control:disabled, .light input.block5__input:disabled {
+.light input.form-control:disabled, .light input.block5__input-login:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.dark input.form-control, .dark input.block5__input {
+.dark input.form-control, .dark input.block5__input-login {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.08);
   border-bottom: 2px solid rgba(255, 255, 255, 0.54);
 }
-.dark input.form-control:hover, .dark input.block5__input:hover {
+.dark input.form-control:hover, .dark input.block5__input-login:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark input.form-control:active, .dark input.block5__input:active,
+.dark input.form-control:active, .dark input.block5__input-login:active,
 .dark input.form-control:focus,
-.dark input.block5__input:focus {
+.dark input.block5__input-login:focus {
   background-color: rgba(30, 30, 30, 0.7);
   border-bottom: 2px solid rgb(96, 205, 255);
   box-shadow: unset;
 }
-.dark input.form-control:disabled, .dark input.block5__input:disabled {
+.dark input.form-control:disabled, .dark input.block5__input-login:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 /* ------------------------- Scroll Bar (Scroll Viewer) ------------------------- */
+html {
+  overflow: auto;
+}
+
+body {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  padding: 4px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 html.light ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
@@ -9528,7 +9576,7 @@ html.dark ::-webkit-scrollbar-thumb {
   font-family: "Segoe Fluent Icons";
   src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
 }
-.btn.icon, .block3__button--shortcuts, .block5__button {
+.btn-icon, .block3__button-shortcuts, .block5__button-login-save, .block5__button-login-reset {
   font-size: 14px;
 }
 
@@ -9537,22 +9585,6 @@ html.dark ::-webkit-scrollbar-thumb {
 .card__icon {
   font-size: 24px;
   margin-right: 1.25rem;
-}
-
-/* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
-html {
-  overflow: auto;
-}
-
-body {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  bottom: 4px;
-  left: 4px;
-  padding: 4px;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 /* ------------------------- Surfaces 2 ------------------------- */
@@ -9575,42 +9607,40 @@ body {
   height: 100px;
   width: 200px;
 }
-.card__icon {
-  font-family: "Segoe Fluent Icons";
-}
 .block2__select-theme {
   width: 10rem;
 }
-.block2__icon--theme::before {
+.block2__icon-theme::before {
+  font-family: "Segoe Fluent Icons";
   content: "\e771";
 }
 
-.block3__icon--shortcuts::before {
+.block3__icon-shortcuts::before {
+  font-family: "Segoe Fluent Icons";
   content: "\eda7";
 }
-.block3__button--shortcuts::before {
+.block3__button-shortcuts::before {
   font-family: "Segoe Fluent Icons";
   content: "\e8a7";
 }
 
-.expander__icon {
+.block4__icon-view::before {
   font-family: "Segoe Fluent Icons";
-}
-.block4__icon--view::before {
   content: "\e890";
 }
 
-.block5__input {
+.block5__input-login {
   width: 20rem;
 }
-.block5__icon--robot::before {
+.block5__icon-robot::before {
+  font-family: "Segoe Fluent Icons";
   content: "\e99a";
 }
-.block5__button--login-save::before {
+.block5__button-login-save::before {
   font-family: "Segoe Fluent Icons";
   content: "\e74e";
 }
-.block5__button--login-reset::before {
+.block5__button-login-reset::before {
   font-family: "Segoe Fluent Icons";
   content: "\e777";
 }

@@ -12,23 +12,6 @@
 @use "fluent/surfaces";
 @use "fluent/iconography";
 
-/* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
-
-html {
-  overflow: auto;
-}
-
-body {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  bottom: 4px;
-  left: 4px;
-  padding: 4px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 /* ------------------------- Surfaces 2 ------------------------- */
 
 .light,
@@ -63,21 +46,18 @@ body {
     width: 200px;
   }
   &__container3 { @extend .d-flex, .flex-column; }
-  &__title      { @extend .text-muted, .f-body, .f-text; }
+  &__span-title { @extend .text-muted, .f-body, .f-text; }
 }
 
 .card {
   @extend .card, .mb-2;
 
-  &__body       { @extend .card-body, .d-flex, .justify-content-between, .align-items-center; }
-  &__container1 { @extend .d-flex; }
-  &__icon {
-    @extend .card-icon, .f-text;
-    font-family: iconography.$font-family;
-  }
-  &__container2 { @extend .d-flex, .flex-column; }
-  &__title      { @extend .f-body, .f-text; }
-  &__subtitle   { @extend .f-caption, .f-text; }
+  &__body           { @extend .card-body, .d-flex, .justify-content-between, .align-items-center; }
+  &__container1     { @extend .d-flex; }
+  &__icon           { @extend .f-text, .card-icon; }
+  &__container2     { @extend .d-flex, .flex-column; }
+  &__span-title     { @extend .f-body, .f-text; }
+  &__span-subtitle  { @extend .f-caption, .f-text; }
 }
 
 .block2 {
@@ -87,66 +67,63 @@ body {
   }
 
   // Personalize
-  &__icon--theme::before { content: "\e771"; }
+  &__icon-theme::before { font-family: iconography.$font-family; content: "\e771"; }
 }
 
 .block3 {
-  &__container                { @extend .d-flex; }
-  &__button--shortcuts        { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  &__container        { @extend .d-flex; }
+  &__button-shortcuts { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text; }
 
   // KeyboardShortcut
-  &__icon--shortcuts::before    { content: "\eda7"; }
+  &__icon-shortcuts::before   { font-family: iconography.$font-family; content: "\eda7"; }
   // OpenInNewWindow
-  &__button--shortcuts::before  { font-family: iconography.$font-family; content: "\e8a7"; }
+  &__button-shortcuts::before { font-family: iconography.$font-family; content: "\e8a7"; }
 }
 
 .expander {
-  &__item       { @extend .accordion-item; }
-  &__header     { @extend .accordion-header; }
-  &__button     { @extend .accordion-button; }
-  &__icon {
-    @extend .accordion-icon, .f-text;
-    font-family: iconography.$font-family;
-  }
-  &__container1 { @extend .d-flex, .flex-column; }
-  &__title      { @extend .f-body, .f-text; }
-  &__subtitle   { @extend .f-caption, .f-text; }
-  &__collapse   { @extend .accordion-collapse; }
+  &__item           { @extend .accordion-item; }
+  &__header         { @extend .accordion-header; }
+  &__button         { @extend .accordion-button; }
+  &__icon           { @extend .f-text, .accordion-icon; }
+  &__container1     { @extend .d-flex, .flex-column; }
+  &__span-title     { @extend .f-body, .f-text; }
+  &__span-subtitle  { @extend .f-caption, .f-text; }
+  &__collapse       { @extend .accordion-collapse; }
+  &__body           { @extend .accordion-body, .d-flex, .justify-content-between, .align-items-center; }
 
-  &__body       { @extend .accordion-body, .d-flex, .justify-content-between, .align-items-center; }
-
-  &__container2 { @extend .d-flex, .flex-column; }
+  &__container2     { @extend .d-flex, .flex-column; }
 }
 
 .block4 {
   @extend .mb-2;
 
-  &__container          { @extend .d-flex, .align-items-center; }
-  &__title              { @extend .me-2, .f-body, .f-text; }
-  &__switch             { @extend .form-check, .form-switch; }
-  &__input              { @extend .form-check-input; }
+  &__container      { @extend .d-flex, .align-items-center; }
+  &__span           { @extend .me-2, .f-body, .f-text; }
+  &__toggle-switch  { @extend .form-check, .form-switch; }
+  &__input          { @extend .form-check-input; }
 
   // View
-  &__icon--view::before { content: "\e890"; }
+  &__icon-view::before { font-family: iconography.$font-family; content: "\e890"; }
 }
 
 .heading2 { @extend .d-block, .mb-2, .f-body-strong, .f-text; }
 
 .block5 {
-  &__container  { @extend .d-flex; }
-  &__input {
+  &__container          { @extend .d-flex; }
+  &__input-login {
     @extend .form-control, .form-control-sm, .me-2, .f-body, .f-text;
     width: 20rem;
   }
-  &__btn-group  { @extend .btn-group, .btn-group-sm; }
-  &__button     { @extend .btn, .btn-sm, .icon, .f-text, .btn--f-standard; }
+  &__btn-group          { @extend .btn-group, .btn-group-sm; }
+  &__button-login-save,
+  &__button-login-reset { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text; }
 
   // Robot
-  &__icon--robot::before          { content: "\e99a"; }
+  &__icon-robot::before         { font-family: iconography.$font-family; content: "\e99a"; }
   // Save
-  &__button--login-save::before   { font-family: iconography.$font-family; content: "\e74e"; }
+  &__button-login-save::before  { font-family: iconography.$font-family; content: "\e74e"; }
   // UpdateRestore
-  &__button--login-reset::before  { font-family: iconography.$font-family; content: "\e777"; }
+  &__button-login-reset::before { font-family: iconography.$font-family; content: "\e777"; }
 }
 
 /* ------------------------- Motion ------------------------- */

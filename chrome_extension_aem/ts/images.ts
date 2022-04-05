@@ -27,17 +27,18 @@ chrome.storage.local.get("theme", ({ theme }) => {
   }
 });
 
-// ------------------------- ... -------------------------
+/*
+ * ------------------------- block1 -------------------------
+ */
 
 const BODY = document.querySelector("body") as HTMLBodyElement;
 
 const DIV_0 = document.createElement("div") as HTMLDivElement;
 DIV_0.setAttribute("class", "body__container");
-DIV_0.setAttribute("id", "div_0");
 
 const BUTTON = document.createElement("button") as HTMLButtonElement;
 BUTTON.setAttribute("class", "button-close");
-BUTTON.setAttribute("id", "button_chrome_close");
+BUTTON.setAttribute("id", "button_close");
 BUTTON.setAttribute("type", "button");
 DIV_0.appendChild(BUTTON);
 
@@ -56,11 +57,11 @@ DIV_2.appendChild(DIV_3);
 // .input-group
 
 const DIV_4 = document.createElement("div") as HTMLDivElement;
-DIV_4.setAttribute("class", "block1__input-group");
+DIV_4.setAttribute("class", "block1__input-group-src");
 DIV_3.appendChild(DIV_4);
 
 const SPAN = document.createElement("span") as HTMLSpanElement;
-SPAN.setAttribute("class", "block1__input-group-text");
+SPAN.setAttribute("class", "block1__span-src");
 DIV_4.appendChild(SPAN);
 
 const SPAN_CTN = document.createTextNode("src");
@@ -69,7 +70,7 @@ SPAN.appendChild(SPAN_CTN);
 // select
 
 const SELECT = document.createElement("select") as HTMLSelectElement;
-SELECT.setAttribute("class", "block1__select");
+SELECT.setAttribute("class", "block1__select-src");
 DIV_4.appendChild(SELECT);
 
 const OPTION_0 = document.createElement("option") as HTMLOptionElement;
@@ -93,7 +94,7 @@ DIV_2.appendChild(DIV_5);
 // input
 
 const INPUT = document.createElement("input") as HTMLInputElement;
-INPUT.setAttribute("class", "block1__input");
+INPUT.setAttribute("class", "block1__input-text");
 INPUT.setAttribute("type", "text");
 INPUT.setAttribute("placeholder", "/pl");
 DIV_5.appendChild(INPUT);
@@ -105,11 +106,14 @@ DIV_0.appendChild(DIV_6);
 
 const DIV_7 = document.createElement("div") as HTMLDivElement;
 DIV_7.setAttribute("class", "block2__container1");
-DIV_7.setAttribute("id", "div_7");
 DIV_6.appendChild(DIV_7);
 
 const IMGS = document.querySelectorAll("img");
 let i: number = 0;
+
+/*
+ * ------------------------- block2 -------------------------
+ */
 
 if (IMGS !== null) {
   for (let img of Array.from(IMGS)) {
@@ -118,7 +122,7 @@ if (IMGS !== null) {
     DIV_7.appendChild(DIV);
 
     const SPAN_0 = document.createElement("span") as HTMLSpanElement;
-    SPAN_0.setAttribute("class", "block2__title");
+    SPAN_0.setAttribute("class", "block2__span-title");
     DIV.appendChild(SPAN_0);
 
     const SPAN_0_CTN = document.createTextNode(`img ${i}:`);
@@ -127,14 +131,14 @@ if (IMGS !== null) {
     i++;
 
     const SPAN_1 = document.createElement("span") as HTMLSpanElement;
-    SPAN_1.setAttribute("class", "block2__subtitle-src");
+    SPAN_1.setAttribute("class", "block2__span-subtitle-src");
     DIV.appendChild(SPAN_1);
 
     const SPAN_1_CTN = document.createTextNode(`src: ${img.src}`);
     SPAN_1.appendChild(SPAN_1_CTN);
 
     const SPAN_2 = document.createElement("span") as HTMLSpanElement;
-    SPAN_2.setAttribute("class", "block2__subtitle-alt");
+    SPAN_2.setAttribute("class", "block2__span-subtitle-alt");
     DIV.appendChild(SPAN_2);
 
     const SPAN_2_CTN = document.createTextNode(`alt: ${img.alt}`);
