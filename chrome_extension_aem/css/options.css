@@ -9874,10 +9874,6 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 
 /* ------------------------- options.html ------------------------- */
-.min-width {
-  min-width: 2.5rem;
-}
-
 .body__container {
   border-radius: 8px;
 }

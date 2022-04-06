@@ -12301,14 +12301,14 @@ textarea.form-control-lg {
 .light .f-critical {
   background-color: rgb(196, 43, 28) !important;
 }
-.light .f-critical-background {
+.light .f-critical-background, .light .block3--critical {
   background-color: rgb(253, 231, 233) !important;
 }
 
 .dark .f-critical {
   background-color: rgb(255, 153, 164) !important;
 }
-.dark .f-critical-background {
+.dark .f-critical-background, .dark .block3--critical {
   background-color: rgb(68, 39, 38) !important;
 }
 

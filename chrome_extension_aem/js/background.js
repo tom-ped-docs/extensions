@@ -6,7 +6,7 @@ const S_URL = {
     p5_aem_eu: "https://aem-eu.samsung.com/",
     p5_aem_eu_shop: "https://aem-eu-shop.samsung.com/",
     p5_login: "aemapi/user/login_sso?s_user_id=",
-    p5_login_reset: "542b562d2e9g30fgcg6b6422101b6e2d95333a3f2e3e49",
+    // p5_login_reset:     "542b562d2e9g30fgcg6b6422101b6e2d95333a3f2e3e49",
     p5_qa: "https://qaweb.samsung.com/",
     p5_qa_shop: "https://qaweb-shop.samsung.com/",
     p5_task_management: "aem/taskmanagement",
@@ -18,24 +18,28 @@ const S_URL = {
     p6_aem_eu: "https://p6-eu-author.samsung.com/",
     p6_aem_us: "https://p6-us-author.samsung.com/",
     p6_login: "aemapi/user/login_sso?s_user_email=",
-    p6_login_reset: "pedzich.t@samsung.com",
+    // p6_login_reset:     "pedzich.t@samsung.com",
     p6_qa: "https://p6-qa.samsung.com/",
     p6_workflows: "aem/inbox",
     p6_purging: "aem/pim/global/setting/cdnpurging/page/purgerequest/info",
     p6_pim_b2c: "aem/pim/b2c/product/detail/main/page/list",
     p6_pim_b2b: "aem/bim/b2b/product/detail/main/page/list",
-    editor_s: "editor.html/content/samsung/",
-    editor_e: ".html",
-    editor_off_s: "content/samsung/",
-    editor_off_e: ".html?wcmmode=disabled",
+    editor1: "editor.html/content/samsung/",
+    editor2: ".html",
+    preview1: "content/samsung/",
+    preview2: ".html?wcmmode=disabled",
     live: "https://www.samsung.com/",
     sites: "sites.html/content/samsung/",
     assets: "assets.html/content/dam/samsung/"
 };
+let user_id = "542b562d2e9g30fgcg6b6422101b6e2d95333a3f2e3e49";
+let user_email = "pedzich.t@samsung.com";
+let selected_aem_samsung = "p5_aem_eu_shop";
+let url_samsung = "pl";
 /*
- * ------------------------- pmi -------------------------
+ * ------------------------- iqos -------------------------
  */
-const P_URL = {
+const I_URL = {
     pre_prod_aem: "https://author.pp.iqos.com/",
     pre_prod_qa: "https://www.pp.iqos.com/",
     pre_prod_qa_login: "cgi-bin/authorize.cgi",
@@ -48,44 +52,64 @@ const P_URL = {
     prod_veev_live: "https://www.veev-vape.com/",
     prod_club_live: "https://www.iqosclub.com/",
     login: "aem/start.html",
-    editor_s: "editor.html/content/",
-    editor_e: ".html",
-    editor_off_s: "content/",
-    editor_off_e: ".html?wcmmode=disabled",
+    editor1: "editor.html/content/",
+    editor2: ".html",
+    preview1: "content/",
+    preview2: ".html?wcmmode=disabled",
     live: ".html?gr=false",
     sites: "sites.html/content/",
     assets: "assets.html/content/dam/iqos/local",
     grfalse: "?gr=false"
 };
+let selected_aem_iqos = "pre_prod_aem";
+let selected_site = "pmisite";
+let url_iqos = "de/en/home";
+const I_COUNTRY = {
+    cr: "costa-rica",
+    cz: "czech-republic",
+    eg: "egypt",
+    fi: "finland",
+    fr: "france",
+    de: "germany",
+    id: "indonesia",
+    jp: "japan",
+    kg: "kyrgyzstan",
+    mv: "maldives",
+    ma: "morocco",
+    mx: "mx",
+    ph: "philippines",
+    pl: "poland",
+    pt: "portugal",
+    sk: "slovakia",
+    tw: "taiwan",
+    tn: "tunisia",
+    gb: "uk",
+    ae: "united-arab-emirates",
+    vu: "vanuatu",
+    vn: "vietnam"
+};
 /*
  * ------------------------- ... -------------------------
  */
-let s_p5_login = "542b562d2e9g30fgcg6b6422101b6e2d95333a3f2e3e49";
-let s_p6_login = "pedzich.t@samsung.com";
-let s_aem = "p5_aem_eu_shop";
-let s_url = "pl";
-let p_aem = "pre_prod_aem";
-let p_content = "pmisite";
-let p_url = "de/en/home";
-// Visibility
-let vis_s_aem = true;
-let vis_p_aem = true;
-let vis_utilities = true;
-let theme = "auto";
+let is_block2_visible = true;
+let is_block3_visible = true;
+let is_block4_visible = true;
+let selected_theme = "auto";
 chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.local.set({ S_URL });
-    chrome.storage.local.set({ P_URL });
-    chrome.storage.local.set({ s_p5_login });
-    chrome.storage.local.set({ s_p6_login });
-    chrome.storage.local.set({ s_aem });
-    chrome.storage.local.set({ s_url });
-    chrome.storage.local.set({ p_aem });
-    chrome.storage.local.set({ p_content });
-    chrome.storage.local.set({ p_url });
-    chrome.storage.local.set({ vis_s_aem });
-    chrome.storage.local.set({ vis_p_aem });
-    chrome.storage.local.set({ vis_utilities });
-    chrome.storage.local.set({ theme });
+    chrome.storage.local.set({ I_URL });
+    chrome.storage.local.set({ user_id });
+    chrome.storage.local.set({ user_email });
+    chrome.storage.local.set({ selected_aem_samsung });
+    chrome.storage.local.set({ url_samsung });
+    chrome.storage.local.set({ selected_aem_iqos });
+    chrome.storage.local.set({ selected_site });
+    chrome.storage.local.set({ url_iqos });
+    chrome.storage.local.set({ I_COUNTRY });
+    chrome.storage.local.set({ is_block2_visible });
+    chrome.storage.local.set({ is_block3_visible });
+    chrome.storage.local.set({ is_block4_visible });
+    chrome.storage.local.set({ selected_theme });
 });
 /*
  * ------------------------- helpers -------------------------

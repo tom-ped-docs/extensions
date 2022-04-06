@@ -69,6 +69,7 @@
   @extend .f-app-surface-layer, .rounded, .mt-2, .p-2;
   transition: 0.5s ease background-color;
 
+  &--critical           { @extend .f-critical-background; }
   &__container1         { @extend .row, .g-2, .mb-2; }
   &__container2,
   &__container3         { @extend .col; }

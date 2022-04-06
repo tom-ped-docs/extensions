@@ -27,8 +27,6 @@
 
 // bootstrap-components, f-iconography, f-typography, f-color, f-surfaces, bootstrap-utilities, CSS
 
-.min-width { min-width: 2.5rem; }
-
 .body {
   @extend .f-app-surface-base;
 
@@ -77,6 +75,10 @@
 .block3 {
   &__container        { @extend .d-flex; }
   &__button-shortcuts { @extend .btn, .btn-sm, .f-btn-icon, .f-text; }
+  // &__button-key {
+  //   @extend .btn, .btn-sm, .btn--f-accent, .f-body, .f-text-on-accent, .me-2;
+  //   min-width: 2.5rem;
+  // }
 
   // KeyboardShortcut
   &__icon-shortcuts::before   { font-family: iconography.$font-family; content: "\eda7"; }

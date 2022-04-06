@@ -9,12 +9,12 @@ const setDark = () => {
 }
 
 // on popup ...
-chrome.storage.local.get("theme", ({ theme }) => {
+chrome.storage.local.get("selected_theme", ({ selected_theme }) => {
   // ------------------------- theme -------------------------
 
-  if (theme === "light") {
+  if (selected_theme === "light") {
     setLight();
-  } else if (theme === "dark") {
+  } else if (selected_theme === "dark") {
     setDark();
   } else {
     const PREFERS_COLOR_SCHEME = window.matchMedia("(prefers-color-scheme: light)");
@@ -31,7 +31,7 @@ chrome.storage.local.get("theme", ({ theme }) => {
  * ------------------------- block1 -------------------------
  */
 
-const BODY = document.querySelector("body") as HTMLBodyElement;
+const BODY = document.body as HTMLBodyElement;
 
 const DIV_0 = document.createElement("div") as HTMLDivElement;
 DIV_0.setAttribute("class", "body__container ms-motion-slideUpIn");
@@ -40,6 +40,10 @@ const BUTTON = document.createElement("button") as HTMLButtonElement;
 BUTTON.setAttribute("class", "button-close");
 BUTTON.setAttribute("type", "button");
 DIV_0.appendChild(BUTTON);
+
+/*
+ * ------------------------- block1 -------------------------
+ */
 
 const DIV_1 = document.createElement("div") as HTMLDivElement;
 DIV_1.setAttribute("class", "block1");
@@ -53,8 +57,6 @@ const DIV_3 = document.createElement("div") as HTMLDivElement;
 DIV_3.setAttribute("class", "block1__container2");
 DIV_2.appendChild(DIV_3);
 
-// .input-group
-
 const DIV_4 = document.createElement("div") as HTMLDivElement;
 DIV_4.setAttribute("class", "block1__input-group");
 DIV_3.appendChild(DIV_4);
@@ -65,8 +67,6 @@ DIV_4.appendChild(SPAN);
 
 const SPAN_TN = document.createTextNode("src");
 SPAN.appendChild(SPAN_TN);
-
-// select
 
 const SELECT = document.createElement("select") as HTMLSelectElement;
 SELECT.setAttribute("class", "block1__select-contains");
@@ -90,13 +90,15 @@ const DIV_5 = document.createElement("div") as HTMLDivElement;
 DIV_5.setAttribute("class", "block1__container3");
 DIV_2.appendChild(DIV_5);
 
-// input
-
 const INPUT = document.createElement("input") as HTMLInputElement;
 INPUT.setAttribute("class", "block1__input-text");
 INPUT.setAttribute("type", "text");
 INPUT.setAttribute("placeholder", "/pl");
 DIV_5.appendChild(INPUT);
+
+/*
+ * ------------------------- block2 -------------------------
+ */
 
 const DIV_6 = document.createElement("div") as HTMLDivElement;
 DIV_6.setAttribute("class", "block2");
@@ -123,7 +125,7 @@ if (IMGS !== null) {
     SPAN_0.setAttribute("class", "block2__title");
     DIV.appendChild(SPAN_0);
 
-    const SPAN_0_TN = document.createTextNode(`img ${i}:`);
+    const SPAN_0_TN = document.createTextNode("img " + i);
     SPAN_0.appendChild(SPAN_0_TN);
 
     i++;
@@ -132,26 +134,26 @@ if (IMGS !== null) {
     SPAN_1.setAttribute("class", "block2__subtitle-src");
     DIV.appendChild(SPAN_1);
 
-    const SPAN_1_TN = document.createTextNode(`src: ${img.src}`);
+    const SPAN_1_TN = document.createTextNode("src: " + img.src);
     SPAN_1.appendChild(SPAN_1_TN);
 
     const SPAN_2 = document.createElement("span") as HTMLSpanElement;
     SPAN_2.setAttribute("class", "block2__subtitle-alt");
     DIV.appendChild(SPAN_2);
 
-    const SPAN_2_TN = document.createTextNode(`alt: ${img.alt}`);
+    const SPAN_2_TN = document.createTextNode("alt: " + img.alt);
     SPAN_2.appendChild(SPAN_2_TN);
   }
 }
 
-// .ms-motion-slideUpIn animation
+// ms-motion-slideUpIn animation
 BODY.appendChild(DIV_0);
 
 BUTTON.addEventListener("click", () => {
   DIV_0.classList.remove("ms-motion-slideUpIn");
   DIV_0.classList.add("ms-motion-slideDownOut");
 
-  // .ms-motion-slideDownOut animation
+  // ms-motion-slideDownOut animation
   setTimeout(() => {
     BODY.removeChild(DIV_0);
     location.reload();

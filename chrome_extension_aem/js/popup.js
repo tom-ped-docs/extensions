@@ -1,7 +1,45 @@
+const BLOCK2 = document.querySelector("#block2");
+const BLOCK3 = document.querySelector("#block3");
+const BLOCK4 = document.querySelector("#block4");
+// @ts-ignore
+const setLight = () => {
+    document.documentElement.classList.add("light");
+};
+// @ts-ignore
+const setDark = () => {
+    document.documentElement.classList.add("dark");
+};
+// on popup ...
+chrome.storage.local.get(["is_block2_visible", "is_block3_visible", "is_block4_visible", "selected_theme"], ({ is_block2_visible, is_block3_visible, is_block4_visible, selected_theme }) => {
+    if (is_block2_visible === false) {
+        BLOCK2.classList.add("d-none");
+    }
+    if (is_block3_visible === false) {
+        BLOCK3.classList.add("d-none");
+    }
+    if (is_block4_visible === false) {
+        BLOCK4.classList.add("d-none");
+    }
+    // ------------------------- theme -------------------------
+    if (selected_theme === "light") {
+        setLight();
+    }
+    else if (selected_theme === "dark") {
+        setDark();
+    }
+    else {
+        const PREFERS_COLOR_SCHEME = window.matchMedia("(prefers-color-scheme: light)");
+        if (PREFERS_COLOR_SCHEME.matches) {
+            setLight();
+        }
+        else {
+            setDark();
+        }
+    }
+});
 /*
  * ------------------------- block1 -------------------------
  */
-// const BLOCK1__BUTTON_IMAGES = document.querySelector("#block1__button_images") as HTMLButtonElement;
 document.querySelector("#block1__button_images").addEventListener("click", () => {
     const query_3 = async () => {
         let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -20,85 +58,30 @@ document.querySelector("#block1__button_images").addEventListener("click", () =>
     };
     query_3();
 });
-// const BLOCK1__BUTTON_OPTIONS = document.querySelector("#block1__button_options") as HTMLButtonElement;
 document.querySelector("#block1__button_options").addEventListener("click", () => {
     chrome.runtime.openOptionsPage();
 });
 /*
- * ------------------------- ... -------------------------
- */
-const BLOCK2 = document.querySelector("#block2");
-const BLOCK3 = document.querySelector("#block3");
-const BLOCK4 = document.querySelector("#block4");
-// @ts-ignore
-const setLight = () => {
-    document.documentElement.classList.add("light");
-};
-// @ts-ignore
-const setDark = () => {
-    document.documentElement.classList.add("dark");
-};
-// on popup ...
-chrome.storage.local.get(["vis_s_aem", "vis_p_aem", "vis_utilities", "theme"], ({ vis_s_aem, vis_p_aem, vis_utilities, theme }) => {
-    // ------------------------- visibility -------------------------
-    if (vis_s_aem === false) {
-        BLOCK2.classList.add("d-none");
-    }
-    if (vis_p_aem === false) {
-        BLOCK3.classList.add("d-none");
-    }
-    if (vis_utilities === false) {
-        BLOCK4.classList.add("d-none");
-    }
-    // ------------------------- theme -------------------------
-    if (theme === "light") {
-        setLight();
-    }
-    else if (theme === "dark") {
-        setDark();
-    }
-    else {
-        const PREFERS_COLOR_SCHEME = window.matchMedia("(prefers-color-scheme: light)");
-        if (PREFERS_COLOR_SCHEME.matches) {
-            setLight();
-        }
-        else {
-            setDark();
-        }
-    }
-});
-/*
- * ------------------------- block2 -------------------------
+ * ------------------------- block2, samsung -------------------------
  */
 const BLOCK2__SELECT_AEM = document.querySelector("#block2__select_aem");
-// const BLOCK2__BUTTON_LOGIN = document.querySelector("#block2__button_login") as HTMLButtonElement;
 const BLOCK2__INPUT_URL = document.querySelector("#block2__input_url");
-// const BLOCK2__BUTTON_EDITOR = document.querySelector("#block2__button_editor") as HTMLButtonElement;
-// const BLOCK2__BUTTON_PREVIEW = document.querySelector("#block2__button_preview") as HTMLButtonElement;
-// const BLOCK2__BUTTON_QA = document.querySelector("#block2__button_qa") as HTMLButtonElement;
-// const BLOCK2__BUTTON_LIVE = document.querySelector("#block2__button_live") as HTMLButtonElement;
-// const BLOCK2__BUTTON_SITES = document.querySelector("#block2__button_sites") as HTMLButtonElement;
-// const BLOCK2__BUTTON_ASSETS = document.querySelector("#block2__button_assets") as HTMLButtonElement;
 const BLOCK2__BUTTON_TASK_MANAGEMENT = document.querySelector("#block2__button_task_management");
-// const BLOCK2__BUTTON_WORKFLOWS = document.querySelector("#block2__button_workflows") as HTMLButtonElement;
-// const BLOCK2__BUTTON_PURGING = document.querySelector("#block2__button_purging") as HTMLButtonElement;
-// const BLOCK2__BUTTON_PIM_B2C = document.querySelector("#block2__button_pim_b2c") as HTMLButtonElement;
-// const BLOCK2__BUTTON_PIM_B2B = document.querySelector("#block2__button_pim_b2b") as HTMLButtonElement;
 // on popup ...
-chrome.storage.local.get(["s_aem", "s_url"], ({ s_aem, s_url }) => {
+chrome.storage.local.get(["selected_aem_samsung", "url_samsung"], ({ selected_aem_samsung, url_samsung }) => {
     for (let option of Array.from(BLOCK2__SELECT_AEM.options)) {
-        if (option.value === s_aem) {
+        if (option.value === selected_aem_samsung) {
             option.selected = true;
         }
     }
-    BLOCK2__INPUT_URL.placeholder = s_url;
-    BLOCK2__INPUT_URL.value = s_url;
+    BLOCK2__INPUT_URL.placeholder = url_samsung;
+    BLOCK2__INPUT_URL.value = url_samsung;
 });
 // ------------------------- select -------------------------
 // on popup ...
-const setSAttributes = () => {
-    chrome.storage.local.get("s_aem", ({ s_aem }) => {
-        if (s_aem === "p6_aem_ap" || s_aem === "p6_aem_eu" || s_aem === "p6_aem_us") {
+const setAttributesBlock2 = () => {
+    chrome.storage.local.get("selected_aem_samsung", ({ selected_aem_samsung }) => {
+        if (selected_aem_samsung === "p6_aem_ap" || selected_aem_samsung === "p6_aem_eu" || selected_aem_samsung === "p6_aem_us") {
             BLOCK2__BUTTON_TASK_MANAGEMENT.setAttribute("disabled", "");
         }
         else {
@@ -106,20 +89,20 @@ const setSAttributes = () => {
         }
     });
 };
-setSAttributes();
-// set "s_aem" var
+setAttributesBlock2();
+// set "selected_aem_samsung" var
 BLOCK2__SELECT_AEM.addEventListener("change", () => {
-    chrome.storage.local.set({ s_aem: BLOCK2__SELECT_AEM.selectedOptions[0].value });
-    setSAttributes();
+    chrome.storage.local.set({ selected_aem_samsung: BLOCK2__SELECT_AEM.selectedOptions[0].value });
+    setAttributesBlock2();
 });
 // ------------------------- button -------------------------
 document.querySelector("#block2__button_login").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem", "s_p5_login", "s_p6_login"], ({ S_URL, s_aem, s_p5_login, s_p6_login }) => {
-        if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_login + s_p5_login });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung", "user_id", "user_email"], ({ S_URL, selected_aem_samsung, user_id, user_email }) => {
+        if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_login + user_id });
         }
         else {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_login + s_p6_login });
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_login + user_email });
         }
     });
 });
@@ -144,309 +127,239 @@ const setUrl = (url) => {
     url = url.toLowerCase();
     return url;
 };
-// set "s_url" var
+// set "url_samsung" var
 BLOCK2__INPUT_URL.addEventListener("input", () => {
     let url = BLOCK2__INPUT_URL.value;
     url = setUrl(url);
-    chrome.storage.local.set({ s_url: url });
+    chrome.storage.local.set({ url_samsung: url });
 });
 // ------------------------- buttons -------------------------
 document.querySelector("#block2__button_editor").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
-        chrome.tabs.create({ url: S_URL[s_aem] + S_URL.editor_s + s_url + S_URL.editor_e });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
+        chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.editor1 + url_samsung + S_URL.editor2 });
     });
 });
 document.querySelector("#block2__button_preview").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
-        chrome.tabs.create({ url: S_URL[s_aem] + S_URL.editor_off_s + s_url + S_URL.editor_off_e });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
+        chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.preview1 + url_samsung + S_URL.preview2 });
     });
 });
 document.querySelector("#block2__button_qa").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
-        if (s_aem === "p5_aem" || s_aem === "p5_aem_eu") {
-            chrome.tabs.create({ url: S_URL.p5_qa + s_url });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
+        if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu") {
+            chrome.tabs.create({ url: S_URL.p5_qa + url_samsung });
         }
-        else if (s_aem === "p5_aem_eu_shop") {
-            chrome.tabs.create({ url: S_URL.p5_qa_shop + s_url });
+        else if (selected_aem_samsung === "p5_aem_eu_shop") {
+            chrome.tabs.create({ url: S_URL.p5_qa_shop + url_samsung });
         }
         else {
-            chrome.tabs.create({ url: S_URL.p6_qa + s_url });
+            chrome.tabs.create({ url: S_URL.p6_qa + url_samsung });
         }
     });
 });
 document.querySelector("#block2__button_live").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_url"], ({ S_URL, s_url }) => {
-        chrome.tabs.create({ url: S_URL.live + s_url });
+    chrome.storage.local.get(["S_URL", "url_samsung"], ({ S_URL, url_samsung }) => {
+        chrome.tabs.create({ url: S_URL.live + url_samsung });
     });
 });
 document.querySelector("#block2__button_sites").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
-        chrome.tabs.create({ url: S_URL[s_aem] + S_URL.sites + s_url });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
+        chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.sites + url_samsung });
     });
 });
 document.querySelector("#block2__button_assets").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem", "s_url"], ({ S_URL, s_aem, s_url }) => {
-        chrome.tabs.create({ url: S_URL[s_aem] + S_URL.assets + s_url });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
+        chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.assets + url_samsung });
     });
 });
 BLOCK2__BUTTON_TASK_MANAGEMENT.addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
-        chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_task_management });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
+        chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_task_management });
     });
 });
 document.querySelector("#block2__button_workflows").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
-        if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_workflows });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
+        if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_workflows });
         }
         else {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_workflows });
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_workflows });
         }
     });
 });
 document.querySelector("#block2__button_purging").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
-        if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_purging });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
+        if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_purging });
         }
         else {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_purging });
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_purging });
         }
     });
 });
 document.querySelector("#block2__button_pim_b2c").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
-        if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_pim_b2c });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
+        if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_pim_b2c });
         }
         else {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_pim_b2c });
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_pim_b2c });
         }
     });
 });
 document.querySelector("#block2__button_pim_b2b").addEventListener("click", () => {
-    chrome.storage.local.get(["S_URL", "s_aem"], ({ S_URL, s_aem }) => {
-        if (s_aem === "p5_aem" || s_aem === "p5_aem_eu" || s_aem === "p5_aem_eu_shop") {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p5_pim_b2b });
+    chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
+        if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_pim_b2b });
         }
         else {
-            chrome.tabs.create({ url: S_URL[s_aem] + S_URL.p6_pim_b2b });
+            chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_pim_b2b });
         }
     });
 });
 /*
- * ------------------------- block3 -------------------------
+ * ------------------------- block3, iqos -------------------------
  */
 const BLOCK3__SELECT_AEM = document.querySelector("#block3__select_aem");
-// const BLOCK3__BUTTON_LOGIN = document.querySelector("#block3__button_login") as HTMLButtonElement;
 const BLOCK3__SELECT_SITE = document.querySelector("#block3__select_site");
 const BLOCK3__INPUT_URL = document.querySelector("#block3__input_url");
-// const BLOCK3__BUTTON_EDITOR = document.querySelector("#block3__button_editor") as HTMLButtonElement;
-// const BLOCK3__BUTTON_PREVIEW = document.querySelector("#block3__button_preview") as HTMLButtonElement;
 const BLOCK3__BUTTON_QA_LOGIN = document.querySelector("#block3__button_qa_login");
-// const BLOCK3__BUTTON_LIVE = document.querySelector("#block3__button_live") as HTMLButtonElement;
-// const BLOCK3__BUTTON_SITES = document.querySelector("#block3__button_sites") as HTMLButtonElement;
-// const BLOCK3__BUTTON_ASSETS = document.querySelector("#block3__button_assets") as HTMLButtonElement;
-// const BLOCK3__BUTTON_GRFALSE = document.querySelector("#block3__button_grfalse") as HTMLButtonElement;
-// const BLOCK3__BUTTON_AGE_GATE = document.querySelector("#block3__button_age_gate") as HTMLButtonElement;
 // on popup ...
-chrome.storage.local.get(["p_aem", "p_content", "p_url"], ({ p_aem, p_content, p_url }) => {
+chrome.storage.local.get(["selected_aem_iqos", "selected_site", "url_iqos"], ({ selected_aem_iqos, selected_site, url_iqos }) => {
     for (let option of Array.from(BLOCK3__SELECT_AEM.options)) {
-        if (option.value === p_aem) {
+        if (option.value === selected_aem_iqos) {
             option.selected = true;
         }
     }
     for (let option of Array.from(BLOCK3__SELECT_SITE.options)) {
-        if (option.value === p_content) {
+        if (option.value === selected_site) {
             option.selected = true;
         }
     }
-    BLOCK3__INPUT_URL.placeholder = p_url;
-    BLOCK3__INPUT_URL.value = p_url;
+    BLOCK3__INPUT_URL.placeholder = url_iqos;
+    BLOCK3__INPUT_URL.value = url_iqos;
 });
 // ------------------------- select -------------------------
 // on popup ...
-const setPAttributes = () => {
-    chrome.storage.local.get("p_aem", ({ p_aem }) => {
-        if (p_aem === "prod_aem") {
-            BLOCK2.classList.add("f-critical-background");
+const setAttributesBlock3 = () => {
+    chrome.storage.local.get("selected_aem_iqos", ({ selected_aem_iqos }) => {
+        if (selected_aem_iqos === "prod_aem") {
+            BLOCK3.classList.add("block3--critical");
             BLOCK3__BUTTON_QA_LOGIN.setAttribute("disabled", "");
         }
         else {
-            BLOCK2.classList.remove("f-critical-background");
+            BLOCK3.classList.remove("block3--critical");
             BLOCK3__BUTTON_QA_LOGIN.removeAttribute("disabled");
         }
     });
 };
-setPAttributes();
-// set "p_aem" var
+setAttributesBlock3();
+// set "selected_aem_iqos" var
 BLOCK3__SELECT_AEM.addEventListener("change", () => {
-    chrome.storage.local.set({ p_aem: BLOCK3__SELECT_AEM.selectedOptions[0].value });
-    setPAttributes();
+    chrome.storage.local.set({ selected_aem_iqos: BLOCK3__SELECT_AEM.selectedOptions[0].value });
+    setAttributesBlock3();
 });
 // ------------------------- button -------------------------
 document.querySelector("#block3__button_login").addEventListener("click", () => {
-    chrome.storage.local.get(["P_URL", "p_aem"], ({ P_URL, p_aem }) => {
-        chrome.tabs.create({ url: P_URL[p_aem] + P_URL.login });
+    chrome.storage.local.get(["I_URL", "selected_aem_iqos"], ({ I_URL, selected_aem_iqos }) => {
+        chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.login });
     });
 });
 // ------------------------- select -------------------------
-// set "p_content" var
+// set "selected_site" var
 BLOCK3__SELECT_SITE.addEventListener("change", () => {
-    chrome.storage.local.set({ p_content: BLOCK3__SELECT_SITE.selectedOptions[0].value });
+    chrome.storage.local.set({ selected_site: BLOCK3__SELECT_SITE.selectedOptions[0].value });
 });
 // ------------------------- input -------------------------
-// set "p_url" var
+// set "url_iqos" var
 BLOCK3__INPUT_URL.addEventListener("input", () => {
     let url = BLOCK3__INPUT_URL.value;
     url = setUrl(url);
-    chrome.storage.local.set({ p_url: url });
+    chrome.storage.local.set({ url_iqos: url });
 });
 // ------------------------- buttons -------------------------
 document.querySelector("#block3__button_editor").addEventListener("click", () => {
-    chrome.storage.local.get(["P_URL", "p_aem", "p_content", "p_url"], ({ P_URL, p_aem, p_content, p_url }) => {
-        chrome.tabs.create({ url: P_URL[p_aem] + P_URL.editor_s + p_content + "/" + p_url + P_URL.editor_e });
+    chrome.storage.local.get(["I_URL", "selected_aem_iqos", "selected_site", "url_iqos"], ({ I_URL, selected_aem_iqos, selected_site, url_iqos }) => {
+        chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.editor1 + selected_site + "/" + url_iqos + I_URL.editor2 });
     });
 });
 document.querySelector("#block3__button_preview").addEventListener("click", () => {
-    chrome.storage.local.get(["P_URL", "p_aem", "p_content", "p_url"], ({ P_URL, p_aem, p_content, p_url }) => {
-        chrome.tabs.create({ url: P_URL[p_aem] + P_URL.editor_off_s + p_content + "/" + p_url + P_URL.editor_off_e });
+    chrome.storage.local.get(["I_URL", "selected_aem_iqos", "selected_site", "url_iqos"], ({ I_URL, selected_aem_iqos, selected_site, url_iqos }) => {
+        chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.preview1 + selected_site + "/" + url_iqos + I_URL.preview2 });
     });
 });
 BLOCK3__BUTTON_QA_LOGIN.addEventListener("click", () => {
-    chrome.storage.local.get(["P_URL", "p_content"], ({ P_URL, p_content }) => {
-        switch (p_content) {
+    chrome.storage.local.get(["I_URL", "selected_site"], ({ I_URL, selected_site }) => {
+        let pre_prod_url = "";
+        switch (selected_site) {
             case "pmisite":
-                chrome.tabs.create({ url: P_URL.pre_prod_qa + P_URL.pre_prod_qa_login });
+                pre_prod_url = I_URL.pre_prod_qa + I_URL.pre_prod_qa_login;
                 break;
             case "veevsite":
-                chrome.tabs.create({ url: P_URL.pre_prod_veev_qa + P_URL.pre_prod_veev_qa_login });
+                pre_prod_url = I_URL.pre_prod_veev_qa + I_URL.pre_prod_veev_qa_login;
                 break;
             case "pmiclub":
-                chrome.tabs.create({ url: P_URL.pre_prod_club_qa + P_URL.pre_prod_club_qa_login });
+                pre_prod_url = I_URL.pre_prod_club_qa + I_URL.pre_prod_club_qa_login;
                 break;
         }
+        chrome.tabs.create({ url: pre_prod_url });
     });
 });
 document.querySelector("#block3__button_live").addEventListener("click", () => {
-    chrome.storage.local.get(["P_URL", "p_aem", "p_content", "p_url"], ({ P_URL, p_aem, p_content, p_url }) => {
-        if (p_aem === "pre_prod_aem") {
+    chrome.storage.local.get(["I_URL", "selected_aem_iqos", "selected_site", "url_iqos"], ({ I_URL, selected_aem_iqos, selected_site, url_iqos }) => {
+        if (selected_aem_iqos === "pre_prod_aem") {
             let pre_prod_url = "";
-            switch (p_content) {
+            switch (selected_site) {
                 case "pmisite":
-                    pre_prod_url = P_URL.pre_prod_qa;
+                    pre_prod_url = I_URL.pre_prod_qa;
                     break;
                 case "veevsite":
-                    pre_prod_url = P_URL.pre_prod_veev_qa;
+                    pre_prod_url = I_URL.pre_prod_veev_qa;
                     break;
                 case "pmiclub":
-                    pre_prod_url = P_URL.pre_prod_club_qa;
+                    pre_prod_url = I_URL.pre_prod_club_qa;
                     break;
             }
-            chrome.tabs.create({ url: pre_prod_url + p_url + P_URL.live });
+            chrome.tabs.create({ url: pre_prod_url + url_iqos + I_URL.live });
         }
         else {
             let prod_url = "";
-            switch (p_content) {
+            switch (selected_site) {
                 case "pmisite":
-                    prod_url = P_URL.prod_live;
+                    prod_url = I_URL.prod_live;
                     break;
                 case "veevsite":
-                    prod_url = P_URL.prod_veev_live;
+                    prod_url = I_URL.prod_veev_live;
                     break;
                 case "pmiclub":
-                    prod_url = P_URL.prod_club_live;
+                    prod_url = I_URL.prod_club_live;
                     break;
             }
-            chrome.tabs.create({ url: prod_url + p_url + P_URL.live });
+            chrome.tabs.create({ url: prod_url + url_iqos + I_URL.live });
         }
     });
 });
 document.querySelector("#block3__button_sites").addEventListener("click", () => {
-    chrome.storage.local.get(["P_URL", "p_aem", "p_content", "p_url"], ({ P_URL, p_aem, p_content, p_url }) => {
-        chrome.tabs.create({ url: P_URL[p_aem] + P_URL.sites + p_content + "/" + p_url });
+    chrome.storage.local.get(["I_URL", "selected_aem_iqos", "selected_site", "url_iqos"], ({ I_URL, selected_aem_iqos, selected_site, url_iqos }) => {
+        chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.sites + selected_site + "/" + url_iqos });
     });
 });
 document.querySelector("#block3__button_assets").addEventListener("click", () => {
-    chrome.storage.local.get(["P_URL", "p_aem", "p_url"], ({ P_URL, p_aem, p_url }) => {
-        const URL = p_url.slice(0, 3);
-        let country = "";
-        switch (URL) {
-            case "cr/":
-                country = "/costa-rica";
-                break;
-            case "cz/":
-                country = "/czech-republic";
-                break;
-            case "eg/":
-                country = "/egypt";
-                break;
-            case "fi/":
-                country = "/finland";
-                break;
-            case "fr/":
-                country = "/france";
-                break;
-            case "de/":
-                country = "/germany";
-                break;
-            case "id/":
-                country = "/indonesia";
-                break;
-            case "jp/":
-                country = "/japan";
-                break;
-            case "kg/":
-                country = "/kyrgyzstan";
-                break;
-            case "mv/":
-                country = "/maldives";
-                break;
-            case "ma/":
-                country = "/morocountryo";
-                break;
-            case "mx/":
-                country = "/mx";
-                break;
-            case "ph/":
-                country = "/philippines";
-                break;
-            case "pl/":
-                country = "/poland";
-                break;
-            case "pt/":
-                country = "/portugal";
-                break;
-            case "sk/":
-                country = "/slovakia";
-                break;
-            case "tw/":
-                country = "/taiwan";
-                break;
-            case "tn/":
-                country = "/tunisia";
-                break;
-            case "gb/":
-                country = "/uk";
-                break;
-            case "ae/":
-                country = "/united-arab-emirates";
-                break;
-            // case "/": country = "/vanuatu"; break;
-            case "vn/":
-                country = "/vietnam";
-                break;
-            default:
-                break;
+    chrome.storage.local.get(["I_URL", "selected_aem_iqos", "url_iqos", "I_COUNTRY"], ({ I_URL, selected_aem_iqos, url_iqos, I_COUNTRY }) => {
+        let url = url_iqos.slice(0, 3);
+        if (url[2] === "/") {
+            url = url.slice(0, 2);
+            if (I_COUNTRY[url]) {
+                chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.assets + "/" + I_COUNTRY[url] });
+            }
         }
-        chrome.tabs.create({ url: P_URL[p_aem] + P_URL.assets + country });
     });
 });
 document.querySelector("#block3__button_grfalse").addEventListener("click", () => {
     const query_1 = async () => {
         let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-        chrome.storage.local.get(["P_URL"], ({ P_URL }) => {
-            chrome.tabs.update({ url: tab.url + P_URL.grfalse });
+        chrome.storage.local.get(["I_URL"], ({ I_URL }) => {
+            chrome.tabs.update({ url: tab.url + I_URL.grfalse });
         });
         window.close();
     };
@@ -502,13 +415,7 @@ document.querySelector("#block3__button_age_gate").addEventListener("click", () 
 /*
  * ------------------------- block4 -------------------------
  */
-// const BLOCK4__BUTTON_PASTE = document.querySelector("#block4__button_paste") as HTMLButtonElement;
 const BLOCK4__INPUT_TEXT = document.querySelector("#block4__input_text");
-// const BLOCK4__BUTTON_TO_LOWER_CASE = document.querySelector("#block4__button_to_lower_case") as HTMLButtonElement;
-// const BLOCK4__BUTTON_TO_UPPER_CASE = document.querySelector("#block4__button_to_upper_case") as HTMLButtonElement;
-// const BLOCK4__BUTTON_TO_TITLE_CASE = document.querySelector("#block4__button_to_title_case") as HTMLButtonElement;
-// const BLOCK4__BUTTON_CUT = document.querySelector("#block4__button_cut") as HTMLButtonElement;
-// const BLOCK4__BUTTON_COPY = document.querySelector("#block4__button_copy") as HTMLButtonElement;
 document.querySelector("#block4__button_paste").addEventListener("click", () => {
     BLOCK4__INPUT_TEXT.focus();
     document.execCommand("paste");

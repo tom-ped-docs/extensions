@@ -13,10 +13,6 @@ const BLOCK4__INPUT_AEM_CAPITALIZATION = document.querySelector("#block4__input_
 
 const BLOCK5__INPUT_LOGIN_P5 = document.querySelector("#block5__input_login_p5") as HTMLInputElement;
 const BLOCK5__INPUT_LOGIN_P6 = document.querySelector("#block5__input_login_p6") as HTMLInputElement;
-// const BLOCK5__BUTTON_LOGIN_SAVE_P5 = document.querySelector("#block5__button_login_save_p5") as HTMLButtonElement;
-// const BLOCK5__BUTTON_LOGIN_SAVE_P6 = document.querySelector("#block5__button_login_save_p6") as HTMLButtonElement;
-// const BLOCK5__BUTTON_LOGIN_RESET_P5 = document.querySelector("#block5__button_login_reset_p5") as HTMLButtonElement;
-// const BLOCK5__BUTTON_LOGIN_RESET_P6 = document.querySelector("#block5__button_login_reset_p6") as HTMLButtonElement;
 
 // @ts-ignore
 const setLight = () => {
@@ -29,36 +25,36 @@ const setDark = () => {
 }
 
 // on popup ...
-chrome.storage.local.get(["s_p5_login", "s_p6_login", "vis_s_aem", "vis_p_aem", "vis_utilities", "theme"], ({ s_p5_login, s_p6_login, vis_s_aem, vis_p_aem, vis_utilities, theme }) => {
+chrome.storage.local.get(["user_id", "user_email", "is_block2_visible", "is_block3_visible", "is_block4_visible", "selected_theme"], ({ user_id, user_email, is_block2_visible, is_block3_visible, is_block4_visible, selected_theme }) => {
   for (let option of Array.from(BLOCK2__SELECT_THEME.options)) {
-    if (option.value === theme) {
+    if (option.value === selected_theme) {
       option.selected = true;
     }
   }
 
-  if (vis_s_aem === true) {
+  if (is_block2_visible === true) {
     BLOCK4__SPAN_AEM1.textContent = "On";
     BLOCK4__INPUT_AEM1.setAttribute("checked", "");
   }
 
-  if (vis_p_aem === true) {
+  if (is_block3_visible === true) {
     BLOCK4__SPAN_AEM2.textContent = "On";
     BLOCK4__INPUT_AEM2.setAttribute("checked", "");
   }
 
-  if (vis_utilities === true) {
+  if (is_block4_visible === true) {
     BLOCK4__SPAN_AEM_CAPITALIZATION.textContent = "On";
     BLOCK4__INPUT_AEM_CAPITALIZATION.setAttribute("checked", "");
   }
 
-  BLOCK5__INPUT_LOGIN_P5.value = s_p5_login;
-  BLOCK5__INPUT_LOGIN_P6.value = s_p6_login;
+  BLOCK5__INPUT_LOGIN_P5.value = user_id;
+  BLOCK5__INPUT_LOGIN_P6.value = user_email;
 
   // ------------------------- theme -------------------------
 
-  if (theme === "light") {
+  if (selected_theme === "light") {
     setLight();
-  } else if (theme === "dark") {
+  } else if (selected_theme === "dark") {
     setDark();
   } else {
     const PREFERS_COLOR_SCHEME = window.matchMedia("(prefers-color-scheme: light)");
@@ -75,9 +71,9 @@ chrome.storage.local.get(["s_p5_login", "s_p6_login", "vis_s_aem", "vis_p_aem", 
  * ------------------------- block2 -------------------------
  */
 
-// set "theme" var
+// set "selected_theme" var
 BLOCK2__SELECT_THEME.addEventListener("change", () => {
-  chrome.storage.local.set({ theme: BLOCK2__SELECT_THEME.selectedOptions[0].value });
+  chrome.storage.local.set({ selected_theme: BLOCK2__SELECT_THEME.selectedOptions[0].value });
   location.reload();
 });
 
@@ -86,68 +82,68 @@ BLOCK2__SELECT_THEME.addEventListener("change", () => {
  */
 
 // on popup ...
-const setShortcuts = () => {
-  const MANIFEST = chrome.runtime.getManifest();
-  const COMMANDS: string = MANIFEST.commands._execute_action.suggested_key.default;
-  const KEYS: string[] = COMMANDS.split("+");
+// const setShortcuts = () => {
+//   const MANIFEST = chrome.runtime.getManifest();
+//   const COMMANDS: string = MANIFEST.commands._execute_action.suggested_key.default;
+//   const KEYS: string[] = COMMANDS.split("+");
 
-  for (let key of KEYS) {
-    const BUTTON = document.createElement("button") as HTMLButtonElement;
+//   for (let key of KEYS) {
+//     const BUTTON = document.createElement("button") as HTMLButtonElement;
 
-    BUTTON.setAttribute("class", "btn btn-sm me-2 | min-width-2 f-body f-text-on-accent");
-    BUTTON.textContent = key;
-    BLOCK3__BUTTON_SHORTCUTS.parentElement.insertBefore(BUTTON, BLOCK3__BUTTON_SHORTCUTS);
-  }
-}
-setShortcuts();
+//     BUTTON.setAttribute("class", "block3__button-key");
+//     BUTTON.textContent = key;
+//     BLOCK3__BUTTON_SHORTCUTS.parentElement.insertBefore(BUTTON, BLOCK3__BUTTON_SHORTCUTS);
+//   }
+// }
+// setShortcuts();
 
 BLOCK3__BUTTON_SHORTCUTS.addEventListener("click", () => {
-  chrome.tabs.create({ url: "brave://extensions/shortcuts" });
+  chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
 });
 
 /*
  * ------------------------- block4 -------------------------
  */
 
-// set "vis_s_aem" var
+// set "is_block2_visible" var
 BLOCK4__INPUT_AEM1.addEventListener("click",
   (e) => {
     if ((e.target as HTMLInputElement).hasAttribute("checked")) {
-      chrome.storage.local.set({ vis_s_aem: false });
+      chrome.storage.local.set({ is_block2_visible: false });
       BLOCK4__SPAN_AEM1.textContent = "Off";
       BLOCK4__INPUT_AEM1.removeAttribute("checked");
     } else {
-      chrome.storage.local.set({ vis_s_aem: true });
+      chrome.storage.local.set({ is_block2_visible: true });
       BLOCK4__SPAN_AEM1.textContent = "On";
       BLOCK4__INPUT_AEM1.setAttribute("checked", "");
     }
   }
 );
 
-// set "vis_p_aem" var
+// set "is_block3_visible" var
 BLOCK4__INPUT_AEM2.addEventListener("click",
   (e) => {
     if ((e.target as HTMLInputElement).hasAttribute("checked")) {
-      chrome.storage.local.set({ vis_p_aem: false });
+      chrome.storage.local.set({ is_block3_visible: false });
       BLOCK4__SPAN_AEM2.textContent = "Off";
       BLOCK4__INPUT_AEM2.removeAttribute("checked");
     } else {
-      chrome.storage.local.set({ vis_p_aem: true });
+      chrome.storage.local.set({ is_block3_visible: true });
       BLOCK4__SPAN_AEM2.textContent = "On";
       BLOCK4__INPUT_AEM2.setAttribute("checked", "");
     }
   }
 );
 
-// set "vis_utilities" var
+// set "is_block4_visible" var
 BLOCK4__INPUT_AEM_CAPITALIZATION.addEventListener("click",
   (e) => {
     if ((e.target as HTMLInputElement).hasAttribute("checked")) {
-      chrome.storage.local.set({ vis_utilities: false });
+      chrome.storage.local.set({ is_block4_visible: false });
       BLOCK4__SPAN_AEM_CAPITALIZATION.textContent = "Off";
       BLOCK4__INPUT_AEM_CAPITALIZATION.removeAttribute("checked");
     } else {
-      chrome.storage.local.set({ vis_utilities: true });
+      chrome.storage.local.set({ is_block4_visible: true });
       BLOCK4__SPAN_AEM_CAPITALIZATION.textContent = "On";
       BLOCK4__INPUT_AEM_CAPITALIZATION.setAttribute("checked", "");
     }
@@ -158,33 +154,33 @@ BLOCK4__INPUT_AEM_CAPITALIZATION.addEventListener("click",
  * ------------------------- block5 -------------------------
  */
 
-// set "s_p5_login" var
+// set "user_id" var
 document.querySelector("#block5__button_save_p5").addEventListener("click", () => {
-  chrome.storage.local.set({ s_p5_login: BLOCK5__INPUT_LOGIN_P5.value });
+  chrome.storage.local.set({ user_id: BLOCK5__INPUT_LOGIN_P5.value });
 });
 
-// set "s_p6_login" var
+// set "user_email" var
 document.querySelector("#block5__button_save_p6").addEventListener("click", () => {
-  chrome.storage.local.set({ s_p6_login: BLOCK5__INPUT_LOGIN_P6.value });
+  chrome.storage.local.set({ user_email: BLOCK5__INPUT_LOGIN_P6.value });
 });
 
-// set "s_p5_login" var
-document.querySelector("#block5__button_reset_p5").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_p5_login"], ({ S_URL, s_p5_login }) => {
-    chrome.storage.local.set({ s_p5_login: S_URL.p5_login_reset });
-    BLOCK5__INPUT_LOGIN_P5.value = s_p5_login;
-  });
-  location.reload();
-});
+// set "user_id" var
+// document.querySelector("#block5__button_reset_p5").addEventListener("click", () => {
+//   chrome.storage.local.get(["S_URL", "user_id"], ({ S_URL, user_id }) => {
+//     chrome.storage.local.set({ user_id: S_URL.p5_login_reset });
+//     BLOCK5__INPUT_LOGIN_P5.value = user_id;
+//   });
+//   location.reload();
+// });
 
-// set "s_p6_login" var
-document.querySelector("#block5__button_reset_p6").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "s_p6_login"], ({ S_URL, s_p6_login }) => {
-    chrome.storage.local.set({ s_p6_login: S_URL.p6_login_reset });
-    BLOCK5__INPUT_LOGIN_P6.value = s_p6_login;
-  });
-  location.reload();
-});
+// set "user_email" var
+// document.querySelector("#block5__button_reset_p6").addEventListener("click", () => {
+//   chrome.storage.local.get(["S_URL", "user_email"], ({ S_URL, user_email }) => {
+//     chrome.storage.local.set({ user_email: S_URL.p6_login_reset });
+//     BLOCK5__INPUT_LOGIN_P6.value = user_email;
+//   });
+//   location.reload();
+// });
 
 // ------------------------- tooltips -------------------------
 
