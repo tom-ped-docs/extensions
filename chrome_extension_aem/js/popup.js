@@ -239,7 +239,7 @@ document.querySelector("#block2__button_pim_b2b").addEventListener("click", () =
  */
 const BLOCK3__SELECT_AEM = document.querySelector("#block3__select_aem");
 // const BLOCK3__BUTTON_LOGIN = document.querySelector("#block3__button_login") as HTMLButtonElement;
-const BLOCK3__SELECT_CONTENT = document.querySelector("#block3__select_content");
+const BLOCK3__SELECT_SITE = document.querySelector("#block3__select_site");
 const BLOCK3__INPUT_URL = document.querySelector("#block3__input_url");
 // const BLOCK3__BUTTON_EDITOR = document.querySelector("#block3__button_editor") as HTMLButtonElement;
 // const BLOCK3__BUTTON_PREVIEW = document.querySelector("#block3__button_preview") as HTMLButtonElement;
@@ -256,7 +256,7 @@ chrome.storage.local.get(["p_aem", "p_content", "p_url"], ({ p_aem, p_content, p
             option.selected = true;
         }
     }
-    for (let option of Array.from(BLOCK3__SELECT_CONTENT.options)) {
+    for (let option of Array.from(BLOCK3__SELECT_SITE.options)) {
         if (option.value === p_content) {
             option.selected = true;
         }
@@ -292,8 +292,8 @@ document.querySelector("#block3__button_login").addEventListener("click", () => 
 });
 // ------------------------- select -------------------------
 // set "p_content" var
-BLOCK3__SELECT_CONTENT.addEventListener("change", () => {
-    chrome.storage.local.set({ p_content: BLOCK3__SELECT_CONTENT.selectedOptions[0].value });
+BLOCK3__SELECT_SITE.addEventListener("change", () => {
+    chrome.storage.local.set({ p_content: BLOCK3__SELECT_SITE.selectedOptions[0].value });
 });
 // ------------------------- input -------------------------
 // set "p_url" var

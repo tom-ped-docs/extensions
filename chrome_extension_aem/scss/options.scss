@@ -12,6 +12,8 @@
 @use "fluent/surfaces";
 @use "fluent/iconography";
 
+@use "fabric/motion";
+
 /* ------------------------- Surfaces 2 ------------------------- */
 
 .light,
@@ -23,18 +25,20 @@
 
 /* ------------------------- options.html ------------------------- */
 
-.min-width-2 { min-width: 2.5rem; }
+// bootstrap-components, f-iconography, f-typography, f-color, f-surfaces, bootstrap-utilities, CSS
+
+.min-width { min-width: 2.5rem; }
 
 .body {
   @extend .f-app-surface-base;
 
   &__container {
-    @extend .container, .p-2, .f-app-surface-layer;
+    @extend .f-app-surface-layer, .container, .p-2;
     border-radius: 8px;
   }
 }
 
-.heading1 { @extend .d-block, .mb-2, .f-title, .f-text; }
+.heading1 { @extend .f-title, .f-text, .d-block, .mb-2; }
 
 .block1 {
   @extend .mb-2;
@@ -46,18 +50,18 @@
     width: 200px;
   }
   &__container3 { @extend .d-flex, .flex-column; }
-  &__span-title { @extend .text-muted, .f-body, .f-text; }
+  &__title      { @extend .f-body, .f-text, .text-muted; }
 }
 
-.card {
+.f-card {
   @extend .card, .mb-2;
 
-  &__body           { @extend .card-body, .d-flex, .justify-content-between, .align-items-center; }
-  &__container1     { @extend .d-flex; }
-  &__icon           { @extend .f-text, .card-icon; }
-  &__container2     { @extend .d-flex, .flex-column; }
-  &__span-title     { @extend .f-body, .f-text; }
-  &__span-subtitle  { @extend .f-caption, .f-text; }
+  &__body       { @extend .card-body, .d-flex, .justify-content-between, .align-items-center; }
+  &__container1 { @extend .d-flex; }
+  &__icon       { @extend .f-card-icon, .f-text; }
+  &__container2 { @extend .d-flex, .flex-column; }
+  &__title      { @extend .f-body, .f-text; }
+  &__subtitle   { @extend .f-caption, .f-text; }
 }
 
 .block2 {
@@ -72,7 +76,7 @@
 
 .block3 {
   &__container        { @extend .d-flex; }
-  &__button-shortcuts { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text; }
+  &__button-shortcuts { @extend .btn, .btn-sm, .f-btn-icon, .f-text; }
 
   // KeyboardShortcut
   &__icon-shortcuts::before   { font-family: iconography.$font-family; content: "\eda7"; }
@@ -81,24 +85,24 @@
 }
 
 .expander {
-  &__item           { @extend .accordion-item; }
-  &__header         { @extend .accordion-header; }
-  &__button         { @extend .accordion-button; }
-  &__icon           { @extend .f-text, .accordion-icon; }
-  &__container1     { @extend .d-flex, .flex-column; }
-  &__span-title     { @extend .f-body, .f-text; }
-  &__span-subtitle  { @extend .f-caption, .f-text; }
-  &__collapse       { @extend .accordion-collapse; }
-  &__body           { @extend .accordion-body, .d-flex, .justify-content-between, .align-items-center; }
+  &__item       { @extend .accordion-item; }
+  &__header     { @extend .accordion-header; }
+  &__button     { @extend .accordion-button; }
+  &__icon       { @extend .f-accordion-icon, .f-text; }
+  &__container1 { @extend .d-flex, .flex-column; }
+  &__title      { @extend .f-body, .f-text; }
+  &__subtitle   { @extend .f-caption, .f-text; }
+  &__collapse   { @extend .accordion-collapse; }
+  &__body       { @extend .accordion-body, .d-flex, .justify-content-between, .align-items-center; }
 
-  &__container2     { @extend .d-flex, .flex-column; }
+  &__container2 { @extend .d-flex, .flex-column; }
 }
 
 .block4 {
   @extend .mb-2;
 
   &__container      { @extend .d-flex, .align-items-center; }
-  &__span           { @extend .me-2, .f-body, .f-text; }
+  &__span           { @extend .f-body, .f-text, .me-2; }
   &__toggle-switch  { @extend .form-check, .form-switch; }
   &__input          { @extend .form-check-input; }
 
@@ -106,58 +110,49 @@
   &__icon-view::before { font-family: iconography.$font-family; content: "\e890"; }
 }
 
-.heading2 { @extend .d-block, .mb-2, .f-body-strong, .f-text; }
+.heading2 { @extend .f-body-strong, .f-text, .d-block, .mb-2; }
 
 .block5 {
-  &__container          { @extend .d-flex; }
+  &__container    { @extend .d-flex; }
   &__input-login {
-    @extend .form-control, .form-control-sm, .me-2, .f-body, .f-text;
+    @extend .form-control, .form-control-sm, .f-body, .f-text, .me-2;
     width: 20rem;
   }
-  &__btn-group          { @extend .btn-group, .btn-group-sm; }
-  &__button-login-save,
-  &__button-login-reset { @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .f-text; }
+  &__btn-group    { @extend .btn-group, .btn-group-sm; }
+  &__button-save,
+  &__button-reset { @extend .btn, .btn-sm, .f-btn-icon, .f-text; }
 
   // Robot
-  &__icon-robot::before         { font-family: iconography.$font-family; content: "\e99a"; }
+  &__icon-robot::before   { font-family: iconography.$font-family; content: "\e99a"; }
   // Save
-  &__button-login-save::before  { font-family: iconography.$font-family; content: "\e74e"; }
+  &__button-save::before  { font-family: iconography.$font-family; content: "\e74e"; }
   // UpdateRestore
-  &__button-login-reset::before { font-family: iconography.$font-family; content: "\e777"; }
+  &__button-reset::before { font-family: iconography.$font-family; content: "\e777"; }
 }
 
-/* ------------------------- Motion ------------------------- */
+/* ------------------------- Motion 2 ------------------------- */
 
-@keyframes ms-motion-slideDownIn {
-  from { transform: translate3d(0, -48px, 0); }
-  to { transform: translate3d(0, 0, 0); }
-}
-
-@keyframes ms-motion-fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.block1 {
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
+          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
 }
 
 .block2 {
-  animation:
-  100ms 125ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
-  100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
+          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
 }
 
 .block3 {
-  animation:
-  100ms 150ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
-  100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
+          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
 }
 
 .block4 {
-  animation:
-  100ms 175ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
-  100ms 175ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
+          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
 }
 
 .block5 {
-  animation:
-  100ms 200ms ms-motion-slideDownIn both cubic-bezier(.1, .9, .2, 1),
-  100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
+          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
 }

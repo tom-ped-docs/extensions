@@ -2334,7 +2334,7 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.form-select, .block1__select-src {
+.form-select, .block1__select-contains {
   display: block;
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
@@ -2354,28 +2354,28 @@ textarea.form-control-lg {
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-select, .block1__select-src {
+  .form-select, .block1__select-contains {
     transition: none;
   }
 }
-.form-select:focus, .block1__select-src:focus {
+.form-select:focus, .block1__select-contains:focus {
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-select[multiple], [multiple].block1__select-src, .form-select[size]:not([size="1"]), [size].block1__select-src:not([size="1"]) {
+.form-select[multiple], [multiple].block1__select-contains, .form-select[size]:not([size="1"]), [size].block1__select-contains:not([size="1"]) {
   padding-right: 0.75rem;
   background-image: none;
 }
-.form-select:disabled, .block1__select-src:disabled {
+.form-select:disabled, .block1__select-contains:disabled {
   background-color: #e9ecef;
 }
-.form-select:-moz-focusring, .block1__select-src:-moz-focusring {
+.form-select:-moz-focusring, .block1__select-contains:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #212529;
 }
 
-.form-select-sm, .block1__select-src {
+.form-select-sm, .block1__select-contains {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
@@ -2580,7 +2580,7 @@ textarea.form-control-lg {
 }
 .form-floating > .form-control, .form-floating > .block1__input-text,
 .form-floating > .form-select,
-.form-floating > .block1__select-src {
+.form-floating > .block1__select-contains {
   height: calc(3.5rem + 2px);
   line-height: 1.25;
 }
@@ -2614,7 +2614,7 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-select, .form-floating > .block1__select-src {
+.form-floating > .form-select, .form-floating > .block1__select-contains {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
@@ -2622,7 +2622,7 @@ textarea.form-control-lg {
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
 .form-floating > .block1__input-text:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label,
-.form-floating > .block1__select-src ~ label {
+.form-floating > .block1__select-contains ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -2631,39 +2631,39 @@ textarea.form-control-lg {
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-.input-group, .block1__input-group-src {
+.input-group, .block1__input-group {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control, .block1__input-group-src > .form-control, .input-group > .block1__input-text, .block1__input-group-src > .block1__input-text,
+.input-group > .form-control, .block1__input-group > .form-control, .input-group > .block1__input-text, .block1__input-group > .block1__input-text,
 .input-group > .form-select,
-.block1__input-group-src > .form-select,
-.input-group > .block1__select-src,
-.block1__input-group-src > .block1__select-src {
+.block1__input-group > .form-select,
+.input-group > .block1__select-contains,
+.block1__input-group > .block1__select-contains {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus, .block1__input-group-src > .form-control:focus, .input-group > .block1__input-text:focus, .block1__input-group-src > .block1__input-text:focus,
+.input-group > .form-control:focus, .block1__input-group > .form-control:focus, .input-group > .block1__input-text:focus, .block1__input-group > .block1__input-text:focus,
 .input-group > .form-select:focus,
-.block1__input-group-src > .form-select:focus,
-.input-group > .block1__select-src:focus,
-.block1__input-group-src > .block1__select-src:focus {
+.block1__input-group > .form-select:focus,
+.input-group > .block1__select-contains:focus,
+.block1__input-group > .block1__select-contains:focus {
   z-index: 3;
 }
-.input-group .btn, .block1__input-group-src .btn, .input-group .button-close, .block1__input-group-src .button-close {
+.input-group .btn, .block1__input-group .btn, .input-group .button-close, .block1__input-group .button-close {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .block1__input-group-src .btn:focus, .input-group .button-close:focus, .block1__input-group-src .button-close:focus {
+.input-group .btn:focus, .block1__input-group .btn:focus, .input-group .button-close:focus, .block1__input-group .button-close:focus {
   z-index: 3;
 }
 
-.input-group-text, .block1__span-src {
+.input-group-text, .block1__title {
   display: flex;
   align-items: center;
   padding: 0.375rem 0.75rem;
@@ -2680,9 +2680,9 @@ textarea.form-control-lg {
 
 .input-group-lg > .form-control, .input-group-lg > .block1__input-text,
 .input-group-lg > .form-select,
-.input-group-lg > .block1__select-src,
+.input-group-lg > .block1__select-contains,
 .input-group-lg > .input-group-text,
-.input-group-lg > .block1__span-src,
+.input-group-lg > .block1__title,
 .input-group-lg > .btn,
 .input-group-lg > .button-close {
   padding: 0.5rem 1rem;
@@ -2690,45 +2690,45 @@ textarea.form-control-lg {
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control, .block1__input-group-src > .form-control, .input-group-sm > .block1__input-text, .block1__input-group-src > .block1__input-text,
+.input-group-sm > .form-control, .block1__input-group > .form-control, .input-group-sm > .block1__input-text, .block1__input-group > .block1__input-text,
 .input-group-sm > .form-select,
-.block1__input-group-src > .form-select,
-.input-group-sm > .block1__select-src,
-.block1__input-group-src > .block1__select-src,
+.block1__input-group > .form-select,
+.input-group-sm > .block1__select-contains,
+.block1__input-group > .block1__select-contains,
 .input-group-sm > .input-group-text,
-.block1__input-group-src > .input-group-text,
-.input-group-sm > .block1__span-src,
-.block1__input-group-src > .block1__span-src,
+.block1__input-group > .input-group-text,
+.input-group-sm > .block1__title,
+.block1__input-group > .block1__title,
 .input-group-sm > .btn,
-.block1__input-group-src > .btn,
+.block1__input-group > .btn,
 .input-group-sm > .button-close,
-.block1__input-group-src > .button-close {
+.block1__input-group > .button-close {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
 
-.input-group-lg > .form-select, .input-group-lg > .block1__select-src,
+.input-group-lg > .form-select, .input-group-lg > .block1__select-contains,
 .input-group-sm > .form-select,
-.block1__input-group-src > .form-select,
-.input-group-sm > .block1__select-src,
-.block1__input-group-src > .block1__select-src {
+.block1__input-group > .form-select,
+.input-group-sm > .block1__select-contains,
+.block1__input-group > .block1__select-contains {
   padding-right: 3rem;
 }
 
-.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .block1__input-group-src:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .block1__input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
 .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
-.block1__input-group-src:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3) {
+.block1__input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu), .has-validation.block1__input-group-src > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu),
+.input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu), .has-validation.block1__input-group > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu),
 .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4),
-.has-validation.block1__input-group-src > .dropdown-toggle:nth-last-child(n+4) {
+.has-validation.block1__input-group > .dropdown-toggle:nth-last-child(n+4) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback), .block1__input-group-src > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback), .block1__input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
   margin-left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -2781,16 +2781,16 @@ textarea.form-control-lg {
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
 
-.was-validated .form-select:valid, .was-validated .block1__select-src:valid, .form-select.is-valid, .is-valid.block1__select-src {
+.was-validated .form-select:valid, .was-validated .block1__select-contains:valid, .form-select.is-valid, .is-valid.block1__select-contains {
   border-color: #198754;
 }
-.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .block1__select-src:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .was-validated .block1__select-src:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .is-valid.block1__select-src:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .is-valid.block1__select-src:not([multiple])[size="1"] {
+.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .block1__select-contains:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .was-validated .block1__select-contains:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .is-valid.block1__select-contains:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .is-valid.block1__select-contains:not([multiple])[size="1"] {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-select:valid:focus, .was-validated .block1__select-src:valid:focus, .form-select.is-valid:focus, .is-valid.block1__select-src:focus {
+.was-validated .form-select:valid:focus, .was-validated .block1__select-contains:valid:focus, .form-select.is-valid:focus, .is-valid.block1__select-contains:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
@@ -2812,26 +2812,26 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:valid, .was-validated .block1__input-group-src .form-control:valid, .was-validated .input-group .block1__input-text:valid, .was-validated .block1__input-group-src .block1__input-text:valid, .input-group .form-control.is-valid, .block1__input-group-src .form-control.is-valid, .input-group .is-valid.block1__input-text, .block1__input-group-src .is-valid.block1__input-text,
+.was-validated .input-group .form-control:valid, .was-validated .block1__input-group .form-control:valid, .was-validated .input-group .block1__input-text:valid, .was-validated .block1__input-group .block1__input-text:valid, .input-group .form-control.is-valid, .block1__input-group .form-control.is-valid, .input-group .is-valid.block1__input-text, .block1__input-group .is-valid.block1__input-text,
 .was-validated .input-group .form-select:valid,
-.was-validated .block1__input-group-src .form-select:valid,
-.was-validated .input-group .block1__select-src:valid,
-.was-validated .block1__input-group-src .block1__select-src:valid,
+.was-validated .block1__input-group .form-select:valid,
+.was-validated .input-group .block1__select-contains:valid,
+.was-validated .block1__input-group .block1__select-contains:valid,
 .input-group .form-select.is-valid,
-.block1__input-group-src .form-select.is-valid,
-.input-group .is-valid.block1__select-src,
-.block1__input-group-src .is-valid.block1__select-src {
+.block1__input-group .form-select.is-valid,
+.input-group .is-valid.block1__select-contains,
+.block1__input-group .is-valid.block1__select-contains {
   z-index: 1;
 }
-.was-validated .input-group .form-control:valid:focus, .was-validated .block1__input-group-src .form-control:valid:focus, .was-validated .input-group .block1__input-text:valid:focus, .was-validated .block1__input-group-src .block1__input-text:valid:focus, .input-group .form-control.is-valid:focus, .block1__input-group-src .form-control.is-valid:focus, .input-group .is-valid.block1__input-text:focus, .block1__input-group-src .is-valid.block1__input-text:focus,
+.was-validated .input-group .form-control:valid:focus, .was-validated .block1__input-group .form-control:valid:focus, .was-validated .input-group .block1__input-text:valid:focus, .was-validated .block1__input-group .block1__input-text:valid:focus, .input-group .form-control.is-valid:focus, .block1__input-group .form-control.is-valid:focus, .input-group .is-valid.block1__input-text:focus, .block1__input-group .is-valid.block1__input-text:focus,
 .was-validated .input-group .form-select:valid:focus,
-.was-validated .block1__input-group-src .form-select:valid:focus,
-.was-validated .input-group .block1__select-src:valid:focus,
-.was-validated .block1__input-group-src .block1__select-src:valid:focus,
+.was-validated .block1__input-group .form-select:valid:focus,
+.was-validated .input-group .block1__select-contains:valid:focus,
+.was-validated .block1__input-group .block1__select-contains:valid:focus,
 .input-group .form-select.is-valid:focus,
-.block1__input-group-src .form-select.is-valid:focus,
-.input-group .is-valid.block1__select-src:focus,
-.block1__input-group-src .is-valid.block1__select-src:focus {
+.block1__input-group .form-select.is-valid:focus,
+.input-group .is-valid.block1__select-contains:focus,
+.block1__input-group .is-valid.block1__select-contains:focus {
   z-index: 3;
 }
 
@@ -2882,16 +2882,16 @@ textarea.form-control-lg {
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
 
-.was-validated .form-select:invalid, .was-validated .block1__select-src:invalid, .form-select.is-invalid, .is-invalid.block1__select-src {
+.was-validated .form-select:invalid, .was-validated .block1__select-contains:invalid, .form-select.is-invalid, .is-invalid.block1__select-contains {
   border-color: #dc3545;
 }
-.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .block1__select-src:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .was-validated .block1__select-src:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .is-invalid.block1__select-src:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], .is-invalid.block1__select-src:not([multiple])[size="1"] {
+.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .block1__select-contains:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .was-validated .block1__select-contains:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .is-invalid.block1__select-contains:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], .is-invalid.block1__select-contains:not([multiple])[size="1"] {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-select:invalid:focus, .was-validated .block1__select-src:invalid:focus, .form-select.is-invalid:focus, .is-invalid.block1__select-src:focus {
+.was-validated .form-select:invalid:focus, .was-validated .block1__select-contains:invalid:focus, .form-select.is-invalid:focus, .is-invalid.block1__select-contains:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
@@ -2913,26 +2913,26 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:invalid, .was-validated .block1__input-group-src .form-control:invalid, .was-validated .input-group .block1__input-text:invalid, .was-validated .block1__input-group-src .block1__input-text:invalid, .input-group .form-control.is-invalid, .block1__input-group-src .form-control.is-invalid, .input-group .is-invalid.block1__input-text, .block1__input-group-src .is-invalid.block1__input-text,
+.was-validated .input-group .form-control:invalid, .was-validated .block1__input-group .form-control:invalid, .was-validated .input-group .block1__input-text:invalid, .was-validated .block1__input-group .block1__input-text:invalid, .input-group .form-control.is-invalid, .block1__input-group .form-control.is-invalid, .input-group .is-invalid.block1__input-text, .block1__input-group .is-invalid.block1__input-text,
 .was-validated .input-group .form-select:invalid,
-.was-validated .block1__input-group-src .form-select:invalid,
-.was-validated .input-group .block1__select-src:invalid,
-.was-validated .block1__input-group-src .block1__select-src:invalid,
+.was-validated .block1__input-group .form-select:invalid,
+.was-validated .input-group .block1__select-contains:invalid,
+.was-validated .block1__input-group .block1__select-contains:invalid,
 .input-group .form-select.is-invalid,
-.block1__input-group-src .form-select.is-invalid,
-.input-group .is-invalid.block1__select-src,
-.block1__input-group-src .is-invalid.block1__select-src {
+.block1__input-group .form-select.is-invalid,
+.input-group .is-invalid.block1__select-contains,
+.block1__input-group .is-invalid.block1__select-contains {
   z-index: 2;
 }
-.was-validated .input-group .form-control:invalid:focus, .was-validated .block1__input-group-src .form-control:invalid:focus, .was-validated .input-group .block1__input-text:invalid:focus, .was-validated .block1__input-group-src .block1__input-text:invalid:focus, .input-group .form-control.is-invalid:focus, .block1__input-group-src .form-control.is-invalid:focus, .input-group .is-invalid.block1__input-text:focus, .block1__input-group-src .is-invalid.block1__input-text:focus,
+.was-validated .input-group .form-control:invalid:focus, .was-validated .block1__input-group .form-control:invalid:focus, .was-validated .input-group .block1__input-text:invalid:focus, .was-validated .block1__input-group .block1__input-text:invalid:focus, .input-group .form-control.is-invalid:focus, .block1__input-group .form-control.is-invalid:focus, .input-group .is-invalid.block1__input-text:focus, .block1__input-group .is-invalid.block1__input-text:focus,
 .was-validated .input-group .form-select:invalid:focus,
-.was-validated .block1__input-group-src .form-select:invalid:focus,
-.was-validated .input-group .block1__select-src:invalid:focus,
-.was-validated .block1__input-group-src .block1__select-src:invalid:focus,
+.was-validated .block1__input-group .form-select:invalid:focus,
+.was-validated .input-group .block1__select-contains:invalid:focus,
+.was-validated .block1__input-group .block1__select-contains:invalid:focus,
 .input-group .form-select.is-invalid:focus,
-.block1__input-group-src .form-select.is-invalid:focus,
-.input-group .is-invalid.block1__select-src:focus,
-.block1__input-group-src .is-invalid.block1__select-src:focus {
+.block1__input-group .form-select.is-invalid:focus,
+.input-group .is-invalid.block1__select-contains:focus,
+.block1__input-group .is-invalid.block1__select-contains:focus {
   z-index: 3;
 }
 
@@ -3514,7 +3514,7 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.btn-toolbar .input-group, .btn-toolbar .block1__input-group-src {
+.btn-toolbar .input-group, .btn-toolbar .block1__input-group {
   width: auto;
 }
 
@@ -5395,7 +5395,7 @@ textarea.form-control-lg {
   white-space: normal !important;
 }
 
-.text-nowrap, .block2__span-title, .block2__span-subtitle-src, .block2__span-subtitle-alt {
+.text-nowrap, .block2__title, .block2__subtitle-src, .block2__subtitle-alt {
   white-space: nowrap !important;
 }
 
@@ -5461,7 +5461,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted, .block2__span-subtitle-alt {
+.text-muted, .block2__subtitle-alt {
   --bs-text-opacity: 1;
   color: #6c757d !important;
 }
@@ -8975,14 +8975,14 @@ textarea.form-control-lg {
   font-family: "Segoe UI Variable";
   src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
 }
-.f-caption, .block2__span-subtitle-src, .block2__span-subtitle-alt {
+.f-caption, .block2__subtitle-src, .block2__subtitle-alt {
   font-family: "Segoe UI Variable";
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
-.f-body, .block1__span-src, .block1__select-src, .block1__input-text, .block2__span-title {
+.f-body, .block1__title, .block1__select-contains, .block1__input-text, .block2__title {
   font-family: "Segoe UI Variable";
   font-feature-settings: "rclt" off;
   font-size: 14px;
@@ -9035,10 +9035,10 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Light & Dark Theme Colors ------------------------- */
-.light .f-text, .light .button-close, .light .block1__span-src, .light .block1__select-src, .light .block1__input-text, .light .block2__span-title, .light .block2__span-subtitle-src, .light .block2__span-subtitle-alt {
+.light .f-text, .light .button-close, .light .block1__title, .light .block1__select-contains, .light .block1__input-text, .light .block2__title, .light .block2__subtitle-src, .light .block2__subtitle-alt {
   color: rgba(0, 0, 0, 0.9);
 }
-.light .f-text:disabled, .light .button-close:disabled, .light .block1__span-src:disabled, .light .block1__select-src:disabled, .light .block1__input-text:disabled, .light .block2__span-title:disabled, .light .block2__span-subtitle-src:disabled, .light .block2__span-subtitle-alt:disabled {
+.light .f-text:disabled, .light .button-close:disabled, .light .block1__title:disabled, .light .block1__select-contains:disabled, .light .block1__input-text:disabled, .light .block2__title:disabled, .light .block2__subtitle-src:disabled, .light .block2__subtitle-alt:disabled {
   color: rgba(0, 0, 0, 0.36);
 }
 .light .text-background-color {
@@ -9063,10 +9063,10 @@ textarea.form-control-lg {
   background-color: rgb(0, 95, 184);
 }
 
-.dark .f-text, .dark .button-close, .dark .block1__span-src, .dark .block1__select-src, .dark .block1__input-text, .dark .block2__span-title, .dark .block2__span-subtitle-src, .dark .block2__span-subtitle-alt {
+.dark .f-text, .dark .button-close, .dark .block1__title, .dark .block1__select-contains, .dark .block1__input-text, .dark .block2__title, .dark .block2__subtitle-src, .dark .block2__subtitle-alt {
   color: rgb(255, 255, 255);
 }
-.dark .f-text:disabled, .dark .button-close:disabled, .dark .block1__span-src:disabled, .dark .block1__select-src:disabled, .dark .block1__input-text:disabled, .dark .block2__span-title:disabled, .dark .block2__span-subtitle-src:disabled, .dark .block2__span-subtitle-alt:disabled {
+.dark .f-text:disabled, .dark .button-close:disabled, .dark .block1__title:disabled, .dark .block1__select-contains:disabled, .dark .block1__input-text:disabled, .dark .block2__title:disabled, .dark .block2__subtitle-src:disabled, .dark .block2__subtitle-alt:disabled {
   color: rgba(255, 255, 255, 0.36);
 }
 .dark .text-background-color {
@@ -9106,24 +9106,24 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Button ------------------------- */
-.light .btn--f-standard, .light .button-close {
+.light .btn, .light .button-close {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
-.light .btn--f-standard:hover, .light .button-close:hover {
+.light .btn:hover, .light .button-close:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light .btn--f-standard:active, .light .button-close:active {
+.light .btn:active, .light .button-close:active {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn--f-standard:disabled, .light .button-close:disabled {
+.light .btn:disabled, .light .button-close:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn--f-standard:focus, .light .button-close:focus {
+.light .btn:focus, .light .button-close:focus {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 .light .btn--f-accent {
@@ -9147,24 +9147,24 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
-.dark .btn--f-standard, .dark .button-close {
+.dark .btn, .dark .button-close {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:hover, .dark .button-close:hover {
+.dark .btn:hover, .dark .button-close:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark .btn--f-standard:active, .dark .button-close:active {
+.dark .btn:active, .dark .button-close:active {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:disabled, .dark .button-close:disabled {
+.dark .btn:disabled, .dark .button-close:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:focus, .dark .button-close:focus {
+.dark .btn:focus, .dark .button-close:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
 .dark .btn--f-accent {
@@ -9189,53 +9189,53 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Dropdown ------------------------- */
-.light .form-select, .light .block1__select-src {
+.light .form-select, .light .block1__select-contains {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
-.light .form-select:hover, .light .block1__select-src:hover {
+.light .form-select:hover, .light .block1__select-contains:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light .form-select:active, .light .block1__select-src:active {
+.light .form-select:active, .light .block1__select-contains:active {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .form-select:disabled, .light .block1__select-src:disabled {
+.light .form-select:disabled, .light .block1__select-contains:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .form-select:focus, .light .block1__select-src:focus {
+.light .form-select:focus, .light .block1__select-contains:focus {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
-.light .form-select option, .light .block1__select-src option {
+.light .form-select option, .light .block1__select-contains option {
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
   background-color: rgba(252, 252, 252, 0.85);
 }
 
-.dark .form-select, .dark .block1__select-src {
+.dark .form-select, .dark .block1__select-contains {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-.dark .form-select:hover, .dark .block1__select-src:hover {
+.dark .form-select:hover, .dark .block1__select-contains:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark .form-select:active, .dark .block1__select-src:active {
+.dark .form-select:active, .dark .block1__select-contains:active {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .form-select:disabled, .dark .block1__select-src:disabled {
+.dark .form-select:disabled, .dark .block1__select-contains:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .form-select:focus, .dark .block1__select-src:focus {
+.dark .form-select:focus, .dark .block1__select-contains:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
-.dark .form-select option, .dark .block1__select-src option {
+.dark .form-select option, .dark .block1__select-contains option {
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
   background-color: rgba(44, 44, 44, 0.15);
@@ -9314,14 +9314,286 @@ textarea.form-control-lg {
   font-family: "Segoe Fluent Icons";
   src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
 }
-.btn-icon, .button-close {
+.f-btn-icon, .button-close {
   font-size: 14px;
 }
 
-.accordion-icon,
-.card-icon {
+.f-accordion-icon,
+.f-card-icon {
   font-size: 24px;
   margin-right: 1.25rem;
+}
+
+@-webkit-keyframes ms-motion-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes ms-motion-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ms-motion-fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes ms-motion-fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes ms-motion-scaleDownIn {
+  from {
+    transform: scale3d(1.15, 1.15, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes ms-motion-scaleDownIn {
+  from {
+    transform: scale3d(1.15, 1.15, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes ms-motion-scaleDownOut {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    transform: scale3d(0.9, 0.9, 1);
+  }
+}
+@keyframes ms-motion-scaleDownOut {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    transform: scale3d(0.9, 0.9, 1);
+  }
+}
+@-webkit-keyframes ms-motion-slideLeftOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-48px, 0, 0);
+  }
+}
+@keyframes ms-motion-slideLeftOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-48px, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideRightOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(48px, 0, 0);
+  }
+}
+@keyframes ms-motion-slideRightOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(48px, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideLeftIn {
+  from {
+    transform: translate3d(48px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes ms-motion-slideLeftIn {
+  from {
+    transform: translate3d(48px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideRightIn {
+  from {
+    transform: translate3d(-48px, 0, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@keyframes ms-motion-slideRightIn {
+  from {
+    transform: translate3d(-48px, 0, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideUpOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -48px, 0);
+  }
+}
+@keyframes ms-motion-slideUpOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -48px, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideDownOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 48px, 0);
+  }
+}
+@keyframes ms-motion-slideDownOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 48px, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideUpIn {
+  from {
+    transform: translate3d(0, 48px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes ms-motion-slideUpIn {
+  from {
+    transform: translate3d(0, 48px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideDownIn {
+  from {
+    transform: translate3d(0, -48px, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@keyframes ms-motion-slideDownIn {
+  from {
+    transform: translate3d(0, -48px, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+.ms-motion-fadeIn {
+  -webkit-animation: ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-fadeOut {
+  -webkit-animation: ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-scaleDownIn {
+  -webkit-animation: ms-motion-scaleDownIn 300ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-scaleDownIn 300ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-scaleDownOut {
+  -webkit-animation: ms-motion-scaleDownOut 300ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-scaleDownOut 300ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=ltr] .ms-motion-slideLeftOut {
+  -webkit-animation: ms-motion-slideLeftOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideLeftOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=rtl] .ms-motion-slideLeftOut {
+  -webkit-animation: ms-motion-slideRightOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideRightOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=ltr] .ms-motion-slideRightOut {
+  -webkit-animation: ms-motion-slideRightOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideRightOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=rtl] .ms-motion-slideRightOut {
+  -webkit-animation: ms-motion-slideLeftOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideLeftOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=ltr] .ms-motion-slideLeftIn {
+  -webkit-animation: ms-motion-slideLeftIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideLeftIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=rtl] .ms-motion-slideLeftIn {
+  -webkit-animation: ms-motion-slideRightIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideRightIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=ltr] .ms-motion-slideRightIn {
+  -webkit-animation: ms-motion-slideRightIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideRightIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=rtl] .ms-motion-slideRightIn {
+  -webkit-animation: ms-motion-slideLeftIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideLeftIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-slideUpOut {
+  -webkit-animation: ms-motion-slideUpOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideUpOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-slideDownOut {
+  -webkit-animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-slideUpIn {
+  -webkit-animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-slideDownIn {
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
 }
 
 /* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
@@ -9349,7 +9621,7 @@ html.dark .block2 ::-webkit-scrollbar-thumb {
   font-family: "Cascadia Code";
   src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
 }
-.cascadia_code, .block2__span-title {
+.f-cascadia_code, .block2__title {
   font-family: "Cascadia Code";
 }
 
@@ -9357,7 +9629,7 @@ html.dark .block2 ::-webkit-scrollbar-thumb {
   font-family: "Cascadia Code Italic";
   src: url(../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
 }
-.cascadia_code_italic, .block2__span-subtitle-alt, .block2__span-subtitle-src {
+.f-cascadia_code_italic, .block2__subtitle-alt, .block2__subtitle-src {
   font-family: "Cascadia Code Italic";
 }
 
@@ -9377,43 +9649,13 @@ html.dark .block2 ::-webkit-scrollbar-thumb {
 .block2__container1 {
   height: 100%;
 }
-/* ------------------------- Motion ------------------------- */
-@keyframes ms-motion-slideUpIn {
-  from {
-    transform: translate3d(0, 48px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes ms-motion-fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.ms-motion-slideUpIn, .body__container {
-  animation: 100ms ms-motion-slideUpIn both cubic-bezier(0.1, 0.9, 0.2, 1), 100ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+/* ------------------------- Motion 2 ------------------------- */
+.ms-motion-slideDownOut {
+  -webkit-animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
 }
 
-@keyframes ms-motion-slideDownOut {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(0, 48px, 0);
-  }
-}
-@keyframes ms-motion-fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-.ms-motion-slideDownOut {
-  animation: 100ms ms-motion-slideDownOut both cubic-bezier(0.9, 0.1, 1, 0.2), 100ms ms-motion-fadeOut both cubic-bezier(0, 0, 1, 1);
+.ms-motion-slideUpIn {
+  -webkit-animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
+  animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
 }

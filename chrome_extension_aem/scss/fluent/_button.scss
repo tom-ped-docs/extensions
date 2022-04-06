@@ -8,31 +8,31 @@
 .light {
   // Mode: Light, Style: Standard
 
-  .btn--f-standard {
+  .btn {
     background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid;
     border-color: rgba(0, 0, 0, 0.06);
     border-color: rgba(0, 0, 0, 0.16);
   }
 
-  .btn--f-standard:hover {
+  .btn:hover {
     background-color: rgba(249, 249, 249, 0.5);
     // border: 1px solid;
     // border-color: rgba(0, 0, 0, 0.06);
     // border-color: rgba(0, 0, 0, 0.16);
   }
 
-  .btn--f-standard:active {
+  .btn:active {
     background-color: rgba(249, 249, 249, 0.3);
     border: 1px solid rgba(0, 0, 0, 0.06);
   }
 
-  .btn--f-standard:disabled {
+  .btn:disabled {
     background-color: rgba(249, 249, 249, 0.3);
     border: 1px solid rgba(0, 0, 0, 0.06);
   }
 
-  .btn--f-standard:focus {
+  .btn:focus {
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
   }
 
@@ -70,31 +70,31 @@
 .dark {
   // Mode: Dark, Style: Standard
 
-  .btn--f-standard {
+  .btn {
     background-color: rgba(255, 255, 255, 0.06);
     border: 1px solid;
     border-color: rgba(255, 255, 255, 0.09);
     border-color: rgba(255, 255, 255, 0.07);
   }
 
-  .btn--f-standard:hover {
+  .btn:hover {
     background-color: rgba(255, 255, 255, 0.08);
     // border: 1px solid;
     // border-color: rgba(255, 255, 255, 0.09);
     // border-color: rgba(255, 255, 255, 0.07);
   }
 
-  .btn--f-standard:active {
+  .btn:active {
     background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.07);
   }
 
-  .btn--f-standard:disabled {
+  .btn:disabled {
     background-color: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.07);
   }
 
-  .btn--f-standard:focus {
+  .btn:focus {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
   }
 

@@ -9,6 +9,8 @@
 
 @use "fluent/iconography";
 
+@use "fabric/motion";
+
 /* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
 
 .block2 {
@@ -36,46 +38,48 @@ html.dark {
 
 /* ------------------------- images.html ------------------------- */
 
+// bootstrap-components, f-iconography, f-typography, f-color, f-surfaces, bootstrap-utilities, CSS
+
 @font-face {
   font-family: "Cascadia Code";
   src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
 }
 
-.cascadia_code { font-family: "Cascadia Code"; }
+.f-cascadia_code { font-family: "Cascadia Code"; }
 
 @font-face {
   font-family: "Cascadia Code Italic";
   src: url(../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
 }
 
-.cascadia_code_italic { font-family: "Cascadia Code Italic"; }
+.f-cascadia_code_italic { font-family: "Cascadia Code Italic"; }
 
 .body__container {
-  @extend .position-fixed, .bottom-0, .start-0, .rounded, .m-2, .p-2, .f-app-surface-base, .ms-motion-slideUpIn;
+  @extend .f-app-surface-base, .rounded, .position-fixed, .bottom-0, .start-0, .m-2, .p-2;
   z-index: 999;
 }
 
 .button-close {
-  @extend .btn, .btn-sm, .btn--f-standard, .btn-icon, .position-absolute, .top-0, .start-100, .translate-middle, .f-text, .f-app-surface-base;
+  @extend .btn, .btn-sm, .f-btn-icon, .f-text, .f-app-surface-base, .position-absolute, .top-0, .start-100, .translate-middle;
 
   // ChromeClose
   &::before { font-family: iconography.$font-family; content: "\e8bb"; }
 }
 
 .block1 {
-  @extend .rounded, .p-2, .f-app-surface-layer;
+  @extend .f-app-surface-layer, .rounded, .p-2;
 
   &__container1       { @extend .row, .g-2; }
   &__container2,
   &__container3       { @extend .col; }
-  &__input-group-src  { @extend .input-group, .input-group-sm; }
-  &__span-src         { @extend .input-group-text, .f-body, .f-text, .f-body, .f-text; }
-  &__select-src       { @extend .form-select, .form-select-sm, .f-body, .f-text; }
+  &__input-group      { @extend .input-group, .input-group-sm; }
+  &__title            { @extend .input-group-text, .f-body, .f-text; }
+  &__select-contains  { @extend .form-select, .form-select-sm, .f-body, .f-text; }
   &__input-text       { @extend .form-control, .form-control-sm, .f-body, .f-text; }
 }
 
 .block2 {
-  @extend .rounded, .mt-2, .p-2, .f-app-surface-layer;
+  @extend .f-app-surface-layer, .rounded, .mt-2, .p-2;
   width: 25rem;
   height: 25rem;
 
@@ -84,41 +88,19 @@ html.dark {
     height: 100%;
   }
   &__container2   { @extend .d-flex, .flex-column, .mb-2; }
-  &__span-title        { @extend .text-nowrap, .f-body, .f-text, .cascadia_code; }
-  &__span-subtitle-src { @extend .text-nowrap, .f-caption, .f-text, .cascadia_code_italic; }
-  &__span-subtitle-alt { @extend .text-muted, .text-nowrap, .f-caption, .f-text, .cascadia_code_italic; }
+  &__title        { @extend .text-nowrap, .f-body, .f-text, .f-cascadia_code; }
+  &__subtitle-src { @extend .text-nowrap, .f-caption, .f-text, .f-cascadia_code_italic; }
+  &__subtitle-alt { @extend .text-muted, .text-nowrap, .f-caption, .f-text, .f-cascadia_code_italic; }
 }
 
-/* ------------------------- Motion ------------------------- */
+/* ------------------------- Motion 2 ------------------------- */
 
-@keyframes ms-motion-slideUpIn {
-  from { transform: translate3d(0, 48px, 0); }
-  to { transform: translate3d(0, 0, 0); }
-}
-
-@keyframes ms-motion-fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.ms-motion-slideDownOut {
+  -webkit-animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+          animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
 }
 
 .ms-motion-slideUpIn {
-  animation:
-  100ms ms-motion-slideUpIn both cubic-bezier(0.1, 0.9, 0.2, 1),
-  100ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
-}
-
-@keyframes ms-motion-slideDownOut {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(0, 48px, 0); }
-}
-
-@keyframes ms-motion-fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-.ms-motion-slideDownOut {
-  animation:
-  100ms ms-motion-slideDownOut both cubic-bezier(0.9, 0.1, 1, 0.2),
-  100ms ms-motion-fadeOut both cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
+          animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
 }

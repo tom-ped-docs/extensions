@@ -2487,7 +2487,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check[disabled] + .block3__button-shortcuts, .btn-check[disabled] + .block5__button-login-save, .btn-check[disabled] + .block5__button-login-reset, .btn-check:disabled + .btn, .btn-check:disabled + .block3__button-shortcuts, .btn-check:disabled + .block5__button-login-save, .btn-check:disabled + .block5__button-login-reset {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .block3__button-shortcuts, .btn-check[disabled] + .block5__button-save, .btn-check[disabled] + .block5__button-reset, .btn-check:disabled + .btn, .btn-check:disabled + .block3__button-shortcuts, .btn-check:disabled + .block5__button-save, .btn-check:disabled + .block5__button-reset {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2651,11 +2651,11 @@ textarea.form-control-lg {
 .input-group > .block2__select-theme:focus {
   z-index: 3;
 }
-.input-group .btn, .input-group .block3__button-shortcuts, .input-group .block5__button-login-save, .input-group .block5__button-login-reset {
+.input-group .btn, .input-group .block3__button-shortcuts, .input-group .block5__button-save, .input-group .block5__button-reset {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .block3__button-shortcuts:focus, .input-group .block5__button-login-save:focus, .input-group .block5__button-login-reset:focus {
+.input-group .btn:focus, .input-group .block3__button-shortcuts:focus, .input-group .block5__button-save:focus, .input-group .block5__button-reset:focus {
   z-index: 3;
 }
 
@@ -2680,8 +2680,8 @@ textarea.form-control-lg {
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
 .input-group-lg > .block3__button-shortcuts,
-.input-group-lg > .block5__button-login-save,
-.input-group-lg > .block5__button-login-reset {
+.input-group-lg > .block5__button-save,
+.input-group-lg > .block5__button-reset {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
@@ -2693,8 +2693,8 @@ textarea.form-control-lg {
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
 .input-group-sm > .block3__button-shortcuts,
-.input-group-sm > .block5__button-login-save,
-.input-group-sm > .block5__button-login-reset {
+.input-group-sm > .block5__button-save,
+.input-group-sm > .block5__button-reset {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -2908,7 +2908,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.btn, .block3__button-shortcuts, .block5__button-login-save, .block5__button-login-reset {
+.btn, .block3__button-shortcuts, .block5__button-save, .block5__button-reset {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -2926,18 +2926,18 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .block3__button-shortcuts, .block5__button-login-save, .block5__button-login-reset {
+  .btn, .block3__button-shortcuts, .block5__button-save, .block5__button-reset {
     transition: none;
   }
 }
-.btn:hover, .block3__button-shortcuts:hover, .block5__button-login-save:hover, .block5__button-login-reset:hover {
+.btn:hover, .block3__button-shortcuts:hover, .block5__button-save:hover, .block5__button-reset:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .btn-check:focus + .block3__button-shortcuts, .btn-check:focus + .block5__button-login-save, .btn-check:focus + .block5__button-login-reset, .btn:focus, .block3__button-shortcuts:focus, .block5__button-login-save:focus, .block5__button-login-reset:focus {
+.btn-check:focus + .btn, .btn-check:focus + .block3__button-shortcuts, .btn-check:focus + .block5__button-save, .btn-check:focus + .block5__button-reset, .btn:focus, .block3__button-shortcuts:focus, .block5__button-save:focus, .block5__button-reset:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.btn:disabled, .block3__button-shortcuts:disabled, .block5__button-login-save:disabled, .block5__button-login-reset:disabled, .btn.disabled, .disabled.block3__button-shortcuts, .disabled.block5__button-login-save, .disabled.block5__button-login-reset, fieldset:disabled .btn, fieldset:disabled .block3__button-shortcuts, fieldset:disabled .block5__button-login-save, fieldset:disabled .block5__button-login-reset {
+.btn:disabled, .block3__button-shortcuts:disabled, .block5__button-save:disabled, .block5__button-reset:disabled, .btn.disabled, .disabled.block3__button-shortcuts, .disabled.block5__button-save, .disabled.block5__button-reset, fieldset:disabled .btn, fieldset:disabled .block3__button-shortcuts, fieldset:disabled .block5__button-save, fieldset:disabled .block5__button-reset {
   pointer-events: none;
   opacity: 0.65;
 }
@@ -3394,13 +3394,13 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .block3__button-shortcuts, .btn-group-lg > .block5__button-login-save, .btn-group-lg > .block5__button-login-reset {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .block3__button-shortcuts, .btn-group-lg > .block5__button-save, .btn-group-lg > .block5__button-reset {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .block3__button-shortcuts, .block5__button-login-save, .block5__button-login-reset, .btn-group-sm > .btn, .block5__btn-group > .btn, .btn-group-sm > .block3__button-shortcuts, .btn-group-sm > .block5__button-login-save, .btn-group-sm > .block5__button-login-reset {
+.btn-sm, .block3__button-shortcuts, .block5__button-save, .block5__button-reset, .btn-group-sm > .btn, .block5__btn-group > .btn, .btn-group-sm > .block3__button-shortcuts, .btn-group-sm > .block5__button-save, .btn-group-sm > .block5__button-reset {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -3449,79 +3449,79 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .block5__btn-group > .btn, .btn-group > .block3__button-shortcuts, .block5__btn-group > .block3__button-shortcuts, .btn-group > .block5__button-login-save, .block5__btn-group > .block5__button-login-save, .btn-group > .block5__button-login-reset, .block5__btn-group > .block5__button-login-reset,
+.btn-group > .btn, .block5__btn-group > .btn, .btn-group > .block3__button-shortcuts, .block5__btn-group > .block3__button-shortcuts, .btn-group > .block5__button-save, .block5__btn-group > .block5__button-save, .btn-group > .block5__button-reset, .block5__btn-group > .block5__button-reset,
 .btn-group-vertical > .btn,
 .btn-group-vertical > .block3__button-shortcuts,
-.btn-group-vertical > .block5__button-login-save,
-.btn-group-vertical > .block5__button-login-reset {
+.btn-group-vertical > .block5__button-save,
+.btn-group-vertical > .block5__button-reset {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .block5__btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .block3__button-shortcuts, .block5__btn-group > .btn-check:checked + .block3__button-shortcuts, .btn-group > .btn-check:checked + .block5__button-login-save, .block5__btn-group > .btn-check:checked + .block5__button-login-save, .btn-group > .btn-check:checked + .block5__button-login-reset, .block5__btn-group > .btn-check:checked + .block5__button-login-reset,
+.btn-group > .btn-check:checked + .btn, .block5__btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .block3__button-shortcuts, .block5__btn-group > .btn-check:checked + .block3__button-shortcuts, .btn-group > .btn-check:checked + .block5__button-save, .block5__btn-group > .btn-check:checked + .block5__button-save, .btn-group > .btn-check:checked + .block5__button-reset, .block5__btn-group > .btn-check:checked + .block5__button-reset,
 .btn-group > .btn-check:focus + .btn,
 .block5__btn-group > .btn-check:focus + .btn,
 .btn-group > .btn-check:focus + .block3__button-shortcuts,
 .block5__btn-group > .btn-check:focus + .block3__button-shortcuts,
-.btn-group > .btn-check:focus + .block5__button-login-save,
-.block5__btn-group > .btn-check:focus + .block5__button-login-save,
-.btn-group > .btn-check:focus + .block5__button-login-reset,
-.block5__btn-group > .btn-check:focus + .block5__button-login-reset,
+.btn-group > .btn-check:focus + .block5__button-save,
+.block5__btn-group > .btn-check:focus + .block5__button-save,
+.btn-group > .btn-check:focus + .block5__button-reset,
+.block5__btn-group > .btn-check:focus + .block5__button-reset,
 .btn-group > .btn:hover,
 .block5__btn-group > .btn:hover,
 .btn-group > .block3__button-shortcuts:hover,
 .block5__btn-group > .block3__button-shortcuts:hover,
-.btn-group > .block5__button-login-save:hover,
-.block5__btn-group > .block5__button-login-save:hover,
-.btn-group > .block5__button-login-reset:hover,
-.block5__btn-group > .block5__button-login-reset:hover,
+.btn-group > .block5__button-save:hover,
+.block5__btn-group > .block5__button-save:hover,
+.btn-group > .block5__button-reset:hover,
+.block5__btn-group > .block5__button-reset:hover,
 .btn-group > .btn:focus,
 .block5__btn-group > .btn:focus,
 .btn-group > .block3__button-shortcuts:focus,
 .block5__btn-group > .block3__button-shortcuts:focus,
-.btn-group > .block5__button-login-save:focus,
-.block5__btn-group > .block5__button-login-save:focus,
-.btn-group > .block5__button-login-reset:focus,
-.block5__btn-group > .block5__button-login-reset:focus,
+.btn-group > .block5__button-save:focus,
+.block5__btn-group > .block5__button-save:focus,
+.btn-group > .block5__button-reset:focus,
+.block5__btn-group > .block5__button-reset:focus,
 .btn-group > .btn:active,
 .block5__btn-group > .btn:active,
 .btn-group > .block3__button-shortcuts:active,
 .block5__btn-group > .block3__button-shortcuts:active,
-.btn-group > .block5__button-login-save:active,
-.block5__btn-group > .block5__button-login-save:active,
-.btn-group > .block5__button-login-reset:active,
-.block5__btn-group > .block5__button-login-reset:active,
+.btn-group > .block5__button-save:active,
+.block5__btn-group > .block5__button-save:active,
+.btn-group > .block5__button-reset:active,
+.block5__btn-group > .block5__button-reset:active,
 .btn-group > .btn.active,
 .block5__btn-group > .btn.active,
 .btn-group > .active.block3__button-shortcuts,
 .block5__btn-group > .active.block3__button-shortcuts,
-.btn-group > .active.block5__button-login-save,
-.block5__btn-group > .active.block5__button-login-save,
-.btn-group > .active.block5__button-login-reset,
-.block5__btn-group > .active.block5__button-login-reset,
+.btn-group > .active.block5__button-save,
+.block5__btn-group > .active.block5__button-save,
+.btn-group > .active.block5__button-reset,
+.block5__btn-group > .active.block5__button-reset,
 .btn-group-vertical > .btn-check:checked + .btn,
 .btn-group-vertical > .btn-check:checked + .block3__button-shortcuts,
-.btn-group-vertical > .btn-check:checked + .block5__button-login-save,
-.btn-group-vertical > .btn-check:checked + .block5__button-login-reset,
+.btn-group-vertical > .btn-check:checked + .block5__button-save,
+.btn-group-vertical > .btn-check:checked + .block5__button-reset,
 .btn-group-vertical > .btn-check:focus + .btn,
 .btn-group-vertical > .btn-check:focus + .block3__button-shortcuts,
-.btn-group-vertical > .btn-check:focus + .block5__button-login-save,
-.btn-group-vertical > .btn-check:focus + .block5__button-login-reset,
+.btn-group-vertical > .btn-check:focus + .block5__button-save,
+.btn-group-vertical > .btn-check:focus + .block5__button-reset,
 .btn-group-vertical > .btn:hover,
 .btn-group-vertical > .block3__button-shortcuts:hover,
-.btn-group-vertical > .block5__button-login-save:hover,
-.btn-group-vertical > .block5__button-login-reset:hover,
+.btn-group-vertical > .block5__button-save:hover,
+.btn-group-vertical > .block5__button-reset:hover,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .block3__button-shortcuts:focus,
-.btn-group-vertical > .block5__button-login-save:focus,
-.btn-group-vertical > .block5__button-login-reset:focus,
+.btn-group-vertical > .block5__button-save:focus,
+.btn-group-vertical > .block5__button-reset:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .block3__button-shortcuts:active,
-.btn-group-vertical > .block5__button-login-save:active,
-.btn-group-vertical > .block5__button-login-reset:active,
+.btn-group-vertical > .block5__button-save:active,
+.btn-group-vertical > .block5__button-reset:active,
 .btn-group-vertical > .btn.active,
 .btn-group-vertical > .active.block3__button-shortcuts,
-.btn-group-vertical > .active.block5__button-login-save,
-.btn-group-vertical > .active.block5__button-login-reset {
+.btn-group-vertical > .active.block5__button-save,
+.btn-group-vertical > .active.block5__button-reset {
   z-index: 1;
 }
 
@@ -3534,14 +3534,14 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child), .block5__btn-group > .btn:not(:first-child), .btn-group > .block3__button-shortcuts:not(:first-child), .block5__btn-group > .block3__button-shortcuts:not(:first-child), .btn-group > .block5__button-login-save:not(:first-child), .block5__btn-group > .block5__button-login-save:not(:first-child), .btn-group > .block5__button-login-reset:not(:first-child), .block5__btn-group > .block5__button-login-reset:not(:first-child),
+.btn-group > .btn:not(:first-child), .block5__btn-group > .btn:not(:first-child), .btn-group > .block3__button-shortcuts:not(:first-child), .block5__btn-group > .block3__button-shortcuts:not(:first-child), .btn-group > .block5__button-save:not(:first-child), .block5__btn-group > .block5__button-save:not(:first-child), .btn-group > .block5__button-reset:not(:first-child), .block5__btn-group > .block5__button-reset:not(:first-child),
 .btn-group > .btn-group:not(:first-child),
 .block5__btn-group > .btn-group:not(:first-child),
 .btn-group > .block5__btn-group:not(:first-child),
 .block5__btn-group > .block5__btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group > .block5__button-login-save:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block5__button-login-save:not(:last-child):not(.dropdown-toggle), .btn-group > .block5__button-login-reset:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block5__button-login-reset:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group > .block5__button-save:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block5__button-save:not(:last-child):not(.dropdown-toggle), .btn-group > .block5__button-reset:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block5__button-reset:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .block5__btn-group > .btn-group:not(:last-child) > .btn,
 .btn-group > .block5__btn-group:not(:last-child) > .btn,
@@ -3550,26 +3550,26 @@ textarea.form-control-lg {
 .block5__btn-group > .btn-group:not(:last-child) > .block3__button-shortcuts,
 .btn-group > .block5__btn-group:not(:last-child) > .block3__button-shortcuts,
 .block5__btn-group > .block5__btn-group:not(:last-child) > .block3__button-shortcuts,
-.btn-group > .btn-group:not(:last-child) > .block5__button-login-save,
-.block5__btn-group > .btn-group:not(:last-child) > .block5__button-login-save,
-.btn-group > .block5__btn-group:not(:last-child) > .block5__button-login-save,
-.block5__btn-group > .block5__btn-group:not(:last-child) > .block5__button-login-save,
-.btn-group > .btn-group:not(:last-child) > .block5__button-login-reset,
-.block5__btn-group > .btn-group:not(:last-child) > .block5__button-login-reset,
-.btn-group > .block5__btn-group:not(:last-child) > .block5__button-login-reset,
-.block5__btn-group > .block5__btn-group:not(:last-child) > .block5__button-login-reset {
+.btn-group > .btn-group:not(:last-child) > .block5__button-save,
+.block5__btn-group > .btn-group:not(:last-child) > .block5__button-save,
+.btn-group > .block5__btn-group:not(:last-child) > .block5__button-save,
+.block5__btn-group > .block5__btn-group:not(:last-child) > .block5__button-save,
+.btn-group > .btn-group:not(:last-child) > .block5__button-reset,
+.block5__btn-group > .btn-group:not(:last-child) > .block5__button-reset,
+.btn-group > .block5__btn-group:not(:last-child) > .block5__button-reset,
+.block5__btn-group > .block5__btn-group:not(:last-child) > .block5__button-reset {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), .block5__btn-group > .btn:nth-child(n+3), .btn-group > .block3__button-shortcuts:nth-child(n+3), .block5__btn-group > .block3__button-shortcuts:nth-child(n+3), .btn-group > .block5__button-login-save:nth-child(n+3), .block5__btn-group > .block5__button-login-save:nth-child(n+3), .btn-group > .block5__button-login-reset:nth-child(n+3), .block5__btn-group > .block5__button-login-reset:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .block5__btn-group > .btn:nth-child(n+3), .btn-group > .block3__button-shortcuts:nth-child(n+3), .block5__btn-group > .block3__button-shortcuts:nth-child(n+3), .btn-group > .block5__button-save:nth-child(n+3), .block5__btn-group > .block5__button-save:nth-child(n+3), .btn-group > .block5__button-reset:nth-child(n+3), .block5__btn-group > .block5__button-reset:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
 .block5__btn-group > :not(.btn-check) + .btn,
 .btn-group > :not(.btn-check) + .block3__button-shortcuts,
 .block5__btn-group > :not(.btn-check) + .block3__button-shortcuts,
-.btn-group > :not(.btn-check) + .block5__button-login-save,
-.block5__btn-group > :not(.btn-check) + .block5__button-login-save,
-.btn-group > :not(.btn-check) + .block5__button-login-reset,
-.block5__btn-group > :not(.btn-check) + .block5__button-login-reset,
+.btn-group > :not(.btn-check) + .block5__button-save,
+.block5__btn-group > :not(.btn-check) + .block5__button-save,
+.btn-group > :not(.btn-check) + .block5__button-reset,
+.block5__btn-group > :not(.btn-check) + .block5__button-reset,
 .btn-group > .btn-group:not(:first-child) > .btn,
 .block5__btn-group > .btn-group:not(:first-child) > .btn,
 .btn-group > .block5__btn-group:not(:first-child) > .btn,
@@ -3578,14 +3578,14 @@ textarea.form-control-lg {
 .block5__btn-group > .btn-group:not(:first-child) > .block3__button-shortcuts,
 .btn-group > .block5__btn-group:not(:first-child) > .block3__button-shortcuts,
 .block5__btn-group > .block5__btn-group:not(:first-child) > .block3__button-shortcuts,
-.btn-group > .btn-group:not(:first-child) > .block5__button-login-save,
-.block5__btn-group > .btn-group:not(:first-child) > .block5__button-login-save,
-.btn-group > .block5__btn-group:not(:first-child) > .block5__button-login-save,
-.block5__btn-group > .block5__btn-group:not(:first-child) > .block5__button-login-save,
-.btn-group > .btn-group:not(:first-child) > .block5__button-login-reset,
-.block5__btn-group > .btn-group:not(:first-child) > .block5__button-login-reset,
-.btn-group > .block5__btn-group:not(:first-child) > .block5__button-login-reset,
-.block5__btn-group > .block5__btn-group:not(:first-child) > .block5__button-login-reset {
+.btn-group > .btn-group:not(:first-child) > .block5__button-save,
+.block5__btn-group > .btn-group:not(:first-child) > .block5__button-save,
+.btn-group > .block5__btn-group:not(:first-child) > .block5__button-save,
+.block5__btn-group > .block5__btn-group:not(:first-child) > .block5__button-save,
+.btn-group > .btn-group:not(:first-child) > .block5__button-reset,
+.block5__btn-group > .btn-group:not(:first-child) > .block5__button-reset,
+.btn-group > .block5__btn-group:not(:first-child) > .block5__button-reset,
+.block5__btn-group > .block5__btn-group:not(:first-child) > .block5__button-reset {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3601,12 +3601,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .block3__button-shortcuts + .dropdown-toggle-split, .block5__button-login-save + .dropdown-toggle-split, .block5__button-login-reset + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .block5__btn-group > .btn + .dropdown-toggle-split, .btn-group-sm > .block3__button-shortcuts + .dropdown-toggle-split, .block5__btn-group > .block3__button-shortcuts + .dropdown-toggle-split, .btn-group-sm > .block5__button-login-save + .dropdown-toggle-split, .block5__btn-group > .block5__button-login-save + .dropdown-toggle-split, .btn-group-sm > .block5__button-login-reset + .dropdown-toggle-split, .block5__btn-group > .block5__button-login-reset + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .block3__button-shortcuts + .dropdown-toggle-split, .block5__button-save + .dropdown-toggle-split, .block5__button-reset + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .block5__btn-group > .btn + .dropdown-toggle-split, .btn-group-sm > .block3__button-shortcuts + .dropdown-toggle-split, .block5__btn-group > .block3__button-shortcuts + .dropdown-toggle-split, .btn-group-sm > .block5__button-save + .dropdown-toggle-split, .block5__btn-group > .block5__button-save + .dropdown-toggle-split, .btn-group-sm > .block5__button-reset + .dropdown-toggle-split, .block5__btn-group > .block5__button-reset + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .block3__button-shortcuts + .dropdown-toggle-split, .btn-group-lg > .block5__button-login-save + .dropdown-toggle-split, .btn-group-lg > .block5__button-login-reset + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .block3__button-shortcuts + .dropdown-toggle-split, .btn-group-lg > .block5__button-save + .dropdown-toggle-split, .btn-group-lg > .block5__button-reset + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3616,42 +3616,42 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .btn-group-vertical > .block3__button-shortcuts, .btn-group-vertical > .block5__button-login-save, .btn-group-vertical > .block5__button-login-reset,
+.btn-group-vertical > .btn, .btn-group-vertical > .block3__button-shortcuts, .btn-group-vertical > .block5__button-save, .btn-group-vertical > .block5__button-reset,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .block5__btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .block3__button-shortcuts:not(:first-child), .btn-group-vertical > .block5__button-login-save:not(:first-child), .btn-group-vertical > .block5__button-login-reset:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .block3__button-shortcuts:not(:first-child), .btn-group-vertical > .block5__button-save:not(:first-child), .btn-group-vertical > .block5__button-reset:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child),
 .btn-group-vertical > .block5__btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block5__button-login-save:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block5__button-login-reset:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block5__button-save:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block5__button-reset:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
 .btn-group-vertical > .block5__btn-group:not(:last-child) > .btn,
 .btn-group-vertical > .btn-group:not(:last-child) > .block3__button-shortcuts,
 .btn-group-vertical > .block5__btn-group:not(:last-child) > .block3__button-shortcuts,
-.btn-group-vertical > .btn-group:not(:last-child) > .block5__button-login-save,
-.btn-group-vertical > .block5__btn-group:not(:last-child) > .block5__button-login-save,
-.btn-group-vertical > .btn-group:not(:last-child) > .block5__button-login-reset,
-.btn-group-vertical > .block5__btn-group:not(:last-child) > .block5__button-login-reset {
+.btn-group-vertical > .btn-group:not(:last-child) > .block5__button-save,
+.btn-group-vertical > .block5__btn-group:not(:last-child) > .block5__button-save,
+.btn-group-vertical > .btn-group:not(:last-child) > .block5__button-reset,
+.btn-group-vertical > .block5__btn-group:not(:last-child) > .block5__button-reset {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .block3__button-shortcuts ~ .btn, .btn-group-vertical > .block5__button-login-save ~ .btn, .btn-group-vertical > .block5__button-login-reset ~ .btn, .btn-group-vertical > .btn ~ .block3__button-shortcuts, .btn-group-vertical > .block3__button-shortcuts ~ .block3__button-shortcuts, .btn-group-vertical > .block5__button-login-save ~ .block3__button-shortcuts, .btn-group-vertical > .block5__button-login-reset ~ .block3__button-shortcuts, .btn-group-vertical > .btn ~ .block5__button-login-save, .btn-group-vertical > .block3__button-shortcuts ~ .block5__button-login-save, .btn-group-vertical > .block5__button-login-save ~ .block5__button-login-save, .btn-group-vertical > .block5__button-login-reset ~ .block5__button-login-save, .btn-group-vertical > .btn ~ .block5__button-login-reset, .btn-group-vertical > .block3__button-shortcuts ~ .block5__button-login-reset, .btn-group-vertical > .block5__button-login-save ~ .block5__button-login-reset, .btn-group-vertical > .block5__button-login-reset ~ .block5__button-login-reset,
+.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .block3__button-shortcuts ~ .btn, .btn-group-vertical > .block5__button-save ~ .btn, .btn-group-vertical > .block5__button-reset ~ .btn, .btn-group-vertical > .btn ~ .block3__button-shortcuts, .btn-group-vertical > .block3__button-shortcuts ~ .block3__button-shortcuts, .btn-group-vertical > .block5__button-save ~ .block3__button-shortcuts, .btn-group-vertical > .block5__button-reset ~ .block3__button-shortcuts, .btn-group-vertical > .btn ~ .block5__button-save, .btn-group-vertical > .block3__button-shortcuts ~ .block5__button-save, .btn-group-vertical > .block5__button-save ~ .block5__button-save, .btn-group-vertical > .block5__button-reset ~ .block5__button-save, .btn-group-vertical > .btn ~ .block5__button-reset, .btn-group-vertical > .block3__button-shortcuts ~ .block5__button-reset, .btn-group-vertical > .block5__button-save ~ .block5__button-reset, .btn-group-vertical > .block5__button-reset ~ .block5__button-reset,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
 .btn-group-vertical > .block5__btn-group:not(:first-child) > .btn,
 .btn-group-vertical > .btn-group:not(:first-child) > .block3__button-shortcuts,
 .btn-group-vertical > .block5__btn-group:not(:first-child) > .block3__button-shortcuts,
-.btn-group-vertical > .btn-group:not(:first-child) > .block5__button-login-save,
-.btn-group-vertical > .block5__btn-group:not(:first-child) > .block5__button-login-save,
-.btn-group-vertical > .btn-group:not(:first-child) > .block5__button-login-reset,
-.btn-group-vertical > .block5__btn-group:not(:first-child) > .block5__button-login-reset {
+.btn-group-vertical > .btn-group:not(:first-child) > .block5__button-save,
+.btn-group-vertical > .block5__btn-group:not(:first-child) > .block5__button-save,
+.btn-group-vertical > .btn-group:not(:first-child) > .block5__button-reset,
+.btn-group-vertical > .block5__btn-group:not(:first-child) > .block5__button-reset {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.card {
+.card, .f-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -3662,30 +3662,31 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
-.card > hr {
+.card > hr, .f-card > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group {
+.card > .list-group, .f-card > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child {
+.card > .list-group:first-child, .f-card > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
-.card > .list-group:last-child {
+.card > .list-group:last-child, .f-card > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
-.card > .card-header + .list-group,
-.card > .list-group + .card-footer {
+.card > .card-header + .list-group, .f-card > .card-header + .list-group,
+.card > .list-group + .card-footer,
+.f-card > .list-group + .card-footer {
   border-top: 0;
 }
 
-.card-body, .card__body {
+.card-body, .f-card__body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
 }
@@ -3766,7 +3767,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
-.card-group > .card {
+.card-group > .card, .card-group > .f-card {
   margin-bottom: 0.75rem;
 }
 @media (min-width: 576px) {
@@ -3774,36 +3775,40 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card {
+  .card-group > .card, .card-group > .f-card {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card {
+  .card-group > .card + .card, .card-group > .f-card + .card, .card-group > .card + .f-card, .card-group > .f-card + .f-card {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child) {
+  .card-group > .card:not(:last-child), .card-group > .f-card:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top,
-.card-group > .card:not(:last-child) .card-header {
+  .card-group > .card:not(:last-child) .card-img-top, .card-group > .f-card:not(:last-child) .card-img-top,
+.card-group > .card:not(:last-child) .card-header,
+.card-group > .f-card:not(:last-child) .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-.card-group > .card:not(:last-child) .card-footer {
+  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .f-card:not(:last-child) .card-img-bottom,
+.card-group > .card:not(:last-child) .card-footer,
+.card-group > .f-card:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child) {
+  .card-group > .card:not(:first-child), .card-group > .f-card:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top,
-.card-group > .card:not(:first-child) .card-header {
+  .card-group > .card:not(:first-child) .card-img-top, .card-group > .f-card:not(:first-child) .card-img-top,
+.card-group > .card:not(:first-child) .card-header,
+.card-group > .f-card:not(:first-child) .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom,
-.card-group > .card:not(:first-child) .card-footer {
+  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .f-card:not(:first-child) .card-img-bottom,
+.card-group > .card:not(:first-child) .card-footer,
+.card-group > .f-card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -4155,7 +4160,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .placeholder.block3__button-shortcuts::before, .placeholder.block5__button-login-save::before, .placeholder.block5__button-login-reset::before {
+.placeholder.btn::before, .placeholder.block3__button-shortcuts::before, .placeholder.block5__button-save::before, .placeholder.block5__button-reset::before {
   display: inline-block;
   content: "";
 }
@@ -4496,7 +4501,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .block1__container1, .block1__container2, .block1__container3, .card__body, .card__container1, .card__container2, .block3__container, .expander__container1, .expander__body, .expander__container2, .block4__container, .block5__container {
+.d-flex, .block1__container1, .block1__container2, .block1__container3, .f-card__body, .f-card__container1, .f-card__container2, .block3__container, .expander__container1, .expander__body, .expander__container2, .block4__container, .block5__container {
   display: flex !important;
 }
 
@@ -4772,7 +4777,7 @@ textarea.form-control-lg {
   flex-direction: row !important;
 }
 
-.flex-column, .block1__container3, .card__container2, .expander__container1, .expander__container2 {
+.flex-column, .block1__container3, .f-card__container2, .expander__container1, .expander__container2 {
   flex-direction: column !important;
 }
 
@@ -4848,7 +4853,7 @@ textarea.form-control-lg {
   justify-content: center !important;
 }
 
-.justify-content-between, .card__body, .expander__body {
+.justify-content-between, .f-card__body, .expander__body {
   justify-content: space-between !important;
 }
 
@@ -4868,7 +4873,7 @@ textarea.form-control-lg {
   align-items: flex-end !important;
 }
 
-.align-items-center, .block1__container1, .block1__container2, .card__body, .expander__body, .block4__container {
+.align-items-center, .block1__container1, .block1__container2, .f-card__body, .expander__body, .block4__container {
   align-items: center !important;
 }
 
@@ -5122,7 +5127,7 @@ textarea.form-control-lg {
   margin-bottom: 0.25rem !important;
 }
 
-.mb-2, .heading1, .block1, .card, .block4, .heading2 {
+.mb-2, .heading1, .block1, .f-card, .block4, .heading2 {
   margin-bottom: 0.5rem !important;
 }
 
@@ -5528,7 +5533,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted, .block1__span-title {
+.text-muted, .block1__title {
   --bs-text-opacity: 1;
   color: #6c757d !important;
 }
@@ -9042,14 +9047,14 @@ textarea.form-control-lg {
   font-family: "Segoe UI Variable";
   src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
 }
-.f-caption, .card__span-subtitle, .expander__span-subtitle {
+.f-caption, .f-card__subtitle, .expander__subtitle {
   font-family: "Segoe UI Variable";
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
-.f-body, .block1__span-title, .card__span-title, .block2__select-theme, .expander__span-title, .block4__span, .block5__input-login {
+.f-body, .block1__title, .f-card__title, .block2__select-theme, .expander__title, .block4__span, .block5__input-login {
   font-family: "Segoe UI Variable";
   font-feature-settings: "rclt" off;
   font-size: 14px;
@@ -9102,10 +9107,10 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Light & Dark Theme Colors ------------------------- */
-.light .f-text, .light .heading1, .light .block1__span-title, .light .card__icon, .light .card__span-title, .light .card__span-subtitle, .light .block2__select-theme, .light .block3__button-shortcuts, .light .expander__icon, .light .expander__span-title, .light .expander__span-subtitle, .light .block4__span, .light .heading2, .light .block5__input-login, .light .block5__button-login-save, .light .block5__button-login-reset {
+.light .f-text, .light .heading1, .light .block1__title, .light .f-card__icon, .light .f-card__title, .light .f-card__subtitle, .light .block2__select-theme, .light .block3__button-shortcuts, .light .expander__icon, .light .expander__title, .light .expander__subtitle, .light .block4__span, .light .heading2, .light .block5__input-login, .light .block5__button-save, .light .block5__button-reset {
   color: rgba(0, 0, 0, 0.9);
 }
-.light .f-text:disabled, .light .heading1:disabled, .light .block1__span-title:disabled, .light .card__icon:disabled, .light .card__span-title:disabled, .light .card__span-subtitle:disabled, .light .block2__select-theme:disabled, .light .block3__button-shortcuts:disabled, .light .expander__icon:disabled, .light .expander__span-title:disabled, .light .expander__span-subtitle:disabled, .light .block4__span:disabled, .light .heading2:disabled, .light .block5__input-login:disabled, .light .block5__button-login-save:disabled, .light .block5__button-login-reset:disabled {
+.light .f-text:disabled, .light .heading1:disabled, .light .block1__title:disabled, .light .f-card__icon:disabled, .light .f-card__title:disabled, .light .f-card__subtitle:disabled, .light .block2__select-theme:disabled, .light .block3__button-shortcuts:disabled, .light .expander__icon:disabled, .light .expander__title:disabled, .light .expander__subtitle:disabled, .light .block4__span:disabled, .light .heading2:disabled, .light .block5__input-login:disabled, .light .block5__button-save:disabled, .light .block5__button-reset:disabled {
   color: rgba(0, 0, 0, 0.36);
 }
 .light .text-background-color {
@@ -9130,10 +9135,10 @@ textarea.form-control-lg {
   background-color: rgb(0, 95, 184);
 }
 
-.dark .f-text, .dark .heading1, .dark .block1__span-title, .dark .card__icon, .dark .card__span-title, .dark .card__span-subtitle, .dark .block2__select-theme, .dark .block3__button-shortcuts, .dark .expander__icon, .dark .expander__span-title, .dark .expander__span-subtitle, .dark .block4__span, .dark .heading2, .dark .block5__input-login, .dark .block5__button-login-save, .dark .block5__button-login-reset {
+.dark .f-text, .dark .heading1, .dark .block1__title, .dark .f-card__icon, .dark .f-card__title, .dark .f-card__subtitle, .dark .block2__select-theme, .dark .block3__button-shortcuts, .dark .expander__icon, .dark .expander__title, .dark .expander__subtitle, .dark .block4__span, .dark .heading2, .dark .block5__input-login, .dark .block5__button-save, .dark .block5__button-reset {
   color: rgb(255, 255, 255);
 }
-.dark .f-text:disabled, .dark .heading1:disabled, .dark .block1__span-title:disabled, .dark .card__icon:disabled, .dark .card__span-title:disabled, .dark .card__span-subtitle:disabled, .dark .block2__select-theme:disabled, .dark .block3__button-shortcuts:disabled, .dark .expander__icon:disabled, .dark .expander__span-title:disabled, .dark .expander__span-subtitle:disabled, .dark .block4__span:disabled, .dark .heading2:disabled, .dark .block5__input-login:disabled, .dark .block5__button-login-save:disabled, .dark .block5__button-login-reset:disabled {
+.dark .f-text:disabled, .dark .heading1:disabled, .dark .block1__title:disabled, .dark .f-card__icon:disabled, .dark .f-card__title:disabled, .dark .f-card__subtitle:disabled, .dark .block2__select-theme:disabled, .dark .block3__button-shortcuts:disabled, .dark .expander__icon:disabled, .dark .expander__title:disabled, .dark .expander__subtitle:disabled, .dark .block4__span:disabled, .dark .heading2:disabled, .dark .block5__input-login:disabled, .dark .block5__button-save:disabled, .dark .block5__button-reset:disabled {
   color: rgba(255, 255, 255, 0.36);
 }
 .dark .text-background-color {
@@ -9173,24 +9178,24 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Button ------------------------- */
-.light .btn--f-standard, .light .block3__button-shortcuts, .light .block5__button-login-save, .light .block5__button-login-reset {
+.light .btn, .light .block3__button-shortcuts, .light .block5__button-save, .light .block5__button-reset {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
-.light .btn--f-standard:hover, .light .block3__button-shortcuts:hover, .light .block5__button-login-save:hover, .light .block5__button-login-reset:hover {
+.light .btn:hover, .light .block3__button-shortcuts:hover, .light .block5__button-save:hover, .light .block5__button-reset:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light .btn--f-standard:active, .light .block3__button-shortcuts:active, .light .block5__button-login-save:active, .light .block5__button-login-reset:active {
+.light .btn:active, .light .block3__button-shortcuts:active, .light .block5__button-save:active, .light .block5__button-reset:active {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn--f-standard:disabled, .light .block3__button-shortcuts:disabled, .light .block5__button-login-save:disabled, .light .block5__button-login-reset:disabled {
+.light .btn:disabled, .light .block3__button-shortcuts:disabled, .light .block5__button-save:disabled, .light .block5__button-reset:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn--f-standard:focus, .light .block3__button-shortcuts:focus, .light .block5__button-login-save:focus, .light .block5__button-login-reset:focus {
+.light .btn:focus, .light .block3__button-shortcuts:focus, .light .block5__button-save:focus, .light .block5__button-reset:focus {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 .light .btn--f-accent {
@@ -9214,24 +9219,24 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
-.dark .btn--f-standard, .dark .block3__button-shortcuts, .dark .block5__button-login-save, .dark .block5__button-login-reset {
+.dark .btn, .dark .block3__button-shortcuts, .dark .block5__button-save, .dark .block5__button-reset {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:hover, .dark .block3__button-shortcuts:hover, .dark .block5__button-login-save:hover, .dark .block5__button-login-reset:hover {
+.dark .btn:hover, .dark .block3__button-shortcuts:hover, .dark .block5__button-save:hover, .dark .block5__button-reset:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark .btn--f-standard:active, .dark .block3__button-shortcuts:active, .dark .block5__button-login-save:active, .dark .block5__button-login-reset:active {
+.dark .btn:active, .dark .block3__button-shortcuts:active, .dark .block5__button-save:active, .dark .block5__button-reset:active {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:disabled, .dark .block3__button-shortcuts:disabled, .dark .block5__button-login-save:disabled, .dark .block5__button-login-reset:disabled {
+.dark .btn:disabled, .dark .block3__button-shortcuts:disabled, .dark .block5__button-save:disabled, .dark .block5__button-reset:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:focus, .dark .block3__button-shortcuts:focus, .dark .block5__button-login-save:focus, .dark .block5__button-login-reset:focus {
+.dark .btn:focus, .dark .block3__button-shortcuts:focus, .dark .block5__button-save:focus, .dark .block5__button-reset:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
 .dark .btn--f-accent {
@@ -9396,7 +9401,8 @@ textarea.form-control-lg {
 }
 
 .light .accordion-item, .light .expander__item,
-.light .card {
+.light .card,
+.light .f-card {
   background-color: rgba(246, 246, 246, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -9414,7 +9420,8 @@ textarea.form-control-lg {
 }
 
 .dark .accordion-item, .dark .expander__item,
-.dark .card {
+.dark .card,
+.dark .f-card {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -9576,15 +9583,287 @@ html.dark ::-webkit-scrollbar-thumb {
   font-family: "Segoe Fluent Icons";
   src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
 }
-.btn-icon, .block3__button-shortcuts, .block5__button-login-save, .block5__button-login-reset {
+.f-btn-icon, .block3__button-shortcuts, .block5__button-save, .block5__button-reset {
   font-size: 14px;
 }
 
-.accordion-icon, .expander__icon,
-.card-icon,
-.card__icon {
+.f-accordion-icon, .expander__icon,
+.f-card-icon,
+.f-card__icon {
   font-size: 24px;
   margin-right: 1.25rem;
+}
+
+@-webkit-keyframes ms-motion-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes ms-motion-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ms-motion-fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes ms-motion-fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes ms-motion-scaleDownIn {
+  from {
+    transform: scale3d(1.15, 1.15, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes ms-motion-scaleDownIn {
+  from {
+    transform: scale3d(1.15, 1.15, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes ms-motion-scaleDownOut {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    transform: scale3d(0.9, 0.9, 1);
+  }
+}
+@keyframes ms-motion-scaleDownOut {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    transform: scale3d(0.9, 0.9, 1);
+  }
+}
+@-webkit-keyframes ms-motion-slideLeftOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-48px, 0, 0);
+  }
+}
+@keyframes ms-motion-slideLeftOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-48px, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideRightOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(48px, 0, 0);
+  }
+}
+@keyframes ms-motion-slideRightOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(48px, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideLeftIn {
+  from {
+    transform: translate3d(48px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes ms-motion-slideLeftIn {
+  from {
+    transform: translate3d(48px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideRightIn {
+  from {
+    transform: translate3d(-48px, 0, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@keyframes ms-motion-slideRightIn {
+  from {
+    transform: translate3d(-48px, 0, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideUpOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -48px, 0);
+  }
+}
+@keyframes ms-motion-slideUpOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -48px, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideDownOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 48px, 0);
+  }
+}
+@keyframes ms-motion-slideDownOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 48px, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideUpIn {
+  from {
+    transform: translate3d(0, 48px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes ms-motion-slideUpIn {
+  from {
+    transform: translate3d(0, 48px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes ms-motion-slideDownIn {
+  from {
+    transform: translate3d(0, -48px, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@keyframes ms-motion-slideDownIn {
+  from {
+    transform: translate3d(0, -48px, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+.ms-motion-fadeIn {
+  -webkit-animation: ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-fadeOut {
+  -webkit-animation: ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-scaleDownIn {
+  -webkit-animation: ms-motion-scaleDownIn 300ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-scaleDownIn 300ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-scaleDownOut {
+  -webkit-animation: ms-motion-scaleDownOut 300ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-scaleDownOut 300ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=ltr] .ms-motion-slideLeftOut {
+  -webkit-animation: ms-motion-slideLeftOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideLeftOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=rtl] .ms-motion-slideLeftOut {
+  -webkit-animation: ms-motion-slideRightOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideRightOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=ltr] .ms-motion-slideRightOut {
+  -webkit-animation: ms-motion-slideRightOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideRightOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=rtl] .ms-motion-slideRightOut {
+  -webkit-animation: ms-motion-slideLeftOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideLeftOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=ltr] .ms-motion-slideLeftIn {
+  -webkit-animation: ms-motion-slideLeftIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideLeftIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=rtl] .ms-motion-slideLeftIn {
+  -webkit-animation: ms-motion-slideRightIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideRightIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=ltr] .ms-motion-slideRightIn {
+  -webkit-animation: ms-motion-slideRightIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideRightIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+[dir=rtl] .ms-motion-slideRightIn {
+  -webkit-animation: ms-motion-slideLeftIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideLeftIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-slideUpOut {
+  -webkit-animation: ms-motion-slideUpOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideUpOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-slideDownOut {
+  -webkit-animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-slideUpIn {
+  -webkit-animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+}
+
+.ms-motion-slideDownIn {
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
+  animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
 }
 
 /* ------------------------- Surfaces 2 ------------------------- */
@@ -9595,7 +9874,7 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 
 /* ------------------------- options.html ------------------------- */
-.min-width-2 {
+.min-width {
   min-width: 2.5rem;
 }
 
@@ -9636,44 +9915,37 @@ html.dark ::-webkit-scrollbar-thumb {
   font-family: "Segoe Fluent Icons";
   content: "\e99a";
 }
-.block5__button-login-save::before {
+.block5__button-save::before {
   font-family: "Segoe Fluent Icons";
   content: "\e74e";
 }
-.block5__button-login-reset::before {
+.block5__button-reset::before {
   font-family: "Segoe Fluent Icons";
   content: "\e777";
 }
 
-/* ------------------------- Motion ------------------------- */
-@keyframes ms-motion-slideDownIn {
-  from {
-    transform: translate3d(0, -48px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
+/* ------------------------- Motion 2 ------------------------- */
+.block1 {
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
+  animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
 }
-@keyframes ms-motion-fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 .block2 {
-  animation: 100ms 125ms ms-motion-slideDownIn both cubic-bezier(0.1, 0.9, 0.2, 1), 100ms 125ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
+  animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
 }
 
 .block3 {
-  animation: 100ms 150ms ms-motion-slideDownIn both cubic-bezier(0.1, 0.9, 0.2, 1), 100ms 150ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
+  animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
 }
 
 .block4 {
-  animation: 100ms 175ms ms-motion-slideDownIn both cubic-bezier(0.1, 0.9, 0.2, 1), 100ms 175ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
+  animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
 }
 
 .block5 {
-  animation: 100ms 200ms ms-motion-slideDownIn both cubic-bezier(0.1, 0.9, 0.2, 1), 100ms 200ms ms-motion-fadeIn both cubic-bezier(0, 0, 1, 1);
+  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
+  animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
 }

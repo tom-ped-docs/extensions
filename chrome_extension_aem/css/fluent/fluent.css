@@ -134,24 +134,24 @@
 }
 
 /* ------------------------- Button ------------------------- */
-.light .btn--f-standard {
+.light .btn {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
-.light .btn--f-standard:hover {
+.light .btn:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light .btn--f-standard:active {
+.light .btn:active {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn--f-standard:disabled {
+.light .btn:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn--f-standard:focus {
+.light .btn:focus {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 .light .btn--f-accent {
@@ -175,24 +175,24 @@
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
-.dark .btn--f-standard {
+.dark .btn {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:hover {
+.dark .btn:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark .btn--f-standard:active {
+.dark .btn:active {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:disabled {
+.dark .btn:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn--f-standard:focus {
+.dark .btn:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
 .dark .btn--f-accent {
@@ -546,12 +546,12 @@ html.dark ::-webkit-scrollbar-thumb {
   font-family: "Segoe Fluent Icons";
   src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
 }
-.btn-icon {
+.f-btn-icon {
   font-size: 14px;
 }
 
-.accordion-icon,
-.card-icon {
+.f-accordion-icon,
+.f-card-icon {
   font-size: 24px;
   margin-right: 1.25rem;
 }

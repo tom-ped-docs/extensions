@@ -30,10 +30,9 @@ chrome.storage.local.get("theme", ({ theme }) => {
  */
 const BODY = document.querySelector("body");
 const DIV_0 = document.createElement("div");
-DIV_0.setAttribute("class", "body__container");
+DIV_0.setAttribute("class", "body__container ms-motion-slideUpIn");
 const BUTTON = document.createElement("button");
 BUTTON.setAttribute("class", "button-close");
-BUTTON.setAttribute("id", "button_close");
 BUTTON.setAttribute("type", "button");
 DIV_0.appendChild(BUTTON);
 const DIV_1 = document.createElement("div");
@@ -47,27 +46,27 @@ DIV_3.setAttribute("class", "block1__container2");
 DIV_2.appendChild(DIV_3);
 // .input-group
 const DIV_4 = document.createElement("div");
-DIV_4.setAttribute("class", "block1__input-group-src");
+DIV_4.setAttribute("class", "block1__input-group");
 DIV_3.appendChild(DIV_4);
 const SPAN = document.createElement("span");
-SPAN.setAttribute("class", "block1__span-src");
+SPAN.setAttribute("class", "block1__title");
 DIV_4.appendChild(SPAN);
-const SPAN_CTN = document.createTextNode("src");
-SPAN.appendChild(SPAN_CTN);
+const SPAN_TN = document.createTextNode("src");
+SPAN.appendChild(SPAN_TN);
 // select
 const SELECT = document.createElement("select");
-SELECT.setAttribute("class", "block1__select-src");
+SELECT.setAttribute("class", "block1__select-contains");
 DIV_4.appendChild(SELECT);
 const OPTION_0 = document.createElement("option");
 OPTION_0.setAttribute("value", "contains");
 SELECT.appendChild(OPTION_0);
-const OPTION_0_CTN = document.createTextNode("contains");
-OPTION_0.appendChild(OPTION_0_CTN);
+const OPTION_0_TN = document.createTextNode("contains");
+OPTION_0.appendChild(OPTION_0_TN);
 const OPTION_1 = document.createElement("option");
 OPTION_1.setAttribute("value", "not_contains");
 SELECT.appendChild(OPTION_1);
-const OPTION_1_CTN = document.createTextNode("not contains");
-OPTION_1.appendChild(OPTION_1_CTN);
+const OPTION_1_TN = document.createTextNode("not contains");
+OPTION_1.appendChild(OPTION_1_TN);
 const DIV_5 = document.createElement("div");
 DIV_5.setAttribute("class", "block1__container3");
 DIV_2.appendChild(DIV_5);
@@ -79,7 +78,6 @@ INPUT.setAttribute("placeholder", "/pl");
 DIV_5.appendChild(INPUT);
 const DIV_6 = document.createElement("div");
 DIV_6.setAttribute("class", "block2");
-DIV_6.setAttribute("id", "div_6");
 DIV_0.appendChild(DIV_6);
 const DIV_7 = document.createElement("div");
 DIV_7.setAttribute("class", "block2__container1");
@@ -95,21 +93,21 @@ if (IMGS !== null) {
         DIV.setAttribute("class", "block2__container2");
         DIV_7.appendChild(DIV);
         const SPAN_0 = document.createElement("span");
-        SPAN_0.setAttribute("class", "block2__span-title");
+        SPAN_0.setAttribute("class", "block2__title");
         DIV.appendChild(SPAN_0);
-        const SPAN_0_CTN = document.createTextNode(`img ${i}:`);
-        SPAN_0.appendChild(SPAN_0_CTN);
+        const SPAN_0_TN = document.createTextNode(`img ${i}:`);
+        SPAN_0.appendChild(SPAN_0_TN);
         i++;
         const SPAN_1 = document.createElement("span");
-        SPAN_1.setAttribute("class", "block2__span-subtitle-src");
+        SPAN_1.setAttribute("class", "block2__subtitle-src");
         DIV.appendChild(SPAN_1);
-        const SPAN_1_CTN = document.createTextNode(`src: ${img.src}`);
-        SPAN_1.appendChild(SPAN_1_CTN);
+        const SPAN_1_TN = document.createTextNode(`src: ${img.src}`);
+        SPAN_1.appendChild(SPAN_1_TN);
         const SPAN_2 = document.createElement("span");
-        SPAN_2.setAttribute("class", "block2__span-subtitle-alt");
+        SPAN_2.setAttribute("class", "block2__subtitle-alt");
         DIV.appendChild(SPAN_2);
-        const SPAN_2_CTN = document.createTextNode(`alt: ${img.alt}`);
-        SPAN_2.appendChild(SPAN_2_CTN);
+        const SPAN_2_TN = document.createTextNode(`alt: ${img.alt}`);
+        SPAN_2.appendChild(SPAN_2_TN);
     }
 }
 // .ms-motion-slideUpIn animation
