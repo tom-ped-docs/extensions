@@ -65,19 +65,6 @@ BLOCK2__SELECT_THEME.addEventListener("change", () => {
 /*
  * ------------------------- block3 -------------------------
  */
-// on popup ...
-// const setShortcuts = () => {
-//   const MANIFEST = chrome.runtime.getManifest();
-//   const COMMANDS: string = MANIFEST.commands._execute_action.suggested_key.default;
-//   const KEYS: string[] = COMMANDS.split("+");
-//   for (let key of KEYS) {
-//     const BUTTON = document.createElement("button") as HTMLButtonElement;
-//     BUTTON.setAttribute("class", "block3__button-key");
-//     BUTTON.textContent = key;
-//     BLOCK3__BUTTON_SHORTCUTS.parentElement.insertBefore(BUTTON, BLOCK3__BUTTON_SHORTCUTS);
-//   }
-// }
-// setShortcuts();
 BLOCK3__BUTTON_SHORTCUTS.addEventListener("click", () => {
     chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
 });
@@ -124,7 +111,7 @@ BLOCK4__INPUT_AEM_CAPITALIZATION.addEventListener("click", (e) => {
     }
 });
 /*
- * ------------------------- block5 -------------------------
+ * ------------------------- block5, samsung -------------------------
  */
 // set "user_id" var
 document.querySelector("#block5__button_save_p5").addEventListener("click", () => {
@@ -134,22 +121,6 @@ document.querySelector("#block5__button_save_p5").addEventListener("click", () =
 document.querySelector("#block5__button_save_p6").addEventListener("click", () => {
     chrome.storage.local.set({ user_email: BLOCK5__INPUT_LOGIN_P6.value });
 });
-// set "user_id" var
-// document.querySelector("#block5__button_reset_p5").addEventListener("click", () => {
-//   chrome.storage.local.get(["S_URL", "user_id"], ({ S_URL, user_id }) => {
-//     chrome.storage.local.set({ user_id: S_URL.p5_login_reset });
-//     BLOCK5__INPUT_LOGIN_P5.value = user_id;
-//   });
-//   location.reload();
-// });
-// set "user_email" var
-// document.querySelector("#block5__button_reset_p6").addEventListener("click", () => {
-//   chrome.storage.local.get(["S_URL", "user_email"], ({ S_URL, user_email }) => {
-//     chrome.storage.local.set({ user_email: S_URL.p6_login_reset });
-//     BLOCK5__INPUT_LOGIN_P6.value = user_email;
-//   });
-//   location.reload();
-// });
 // ------------------------- tooltips -------------------------
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {

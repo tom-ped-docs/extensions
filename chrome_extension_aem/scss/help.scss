@@ -1,0 +1,20 @@
+@use "bootstrap";
+
+@use "fluent/typography";
+@use "fluent/color";
+@use "fluent/scroll_viewer";
+@use "fluent/surfaces";
+@use "fluent/iconography";
+
+/* ------------------------- Surfaces 2 ------------------------- */
+
+.light,
+.dark {
+  .f-app-surface-base {
+    border: unset;
+  }
+}
+
+/* ------------------------- help.html ------------------------- */
+
+// bootstrap-components, f-iconography, f-typography, f-color, f-surfaces, bootstrap-utilities, CSS
