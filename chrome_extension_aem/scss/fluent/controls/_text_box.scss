@@ -1,3 +1,6 @@
+@use "../typography";
+@use "../color";
+
 /* ------------------------- Text Box ------------------------- */
 
 // input.form-control {
@@ -14,6 +17,8 @@
     border-color: rgba(0, 0, 0, 0.06);
     // border-color: rgba(0, 0, 0, 0.45);
     border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+
+    @extend .f-body, .f-text;
   }
 
   input.form-control:hover {
@@ -46,6 +51,8 @@
     // border-color: rgba(255, 255, 255, 0.54);
     // border-color: rgba(255, 255, 255, 0.54);
     border-bottom: 2px solid rgba(255, 255, 255, 0.54);
+
+    @extend .f-body, .f-text;
   }
 
   input.form-control:hover {

@@ -1,14 +1,14 @@
 @use "typography";
 @use "color";
 
-@use "button";
-@use "dropdown";
-@use "toggle_switch";
-@use "expander";
-@use "text_box";
-@use "scroll_viewer";
-@use "info_bar";
-@use "tooltip";
+@use "controls/button";
+@use "controls/dropdown";
+@use "controls/toggle_switch";
+@use "controls/expander";
+@use "controls/text_box";
+@use "controls/scroll_viewer";
+@use "controls/info_bar";
+@use "controls/tooltip";
 @use "surfaces";
 
 @use "iconography";

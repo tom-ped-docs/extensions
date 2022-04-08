@@ -1,14 +1,14 @@
-@use "bootstrap";
+@use "bootstrap/bootstrap";
 
 @use "fluent/typography";
 @use "fluent/color";
-@use "fluent/button";
-@use "fluent/dropdown";
-@use "fluent/toggle_switch";
-@use "fluent/expander";
-@use "fluent/text_box";
-@use "fluent/scroll_viewer";
-@use "fluent/tooltip";
+@use "fluent/controls/button";
+@use "fluent/controls/dropdown";
+@use "fluent/controls/toggle_switch";
+@use "fluent/controls/expander";
+@use "fluent/controls/text_box";
+@use "fluent/controls/scroll_viewer";
+@use "fluent/controls/tooltip";
 @use "fluent/surfaces";
 @use "fluent/iconography";
 
@@ -25,7 +25,7 @@
 
 /* ------------------------- options.html ------------------------- */
 
-// bootstrap-components, f-iconography, f-typography, f-color, f-surfaces, bootstrap-utilities, CSS
+// bootstrap-components + fluent-controls (f-typography, f-color), f-iconography, f-surfaces, bootstrap-utilities, CSS
 
 .body {
   @extend .f-app-surface-base;
@@ -36,35 +36,34 @@
   }
 }
 
-.heading1 { @extend .f-title, .f-text, .d-block, .mb-2; }
+.heading {
+  @extend .f-text, .d-block, .mb-2;
 
-.block1 {
+  &__options      { @extend .f-title; }
+  &__aem-samsung  { @extend .f-body-strong; }
+}
+
+.about {
+  // { a }
   @extend .mb-2;
 
-  &__container1 { @extend .d-flex, .align-items-center; }
-  &__container2 {
+  &__container-row    { @extend .d-flex, .align-items-center; }// .flex-row
+  &__container-center {
     @extend .d-flex, .justify-content-center, .align-items-center, .me-2;
     height: 100px;
     width: 200px;
   }
-  &__container3 { @extend .d-flex, .flex-column; }
-  &__title      { @extend .f-body, .f-text, .text-muted; }
+  &__container-column { @extend .d-flex, .flex-column; }
+  &__title            { @extend .f-body, .f-text, .text-muted; }
 }
 
-.f-card {
-  @extend .card, .mb-2;
+.appearance {
+  // { a }
+  @extend .mb-2;
 
-  &__body       { @extend .card-body, .d-flex, .justify-content-between, .align-items-center; }
-  &__container1 { @extend .d-flex; }
-  &__icon       { @extend .f-card-icon, .f-text; }
-  &__container2 { @extend .d-flex, .flex-column; }
-  &__title      { @extend .f-body, .f-text; }
-  &__subtitle   { @extend .f-caption, .f-text; }
-}
-
-.block2 {
+  // &__icon-theme { i }
   &__select-theme {
-    @extend .form-select, .form-select-sm, .f-body, .f-text;
+    @extend .form-select, .form-select-sm;
     width: 10rem;
   }
 
@@ -72,9 +71,12 @@
   &__icon-theme::before { font-family: iconography.$font-family; content: "\e771"; }
 }
 
-.block3 {
-  &__container        { @extend .d-flex; }
-  &__button-shortcuts { @extend .btn, .btn-sm, .f-btn-icon, .f-text; }
+.shortcuts {
+  // { a }
+  @extend .mb-2;
+
+  // &__icon-shortcuts { i }
+  // &__button-shortcuts { i }
 
   // KeyboardShortcut
   &__icon-shortcuts::before   { font-family: iconography.$font-family; content: "\eda7"; }
@@ -82,75 +84,61 @@
   &__button-shortcuts::before { font-family: iconography.$font-family; content: "\e8a7"; }
 }
 
-.expander {
-  &__item       { @extend .accordion-item; }
-  &__header     { @extend .accordion-header; }
-  &__button     { @extend .accordion-button; }
-  &__icon       { @extend .f-accordion-icon, .f-text; }
-  &__container1 { @extend .d-flex, .flex-column; }
-  &__title      { @extend .f-body, .f-text; }
-  &__subtitle   { @extend .f-caption, .f-text; }
-  &__collapse   { @extend .accordion-collapse; }
-  &__body       { @extend .accordion-body, .d-flex, .justify-content-between, .align-items-center; }
-
-  &__container2 { @extend .d-flex, .flex-column; }
-}
-
-.block4 {
+.extensions {
+  // { a }
   @extend .mb-2;
+
+  // &__icon-view { i }
 
   &__container      { @extend .d-flex, .align-items-center; }
   &__span           { @extend .f-body, .f-text, .me-2; }
   &__toggle-switch  { @extend .form-check, .form-switch; }
-  &__input          { @extend .form-check-input; }
+  &__check          { @extend .form-check-input; }
 
   // View
   &__icon-view::before { font-family: iconography.$font-family; content: "\e890"; }
 }
 
-.heading2 { @extend .f-body-strong, .f-text, .d-block, .mb-2; }
+.aem-samsung {
+  // { a }
 
-.block5 {
+  // &__button-robot { i }
   &__container    { @extend .d-flex; }
-  &__input-login {
-    @extend .form-control, .form-control-sm, .f-body, .f-text, .me-2;
+  &__input-login  {
+    @extend .form-control, .form-control-sm, .me-2;
     width: 20rem;
   }
-  &__btn-group    { @extend .btn-group, .btn-group-sm; }
-  &__button-save,
-  &__button-reset { @extend .btn, .btn-sm, .f-btn-icon, .f-text; }
+  // &__button-save { i }
 
   // Robot
   &__icon-robot::before   { font-family: iconography.$font-family; content: "\e99a"; }
   // Save
   &__button-save::before  { font-family: iconography.$font-family; content: "\e74e"; }
-  // UpdateRestore
-  &__button-reset::before { font-family: iconography.$font-family; content: "\e777"; }
 }
 
 /* ------------------------- Motion 2 ------------------------- */
 
-.block1 {
+.about {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
           animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
 }
 
-.block2 {
+.appearance {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
           animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
 }
 
-.block3 {
+.shortcuts {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
           animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
 }
 
-.block4 {
+.extensions {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
           animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
 }
 
-.block5 {
+.aem-samsung {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
           animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
 }

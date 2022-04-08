@@ -28,7 +28,7 @@ chrome.storage.local.get("selected_theme", ({ selected_theme }) => {
 });
 
 /*
- * ------------------------- block1 -------------------------
+ * ------------------------- images.ts -------------------------
  */
 
 const BODY = document.body as HTMLBodyElement;
@@ -37,39 +37,39 @@ const DIV_0 = document.createElement("div") as HTMLDivElement;
 DIV_0.setAttribute("class", "body__container ms-motion-slideUpIn");
 
 const BUTTON = document.createElement("button") as HTMLButtonElement;
-BUTTON.setAttribute("class", "button-close");
+BUTTON.setAttribute("class", "button button--standard-icon button-close");
 BUTTON.setAttribute("type", "button");
 DIV_0.appendChild(BUTTON);
 
 /*
- * ------------------------- block1 -------------------------
+ * ------------------------- find -------------------------
  */
 
 const DIV_1 = document.createElement("div") as HTMLDivElement;
-DIV_1.setAttribute("class", "block1");
+DIV_1.setAttribute("class", "find");
 DIV_0.appendChild(DIV_1);
 
 const DIV_2 = document.createElement("div") as HTMLDivElement;
-DIV_2.setAttribute("class", "block1__container1");
+DIV_2.setAttribute("class", "find__container-row");
 DIV_1.appendChild(DIV_2);
 
 const DIV_3 = document.createElement("div") as HTMLDivElement;
-DIV_3.setAttribute("class", "block1__container2");
+DIV_3.setAttribute("class", "find__container-col");
 DIV_2.appendChild(DIV_3);
 
 const DIV_4 = document.createElement("div") as HTMLDivElement;
-DIV_4.setAttribute("class", "block1__input-group");
+DIV_4.setAttribute("class", "find__input-group");
 DIV_3.appendChild(DIV_4);
 
 const SPAN = document.createElement("span") as HTMLSpanElement;
-SPAN.setAttribute("class", "block1__title");
+SPAN.setAttribute("class", "find__title");
 DIV_4.appendChild(SPAN);
 
 const SPAN_TN = document.createTextNode("src");
 SPAN.appendChild(SPAN_TN);
 
 const SELECT = document.createElement("select") as HTMLSelectElement;
-SELECT.setAttribute("class", "block1__select-contains");
+SELECT.setAttribute("class", "find__select");
 DIV_4.appendChild(SELECT);
 
 const OPTION_0 = document.createElement("option") as HTMLOptionElement;
@@ -87,42 +87,38 @@ const OPTION_1_TN = document.createTextNode("not contains");
 OPTION_1.appendChild(OPTION_1_TN);
 
 const DIV_5 = document.createElement("div") as HTMLDivElement;
-DIV_5.setAttribute("class", "block1__container3");
+DIV_5.setAttribute("class", "find__container-col");
 DIV_2.appendChild(DIV_5);
 
 const INPUT = document.createElement("input") as HTMLInputElement;
-INPUT.setAttribute("class", "block1__input-text");
+INPUT.setAttribute("class", "find__input");
 INPUT.setAttribute("type", "text");
 INPUT.setAttribute("placeholder", "/pl");
 DIV_5.appendChild(INPUT);
 
 /*
- * ------------------------- block2 -------------------------
+ * ------------------------- images -------------------------
  */
 
 const DIV_6 = document.createElement("div") as HTMLDivElement;
-DIV_6.setAttribute("class", "block2");
+DIV_6.setAttribute("class", "images");
 DIV_0.appendChild(DIV_6);
 
 const DIV_7 = document.createElement("div") as HTMLDivElement;
-DIV_7.setAttribute("class", "block2__container1");
+DIV_7.setAttribute("class", "images__container");
 DIV_6.appendChild(DIV_7);
 
 const IMGS = document.querySelectorAll("img");
 let i: number = 0;
 
-/*
- * ------------------------- block2 -------------------------
- */
-
 if (IMGS !== null) {
   for (let img of Array.from(IMGS)) {
     const DIV = document.createElement("div") as HTMLDivElement;
-    DIV.setAttribute("class", "block2__container2");
+    DIV.setAttribute("class", "images__container-column");
     DIV_7.appendChild(DIV);
 
     const SPAN_0 = document.createElement("span") as HTMLSpanElement;
-    SPAN_0.setAttribute("class", "block2__title");
+    SPAN_0.setAttribute("class", "images__title");
     DIV.appendChild(SPAN_0);
 
     const SPAN_0_TN = document.createTextNode("img " + i);
@@ -131,14 +127,14 @@ if (IMGS !== null) {
     i++;
 
     const SPAN_1 = document.createElement("span") as HTMLSpanElement;
-    SPAN_1.setAttribute("class", "block2__subtitle-src");
+    SPAN_1.setAttribute("class", "images__subtitle-src");
     DIV.appendChild(SPAN_1);
 
     const SPAN_1_TN = document.createTextNode("src: " + img.src);
     SPAN_1.appendChild(SPAN_1_TN);
 
     const SPAN_2 = document.createElement("span") as HTMLSpanElement;
-    SPAN_2.setAttribute("class", "block2__subtitle-alt");
+    SPAN_2.setAttribute("class", "images__subtitle-alt");
     DIV.appendChild(SPAN_2);
 
     const SPAN_2_TN = document.createTextNode("alt: " + img.alt);

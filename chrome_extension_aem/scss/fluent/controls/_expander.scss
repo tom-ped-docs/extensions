@@ -1,0 +1,139 @@
+@use "../../bootstrap/bootstrap";
+
+@use "../typography";
+@use "../color";
+
+@use "../iconography";
+
+/* ------------------------- Expander ------------------------- */
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.light {
+  // Mode: Light, Expanded: False & True
+
+  .accordion-item,
+  .card {
+    background-color: rgba(246, 246, 246, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .accordion-button {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .accordion-button:not(.collapsed) {
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .accordion-body {
+    // border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .accordion-body:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.dark {
+  // Mode: Dark, Expanded: False & True
+
+  .accordion-item,
+  .card {
+    background-color: rgba(255, 255, 255, 0.03);
+    // border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .accordion-button {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .accordion-button:not(.collapsed) {
+    // box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .accordion-body {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .accordion-body:last-of-type {
+    border-bottom: none;
+  }
+}
+
+/* ------------------------- controls ------------------------- */
+
+.expander {
+  &__item { @extend .accordion-item; }
+  &__header { @extend .accordion-header; }
+  &__button { @extend .accordion-button; }
+  &__icon {
+    @extend .f-text;
+    font-size: 24px;
+    margin-right: 1.25rem;
+  }
+  &__container { @extend .d-flex, .flex-column; }
+  &__title { @extend .f-body, .f-text; }
+  &__subtitle { @extend .f-caption, .f-text; }
+  &__collapse { @extend .accordion-collapse; }
+  &__body { @extend .accordion-body, .d-flex, .justify-content-between, .align-items-center; }
+
+  &__icon::before { font-family: iconography.$font-family; content: "..."; }
+}
+
+// <div class="expander__item">
+//   <span class="expander__header">
+//     <button class="expander__button collapsed" data-bs-target="#accordion" data-bs-toggle="collapse" type="button">
+//       <span class="expander__icon"></span>
+//       <div class="expander__container">
+//         <span class="expander__title">Text</span>
+//         <span class="expander__subtitle">Text</span>
+//       </div>
+//     </button>
+//   </span>
+//   <div class="expander__collapse collapse" id="accordion">
+//     <div class="expander__body">
+//       <!-- ... -->
+//     </div>
+//   </div>
+// </div>
+
+.card {
+  @extend .card;
+
+  &__body { @extend .card-body, .d-flex, .justify-content-between, .align-items-center; }
+  &__container-row { @extend .d-flex; }// .flex-row
+  &__icon {
+    @extend .f-text;
+    font-size: 24px;
+    margin-right: 1.25rem;
+  }
+  &__container-column { @extend .d-flex, .flex-column; }
+  &__title { @extend .f-body, .f-text; }
+  &__subtitle { @extend .f-caption, .f-text; }
+
+  &__icon::before { font-family: iconography.$font-family; content: "..."; }
+}
+
+// <div class="card">
+//   <div class="card__body">
+//     <div class="card__container-row">
+//       <span class="card__icon"></span>
+//       <div class="card__container-column">
+//         <span class="card__title">Text</span>
+//         <span class="card__subtitle">Text</span>
+//       </div>
+//     </div>
+//     <!-- ... -->
+//   </div>
+// </div>

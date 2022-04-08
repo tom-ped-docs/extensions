@@ -9106,16 +9106,6 @@ html.dark ::-webkit-scrollbar-thumb {
   font-family: "Segoe Fluent Icons";
   src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
 }
-.f-btn-icon {
-  font-size: 14px;
-}
-
-.f-accordion-icon,
-.f-card-icon {
-  font-size: 24px;
-  margin-right: 1.25rem;
-}
-
 /* ------------------------- Surfaces 2 ------------------------- */
 .light .f-app-surface-base,
 .dark .f-app-surface-base {

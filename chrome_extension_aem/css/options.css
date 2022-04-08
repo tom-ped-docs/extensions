@@ -2168,7 +2168,7 @@ progress {
   color: #6c757d;
 }
 
-.form-control, .block5__input-login {
+.form-control, .aem-samsung__input-login {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -2184,35 +2184,35 @@ progress {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control, .block5__input-login {
+  .form-control, .aem-samsung__input-login {
     transition: none;
   }
 }
-.form-control[type=file], [type=file].block5__input-login {
+.form-control[type=file], [type=file].aem-samsung__input-login {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]), [type=file].block5__input-login:not(:disabled):not([readonly]) {
+.form-control[type=file]:not(:disabled):not([readonly]), [type=file].aem-samsung__input-login:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control:focus, .block5__input-login:focus {
+.form-control:focus, .aem-samsung__input-login:focus {
   color: #212529;
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-control::-webkit-date-and-time-value, .block5__input-login::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value, .aem-samsung__input-login::-webkit-date-and-time-value {
   height: 1.5em;
 }
-.form-control::placeholder, .block5__input-login::placeholder {
+.form-control::placeholder, .aem-samsung__input-login::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .block5__input-login:disabled, .form-control[readonly], [readonly].block5__input-login {
+.form-control:disabled, .aem-samsung__input-login:disabled, .form-control[readonly], [readonly].aem-samsung__input-login {
   background-color: #e9ecef;
   opacity: 1;
 }
-.form-control::file-selector-button, .block5__input-login::file-selector-button {
+.form-control::file-selector-button, .aem-samsung__input-login::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -2227,14 +2227,14 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::file-selector-button, .block5__input-login::file-selector-button {
+  .form-control::file-selector-button, .aem-samsung__input-login::file-selector-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .block5__input-login:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .aem-samsung__input-login:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
-.form-control::-webkit-file-upload-button, .block5__input-login::-webkit-file-upload-button {
+.form-control::-webkit-file-upload-button, .aem-samsung__input-login::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -2249,11 +2249,11 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button, .block5__input-login::-webkit-file-upload-button {
+  .form-control::-webkit-file-upload-button, .aem-samsung__input-login::-webkit-file-upload-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .block5__input-login:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .aem-samsung__input-login:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
 
@@ -2268,23 +2268,23 @@ progress {
   border: solid transparent;
   border-width: 1px 0;
 }
-.form-control-plaintext.form-control-sm, .form-control-plaintext.block5__input-login, .form-control-plaintext.form-control-lg {
+.form-control-plaintext.form-control-sm, .form-control-plaintext.aem-samsung__input-login, .form-control-plaintext.form-control-lg {
   padding-right: 0;
   padding-left: 0;
 }
 
-.form-control-sm, .block5__input-login {
+.form-control-sm, .aem-samsung__input-login {
   min-height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
-.form-control-sm::file-selector-button, .block5__input-login::file-selector-button {
+.form-control-sm::file-selector-button, .aem-samsung__input-login::file-selector-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
   margin-inline-end: 0.5rem;
 }
-.form-control-sm::-webkit-file-upload-button, .block5__input-login::-webkit-file-upload-button {
+.form-control-sm::-webkit-file-upload-button, .aem-samsung__input-login::-webkit-file-upload-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
   margin-inline-end: 0.5rem;
@@ -2307,10 +2307,10 @@ progress {
   margin-inline-end: 1rem;
 }
 
-textarea.form-control, textarea.block5__input-login {
+textarea.form-control, textarea.aem-samsung__input-login {
   min-height: calc(1.5em + 0.75rem + 2px);
 }
-textarea.form-control-sm, textarea.block5__input-login {
+textarea.form-control-sm, textarea.aem-samsung__input-login {
   min-height: calc(1.5em + 0.5rem + 2px);
 }
 textarea.form-control-lg {
@@ -2334,7 +2334,7 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.form-select, .block2__select-theme {
+.form-select, .appearance__select-theme {
   display: block;
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
@@ -2354,28 +2354,28 @@ textarea.form-control-lg {
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-select, .block2__select-theme {
+  .form-select, .appearance__select-theme {
     transition: none;
   }
 }
-.form-select:focus, .block2__select-theme:focus {
+.form-select:focus, .appearance__select-theme:focus {
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-select[multiple], [multiple].block2__select-theme, .form-select[size]:not([size="1"]), [size].block2__select-theme:not([size="1"]) {
+.form-select[multiple], [multiple].appearance__select-theme, .form-select[size]:not([size="1"]), [size].appearance__select-theme:not([size="1"]) {
   padding-right: 0.75rem;
   background-image: none;
 }
-.form-select:disabled, .block2__select-theme:disabled {
+.form-select:disabled, .appearance__select-theme:disabled {
   background-color: #e9ecef;
 }
-.form-select:-moz-focusring, .block2__select-theme:-moz-focusring {
+.form-select:-moz-focusring, .appearance__select-theme:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #212529;
 }
 
-.form-select-sm, .block2__select-theme {
+.form-select-sm, .appearance__select-theme {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
@@ -2391,18 +2391,18 @@ textarea.form-control-lg {
   border-radius: 0.3rem;
 }
 
-.form-check, .block4__toggle-switch {
+.form-check, .extensions__toggle-switch {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
-.form-check .form-check-input, .block4__toggle-switch .form-check-input, .form-check .block4__input, .block4__toggle-switch .block4__input {
+.form-check .form-check-input, .extensions__toggle-switch .form-check-input, .form-check .extensions__check, .extensions__toggle-switch .extensions__check {
   float: left;
   margin-left: -1.5em;
 }
 
-.form-check-input, .block4__input {
+.form-check-input, .extensions__check {
   width: 1em;
   height: 1em;
   margin-top: 0.25em;
@@ -2415,48 +2415,48 @@ textarea.form-control-lg {
   appearance: none;
   color-adjust: exact;
 }
-.form-check-input[type=checkbox], [type=checkbox].block4__input {
+.form-check-input[type=checkbox], [type=checkbox].extensions__check {
   border-radius: 0.25em;
 }
-.form-check-input[type=radio], [type=radio].block4__input {
+.form-check-input[type=radio], [type=radio].extensions__check {
   border-radius: 50%;
 }
-.form-check-input:active, .block4__input:active {
+.form-check-input:active, .extensions__check:active {
   filter: brightness(90%);
 }
-.form-check-input:focus, .block4__input:focus {
+.form-check-input:focus, .extensions__check:focus {
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-check-input:checked, .block4__input:checked {
+.form-check-input:checked, .extensions__check:checked {
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.form-check-input:checked[type=checkbox], .block4__input:checked[type=checkbox] {
+.form-check-input:checked[type=checkbox], .extensions__check:checked[type=checkbox] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
 }
-.form-check-input:checked[type=radio], .block4__input:checked[type=radio] {
+.form-check-input:checked[type=radio], .extensions__check:checked[type=radio] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
-.form-check-input[type=checkbox]:indeterminate, [type=checkbox].block4__input:indeterminate {
+.form-check-input[type=checkbox]:indeterminate, [type=checkbox].extensions__check:indeterminate {
   background-color: #0d6efd;
   border-color: #0d6efd;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
-.form-check-input:disabled, .block4__input:disabled {
+.form-check-input:disabled, .extensions__check:disabled {
   pointer-events: none;
   filter: none;
   opacity: 0.5;
 }
-.form-check-input[disabled] ~ .form-check-label, [disabled].block4__input ~ .form-check-label, .form-check-input:disabled ~ .form-check-label, .block4__input:disabled ~ .form-check-label {
+.form-check-input[disabled] ~ .form-check-label, [disabled].extensions__check ~ .form-check-label, .form-check-input:disabled ~ .form-check-label, .extensions__check:disabled ~ .form-check-label {
   opacity: 0.5;
 }
 
-.form-switch, .block4__toggle-switch {
+.form-switch, .extensions__toggle-switch {
   padding-left: 2.5em;
 }
-.form-switch .form-check-input, .block4__toggle-switch .form-check-input, .form-switch .block4__input, .block4__toggle-switch .block4__input {
+.form-switch .form-check-input, .extensions__toggle-switch .form-check-input, .form-switch .extensions__check, .extensions__toggle-switch .extensions__check {
   width: 2em;
   margin-left: -2.5em;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
@@ -2465,14 +2465,14 @@ textarea.form-control-lg {
   transition: background-position 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-switch .form-check-input, .block4__toggle-switch .form-check-input, .form-switch .block4__input, .block4__toggle-switch .block4__input {
+  .form-switch .form-check-input, .extensions__toggle-switch .form-check-input, .form-switch .extensions__check, .extensions__toggle-switch .extensions__check {
     transition: none;
   }
 }
-.form-switch .form-check-input:focus, .block4__toggle-switch .form-check-input:focus, .form-switch .block4__input:focus, .block4__toggle-switch .block4__input:focus {
+.form-switch .form-check-input:focus, .extensions__toggle-switch .form-check-input:focus, .form-switch .extensions__check:focus, .extensions__toggle-switch .extensions__check:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
 }
-.form-switch .form-check-input:checked, .block4__toggle-switch .form-check-input:checked, .form-switch .block4__input:checked, .block4__toggle-switch .block4__input:checked {
+.form-switch .form-check-input:checked, .extensions__toggle-switch .form-check-input:checked, .form-switch .extensions__check:checked, .extensions__toggle-switch .extensions__check:checked {
   background-position: right center;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
@@ -2487,7 +2487,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check[disabled] + .block3__button-shortcuts, .btn-check[disabled] + .block5__button-save, .btn-check[disabled] + .block5__button-reset, .btn-check:disabled + .btn, .btn-check:disabled + .block3__button-shortcuts, .btn-check:disabled + .block5__button-save, .btn-check:disabled + .block5__button-reset {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .button, .btn-check:disabled + .btn, .btn-check:disabled + .button {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2578,9 +2578,9 @@ textarea.form-control-lg {
 .form-floating {
   position: relative;
 }
-.form-floating > .form-control, .form-floating > .block5__input-login,
+.form-floating > .form-control, .form-floating > .aem-samsung__input-login,
 .form-floating > .form-select,
-.form-floating > .block2__select-theme {
+.form-floating > .appearance__select-theme {
   height: calc(3.5rem + 2px);
   line-height: 1.25;
 }
@@ -2600,33 +2600,33 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.form-floating > .form-control, .form-floating > .block5__input-login {
+.form-floating > .form-control, .form-floating > .aem-samsung__input-login {
   padding: 1rem 0.75rem;
 }
-.form-floating > .form-control::placeholder, .form-floating > .block5__input-login::placeholder {
+.form-floating > .form-control::placeholder, .form-floating > .aem-samsung__input-login::placeholder {
   color: transparent;
 }
-.form-floating > .form-control:focus, .form-floating > .block5__input-login:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .block5__input-login:not(:placeholder-shown) {
+.form-floating > .form-control:focus, .form-floating > .aem-samsung__input-login:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .aem-samsung__input-login:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:-webkit-autofill, .form-floating > .block5__input-login:-webkit-autofill {
+.form-floating > .form-control:-webkit-autofill, .form-floating > .aem-samsung__input-login:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-select, .form-floating > .block2__select-theme {
+.form-floating > .form-select, .form-floating > .appearance__select-theme {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:focus ~ label, .form-floating > .block5__input-login:focus ~ label,
+.form-floating > .form-control:focus ~ label, .form-floating > .aem-samsung__input-login:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .block5__input-login:not(:placeholder-shown) ~ label,
+.form-floating > .aem-samsung__input-login:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label,
-.form-floating > .block2__select-theme ~ label {
+.form-floating > .appearance__select-theme ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
-.form-floating > .form-control:-webkit-autofill ~ label, .form-floating > .block5__input-login:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label, .form-floating > .aem-samsung__input-login:-webkit-autofill ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -2638,24 +2638,24 @@ textarea.form-control-lg {
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control, .input-group > .block5__input-login,
+.input-group > .form-control, .input-group > .aem-samsung__input-login,
 .input-group > .form-select,
-.input-group > .block2__select-theme {
+.input-group > .appearance__select-theme {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus, .input-group > .block5__input-login:focus,
+.input-group > .form-control:focus, .input-group > .aem-samsung__input-login:focus,
 .input-group > .form-select:focus,
-.input-group > .block2__select-theme:focus {
+.input-group > .appearance__select-theme:focus {
   z-index: 3;
 }
-.input-group .btn, .input-group .block3__button-shortcuts, .input-group .block5__button-save, .input-group .block5__button-reset {
+.input-group .btn, .input-group .button {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .block3__button-shortcuts:focus, .input-group .block5__button-save:focus, .input-group .block5__button-reset:focus {
+.input-group .btn:focus, .input-group .button:focus {
   z-index: 3;
 }
 
@@ -2674,35 +2674,31 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-control, .input-group-lg > .block5__input-login,
+.input-group-lg > .form-control, .input-group-lg > .aem-samsung__input-login,
 .input-group-lg > .form-select,
-.input-group-lg > .block2__select-theme,
+.input-group-lg > .appearance__select-theme,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
-.input-group-lg > .block3__button-shortcuts,
-.input-group-lg > .block5__button-save,
-.input-group-lg > .block5__button-reset {
+.input-group-lg > .button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control, .input-group-sm > .block5__input-login,
+.input-group-sm > .form-control, .input-group-sm > .aem-samsung__input-login,
 .input-group-sm > .form-select,
-.input-group-sm > .block2__select-theme,
+.input-group-sm > .appearance__select-theme,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
-.input-group-sm > .block3__button-shortcuts,
-.input-group-sm > .block5__button-save,
-.input-group-sm > .block5__button-reset {
+.input-group-sm > .button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
 
-.input-group-lg > .form-select, .input-group-lg > .block2__select-theme,
+.input-group-lg > .form-select, .input-group-lg > .appearance__select-theme,
 .input-group-sm > .form-select,
-.input-group-sm > .block2__select-theme {
+.input-group-sm > .appearance__select-theme {
   padding-right: 3rem;
 }
 
@@ -2751,7 +2747,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:valid, .was-validated .block5__input-login:valid, .form-control.is-valid, .is-valid.block5__input-login {
+.was-validated .form-control:valid, .was-validated .aem-samsung__input-login:valid, .form-control.is-valid, .is-valid.aem-samsung__input-login {
   border-color: #198754;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -2759,59 +2755,59 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:valid:focus, .was-validated .block5__input-login:valid:focus, .form-control.is-valid:focus, .is-valid.block5__input-login:focus {
+.was-validated .form-control:valid:focus, .was-validated .aem-samsung__input-login:valid:focus, .form-control.is-valid:focus, .is-valid.aem-samsung__input-login:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
-.was-validated textarea.form-control:valid, .was-validated textarea.block5__input-login:valid, textarea.form-control.is-valid, textarea.is-valid.block5__input-login {
+.was-validated textarea.form-control:valid, .was-validated textarea.aem-samsung__input-login:valid, textarea.form-control.is-valid, textarea.is-valid.aem-samsung__input-login {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
 
-.was-validated .form-select:valid, .was-validated .block2__select-theme:valid, .form-select.is-valid, .is-valid.block2__select-theme {
+.was-validated .form-select:valid, .was-validated .appearance__select-theme:valid, .form-select.is-valid, .is-valid.appearance__select-theme {
   border-color: #198754;
 }
-.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .block2__select-theme:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .was-validated .block2__select-theme:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .is-valid.block2__select-theme:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .is-valid.block2__select-theme:not([multiple])[size="1"] {
+.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .appearance__select-theme:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .was-validated .appearance__select-theme:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .is-valid.appearance__select-theme:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .is-valid.appearance__select-theme:not([multiple])[size="1"] {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-select:valid:focus, .was-validated .block2__select-theme:valid:focus, .form-select.is-valid:focus, .is-valid.block2__select-theme:focus {
+.was-validated .form-select:valid:focus, .was-validated .appearance__select-theme:valid:focus, .form-select.is-valid:focus, .is-valid.appearance__select-theme:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
-.was-validated .form-check-input:valid, .was-validated .block4__input:valid, .form-check-input.is-valid, .is-valid.block4__input {
+.was-validated .form-check-input:valid, .was-validated .extensions__check:valid, .form-check-input.is-valid, .is-valid.extensions__check {
   border-color: #198754;
 }
-.was-validated .form-check-input:valid:checked, .was-validated .block4__input:valid:checked, .form-check-input.is-valid:checked, .is-valid.block4__input:checked {
+.was-validated .form-check-input:valid:checked, .was-validated .extensions__check:valid:checked, .form-check-input.is-valid:checked, .is-valid.extensions__check:checked {
   background-color: #198754;
 }
-.was-validated .form-check-input:valid:focus, .was-validated .block4__input:valid:focus, .form-check-input.is-valid:focus, .is-valid.block4__input:focus {
+.was-validated .form-check-input:valid:focus, .was-validated .extensions__check:valid:focus, .form-check-input.is-valid:focus, .is-valid.extensions__check:focus {
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
-.was-validated .form-check-input:valid ~ .form-check-label, .was-validated .block4__input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label, .is-valid.block4__input ~ .form-check-label {
+.was-validated .form-check-input:valid ~ .form-check-label, .was-validated .extensions__check:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label, .is-valid.extensions__check ~ .form-check-label {
   color: #198754;
 }
 
-.form-check-inline .form-check-input ~ .valid-feedback, .form-check-inline .block4__input ~ .valid-feedback {
+.form-check-inline .form-check-input ~ .valid-feedback, .form-check-inline .extensions__check ~ .valid-feedback {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:valid, .was-validated .input-group .block5__input-login:valid, .input-group .form-control.is-valid, .input-group .is-valid.block5__input-login,
+.was-validated .input-group .form-control:valid, .was-validated .input-group .aem-samsung__input-login:valid, .input-group .form-control.is-valid, .input-group .is-valid.aem-samsung__input-login,
 .was-validated .input-group .form-select:valid,
-.was-validated .input-group .block2__select-theme:valid,
+.was-validated .input-group .appearance__select-theme:valid,
 .input-group .form-select.is-valid,
-.input-group .is-valid.block2__select-theme {
+.input-group .is-valid.appearance__select-theme {
   z-index: 1;
 }
-.was-validated .input-group .form-control:valid:focus, .was-validated .input-group .block5__input-login:valid:focus, .input-group .form-control.is-valid:focus, .input-group .is-valid.block5__input-login:focus,
+.was-validated .input-group .form-control:valid:focus, .was-validated .input-group .aem-samsung__input-login:valid:focus, .input-group .form-control.is-valid:focus, .input-group .is-valid.aem-samsung__input-login:focus,
 .was-validated .input-group .form-select:valid:focus,
-.was-validated .input-group .block2__select-theme:valid:focus,
+.was-validated .input-group .appearance__select-theme:valid:focus,
 .input-group .form-select.is-valid:focus,
-.input-group .is-valid.block2__select-theme:focus {
+.input-group .is-valid.appearance__select-theme:focus {
   z-index: 3;
 }
 
@@ -2844,7 +2840,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:invalid, .was-validated .block5__input-login:invalid, .form-control.is-invalid, .is-invalid.block5__input-login {
+.was-validated .form-control:invalid, .was-validated .aem-samsung__input-login:invalid, .form-control.is-invalid, .is-invalid.aem-samsung__input-login {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -2852,63 +2848,63 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:invalid:focus, .was-validated .block5__input-login:invalid:focus, .form-control.is-invalid:focus, .is-invalid.block5__input-login:focus {
+.was-validated .form-control:invalid:focus, .was-validated .aem-samsung__input-login:invalid:focus, .form-control.is-invalid:focus, .is-invalid.aem-samsung__input-login:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated textarea.form-control:invalid, .was-validated textarea.block5__input-login:invalid, textarea.form-control.is-invalid, textarea.is-invalid.block5__input-login {
+.was-validated textarea.form-control:invalid, .was-validated textarea.aem-samsung__input-login:invalid, textarea.form-control.is-invalid, textarea.is-invalid.aem-samsung__input-login {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
 
-.was-validated .form-select:invalid, .was-validated .block2__select-theme:invalid, .form-select.is-invalid, .is-invalid.block2__select-theme {
+.was-validated .form-select:invalid, .was-validated .appearance__select-theme:invalid, .form-select.is-invalid, .is-invalid.appearance__select-theme {
   border-color: #dc3545;
 }
-.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .block2__select-theme:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .was-validated .block2__select-theme:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .is-invalid.block2__select-theme:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], .is-invalid.block2__select-theme:not([multiple])[size="1"] {
+.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .appearance__select-theme:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .was-validated .appearance__select-theme:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .is-invalid.appearance__select-theme:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], .is-invalid.appearance__select-theme:not([multiple])[size="1"] {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-select:invalid:focus, .was-validated .block2__select-theme:invalid:focus, .form-select.is-invalid:focus, .is-invalid.block2__select-theme:focus {
+.was-validated .form-select:invalid:focus, .was-validated .appearance__select-theme:invalid:focus, .form-select.is-invalid:focus, .is-invalid.appearance__select-theme:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated .form-check-input:invalid, .was-validated .block4__input:invalid, .form-check-input.is-invalid, .is-invalid.block4__input {
+.was-validated .form-check-input:invalid, .was-validated .extensions__check:invalid, .form-check-input.is-invalid, .is-invalid.extensions__check {
   border-color: #dc3545;
 }
-.was-validated .form-check-input:invalid:checked, .was-validated .block4__input:invalid:checked, .form-check-input.is-invalid:checked, .is-invalid.block4__input:checked {
+.was-validated .form-check-input:invalid:checked, .was-validated .extensions__check:invalid:checked, .form-check-input.is-invalid:checked, .is-invalid.extensions__check:checked {
   background-color: #dc3545;
 }
-.was-validated .form-check-input:invalid:focus, .was-validated .block4__input:invalid:focus, .form-check-input.is-invalid:focus, .is-invalid.block4__input:focus {
+.was-validated .form-check-input:invalid:focus, .was-validated .extensions__check:invalid:focus, .form-check-input.is-invalid:focus, .is-invalid.extensions__check:focus {
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
-.was-validated .form-check-input:invalid ~ .form-check-label, .was-validated .block4__input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label, .is-invalid.block4__input ~ .form-check-label {
+.was-validated .form-check-input:invalid ~ .form-check-label, .was-validated .extensions__check:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label, .is-invalid.extensions__check ~ .form-check-label {
   color: #dc3545;
 }
 
-.form-check-inline .form-check-input ~ .invalid-feedback, .form-check-inline .block4__input ~ .invalid-feedback {
+.form-check-inline .form-check-input ~ .invalid-feedback, .form-check-inline .extensions__check ~ .invalid-feedback {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:invalid, .was-validated .input-group .block5__input-login:invalid, .input-group .form-control.is-invalid, .input-group .is-invalid.block5__input-login,
+.was-validated .input-group .form-control:invalid, .was-validated .input-group .aem-samsung__input-login:invalid, .input-group .form-control.is-invalid, .input-group .is-invalid.aem-samsung__input-login,
 .was-validated .input-group .form-select:invalid,
-.was-validated .input-group .block2__select-theme:invalid,
+.was-validated .input-group .appearance__select-theme:invalid,
 .input-group .form-select.is-invalid,
-.input-group .is-invalid.block2__select-theme {
+.input-group .is-invalid.appearance__select-theme {
   z-index: 2;
 }
-.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group .block5__input-login:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group .is-invalid.block5__input-login:focus,
+.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group .aem-samsung__input-login:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group .is-invalid.aem-samsung__input-login:focus,
 .was-validated .input-group .form-select:invalid:focus,
-.was-validated .input-group .block2__select-theme:invalid:focus,
+.was-validated .input-group .appearance__select-theme:invalid:focus,
 .input-group .form-select.is-invalid:focus,
-.input-group .is-invalid.block2__select-theme:focus {
+.input-group .is-invalid.appearance__select-theme:focus {
   z-index: 3;
 }
 
-.btn, .block3__button-shortcuts, .block5__button-save, .block5__button-reset {
+.btn, .button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -2926,18 +2922,18 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .block3__button-shortcuts, .block5__button-save, .block5__button-reset {
+  .btn, .button {
     transition: none;
   }
 }
-.btn:hover, .block3__button-shortcuts:hover, .block5__button-save:hover, .block5__button-reset:hover {
+.btn:hover, .button:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .btn-check:focus + .block3__button-shortcuts, .btn-check:focus + .block5__button-save, .btn-check:focus + .block5__button-reset, .btn:focus, .block3__button-shortcuts:focus, .block5__button-save:focus, .block5__button-reset:focus {
+.btn-check:focus + .btn, .btn-check:focus + .button, .btn:focus, .button:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.btn:disabled, .block3__button-shortcuts:disabled, .block5__button-save:disabled, .block5__button-reset:disabled, .btn.disabled, .disabled.block3__button-shortcuts, .disabled.block5__button-save, .disabled.block5__button-reset, fieldset:disabled .btn, fieldset:disabled .block3__button-shortcuts, fieldset:disabled .block5__button-save, fieldset:disabled .block5__button-reset {
+.btn:disabled, .button:disabled, .btn.disabled, .disabled.button, fieldset:disabled .btn, fieldset:disabled .button {
   pointer-events: none;
   opacity: 0.65;
 }
@@ -3394,13 +3390,13 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .block3__button-shortcuts, .btn-group-lg > .block5__button-save, .btn-group-lg > .block5__button-reset {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .block3__button-shortcuts, .block5__button-save, .block5__button-reset, .btn-group-sm > .btn, .block5__btn-group > .btn, .btn-group-sm > .block3__button-shortcuts, .btn-group-sm > .block5__button-save, .btn-group-sm > .block5__button-reset {
+.btn-sm, .button, .btn-group-sm > .btn, .btn-group-sm > .button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -3443,85 +3439,41 @@ textarea.form-control-lg {
   }
 }
 
-.btn-group, .block5__btn-group,
+.btn-group,
 .btn-group-vertical {
   position: relative;
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .block5__btn-group > .btn, .btn-group > .block3__button-shortcuts, .block5__btn-group > .block3__button-shortcuts, .btn-group > .block5__button-save, .block5__btn-group > .block5__button-save, .btn-group > .block5__button-reset, .block5__btn-group > .block5__button-reset,
+.btn-group > .btn, .btn-group > .button,
 .btn-group-vertical > .btn,
-.btn-group-vertical > .block3__button-shortcuts,
-.btn-group-vertical > .block5__button-save,
-.btn-group-vertical > .block5__button-reset {
+.btn-group-vertical > .button {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .block5__btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .block3__button-shortcuts, .block5__btn-group > .btn-check:checked + .block3__button-shortcuts, .btn-group > .btn-check:checked + .block5__button-save, .block5__btn-group > .btn-check:checked + .block5__button-save, .btn-group > .btn-check:checked + .block5__button-reset, .block5__btn-group > .btn-check:checked + .block5__button-reset,
+.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .button,
 .btn-group > .btn-check:focus + .btn,
-.block5__btn-group > .btn-check:focus + .btn,
-.btn-group > .btn-check:focus + .block3__button-shortcuts,
-.block5__btn-group > .btn-check:focus + .block3__button-shortcuts,
-.btn-group > .btn-check:focus + .block5__button-save,
-.block5__btn-group > .btn-check:focus + .block5__button-save,
-.btn-group > .btn-check:focus + .block5__button-reset,
-.block5__btn-group > .btn-check:focus + .block5__button-reset,
+.btn-group > .btn-check:focus + .button,
 .btn-group > .btn:hover,
-.block5__btn-group > .btn:hover,
-.btn-group > .block3__button-shortcuts:hover,
-.block5__btn-group > .block3__button-shortcuts:hover,
-.btn-group > .block5__button-save:hover,
-.block5__btn-group > .block5__button-save:hover,
-.btn-group > .block5__button-reset:hover,
-.block5__btn-group > .block5__button-reset:hover,
+.btn-group > .button:hover,
 .btn-group > .btn:focus,
-.block5__btn-group > .btn:focus,
-.btn-group > .block3__button-shortcuts:focus,
-.block5__btn-group > .block3__button-shortcuts:focus,
-.btn-group > .block5__button-save:focus,
-.block5__btn-group > .block5__button-save:focus,
-.btn-group > .block5__button-reset:focus,
-.block5__btn-group > .block5__button-reset:focus,
+.btn-group > .button:focus,
 .btn-group > .btn:active,
-.block5__btn-group > .btn:active,
-.btn-group > .block3__button-shortcuts:active,
-.block5__btn-group > .block3__button-shortcuts:active,
-.btn-group > .block5__button-save:active,
-.block5__btn-group > .block5__button-save:active,
-.btn-group > .block5__button-reset:active,
-.block5__btn-group > .block5__button-reset:active,
+.btn-group > .button:active,
 .btn-group > .btn.active,
-.block5__btn-group > .btn.active,
-.btn-group > .active.block3__button-shortcuts,
-.block5__btn-group > .active.block3__button-shortcuts,
-.btn-group > .active.block5__button-save,
-.block5__btn-group > .active.block5__button-save,
-.btn-group > .active.block5__button-reset,
-.block5__btn-group > .active.block5__button-reset,
+.btn-group > .active.button,
 .btn-group-vertical > .btn-check:checked + .btn,
-.btn-group-vertical > .btn-check:checked + .block3__button-shortcuts,
-.btn-group-vertical > .btn-check:checked + .block5__button-save,
-.btn-group-vertical > .btn-check:checked + .block5__button-reset,
+.btn-group-vertical > .btn-check:checked + .button,
 .btn-group-vertical > .btn-check:focus + .btn,
-.btn-group-vertical > .btn-check:focus + .block3__button-shortcuts,
-.btn-group-vertical > .btn-check:focus + .block5__button-save,
-.btn-group-vertical > .btn-check:focus + .block5__button-reset,
+.btn-group-vertical > .btn-check:focus + .button,
 .btn-group-vertical > .btn:hover,
-.btn-group-vertical > .block3__button-shortcuts:hover,
-.btn-group-vertical > .block5__button-save:hover,
-.btn-group-vertical > .block5__button-reset:hover,
+.btn-group-vertical > .button:hover,
 .btn-group-vertical > .btn:focus,
-.btn-group-vertical > .block3__button-shortcuts:focus,
-.btn-group-vertical > .block5__button-save:focus,
-.btn-group-vertical > .block5__button-reset:focus,
+.btn-group-vertical > .button:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .block3__button-shortcuts:active,
-.btn-group-vertical > .block5__button-save:active,
-.btn-group-vertical > .block5__button-reset:active,
+.btn-group-vertical > .button:active,
 .btn-group-vertical > .btn.active,
-.btn-group-vertical > .active.block3__button-shortcuts,
-.btn-group-vertical > .active.block5__button-save,
-.btn-group-vertical > .active.block5__button-reset {
+.btn-group-vertical > .active.button {
   z-index: 1;
 }
 
@@ -3534,58 +3486,21 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child), .block5__btn-group > .btn:not(:first-child), .btn-group > .block3__button-shortcuts:not(:first-child), .block5__btn-group > .block3__button-shortcuts:not(:first-child), .btn-group > .block5__button-save:not(:first-child), .block5__btn-group > .block5__button-save:not(:first-child), .btn-group > .block5__button-reset:not(:first-child), .block5__btn-group > .block5__button-reset:not(:first-child),
-.btn-group > .btn-group:not(:first-child),
-.block5__btn-group > .btn-group:not(:first-child),
-.btn-group > .block5__btn-group:not(:first-child),
-.block5__btn-group > .block5__btn-group:not(:first-child) {
+.btn-group > .btn:not(:first-child), .btn-group > .button:not(:first-child),
+.btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group > .block5__button-save:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block5__button-save:not(:last-child):not(.dropdown-toggle), .btn-group > .block5__button-reset:not(:last-child):not(.dropdown-toggle), .block5__btn-group > .block5__button-reset:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
-.block5__btn-group > .btn-group:not(:last-child) > .btn,
-.btn-group > .block5__btn-group:not(:last-child) > .btn,
-.block5__btn-group > .block5__btn-group:not(:last-child) > .btn,
-.btn-group > .btn-group:not(:last-child) > .block3__button-shortcuts,
-.block5__btn-group > .btn-group:not(:last-child) > .block3__button-shortcuts,
-.btn-group > .block5__btn-group:not(:last-child) > .block3__button-shortcuts,
-.block5__btn-group > .block5__btn-group:not(:last-child) > .block3__button-shortcuts,
-.btn-group > .btn-group:not(:last-child) > .block5__button-save,
-.block5__btn-group > .btn-group:not(:last-child) > .block5__button-save,
-.btn-group > .block5__btn-group:not(:last-child) > .block5__button-save,
-.block5__btn-group > .block5__btn-group:not(:last-child) > .block5__button-save,
-.btn-group > .btn-group:not(:last-child) > .block5__button-reset,
-.block5__btn-group > .btn-group:not(:last-child) > .block5__button-reset,
-.btn-group > .block5__btn-group:not(:last-child) > .block5__button-reset,
-.block5__btn-group > .block5__btn-group:not(:last-child) > .block5__button-reset {
+.btn-group > .btn-group:not(:last-child) > .button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), .block5__btn-group > .btn:nth-child(n+3), .btn-group > .block3__button-shortcuts:nth-child(n+3), .block5__btn-group > .block3__button-shortcuts:nth-child(n+3), .btn-group > .block5__button-save:nth-child(n+3), .block5__btn-group > .block5__button-save:nth-child(n+3), .btn-group > .block5__button-reset:nth-child(n+3), .block5__btn-group > .block5__button-reset:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .btn-group > .button:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-.block5__btn-group > :not(.btn-check) + .btn,
-.btn-group > :not(.btn-check) + .block3__button-shortcuts,
-.block5__btn-group > :not(.btn-check) + .block3__button-shortcuts,
-.btn-group > :not(.btn-check) + .block5__button-save,
-.block5__btn-group > :not(.btn-check) + .block5__button-save,
-.btn-group > :not(.btn-check) + .block5__button-reset,
-.block5__btn-group > :not(.btn-check) + .block5__button-reset,
+.btn-group > :not(.btn-check) + .button,
 .btn-group > .btn-group:not(:first-child) > .btn,
-.block5__btn-group > .btn-group:not(:first-child) > .btn,
-.btn-group > .block5__btn-group:not(:first-child) > .btn,
-.block5__btn-group > .block5__btn-group:not(:first-child) > .btn,
-.btn-group > .btn-group:not(:first-child) > .block3__button-shortcuts,
-.block5__btn-group > .btn-group:not(:first-child) > .block3__button-shortcuts,
-.btn-group > .block5__btn-group:not(:first-child) > .block3__button-shortcuts,
-.block5__btn-group > .block5__btn-group:not(:first-child) > .block3__button-shortcuts,
-.btn-group > .btn-group:not(:first-child) > .block5__button-save,
-.block5__btn-group > .btn-group:not(:first-child) > .block5__button-save,
-.btn-group > .block5__btn-group:not(:first-child) > .block5__button-save,
-.block5__btn-group > .block5__btn-group:not(:first-child) > .block5__button-save,
-.btn-group > .btn-group:not(:first-child) > .block5__button-reset,
-.block5__btn-group > .btn-group:not(:first-child) > .block5__button-reset,
-.btn-group > .block5__btn-group:not(:first-child) > .block5__button-reset,
-.block5__btn-group > .block5__btn-group:not(:first-child) > .block5__button-reset {
+.btn-group > .btn-group:not(:first-child) > .button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3601,12 +3516,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .block3__button-shortcuts + .dropdown-toggle-split, .block5__button-save + .dropdown-toggle-split, .block5__button-reset + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .block5__btn-group > .btn + .dropdown-toggle-split, .btn-group-sm > .block3__button-shortcuts + .dropdown-toggle-split, .block5__btn-group > .block3__button-shortcuts + .dropdown-toggle-split, .btn-group-sm > .block5__button-save + .dropdown-toggle-split, .block5__btn-group > .block5__button-save + .dropdown-toggle-split, .btn-group-sm > .block5__button-reset + .dropdown-toggle-split, .block5__btn-group > .block5__button-reset + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .button + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .block3__button-shortcuts + .dropdown-toggle-split, .btn-group-lg > .block5__button-save + .dropdown-toggle-split, .btn-group-lg > .block5__button-reset + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3616,42 +3531,28 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .btn-group-vertical > .block3__button-shortcuts, .btn-group-vertical > .block5__button-save, .btn-group-vertical > .block5__button-reset,
-.btn-group-vertical > .btn-group,
-.btn-group-vertical > .block5__btn-group {
+.btn-group-vertical > .btn, .btn-group-vertical > .button,
+.btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .block3__button-shortcuts:not(:first-child), .btn-group-vertical > .block5__button-save:not(:first-child), .btn-group-vertical > .block5__button-reset:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child),
-.btn-group-vertical > .block5__btn-group:not(:first-child) {
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .button:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block3__button-shortcuts:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block5__button-save:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .block5__button-reset:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-.btn-group-vertical > .block5__btn-group:not(:last-child) > .btn,
-.btn-group-vertical > .btn-group:not(:last-child) > .block3__button-shortcuts,
-.btn-group-vertical > .block5__btn-group:not(:last-child) > .block3__button-shortcuts,
-.btn-group-vertical > .btn-group:not(:last-child) > .block5__button-save,
-.btn-group-vertical > .block5__btn-group:not(:last-child) > .block5__button-save,
-.btn-group-vertical > .btn-group:not(:last-child) > .block5__button-reset,
-.btn-group-vertical > .block5__btn-group:not(:last-child) > .block5__button-reset {
+.btn-group-vertical > .btn-group:not(:last-child) > .button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .block3__button-shortcuts ~ .btn, .btn-group-vertical > .block5__button-save ~ .btn, .btn-group-vertical > .block5__button-reset ~ .btn, .btn-group-vertical > .btn ~ .block3__button-shortcuts, .btn-group-vertical > .block3__button-shortcuts ~ .block3__button-shortcuts, .btn-group-vertical > .block5__button-save ~ .block3__button-shortcuts, .btn-group-vertical > .block5__button-reset ~ .block3__button-shortcuts, .btn-group-vertical > .btn ~ .block5__button-save, .btn-group-vertical > .block3__button-shortcuts ~ .block5__button-save, .btn-group-vertical > .block5__button-save ~ .block5__button-save, .btn-group-vertical > .block5__button-reset ~ .block5__button-save, .btn-group-vertical > .btn ~ .block5__button-reset, .btn-group-vertical > .block3__button-shortcuts ~ .block5__button-reset, .btn-group-vertical > .block5__button-save ~ .block5__button-reset, .btn-group-vertical > .block5__button-reset ~ .block5__button-reset,
+.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .button ~ .btn, .btn-group-vertical > .btn ~ .button, .btn-group-vertical > .button ~ .button,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-.btn-group-vertical > .block5__btn-group:not(:first-child) > .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .block3__button-shortcuts,
-.btn-group-vertical > .block5__btn-group:not(:first-child) > .block3__button-shortcuts,
-.btn-group-vertical > .btn-group:not(:first-child) > .block5__button-save,
-.btn-group-vertical > .block5__btn-group:not(:first-child) > .block5__button-save,
-.btn-group-vertical > .btn-group:not(:first-child) > .block5__button-reset,
-.btn-group-vertical > .block5__btn-group:not(:first-child) > .block5__button-reset {
+.btn-group-vertical > .btn-group:not(:first-child) > .button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.card, .f-card {
+.card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -3662,31 +3563,30 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
-.card > hr, .f-card > hr {
+.card > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group, .f-card > .list-group {
+.card > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child, .f-card > .list-group:first-child {
+.card > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
-.card > .list-group:last-child, .f-card > .list-group:last-child {
+.card > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
-.card > .card-header + .list-group, .f-card > .card-header + .list-group,
-.card > .list-group + .card-footer,
-.f-card > .list-group + .card-footer {
+.card > .card-header + .list-group,
+.card > .list-group + .card-footer {
   border-top: 0;
 }
 
-.card-body, .f-card__body {
+.card-body, .card__body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
 }
@@ -3767,7 +3667,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
-.card-group > .card, .card-group > .f-card {
+.card-group > .card {
   margin-bottom: 0.75rem;
 }
 @media (min-width: 576px) {
@@ -3775,40 +3675,36 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card, .card-group > .f-card {
+  .card-group > .card {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card, .card-group > .f-card + .card, .card-group > .card + .f-card, .card-group > .f-card + .f-card {
+  .card-group > .card + .card {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child), .card-group > .f-card:not(:last-child) {
+  .card-group > .card:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top, .card-group > .f-card:not(:last-child) .card-img-top,
-.card-group > .card:not(:last-child) .card-header,
-.card-group > .f-card:not(:last-child) .card-header {
+  .card-group > .card:not(:last-child) .card-img-top,
+.card-group > .card:not(:last-child) .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .f-card:not(:last-child) .card-img-bottom,
-.card-group > .card:not(:last-child) .card-footer,
-.card-group > .f-card:not(:last-child) .card-footer {
+  .card-group > .card:not(:last-child) .card-img-bottom,
+.card-group > .card:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child), .card-group > .f-card:not(:first-child) {
+  .card-group > .card:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top, .card-group > .f-card:not(:first-child) .card-img-top,
-.card-group > .card:not(:first-child) .card-header,
-.card-group > .f-card:not(:first-child) .card-header {
+  .card-group > .card:not(:first-child) .card-img-top,
+.card-group > .card:not(:first-child) .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .f-card:not(:first-child) .card-img-bottom,
-.card-group > .card:not(:first-child) .card-footer,
-.card-group > .f-card:not(:first-child) .card-footer {
+  .card-group > .card:not(:first-child) .card-img-bottom,
+.card-group > .card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -4160,7 +4056,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .placeholder.block3__button-shortcuts::before, .placeholder.block5__button-save::before, .placeholder.block5__button-reset::before {
+.placeholder.btn::before, .placeholder.button::before {
   display: inline-block;
   content: "";
 }
@@ -4481,7 +4377,7 @@ textarea.form-control-lg {
   display: inline-block !important;
 }
 
-.d-block, .heading1, .heading2 {
+.d-block, .heading {
   display: block !important;
 }
 
@@ -4501,7 +4397,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .block1__container1, .block1__container2, .block1__container3, .f-card__body, .f-card__container1, .f-card__container2, .block3__container, .expander__container1, .expander__body, .expander__container2, .block4__container, .block5__container {
+.d-flex, .about__container-row, .about__container-center, .about__container-column, .extensions__container, .aem-samsung__container, .expander__container, .expander__body, .card__body, .card__container-row, .card__container-column {
   display: flex !important;
 }
 
@@ -4777,7 +4673,7 @@ textarea.form-control-lg {
   flex-direction: row !important;
 }
 
-.flex-column, .block1__container3, .f-card__container2, .expander__container1, .expander__container2 {
+.flex-column, .about__container-column, .expander__container, .card__container-column {
   flex-direction: column !important;
 }
 
@@ -4849,11 +4745,11 @@ textarea.form-control-lg {
   justify-content: flex-end !important;
 }
 
-.justify-content-center, .block1__container2 {
+.justify-content-center, .about__container-center {
   justify-content: center !important;
 }
 
-.justify-content-between, .f-card__body, .expander__body {
+.justify-content-between, .expander__body, .card__body {
   justify-content: space-between !important;
 }
 
@@ -4873,7 +4769,7 @@ textarea.form-control-lg {
   align-items: flex-end !important;
 }
 
-.align-items-center, .block1__container1, .block1__container2, .f-card__body, .expander__body, .block4__container {
+.align-items-center, .about__container-row, .about__container-center, .extensions__container, .expander__body, .card__body {
   align-items: center !important;
 }
 
@@ -5099,7 +4995,7 @@ textarea.form-control-lg {
   margin-right: 0.25rem !important;
 }
 
-.me-2, .block1__container2, .block4__span, .block5__input-login {
+.me-2, .about__container-center, .extensions__span, .aem-samsung__input-login {
   margin-right: 0.5rem !important;
 }
 
@@ -5127,7 +5023,7 @@ textarea.form-control-lg {
   margin-bottom: 0.25rem !important;
 }
 
-.mb-2, .heading1, .block1, .f-card, .block4, .heading2 {
+.mb-2, .heading, .about, .appearance, .shortcuts, .extensions {
   margin-bottom: 0.5rem !important;
 }
 
@@ -5533,7 +5429,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted, .block1__title {
+.text-muted, .about__title {
   --bs-text-opacity: 1;
   color: #6c757d !important;
 }
@@ -9047,14 +8943,14 @@ textarea.form-control-lg {
   font-family: "Segoe UI Variable";
   src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
 }
-.f-caption, .f-card__subtitle, .expander__subtitle {
+.f-caption, .expander__subtitle, .card__subtitle {
   font-family: "Segoe UI Variable";
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
-.f-body, .block1__title, .f-card__title, .block2__select-theme, .expander__title, .block4__span, .block5__input-login {
+.f-body, .about__title, .extensions__span, .light input.form-control, .dark input.form-control, .light input.aem-samsung__input-login, .dark input.aem-samsung__input-login, .expander__title, .card__title, .light .form-select, .dark .form-select, .light .appearance__select-theme, .dark .appearance__select-theme, .light .btn-standard, .light .btn-accent, .dark .btn-standard, .dark .btn-accent, .light .button--standard, .dark .button--standard, .light .button--accent, .dark .button--accent, .light .button--standard-icon, .dark .button--standard-icon, .light .button--accent-icon, .dark .button--accent-icon {
   font-family: "Segoe UI Variable";
   font-feature-settings: "rclt" off;
   font-size: 14px;
@@ -9062,7 +8958,7 @@ textarea.form-control-lg {
   line-height: 20px;
 }
 
-.f-body-strong, .heading2 {
+.f-body-strong, .heading__aem-samsung {
   font-family: "Segoe UI Variable";
   font-feature-settings: "fina" on, "init" on;
   font-size: 14px;
@@ -9085,7 +8981,7 @@ textarea.form-control-lg {
   line-height: 28px;
 }
 
-.f-title, .heading1 {
+.f-title, .heading__options {
   font-family: "Segoe UI Variable";
   font-size: 28px;
   font-weight: 600;
@@ -9107,10 +9003,10 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Light & Dark Theme Colors ------------------------- */
-.light .f-text, .light .heading1, .light .block1__title, .light .f-card__icon, .light .f-card__title, .light .f-card__subtitle, .light .block2__select-theme, .light .block3__button-shortcuts, .light .expander__icon, .light .expander__title, .light .expander__subtitle, .light .block4__span, .light .heading2, .light .block5__input-login, .light .block5__button-save, .light .block5__button-reset {
+.light .f-text, .light .heading, .light .about__title, .light .extensions__span, .light input.form-control, .light input.aem-samsung__input-login, .light .expander__icon, .light .expander__title, .light .expander__subtitle, .light .card__icon, .light .card__title, .light .card__subtitle, .light .form-select, .light .appearance__select-theme, .light .btn-standard, .light .button--standard, .light .button--standard-icon {
   color: rgba(0, 0, 0, 0.9);
 }
-.light .f-text:disabled, .light .heading1:disabled, .light .block1__title:disabled, .light .f-card__icon:disabled, .light .f-card__title:disabled, .light .f-card__subtitle:disabled, .light .block2__select-theme:disabled, .light .block3__button-shortcuts:disabled, .light .expander__icon:disabled, .light .expander__title:disabled, .light .expander__subtitle:disabled, .light .block4__span:disabled, .light .heading2:disabled, .light .block5__input-login:disabled, .light .block5__button-save:disabled, .light .block5__button-reset:disabled {
+.light .f-text:disabled, .light .heading:disabled, .light .about__title:disabled, .light .extensions__span:disabled, .light input.form-control:disabled, .light input.aem-samsung__input-login:disabled, .light .expander__icon:disabled, .light .expander__title:disabled, .light .expander__subtitle:disabled, .light .card__icon:disabled, .light .card__title:disabled, .light .card__subtitle:disabled, .light .form-select:disabled, .light .appearance__select-theme:disabled, .light .btn-standard:disabled, .light .button--standard:disabled, .light .button--standard-icon:disabled {
   color: rgba(0, 0, 0, 0.36);
 }
 .light .text-background-color {
@@ -9125,20 +9021,20 @@ textarea.form-control-lg {
 .light .accent-text-background-color {
   background-color: rgba(246, 246, 246, 0.5);
 }
-.light .f-text-on-accent {
+.light .f-text-on-accent, .light .btn-accent, .light .button--accent, .light .button--accent-icon {
   color: rgb(255, 255, 255);
 }
-.light .f-text-on-accent:disabled {
+.light .f-text-on-accent:disabled, .light .btn-accent:disabled, .light .button--accent:disabled, .light .button--accent-icon:disabled {
   color: rgba(255, 255, 255, 0.7);
 }
 .light .text-on-accent-background-color {
   background-color: rgb(0, 95, 184);
 }
 
-.dark .f-text, .dark .heading1, .dark .block1__title, .dark .f-card__icon, .dark .f-card__title, .dark .f-card__subtitle, .dark .block2__select-theme, .dark .block3__button-shortcuts, .dark .expander__icon, .dark .expander__title, .dark .expander__subtitle, .dark .block4__span, .dark .heading2, .dark .block5__input-login, .dark .block5__button-save, .dark .block5__button-reset {
+.dark .f-text, .dark .heading, .dark .about__title, .dark .extensions__span, .dark input.form-control, .dark input.aem-samsung__input-login, .dark .expander__icon, .dark .expander__title, .dark .expander__subtitle, .dark .card__icon, .dark .card__title, .dark .card__subtitle, .dark .form-select, .dark .appearance__select-theme, .dark .btn-standard, .dark .button--standard, .dark .button--standard-icon {
   color: rgb(255, 255, 255);
 }
-.dark .f-text:disabled, .dark .heading1:disabled, .dark .block1__title:disabled, .dark .f-card__icon:disabled, .dark .f-card__title:disabled, .dark .f-card__subtitle:disabled, .dark .block2__select-theme:disabled, .dark .block3__button-shortcuts:disabled, .dark .expander__icon:disabled, .dark .expander__title:disabled, .dark .expander__subtitle:disabled, .dark .block4__span:disabled, .dark .heading2:disabled, .dark .block5__input-login:disabled, .dark .block5__button-save:disabled, .dark .block5__button-reset:disabled {
+.dark .f-text:disabled, .dark .heading:disabled, .dark .about__title:disabled, .dark .extensions__span:disabled, .dark input.form-control:disabled, .dark input.aem-samsung__input-login:disabled, .dark .expander__icon:disabled, .dark .expander__title:disabled, .dark .expander__subtitle:disabled, .dark .card__icon:disabled, .dark .card__title:disabled, .dark .card__subtitle:disabled, .dark .form-select:disabled, .dark .appearance__select-theme:disabled, .dark .btn-standard:disabled, .dark .button--standard:disabled, .dark .button--standard-icon:disabled {
   color: rgba(255, 255, 255, 0.36);
 }
 .dark .text-background-color {
@@ -9153,10 +9049,10 @@ textarea.form-control-lg {
 .dark .accent-text-background-color {
   background-color: rgba(255, 255, 255, 0.03);
 }
-.dark .f-text-on-accent {
+.dark .f-text-on-accent, .dark .btn-accent, .dark .button--accent, .dark .button--accent-icon {
   color: rgb(0, 0, 0);
 }
-.dark .f-text-on-accent:disabled {
+.dark .f-text-on-accent:disabled, .dark .btn-accent:disabled, .dark .button--accent:disabled, .dark .button--accent-icon:disabled {
   color: rgba(0, 0, 0, 0.5);
 }
 .dark .text-on-accent-background-color {
@@ -9178,136 +9074,144 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Button ------------------------- */
-.light .btn, .light .block3__button-shortcuts, .light .block5__button-save, .light .block5__button-reset {
+.light .btn-standard, .light .button--standard-icon, .light .button--standard {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
-.light .btn:hover, .light .block3__button-shortcuts:hover, .light .block5__button-save:hover, .light .block5__button-reset:hover {
+.light .btn-standard:hover, .light .button--standard-icon:hover, .light .button--standard:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light .btn:active, .light .block3__button-shortcuts:active, .light .block5__button-save:active, .light .block5__button-reset:active {
+.light .btn-standard:active, .light .button--standard-icon:active, .light .button--standard:active {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn:disabled, .light .block3__button-shortcuts:disabled, .light .block5__button-save:disabled, .light .block5__button-reset:disabled {
+.light .btn-standard:disabled, .light .button--standard-icon:disabled, .light .button--standard:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .btn:focus, .light .block3__button-shortcuts:focus, .light .block5__button-save:focus, .light .block5__button-reset:focus {
+.light .btn-standard:focus, .light .button--standard-icon:focus, .light .button--standard:focus {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
-.light .btn--f-accent {
+.light .btn-accent, .light .button--accent-icon, .light .button--accent {
   background-color: rgb(0, 95, 184);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(0, 0, 0, 0.4);
 }
-.light .btn--f-accent:hover {
+.light .btn-accent:hover, .light .button--accent-icon:hover, .light .button--accent:hover {
   background-color: rgba(0, 95, 184, 0.9);
 }
-.light .btn--f-accent:active {
+.light .btn-accent:active, .light .button--accent-icon:active, .light .button--accent:active {
   background-color: rgba(0, 95, 184, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
-.light .btn--f-accent:disabled {
+.light .btn-accent:disabled, .light .button--accent-icon:disabled, .light .button--accent:disabled {
   background-color: rgba(0, 0, 0, 0.22);
   border: unset;
 }
-.light .btn--f-accent:focus {
+.light .btn-accent:focus, .light .button--accent-icon:focus, .light .button--accent:focus {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
-.dark .btn, .dark .block3__button-shortcuts, .dark .block5__button-save, .dark .block5__button-reset {
+.dark .btn-standard, .dark .button--standard-icon, .dark .button--standard {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-.dark .btn:hover, .dark .block3__button-shortcuts:hover, .dark .block5__button-save:hover, .dark .block5__button-reset:hover {
+.dark .btn-standard:hover, .dark .button--standard-icon:hover, .dark .button--standard:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark .btn:active, .dark .block3__button-shortcuts:active, .dark .block5__button-save:active, .dark .block5__button-reset:active {
+.dark .btn-standard:active, .dark .button--standard-icon:active, .dark .button--standard:active {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn:disabled, .dark .block3__button-shortcuts:disabled, .dark .block5__button-save:disabled, .dark .block5__button-reset:disabled {
+.dark .btn-standard:disabled, .dark .button--standard-icon:disabled, .dark .button--standard:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .btn:focus, .dark .block3__button-shortcuts:focus, .dark .block5__button-save:focus, .dark .block5__button-reset:focus {
+.dark .btn-standard:focus, .dark .button--standard-icon:focus, .dark .button--standard:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
-.dark .btn--f-accent {
+.dark .btn-accent, .dark .button--accent-icon, .dark .button--accent {
   background-color: rgb(96, 205, 255);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(0, 0, 0, 0.14);
 }
-.dark .btn--f-accent:hover {
+.dark .btn-accent:hover, .dark .button--accent-icon:hover, .dark .button--accent:hover {
   background-color: rgba(96, 205, 255, 0.9);
 }
-.dark .btn--f-accent:active {
+.dark .btn-accent:active, .dark .button--accent-icon:active, .dark .button--accent:active {
   background-color: rgba(96, 205, 255, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
-.dark .btn--f-accent:disabled {
+.dark .btn-accent:disabled, .dark .button--accent-icon:disabled, .dark .button--accent:disabled {
   background-color: rgba(255, 255, 255, 0.16);
   border: unset;
 }
-.dark .btn--f-accent:focus {
+.dark .btn-accent:focus, .dark .button--accent-icon:focus, .dark .button--accent:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
 
+/* ------------------------- controls ------------------------- */
+.button--standard-icon {
+  font-size: 14px;
+}
+.button--accent-icon {
+  font-size: 14px;
+}
+
 /* ------------------------- Dropdown ------------------------- */
-.light .form-select, .light .block2__select-theme {
+.light .form-select, .light .appearance__select-theme {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
-.light .form-select:hover, .light .block2__select-theme:hover {
+.light .form-select:hover, .light .appearance__select-theme:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light .form-select:active, .light .block2__select-theme:active {
+.light .form-select:active, .light .appearance__select-theme:active {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .form-select:disabled, .light .block2__select-theme:disabled {
+.light .form-select:disabled, .light .appearance__select-theme:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .form-select:focus, .light .block2__select-theme:focus {
+.light .form-select:focus, .light .appearance__select-theme:focus {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
-.light .form-select option, .light .block2__select-theme option {
+.light .form-select option, .light .appearance__select-theme option {
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
   background-color: rgba(252, 252, 252, 0.85);
 }
 
-.dark .form-select, .dark .block2__select-theme {
+.dark .form-select, .dark .appearance__select-theme {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-.dark .form-select:hover, .dark .block2__select-theme:hover {
+.dark .form-select:hover, .dark .appearance__select-theme:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark .form-select:active, .dark .block2__select-theme:active {
+.dark .form-select:active, .dark .appearance__select-theme:active {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .form-select:disabled, .dark .block2__select-theme:disabled {
+.dark .form-select:disabled, .dark .appearance__select-theme:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .form-select:focus, .dark .block2__select-theme:focus {
+.dark .form-select:focus, .dark .appearance__select-theme:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
-.dark .form-select option, .dark .block2__select-theme option {
+.dark .form-select option, .dark .appearance__select-theme option {
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
   background-color: rgba(44, 44, 44, 0.15);
@@ -9316,80 +9220,85 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Toggle Switch ------------------------- */
-.light .form-switch .form-check-input, .light .block4__toggle-switch .form-check-input, .light .form-switch .block4__input, .light .block4__toggle-switch .block4__input {
+.light .form-switch .form-check-input, .light .extensions__toggle-switch .form-check-input, .light .form-switch .extensions__check, .light .extensions__toggle-switch .extensions__check {
   background-color: rgba(0, 0, 0, 0.02);
   border: 1px solid rgba(0, 0, 0, 0.45);
 }
-.light .form-switch .form-check-input:hover, .light .block4__toggle-switch .form-check-input:hover, .light .form-switch .block4__input:hover, .light .block4__toggle-switch .block4__input:hover {
+.light .form-switch .form-check-input:hover, .light .extensions__toggle-switch .form-check-input:hover, .light .form-switch .extensions__check:hover, .light .extensions__toggle-switch .extensions__check:hover {
   background-color: rgba(0, 0, 0, 0.06);
 }
-.light .form-switch .form-check-input:active, .light .block4__toggle-switch .form-check-input:active, .light .form-switch .block4__input:active, .light .block4__toggle-switch .block4__input:active {
+.light .form-switch .form-check-input:active, .light .extensions__toggle-switch .form-check-input:active, .light .form-switch .extensions__check:active, .light .extensions__toggle-switch .extensions__check:active {
   background-color: rgba(0, 0, 0, 0.09);
 }
-.light .form-switch .form-check-input:disabled, .light .block4__toggle-switch .form-check-input:disabled, .light .form-switch .block4__input:disabled, .light .block4__toggle-switch .block4__input:disabled {
+.light .form-switch .form-check-input:disabled, .light .extensions__toggle-switch .form-check-input:disabled, .light .form-switch .extensions__check:disabled, .light .extensions__toggle-switch .extensions__check:disabled {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgba(0, 0, 0, 0.22);
 }
-.light .form-switch .form-check-input:focus, .light .block4__toggle-switch .form-check-input:focus, .light .form-switch .block4__input:focus, .light .block4__toggle-switch .block4__input:focus {
+.light .form-switch .form-check-input:focus, .light .extensions__toggle-switch .form-check-input:focus, .light .form-switch .extensions__check:focus, .light .extensions__toggle-switch .extensions__check:focus {
   box-shadow: 0 0 0 3px rgb(255, 255, 255), 0 0 0 5px rgba(0, 0, 0, 0.9);
 }
-.light .form-switch .form-check-input:checked, .light .block4__toggle-switch .form-check-input:checked, .light .form-switch .block4__input:checked, .light .block4__toggle-switch .block4__input:checked {
+.light .form-switch .form-check-input:checked, .light .extensions__toggle-switch .form-check-input:checked, .light .form-switch .extensions__check:checked, .light .extensions__toggle-switch .extensions__check:checked {
   background-color: rgb(0, 95, 184);
   border: 1px solid rgb(0, 95, 184);
 }
-.light .form-switch .form-check-input:checked:hover, .light .block4__toggle-switch .form-check-input:checked:hover, .light .form-switch .block4__input:checked:hover, .light .block4__toggle-switch .block4__input:checked:hover {
+.light .form-switch .form-check-input:checked:hover, .light .extensions__toggle-switch .form-check-input:checked:hover, .light .form-switch .extensions__check:checked:hover, .light .extensions__toggle-switch .extensions__check:checked:hover {
   background-color: rgba(0, 95, 184, 0.9);
   border: 1px solid rgba(0, 95, 184, 0.9);
 }
-.light .form-switch .form-check-input:checked:active, .light .block4__toggle-switch .form-check-input:checked:active, .light .form-switch .block4__input:checked:active, .light .block4__toggle-switch .block4__input:checked:active {
+.light .form-switch .form-check-input:checked:active, .light .extensions__toggle-switch .form-check-input:checked:active, .light .form-switch .extensions__check:checked:active, .light .extensions__toggle-switch .extensions__check:checked:active {
   background-color: rgba(0, 95, 184, 0.8);
   border: 1px solid rgba(0, 95, 184, 0.8);
 }
-.light .form-switch .form-check-input:checked:disabled, .light .block4__toggle-switch .form-check-input:checked:disabled, .light .form-switch .block4__input:checked:disabled, .light .block4__toggle-switch .block4__input:checked:disabled {
+.light .form-switch .form-check-input:checked:disabled, .light .extensions__toggle-switch .form-check-input:checked:disabled, .light .form-switch .extensions__check:checked:disabled, .light .extensions__toggle-switch .extensions__check:checked:disabled {
   background-color: rgba(0, 0, 0, 0.22);
   border: 1px solid rgba(0, 0, 0, 0.22);
 }
-.light .form-switch .form-check-input:checked:focus, .light .block4__toggle-switch .form-check-input:checked:focus, .light .form-switch .block4__input:checked:focus, .light .block4__toggle-switch .block4__input:checked:focus {
+.light .form-switch .form-check-input:checked:focus, .light .extensions__toggle-switch .form-check-input:checked:focus, .light .form-switch .extensions__check:checked:focus, .light .extensions__toggle-switch .extensions__check:checked:focus {
   box-shadow: 0 0 0 3px rgb(255, 255, 255), 0 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-.dark .form-switch .form-check-input, .dark .block4__toggle-switch .form-check-input, .dark .form-switch .block4__input, .dark .block4__toggle-switch .block4__input {
+.dark .form-switch .form-check-input, .dark .extensions__toggle-switch .form-check-input, .dark .form-switch .extensions__check, .dark .extensions__toggle-switch .extensions__check {
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.54);
 }
-.dark .form-switch .form-check-input:hover, .dark .block4__toggle-switch .form-check-input:hover, .dark .form-switch .block4__input:hover, .dark .block4__toggle-switch .block4__input:hover {
+.dark .form-switch .form-check-input:hover, .dark .extensions__toggle-switch .form-check-input:hover, .dark .form-switch .extensions__check:hover, .dark .extensions__toggle-switch .extensions__check:hover {
   background-color: rgba(255, 255, 255, 0.04);
 }
-.dark .form-switch .form-check-input:active, .dark .block4__toggle-switch .form-check-input:active, .dark .form-switch .block4__input:active, .dark .block4__toggle-switch .block4__input:active {
+.dark .form-switch .form-check-input:active, .dark .extensions__toggle-switch .form-check-input:active, .dark .form-switch .extensions__check:active, .dark .extensions__toggle-switch .extensions__check:active {
   background-color: rgba(255, 255, 255, 0.07);
 }
-.dark .form-switch .form-check-input:disabled, .dark .block4__toggle-switch .form-check-input:disabled, .dark .form-switch .block4__input:disabled, .dark .block4__toggle-switch .block4__input:disabled {
+.dark .form-switch .form-check-input:disabled, .dark .extensions__toggle-switch .form-check-input:disabled, .dark .form-switch .extensions__check:disabled, .dark .extensions__toggle-switch .extensions__check:disabled {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
-.dark .form-switch .form-check-input:focus, .dark .block4__toggle-switch .form-check-input:focus, .dark .form-switch .block4__input:focus, .dark .block4__toggle-switch .block4__input:focus {
+.dark .form-switch .form-check-input:focus, .dark .extensions__toggle-switch .form-check-input:focus, .dark .form-switch .extensions__check:focus, .dark .extensions__toggle-switch .extensions__check:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgb(255, 255, 255);
 }
-.dark .form-switch .form-check-input:checked, .dark .block4__toggle-switch .form-check-input:checked, .dark .form-switch .block4__input:checked, .dark .block4__toggle-switch .block4__input:checked {
+.dark .form-switch .form-check-input:checked, .dark .extensions__toggle-switch .form-check-input:checked, .dark .form-switch .extensions__check:checked, .dark .extensions__toggle-switch .extensions__check:checked {
   background-color: rgb(96, 205, 255);
   border: 1px solid rgb(96, 205, 255);
 }
-.dark .form-switch .form-check-input:checked:hover, .dark .block4__toggle-switch .form-check-input:checked:hover, .dark .form-switch .block4__input:checked:hover, .dark .block4__toggle-switch .block4__input:checked:hover {
+.dark .form-switch .form-check-input:checked:hover, .dark .extensions__toggle-switch .form-check-input:checked:hover, .dark .form-switch .extensions__check:checked:hover, .dark .extensions__toggle-switch .extensions__check:checked:hover {
   background-color: rgba(96, 205, 255, 0.9);
   border: 1px solid rgba(96, 205, 255, 0.9);
 }
-.dark .form-switch .form-check-input:checked:active, .dark .block4__toggle-switch .form-check-input:checked:active, .dark .form-switch .block4__input:checked:active, .dark .block4__toggle-switch .block4__input:checked:active {
+.dark .form-switch .form-check-input:checked:active, .dark .extensions__toggle-switch .form-check-input:checked:active, .dark .form-switch .extensions__check:checked:active, .dark .extensions__toggle-switch .extensions__check:checked:active {
   background-color: rgba(96, 205, 255, 0.8);
   border: 1px solid rgba(96, 205, 255, 0.8);
 }
-.dark .form-switch .form-check-input:checked:disabled, .dark .block4__toggle-switch .form-check-input:checked:disabled, .dark .form-switch .block4__input:checked:disabled, .dark .block4__toggle-switch .block4__input:checked:disabled {
+.dark .form-switch .form-check-input:checked:disabled, .dark .extensions__toggle-switch .form-check-input:checked:disabled, .dark .form-switch .extensions__check:checked:disabled, .dark .extensions__toggle-switch .extensions__check:checked:disabled {
   background-color: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
-.dark .form-switch .form-check-input:checked:focus, .dark .block4__toggle-switch .form-check-input:checked:focus, .dark .form-switch .block4__input:checked:focus, .dark .block4__toggle-switch .block4__input:checked:focus {
+.dark .form-switch .form-check-input:checked:focus, .dark .extensions__toggle-switch .form-check-input:checked:focus, .dark .form-switch .extensions__check:checked:focus, .dark .extensions__toggle-switch .extensions__check:checked:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgb(255, 255, 255);
 }
 
+/* ------------------------- Iconography ------------------------- */
+@font-face {
+  font-family: "Segoe Fluent Icons";
+  src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
+}
 /* ------------------------- Expander ------------------------- */
 .accordion-button:focus, .expander__button:focus {
   box-shadow: none;
@@ -9401,8 +9310,7 @@ textarea.form-control-lg {
 }
 
 .light .accordion-item, .light .expander__item,
-.light .card,
-.light .f-card {
+.light .card {
   background-color: rgba(246, 246, 246, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -9420,8 +9328,7 @@ textarea.form-control-lg {
 }
 
 .dark .accordion-item, .dark .expander__item,
-.dark .card,
-.dark .f-card {
+.dark .card {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -9438,45 +9345,64 @@ textarea.form-control-lg {
   border-bottom: none;
 }
 
+/* ------------------------- controls ------------------------- */
+.expander__icon {
+  font-size: 24px;
+  margin-right: 1.25rem;
+}
+.expander__icon::before {
+  font-family: "Segoe Fluent Icons";
+  content: "...";
+}
+
+.card__icon {
+  font-size: 24px;
+  margin-right: 1.25rem;
+}
+.card__icon::before {
+  font-family: "Segoe Fluent Icons";
+  content: "...";
+}
+
 /* ------------------------- Text Box ------------------------- */
-.light input.form-control, .light input.block5__input-login {
+.light input.form-control, .light input.aem-samsung__input-login {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-bottom: 2px solid rgba(0, 0, 0, 0.45);
 }
-.light input.form-control:hover, .light input.block5__input-login:hover {
+.light input.form-control:hover, .light input.aem-samsung__input-login:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light input.form-control:active, .light input.block5__input-login:active,
+.light input.form-control:active, .light input.aem-samsung__input-login:active,
 .light input.form-control:focus,
-.light input.block5__input-login:focus {
+.light input.aem-samsung__input-login:focus {
   background-color: rgb(255, 255, 255);
   border-bottom: 2px solid rgb(0, 95, 184);
   box-shadow: unset;
 }
-.light input.form-control:disabled, .light input.block5__input-login:disabled {
+.light input.form-control:disabled, .light input.aem-samsung__input-login:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.dark input.form-control, .dark input.block5__input-login {
+.dark input.form-control, .dark input.aem-samsung__input-login {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.08);
   border-bottom: 2px solid rgba(255, 255, 255, 0.54);
 }
-.dark input.form-control:hover, .dark input.block5__input-login:hover {
+.dark input.form-control:hover, .dark input.aem-samsung__input-login:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark input.form-control:active, .dark input.block5__input-login:active,
+.dark input.form-control:active, .dark input.aem-samsung__input-login:active,
 .dark input.form-control:focus,
-.dark input.block5__input-login:focus {
+.dark input.aem-samsung__input-login:focus {
   background-color: rgba(30, 30, 30, 0.7);
   border-bottom: 2px solid rgb(96, 205, 255);
   box-shadow: unset;
 }
-.dark input.form-control:disabled, .dark input.block5__input-login:disabled {
+.dark input.form-control:disabled, .dark input.aem-samsung__input-login:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
@@ -9576,22 +9502,6 @@ html.dark ::-webkit-scrollbar-thumb {
 .dark .f-app-surface-layer, .dark .body__container {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: rgba(58, 58, 58, 0.3);
-}
-
-/* ------------------------- Iconography ------------------------- */
-@font-face {
-  font-family: "Segoe Fluent Icons";
-  src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
-}
-.f-btn-icon, .block3__button-shortcuts, .block5__button-save, .block5__button-reset {
-  font-size: 14px;
-}
-
-.f-accordion-icon, .expander__icon,
-.f-card-icon,
-.f-card__icon {
-  font-size: 24px;
-  margin-right: 1.25rem;
 }
 
 @-webkit-keyframes ms-motion-fadeIn {
@@ -9878,70 +9788,66 @@ html.dark ::-webkit-scrollbar-thumb {
   border-radius: 8px;
 }
 
-.block1__container2 {
+.about__container-center {
   height: 100px;
   width: 200px;
 }
-.block2__select-theme {
+.appearance__select-theme {
   width: 10rem;
 }
-.block2__icon-theme::before {
+.appearance__icon-theme::before {
   font-family: "Segoe Fluent Icons";
   content: "\e771";
 }
 
-.block3__icon-shortcuts::before {
+.shortcuts__icon-shortcuts::before {
   font-family: "Segoe Fluent Icons";
   content: "\eda7";
 }
-.block3__button-shortcuts::before {
+.shortcuts__button-shortcuts::before {
   font-family: "Segoe Fluent Icons";
   content: "\e8a7";
 }
 
-.block4__icon-view::before {
+.extensions__icon-view::before {
   font-family: "Segoe Fluent Icons";
   content: "\e890";
 }
 
-.block5__input-login {
+.aem-samsung__input-login {
   width: 20rem;
 }
-.block5__icon-robot::before {
+.aem-samsung__icon-robot::before {
   font-family: "Segoe Fluent Icons";
   content: "\e99a";
 }
-.block5__button-save::before {
+.aem-samsung__button-save::before {
   font-family: "Segoe Fluent Icons";
   content: "\e74e";
 }
-.block5__button-reset::before {
-  font-family: "Segoe Fluent Icons";
-  content: "\e777";
-}
 
 /* ------------------------- Motion 2 ------------------------- */
-.block1 {
+.about {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
 }
 
-.block2 {
+.appearance {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
 }
 
-.block3 {
+.shortcuts {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
 }
 
-.block4 {
+.extensions {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
 }
 
-.block5 {
+.aem-samsung {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
 }

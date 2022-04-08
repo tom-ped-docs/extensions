@@ -1,8 +1,8 @@
-@use "bootstrap";
+@use "bootstrap/bootstrap";
 
 @use "fluent/typography";
 @use "fluent/color";
-@use "fluent/scroll_viewer";
+@use "fluent/controls/scroll_viewer";
 @use "fluent/surfaces";
 @use "fluent/iconography";
 
@@ -17,4 +17,4 @@
 
 /* ------------------------- help.html ------------------------- */
 
-// bootstrap-components, f-iconography, f-typography, f-color, f-surfaces, bootstrap-utilities, CSS
+// bootstrap-components + fluent-controls, f-iconography, f-typography, f-color, f-surfaces, bootstrap-utilities, CSS

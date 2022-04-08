@@ -1,10 +1,10 @@
-@use "bootstrap";
+@use "bootstrap/bootstrap";
 
 @use "fluent/typography";
 @use "fluent/color";
-@use "fluent/button";
-@use "fluent/dropdown";
-@use "fluent/text_box";
+@use "fluent/controls/button";
+@use "fluent/controls/dropdown";
+@use "fluent/controls/text_box";
 @use "fluent/surfaces";
 
 @use "fluent/iconography";
@@ -33,7 +33,7 @@
 
 /* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
 
-.block2 {
+.images {
   ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
@@ -45,20 +45,20 @@
 }
 
 html.light {
-  .block2 {
+  .images {
     ::-webkit-scrollbar-thumb { background-color: rgba(0, 0, 0, 0.45); }
   }
 }
 
 html.dark {
-  .block2 {
+  .images {
     ::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.54); }
   }
 }
 
 /* ------------------------- images.html ------------------------- */
 
-// bootstrap-components, f-iconography, f-typography, f-color, f-surfaces, bootstrap-utilities, CSS
+// bootstrap-components + fluent-controls (f-typography, f-color), f-iconography, f-surfaces, bootstrap-utilities, CSS
 
 @font-face {
   font-family: "Cascadia Code";
@@ -80,37 +80,37 @@ html.dark {
 }
 
 .button-close {
-  @extend .btn, .btn-sm, .f-btn-icon, .f-text, .f-app-surface-base, .position-absolute, .top-0, .start-100, .translate-middle;
+  // { i }
+  @extend .f-app-surface-base, .position-absolute, .top-0, .start-100, .translate-middle;
 
   // ChromeClose
   &::before { font-family: iconography.$font-family; content: "\e8bb"; }
 }
 
-.block1 {
+.find {
   @extend .f-app-surface-layer, .rounded, .p-2;
 
-  &__container1       { @extend .row, .g-2; }
-  &__container2,
-  &__container3       { @extend .col; }
+  &__container-row    { @extend .row, .g-2; }
+  &__container-col    { @extend .col; }
   &__input-group      { @extend .input-group, .input-group-sm; }
   &__title            { @extend .input-group-text, .f-body, .f-text; }
-  &__select-contains  { @extend .form-select, .form-select-sm, .f-body, .f-text; }
-  &__input-text       { @extend .form-control, .form-control-sm, .f-body, .f-text; }
+  &__select           { @extend .form-select, .form-select-sm; }
+  &__input            { @extend .form-control, .form-control-sm; }
 }
 
-.block2 {
+.images {
   @extend .f-app-surface-layer, .rounded, .mt-2, .p-2;
   width: 25rem;
   height: 25rem;
 
-  &__container1 {
+  &__container {
     @extend .overflow-scroll;
     height: 100%;
   }
-  &__container2   { @extend .d-flex, .flex-column, .mb-2; }
-  &__title        { @extend .text-nowrap, .f-body, .f-text, .f-cascadia_code; }
-  &__subtitle-src { @extend .text-nowrap, .f-caption, .f-text, .f-cascadia_code_italic; }
-  &__subtitle-alt { @extend .text-muted, .text-nowrap, .f-caption, .f-text, .f-cascadia_code_italic; }
+  &__container-column { @extend .d-flex, .flex-column, .mb-2; }
+  &__title            { @extend .text-nowrap, .f-body, .f-text, .f-cascadia_code; }
+  &__subtitle-src     { @extend .text-nowrap, .f-caption, .f-text, .f-cascadia_code_italic; }
+  &__subtitle-alt     { @extend .text-muted, .text-nowrap, .f-caption, .f-text, .f-cascadia_code_italic; }
 }
 
 /* ------------------------- Motion 2 ------------------------- */
