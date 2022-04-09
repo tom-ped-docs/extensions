@@ -6,8 +6,13 @@
 @use "fluent/controls/tooltip";
 @use "fluent/surfaces";
 @use "fluent/iconography";
-
 @use "fabric/motion";
+
+@use "blocks/component";
+
+/* ------------------------- component ------------------------- */
+
+.component { @extend .f-app-surface-layer, .rounded, .p-2; }
 
 /* ------------------------- popup.html ------------------------- */
 
@@ -15,32 +20,19 @@
 
 .body { @extend .f-app-surface-base, .p-2; }
 
-.component {
-  @extend .f-app-surface-layer, .rounded, .p-2;
-
-  // __inner
-  &__container-start  { @extend .d-flex; }// .justify-content-start
-  &__container-end    { @extend .d-flex, .justify-content-end; }
-  &__container-row    { @extend .row, .g-2; }
-  &__container-col    { @extend .col; }
-
-  &__input-group      { @extend .input-group, .input-group-sm; }
-  &__btn-group        { @extend .btn-group, .btn-group-sm; }
-
-  &__select           { @extend .form-select, .form-select-sm; }
-  &__input            { @extend .form-control, .form-control-sm; }
-}
-
 .toolbar {
   // { a }
 
-  &__button-images { @extend .me-2; }
+  &__button-images,
+  &__button-options { @extend .me-2; }
   // &__button-options { i }
 
   // ImageExport
   &__button-images::before  { font-family: iconography.$font-family; content: "\ee71"; }
   // Settings
   &__button-options::before { font-family: iconography.$font-family; content: "\e713"; }
+  // Help
+  &__button-help::before  { font-family: iconography.$font-family; content: "\e897"; }
 }
 
 .aem {

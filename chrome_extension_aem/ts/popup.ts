@@ -1,6 +1,6 @@
-const BLOCK2 = document.querySelector("#block2") as HTMLDivElement;
-const BLOCK3 = document.querySelector("#block3") as HTMLDivElement;
-const BLOCK4 = document.querySelector("#block4") as HTMLDivElement;
+const SAMSUNG = document.querySelector("#samsung") as HTMLDivElement;
+const IQOS = document.querySelector("#iqos") as HTMLDivElement;
+const TOOLS = document.querySelector("#tools") as HTMLDivElement;
 
 // @ts-ignore
 const setLight = () => {
@@ -13,17 +13,17 @@ const setDark = () => {
 }
 
 // on popup ...
-chrome.storage.local.get(["is_block2_visible", "is_block3_visible", "is_block4_visible", "selected_theme"], ({ is_block2_visible, is_block3_visible, is_block4_visible, selected_theme }) => {
-  if (is_block2_visible === false) {
-    BLOCK2.classList.add("d-none");
+chrome.storage.local.get(["is_aem_samsung_visible", "is_aem_iqos_visible", "is_tools_visible", "selected_theme"], ({ is_aem_samsung_visible, is_aem_iqos_visible, is_tools_visible, selected_theme }) => {
+  if (is_aem_samsung_visible === false) {
+    SAMSUNG.classList.add("d-none");
   }
 
-  if (is_block3_visible === false) {
-    BLOCK3.classList.add("d-none");
+  if (is_aem_iqos_visible === false) {
+    IQOS.classList.add("d-none");
   }
 
-  if (is_block4_visible === false) {
-    BLOCK4.classList.add("d-none");
+  if (is_tools_visible === false) {
+    TOOLS.classList.add("d-none");
   }
 
   // ------------------------- theme -------------------------
@@ -44,10 +44,10 @@ chrome.storage.local.get(["is_block2_visible", "is_block3_visible", "is_block4_v
 });
 
 /*
- * ------------------------- block1 -------------------------
+ * ------------------------- toolbar -------------------------
  */
 
-document.querySelector("#block1__button_images").addEventListener("click", () => {
+document.querySelector("#toolbar__button-images").addEventListener("click", () => {
   const query_3 = async () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -69,28 +69,32 @@ document.querySelector("#block1__button_images").addEventListener("click", () =>
   query_3();
 });
 
-document.querySelector("#block1__button_options").addEventListener("click", () => {
+document.querySelector("#toolbar__button-options").addEventListener("click", () => {
   chrome.runtime.openOptionsPage();
 });
 
+document.querySelector("#toolbar__button-help").addEventListener("click", () => {
+  chrome.tabs.create({ url: "/html/help.html" });
+});
+
 /*
- * ------------------------- block2, samsung -------------------------
+ * ------------------------- aem (samsung) -------------------------
  */
 
-const BLOCK2__SELECT_AEM = document.querySelector("#block2__select_aem") as HTMLSelectElement;
-const BLOCK2__INPUT_URL = document.querySelector("#block2__input_url") as HTMLInputElement;
-const BLOCK2__BUTTON_TASK_MANAGEMENT = document.querySelector("#block2__button_task_management") as HTMLButtonElement;
+const SAMSUNG__SELECT_AEM = document.querySelector("#samsung__select-aem") as HTMLSelectElement;
+const SAMSUNG__INPUT_URL = document.querySelector("#samsung__input-url") as HTMLInputElement;
+const SAMSUNG__BUTTON_TASK_MANAGEMENT = document.querySelector("#samsung__button-task-management") as HTMLButtonElement;
 
 // on popup ...
 chrome.storage.local.get(["selected_aem_samsung", "url_samsung"], ({ selected_aem_samsung, url_samsung }) => {
-  for (let option of Array.from(BLOCK2__SELECT_AEM.options)) {
+  for (let option of Array.from(SAMSUNG__SELECT_AEM.options)) {
     if (option.value === selected_aem_samsung) {
       option.selected = true;
     }
   }
 
-  BLOCK2__INPUT_URL.placeholder = url_samsung;
-  BLOCK2__INPUT_URL.value = url_samsung;
+  SAMSUNG__INPUT_URL.placeholder = url_samsung;
+  SAMSUNG__INPUT_URL.value = url_samsung;
 });
 
 // ------------------------- select -------------------------
@@ -99,28 +103,28 @@ chrome.storage.local.get(["selected_aem_samsung", "url_samsung"], ({ selected_ae
 const setAttributesBlock2 = () => {
   chrome.storage.local.get("selected_aem_samsung", ({ selected_aem_samsung }) => {
     if (selected_aem_samsung === "p6_aem_ap" || selected_aem_samsung === "p6_aem_eu" || selected_aem_samsung === "p6_aem_us") {
-      BLOCK2__BUTTON_TASK_MANAGEMENT.setAttribute("disabled", "");
+      SAMSUNG__BUTTON_TASK_MANAGEMENT.setAttribute("disabled", "");
     } else {
-      BLOCK2__BUTTON_TASK_MANAGEMENT.removeAttribute("disabled");
+      SAMSUNG__BUTTON_TASK_MANAGEMENT.removeAttribute("disabled");
     }
   });
 }
 setAttributesBlock2();
 
 // set "selected_aem_samsung" var
-BLOCK2__SELECT_AEM.addEventListener("change", () => {
-  chrome.storage.local.set({ selected_aem_samsung: BLOCK2__SELECT_AEM.selectedOptions[0].value });
+SAMSUNG__SELECT_AEM.addEventListener("change", () => {
+  chrome.storage.local.set({ selected_aem_samsung: SAMSUNG__SELECT_AEM.selectedOptions[0].value });
   setAttributesBlock2();
 });
 
 // ------------------------- button -------------------------
 
-document.querySelector("#block2__button_login").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung", "user_id", "user_email"], ({ S_URL, selected_aem_samsung, user_id, user_email }) => {
+document.querySelector("#samsung__button-login").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung", "user_id", "user_email"], ({ URL_SAMSUNG, selected_aem_samsung, user_id, user_email }) => {
     if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_login + user_id });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p5_login + user_id });
     } else {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_login + user_email });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p6_login + user_email });
     }
   });
 });
@@ -155,8 +159,8 @@ const setUrl = (url: string): string => {
 }
 
 // set "url_samsung" var
-BLOCK2__INPUT_URL.addEventListener("input", () => {
-  let url: string = BLOCK2__INPUT_URL.value;
+SAMSUNG__INPUT_URL.addEventListener("input", () => {
+  let url: string = SAMSUNG__INPUT_URL.value;
 
   url = setUrl(url);
   chrome.storage.local.set({ url_samsung: url });
@@ -164,119 +168,119 @@ BLOCK2__INPUT_URL.addEventListener("input", () => {
 
 // ------------------------- buttons -------------------------
 
-document.querySelector("#block2__button_editor").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
-    chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.editor1 + url_samsung + S_URL.editor2 });
+document.querySelector("#samsung__button-editor").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung", "url_samsung"], ({ URL_SAMSUNG, selected_aem_samsung, url_samsung }) => {
+    chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.editor1 + url_samsung + URL_SAMSUNG.editor2 });
   });
 });
 
-document.querySelector("#block2__button_preview").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
-    chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.preview1 + url_samsung + S_URL.preview2 });
+document.querySelector("#samsung__button-preview").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung", "url_samsung"], ({ URL_SAMSUNG, selected_aem_samsung, url_samsung }) => {
+    chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.preview1 + url_samsung + URL_SAMSUNG.preview2 });
   });
 });
 
-document.querySelector("#block2__button_qa").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
+document.querySelector("#samsung__button-qa").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung", "url_samsung"], ({ URL_SAMSUNG, selected_aem_samsung, url_samsung }) => {
     if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu") {
-      chrome.tabs.create({ url: S_URL.p5_qa + url_samsung });
+      chrome.tabs.create({ url: URL_SAMSUNG.p5_qa + url_samsung });
     } else if (selected_aem_samsung === "p5_aem_eu_shop") {
-      chrome.tabs.create({ url: S_URL.p5_qa_shop + url_samsung });
+      chrome.tabs.create({ url: URL_SAMSUNG.p5_qa_shop + url_samsung });
     } else {
-      chrome.tabs.create({ url: S_URL.p6_qa + url_samsung });
+      chrome.tabs.create({ url: URL_SAMSUNG.p6_qa + url_samsung });
     }
   });
 });
 
-document.querySelector("#block2__button_live").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "url_samsung"], ({ S_URL, url_samsung }) => {
-    chrome.tabs.create({ url: S_URL.live + url_samsung });
+document.querySelector("#samsung__button-live").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "url_samsung"], ({ URL_SAMSUNG, url_samsung }) => {
+    chrome.tabs.create({ url: URL_SAMSUNG.live + url_samsung });
   });
 });
 
-document.querySelector("#block2__button_sites").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
-    chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.sites + url_samsung });
+document.querySelector("#samsung__button-sites").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung", "url_samsung"], ({ URL_SAMSUNG, selected_aem_samsung, url_samsung }) => {
+    chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.sites + url_samsung });
   });
 });
 
-document.querySelector("#block2__button_assets").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung", "url_samsung"], ({ S_URL, selected_aem_samsung, url_samsung }) => {
-    chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.assets + url_samsung });
+document.querySelector("#samsung__button-assets").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung", "url_samsung"], ({ URL_SAMSUNG, selected_aem_samsung, url_samsung }) => {
+    chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.assets + url_samsung });
   });
 });
 
-BLOCK2__BUTTON_TASK_MANAGEMENT.addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
-    chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_task_management });
+SAMSUNG__BUTTON_TASK_MANAGEMENT.addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung"], ({ URL_SAMSUNG, selected_aem_samsung }) => {
+    chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p5_task_management });
   });
 });
 
-document.querySelector("#block2__button_workflows").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
+document.querySelector("#samsung__button-workflows").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung"], ({ URL_SAMSUNG, selected_aem_samsung }) => {
     if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_workflows });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p5_workflows });
     } else {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_workflows });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p6_workflows });
     }
   });
 });
 
-document.querySelector("#block2__button_purging").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
+document.querySelector("#samsung__button-purging").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung"], ({ URL_SAMSUNG, selected_aem_samsung }) => {
     if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_purging });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p5_purging });
     } else {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_purging });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p6_purging });
     }
   });
 });
 
-document.querySelector("#block2__button_pim_b2c").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
+document.querySelector("#samsung__button-pim-b2c").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung"], ({ URL_SAMSUNG, selected_aem_samsung }) => {
     if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_pim_b2c });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p5_pim_b2c });
     } else {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_pim_b2c });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p6_pim_b2c });
     }
   });
 });
 
-document.querySelector("#block2__button_pim_b2b").addEventListener("click", () => {
-  chrome.storage.local.get(["S_URL", "selected_aem_samsung"], ({ S_URL, selected_aem_samsung }) => {
+document.querySelector("#samsung__button-pim-b2b").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_SAMSUNG", "selected_aem_samsung"], ({ URL_SAMSUNG, selected_aem_samsung }) => {
     if (selected_aem_samsung === "p5_aem" || selected_aem_samsung === "p5_aem_eu" || selected_aem_samsung === "p5_aem_eu_shop") {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p5_pim_b2b });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p5_pim_b2b });
     } else {
-      chrome.tabs.create({ url: S_URL[selected_aem_samsung] + S_URL.p6_pim_b2b });
+      chrome.tabs.create({ url: URL_SAMSUNG[selected_aem_samsung] + URL_SAMSUNG.p6_pim_b2b });
     }
   });
 });
 
 /*
- * ------------------------- block3, iqos -------------------------
+ * ------------------------- aem (iqos) -------------------------
  */
 
-const BLOCK3__SELECT_AEM = document.querySelector("#block3__select_aem") as HTMLSelectElement;
-const BLOCK3__SELECT_SITE = document.querySelector("#block3__select_site") as HTMLSelectElement;
-const BLOCK3__INPUT_URL = document.querySelector("#block3__input_url") as HTMLInputElement;
-const BLOCK3__BUTTON_QA_LOGIN = document.querySelector("#block3__button_qa_login") as HTMLButtonElement;
+const IQOS__SELECT_AEM = document.querySelector("#iqos__select-aem") as HTMLSelectElement;
+const IQOS__SELECT_SITE = document.querySelector("#iqos__select-site") as HTMLSelectElement;
+const IQOS__INPUT_URL = document.querySelector("#iqos__input-url") as HTMLInputElement;
+const IQOS__BUTTON_QA_LOGIN = document.querySelector("#iqos__button-qa-login") as HTMLButtonElement;
 
 // on popup ...
 chrome.storage.local.get(["selected_aem_iqos", "selected_site", "url_iqos"], ({ selected_aem_iqos, selected_site, url_iqos }) => {
-  for (let option of Array.from(BLOCK3__SELECT_AEM.options)) {
+  for (let option of Array.from(IQOS__SELECT_AEM.options)) {
     if (option.value === selected_aem_iqos) {
       option.selected = true;
     }
   }
 
-  for (let option of Array.from(BLOCK3__SELECT_SITE.options)) {
+  for (let option of Array.from(IQOS__SELECT_SITE.options)) {
     if (option.value === selected_site) {
       option.selected = true;
     }
   }
 
-  BLOCK3__INPUT_URL.placeholder = url_iqos;
-  BLOCK3__INPUT_URL.value = url_iqos;
+  IQOS__INPUT_URL.placeholder = url_iqos;
+  IQOS__INPUT_URL.value = url_iqos;
 });
 
 // ------------------------- select -------------------------
@@ -285,42 +289,42 @@ chrome.storage.local.get(["selected_aem_iqos", "selected_site", "url_iqos"], ({ 
 const setAttributesBlock3 = () => {
   chrome.storage.local.get("selected_aem_iqos", ({ selected_aem_iqos }) => {
     if (selected_aem_iqos === "prod_aem") {
-      BLOCK3.classList.add("block3--critical");
-      BLOCK3__BUTTON_QA_LOGIN.setAttribute("disabled", "");
+      IQOS.classList.add("aem--critical");
+      IQOS__BUTTON_QA_LOGIN.setAttribute("disabled", "");
     } else {
-      BLOCK3.classList.remove("block3--critical");
-      BLOCK3__BUTTON_QA_LOGIN.removeAttribute("disabled");
+      IQOS.classList.remove("aem--critical");
+      IQOS__BUTTON_QA_LOGIN.removeAttribute("disabled");
     }
   });
 }
 setAttributesBlock3();
 
 // set "selected_aem_iqos" var
-BLOCK3__SELECT_AEM.addEventListener("change", () => {
-  chrome.storage.local.set({ selected_aem_iqos: BLOCK3__SELECT_AEM.selectedOptions[0].value });
+IQOS__SELECT_AEM.addEventListener("change", () => {
+  chrome.storage.local.set({ selected_aem_iqos: IQOS__SELECT_AEM.selectedOptions[0].value });
   setAttributesBlock3();
 });
 
 // ------------------------- button -------------------------
 
-document.querySelector("#block3__button_login").addEventListener("click", () => {
-  chrome.storage.local.get(["I_URL", "selected_aem_iqos"], ({ I_URL, selected_aem_iqos }) => {
-    chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.login });
+document.querySelector("#iqos__button-login").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_IQOS", "selected_aem_iqos"], ({ URL_IQOS, selected_aem_iqos }) => {
+    chrome.tabs.create({ url: URL_IQOS[selected_aem_iqos] + URL_IQOS.login });
   });
 });
 
 // ------------------------- select -------------------------
 
 // set "selected_site" var
-BLOCK3__SELECT_SITE.addEventListener("change", () => {
-  chrome.storage.local.set({ selected_site: BLOCK3__SELECT_SITE.selectedOptions[0].value });
+IQOS__SELECT_SITE.addEventListener("change", () => {
+  chrome.storage.local.set({ selected_site: IQOS__SELECT_SITE.selectedOptions[0].value });
 });
 
 // ------------------------- input -------------------------
 
 // set "url_iqos" var
-BLOCK3__INPUT_URL.addEventListener("input", () => {
-  let url: string = BLOCK3__INPUT_URL.value;
+IQOS__INPUT_URL.addEventListener("input", () => {
+  let url: string = IQOS__INPUT_URL.value;
 
   url = setUrl(url);
   chrome.storage.local.set({ url_iqos: url });
@@ -328,31 +332,31 @@ BLOCK3__INPUT_URL.addEventListener("input", () => {
 
 // ------------------------- buttons -------------------------
 
-document.querySelector("#block3__button_editor").addEventListener("click", () => {
-  chrome.storage.local.get(["I_URL", "selected_aem_iqos", "selected_site", "url_iqos"], ({ I_URL, selected_aem_iqos, selected_site, url_iqos }) => {
-    chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.editor1 + selected_site + "/" + url_iqos + I_URL.editor2 });
+document.querySelector("#iqos__button-editor").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_IQOS", "selected_aem_iqos", "selected_site", "url_iqos"], ({ URL_IQOS, selected_aem_iqos, selected_site, url_iqos }) => {
+    chrome.tabs.create({ url: URL_IQOS[selected_aem_iqos] + URL_IQOS.editor1 + selected_site + "/" + url_iqos + URL_IQOS.editor2 });
   });
 });
 
-document.querySelector("#block3__button_preview").addEventListener("click", () => {
-  chrome.storage.local.get(["I_URL", "selected_aem_iqos", "selected_site", "url_iqos"], ({ I_URL, selected_aem_iqos, selected_site, url_iqos }) => {
-    chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.preview1 + selected_site + "/" + url_iqos + I_URL.preview2 });
+document.querySelector("#iqos__button-preview").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_IQOS", "selected_aem_iqos", "selected_site", "url_iqos"], ({ URL_IQOS, selected_aem_iqos, selected_site, url_iqos }) => {
+    chrome.tabs.create({ url: URL_IQOS[selected_aem_iqos] + URL_IQOS.preview1 + selected_site + "/" + url_iqos + URL_IQOS.preview2 });
   });
 });
 
-BLOCK3__BUTTON_QA_LOGIN.addEventListener("click", () => {
-  chrome.storage.local.get(["I_URL", "selected_site"], ({ I_URL, selected_site }) => {
+IQOS__BUTTON_QA_LOGIN.addEventListener("click", () => {
+  chrome.storage.local.get(["URL_IQOS", "selected_site"], ({ URL_IQOS, selected_site }) => {
     let pre_prod_url: string = "";
 
     switch (selected_site) {
       case "pmisite":
-        pre_prod_url = I_URL.pre_prod_qa + I_URL.pre_prod_qa_login;
+        pre_prod_url = URL_IQOS.pre_prod_qa + URL_IQOS.pre_prod_qa_login;
         break;
       case "veevsite":
-        pre_prod_url = I_URL.pre_prod_veev_qa + I_URL.pre_prod_veev_qa_login;
+        pre_prod_url = URL_IQOS.pre_prod_veev_qa + URL_IQOS.pre_prod_veev_qa_login;
         break;
       case "pmiclub":
-        pre_prod_url = I_URL.pre_prod_club_qa + I_URL.pre_prod_club_qa_login;
+        pre_prod_url = URL_IQOS.pre_prod_club_qa + URL_IQOS.pre_prod_club_qa_login;
         break;
     }
 
@@ -360,71 +364,71 @@ BLOCK3__BUTTON_QA_LOGIN.addEventListener("click", () => {
   });
 });
 
-document.querySelector("#block3__button_live").addEventListener("click", () => {
-  chrome.storage.local.get(["I_URL", "selected_aem_iqos", "selected_site", "url_iqos"], ({ I_URL, selected_aem_iqos, selected_site, url_iqos }) => {
+document.querySelector("#iqos__button-live").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_IQOS", "selected_aem_iqos", "selected_site", "url_iqos"], ({ URL_IQOS, selected_aem_iqos, selected_site, url_iqos }) => {
     if (selected_aem_iqos === "pre_prod_aem") {
       let pre_prod_url: string = "";
 
       switch (selected_site) {
         case "pmisite":
-          pre_prod_url = I_URL.pre_prod_qa;
+          pre_prod_url = URL_IQOS.pre_prod_qa;
           break;
         case "veevsite":
-          pre_prod_url = I_URL.pre_prod_veev_qa;
+          pre_prod_url = URL_IQOS.pre_prod_veev_qa;
           break;
         case "pmiclub":
-          pre_prod_url = I_URL.pre_prod_club_qa;
+          pre_prod_url = URL_IQOS.pre_prod_club_qa;
           break;
       }
 
-      chrome.tabs.create({ url: pre_prod_url + url_iqos + I_URL.live });
+      chrome.tabs.create({ url: pre_prod_url + url_iqos + URL_IQOS.live });
     } else {
       let prod_url: string = "";
 
       switch (selected_site) {
         case "pmisite":
-          prod_url = I_URL.prod_live;
+          prod_url = URL_IQOS.prod_live;
           break;
         case "veevsite":
-          prod_url = I_URL.prod_veev_live;
+          prod_url = URL_IQOS.prod_veev_live;
           break;
         case "pmiclub":
-          prod_url = I_URL.prod_club_live;
+          prod_url = URL_IQOS.prod_club_live;
           break;
       }
 
-      chrome.tabs.create({ url: prod_url + url_iqos + I_URL.live });
+      chrome.tabs.create({ url: prod_url + url_iqos + URL_IQOS.live });
     }
   });
 });
 
-document.querySelector("#block3__button_sites").addEventListener("click", () => {
-  chrome.storage.local.get(["I_URL", "selected_aem_iqos", "selected_site", "url_iqos"], ({ I_URL, selected_aem_iqos, selected_site, url_iqos }) => {
-    chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.sites + selected_site + "/" + url_iqos });
+document.querySelector("#iqos__button-sites").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_IQOS", "selected_aem_iqos", "selected_site", "url_iqos"], ({ URL_IQOS, selected_aem_iqos, selected_site, url_iqos }) => {
+    chrome.tabs.create({ url: URL_IQOS[selected_aem_iqos] + URL_IQOS.sites + selected_site + "/" + url_iqos });
   });
 });
 
-document.querySelector("#block3__button_assets").addEventListener("click", () => {
-  chrome.storage.local.get(["I_URL", "selected_aem_iqos", "url_iqos", "I_COUNTRY"], ({ I_URL, selected_aem_iqos, url_iqos, I_COUNTRY }) => {
+document.querySelector("#iqos__button-assets").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_IQOS", "selected_aem_iqos", "url_iqos", "COUNTRIES_IQOS"], ({ URL_IQOS, selected_aem_iqos, url_iqos, COUNTRIES_IQOS }) => {
     let url: string = url_iqos.slice(0, 3);
 
     if (url[2] === "/") {
       url = url.slice(0, 2);
 
-      if (I_COUNTRY[url]) {
-        chrome.tabs.create({ url: I_URL[selected_aem_iqos] + I_URL.assets + "/" + I_COUNTRY[url] });
+      if (COUNTRIES_IQOS[url]) {
+        chrome.tabs.create({ url: URL_IQOS[selected_aem_iqos] + URL_IQOS.assets + "/" + COUNTRIES_IQOS[url] });
       }
     }
 
   });
 });
 
-document.querySelector("#block3__button_grfalse").addEventListener("click", () => {
+document.querySelector("#iqos__button-grfalse").addEventListener("click", () => {
   const query_1 = async () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    chrome.storage.local.get(["I_URL"], ({ I_URL }) => {
-      chrome.tabs.update({ url: tab.url + I_URL.grfalse });
+    chrome.storage.local.get(["URL_IQOS"], ({ URL_IQOS }) => {
+      chrome.tabs.update({ url: tab.url + URL_IQOS.grfalse });
     });
 
     window.close();
@@ -474,7 +478,7 @@ const setSelect = () => {
   }
 }
 
-document.querySelector("#block3__button_age_gate").addEventListener("click", () => {
+document.querySelector("#iqos__button-age-gate").addEventListener("click", () => {
   const query_2 = async () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -489,26 +493,26 @@ document.querySelector("#block3__button_age_gate").addEventListener("click", () 
 });
 
 /*
- * ------------------------- block4 -------------------------
+ * ------------------------- tools -------------------------
  */
 
-const BLOCK4__INPUT_TEXT = document.querySelector("#block4__input_text") as HTMLInputElement;
+const TOOLS__INPUT_TEXT = document.querySelector("#tools__input-text") as HTMLInputElement;
 
-document.querySelector("#block4__button_paste").addEventListener("click", () => {
-  BLOCK4__INPUT_TEXT.focus();
+document.querySelector("#tools__button-paste").addEventListener("click", () => {
+  TOOLS__INPUT_TEXT.focus();
   document.execCommand("paste");
 });
 
-document.querySelector("#block4__button_to_lower_case").addEventListener("click", () => {
-  BLOCK4__INPUT_TEXT.value = BLOCK4__INPUT_TEXT.value.toLowerCase();
+document.querySelector("#tools__button-to-lower-case").addEventListener("click", () => {
+  TOOLS__INPUT_TEXT.value = TOOLS__INPUT_TEXT.value.toLowerCase();
 });
 
-document.querySelector("#block4__button_to_upper_case").addEventListener("click", () => {
-  BLOCK4__INPUT_TEXT.value = BLOCK4__INPUT_TEXT.value.toUpperCase();
+document.querySelector("#tools__button-to-upper-case").addEventListener("click", () => {
+  TOOLS__INPUT_TEXT.value = TOOLS__INPUT_TEXT.value.toUpperCase();
 });
 
-document.querySelector("#block4__button_to_title_case").addEventListener("click", () => {
-  const VALUE: string = BLOCK4__INPUT_TEXT.value.trim();
+document.querySelector("#tools__button-to-title-case").addEventListener("click", () => {
+  const VALUE: string = TOOLS__INPUT_TEXT.value.trim();
   let values: string[] = VALUE.split(" ");
   let text: string = "";
 
@@ -516,16 +520,16 @@ document.querySelector("#block4__button_to_title_case").addEventListener("click"
     text += value.charAt(0).toUpperCase() + value.slice(1).toLowerCase() + " ";
   }
 
-  BLOCK4__INPUT_TEXT.value = text.trimEnd();
+  TOOLS__INPUT_TEXT.value = text.trimEnd();
 });
 
-document.querySelector("#block4__button_cut").addEventListener("click", () => {
-  BLOCK4__INPUT_TEXT.select();
+document.querySelector("#tools__button-cut").addEventListener("click", () => {
+  TOOLS__INPUT_TEXT.select();
   document.execCommand("cut");
 });
 
-document.querySelector("#block4__button_copy").addEventListener("click", () => {
-  BLOCK4__INPUT_TEXT.select();
+document.querySelector("#tools__button-copy").addEventListener("click", () => {
+  TOOLS__INPUT_TEXT.select();
   document.execCommand("copy");
 });
 

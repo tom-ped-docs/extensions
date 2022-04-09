@@ -1,0 +1,19 @@
+@use "../fluent/typography";
+@use "../fluent/color";
+
+@use "../bootstrap/bootstrap";
+
+.component {
+  // __inner
+  &__container-start  { @extend .d-flex; }// .justify-content-start
+  &__container-end    { @extend .d-flex, .justify-content-end; }
+  &__container-row    { @extend .row, .g-2; }
+  &__container-col    { @extend .col; }
+
+  &__input-group      { @extend .input-group, .input-group-sm; }
+  &__input-group-text { @extend .input-group-text, .f-body, .f-text; }
+  &__btn-group        { @extend .btn-group, .btn-group-sm; }
+
+  &__select           { @extend .form-select, .form-select-sm; }
+  &__input            { @extend .form-control, .form-control-sm; }
+}

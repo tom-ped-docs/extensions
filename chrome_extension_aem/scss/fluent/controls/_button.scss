@@ -18,8 +18,6 @@
     border: 1px solid;
     border-color: rgba(0, 0, 0, 0.06);
     border-color: rgba(0, 0, 0, 0.16);
-
-    @extend .f-body, .f-text;
   }
 
   .btn-standard:hover {
@@ -50,8 +48,6 @@
     border: 1px solid;
     border-color: rgba(255, 255, 255, 0.08);
     border-color: rgba(0, 0, 0, 0.4);
-
-    @extend .f-body, .f-text-on-accent;
   }
 
   .btn-accent:hover {
@@ -84,8 +80,6 @@
     border: 1px solid;
     border-color: rgba(255, 255, 255, 0.09);
     border-color: rgba(255, 255, 255, 0.07);
-
-    @extend .f-body, .f-text;
   }
 
   .btn-standard:hover {
@@ -116,8 +110,6 @@
     border: 1px solid;
     border-color: rgba(255, 255, 255, 0.08);
     border-color: rgba(0, 0, 0, 0.14);
-
-    @extend .f-body, .f-text-on-accent;
   }
 
   .btn-accent:hover {
@@ -147,15 +139,15 @@
 .button {
   @extend .btn, .btn-sm;
 
-  &--standard { @extend .btn-standard; }
-  &--accent { @extend .btn-accent; }
+  &--standard { @extend .btn-standard, .f-body, .f-text; }
+  &--accent { @extend .btn-accent, .f-body, .f-text-on-accent; }
 
   &--standard-icon {
-    @extend .btn-standard;
+    @extend .btn-standard, .f-text;
     font-size: 14px;
   }
   &--accent-icon {
-    @extend .btn-accent;
+    @extend .btn-accent, .f-text-on-accent;
     font-size: 14px;
   }
 }

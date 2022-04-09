@@ -2663,7 +2663,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.input-group-text {
+.input-group-text, .component__input-group-text {
   display: flex;
   align-items: center;
   padding: 0.375rem 0.75rem;
@@ -2682,6 +2682,7 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .component__select,
 .input-group-lg > .input-group-text,
+.input-group-lg > .component__input-group-text,
 .input-group-lg > .btn,
 .input-group-lg > .button {
   padding: 0.5rem 1rem;
@@ -2696,6 +2697,8 @@ textarea.form-control-lg {
 .component__input-group > .component__select,
 .input-group-sm > .input-group-text,
 .component__input-group > .input-group-text,
+.input-group-sm > .component__input-group-text,
+.component__input-group > .component__input-group-text,
 .input-group-sm > .btn,
 .component__input-group > .btn,
 .input-group-sm > .button,
@@ -4459,7 +4462,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .component__container-start, .component__container-end, .tools__container {
+.d-flex, .tools__container, .component__container-start, .component__container-end {
   display: flex !important;
 }
 
@@ -5057,7 +5060,7 @@ textarea.form-control-lg {
   margin-right: 0.25rem !important;
 }
 
-.me-2, .toolbar__button-images, .aem__btn-group-editor, .aem__button-qa, .aem__button-qa-login, .aem__button-live, .aem__button-sites, .aem__button-purging, .aem__button-pim-b2c, .aem__button-grfalse, .aem__button-task-management, .aem__button-workflows, .tools__btn-group-capitalization {
+.me-2, .toolbar__button-images, .toolbar__button-options, .aem__btn-group-editor, .aem__button-qa, .aem__button-qa-login, .aem__button-live, .aem__button-sites, .aem__button-purging, .aem__button-pim-b2c, .aem__button-grfalse, .aem__button-task-management, .aem__button-workflows, .tools__btn-group-capitalization {
   margin-right: 0.5rem !important;
 }
 
@@ -5141,7 +5144,7 @@ textarea.form-control-lg {
   padding: 0.25rem !important;
 }
 
-.p-2, .body, .component {
+.p-2, .component, .body {
   padding: 0.5rem !important;
 }
 
@@ -9012,7 +9015,7 @@ textarea.form-control-lg {
   line-height: 16px;
 }
 
-.f-body, .light input.form-control, .dark input.form-control, .light input.component__input, .dark input.component__input, .light .form-select, .dark .form-select, .light .component__select, .dark .component__select, .light .btn-standard, .light .btn-accent, .dark .btn-standard, .dark .btn-accent, .light .button--standard, .dark .button--standard, .light .button--accent, .dark .button--accent, .light .button--standard-icon, .dark .button--standard-icon, .light .button--accent-icon, .dark .button--accent-icon {
+.f-body, .component__input-group-text, .light input.form-control, .dark input.form-control, .light .form-select, .dark .form-select, .button--standard, .button--accent {
   font-family: "Segoe UI Variable";
   font-feature-settings: "rclt" off;
   font-size: 14px;
@@ -9065,10 +9068,10 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Light & Dark Theme Colors ------------------------- */
-.light .f-text, .light input.form-control, .light input.component__input, .light .form-select, .light .component__select, .light .btn-standard, .light .button--standard, .light .button--standard-icon {
+.light .f-text, .light .component__input-group-text, .light input.form-control, .light .form-select, .light .button--standard, .light .button--standard-icon {
   color: rgba(0, 0, 0, 0.9);
 }
-.light .f-text:disabled, .light input.form-control:disabled, .light input.component__input:disabled, .light .form-select:disabled, .light .component__select:disabled, .light .btn-standard:disabled, .light .button--standard:disabled, .light .button--standard-icon:disabled {
+.light .f-text:disabled, .light .component__input-group-text:disabled, .light input.form-control:disabled, .light .form-select:disabled, .light .button--standard:disabled, .light .button--standard-icon:disabled {
   color: rgba(0, 0, 0, 0.36);
 }
 .light .text-background-color {
@@ -9083,20 +9086,20 @@ textarea.form-control-lg {
 .light .accent-text-background-color {
   background-color: rgba(246, 246, 246, 0.5);
 }
-.light .f-text-on-accent, .light .btn-accent, .light .button--accent, .light .button--accent-icon {
+.light .f-text-on-accent, .light .button--accent, .light .button--accent-icon {
   color: rgb(255, 255, 255);
 }
-.light .f-text-on-accent:disabled, .light .btn-accent:disabled, .light .button--accent:disabled, .light .button--accent-icon:disabled {
+.light .f-text-on-accent:disabled, .light .button--accent:disabled, .light .button--accent-icon:disabled {
   color: rgba(255, 255, 255, 0.7);
 }
 .light .text-on-accent-background-color {
   background-color: rgb(0, 95, 184);
 }
 
-.dark .f-text, .dark input.form-control, .dark input.component__input, .dark .form-select, .dark .component__select, .dark .btn-standard, .dark .button--standard, .dark .button--standard-icon {
+.dark .f-text, .dark .component__input-group-text, .dark input.form-control, .dark .form-select, .dark .button--standard, .dark .button--standard-icon {
   color: rgb(255, 255, 255);
 }
-.dark .f-text:disabled, .dark input.form-control:disabled, .dark input.component__input:disabled, .dark .form-select:disabled, .dark .component__select:disabled, .dark .btn-standard:disabled, .dark .button--standard:disabled, .dark .button--standard-icon:disabled {
+.dark .f-text:disabled, .dark .component__input-group-text:disabled, .dark input.form-control:disabled, .dark .form-select:disabled, .dark .button--standard:disabled, .dark .button--standard-icon:disabled {
   color: rgba(255, 255, 255, 0.36);
 }
 .dark .text-background-color {
@@ -9111,10 +9114,10 @@ textarea.form-control-lg {
 .dark .accent-text-background-color {
   background-color: rgba(255, 255, 255, 0.03);
 }
-.dark .f-text-on-accent, .dark .btn-accent, .dark .button--accent, .dark .button--accent-icon {
+.dark .f-text-on-accent, .dark .button--accent, .dark .button--accent-icon {
   color: rgb(0, 0, 0);
 }
-.dark .f-text-on-accent:disabled, .dark .btn-accent:disabled, .dark .button--accent:disabled, .dark .button--accent-icon:disabled {
+.dark .f-text-on-accent:disabled, .dark .button--accent:disabled, .dark .button--accent-icon:disabled {
   color: rgba(0, 0, 0, 0.5);
 }
 .dark .text-on-accent-background-color {
@@ -9227,53 +9230,53 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Dropdown ------------------------- */
-.light .form-select, .light .component__select {
+.light .form-select {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
-.light .form-select:hover, .light .component__select:hover {
+.light .form-select:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light .form-select:active, .light .component__select:active {
+.light .form-select:active {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .form-select:disabled, .light .component__select:disabled {
+.light .form-select:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.light .form-select:focus, .light .component__select:focus {
+.light .form-select:focus {
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
-.light .form-select option, .light .component__select option {
+.light .form-select option {
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
   background-color: rgba(252, 252, 252, 0.85);
 }
 
-.dark .form-select, .dark .component__select {
+.dark .form-select {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-.dark .form-select:hover, .dark .component__select:hover {
+.dark .form-select:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark .form-select:active, .dark .component__select:active {
+.dark .form-select:active {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .form-select:disabled, .dark .component__select:disabled {
+.dark .form-select:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-.dark .form-select:focus, .dark .component__select:focus {
+.dark .form-select:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
-.dark .form-select option, .dark .component__select option {
+.dark .form-select option {
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
   background-color: rgba(44, 44, 44, 0.15);
@@ -9282,44 +9285,42 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Text Box ------------------------- */
-.light input.form-control, .light input.component__input {
+.light input.form-control {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-bottom: 2px solid rgba(0, 0, 0, 0.45);
 }
-.light input.form-control:hover, .light input.component__input:hover {
+.light input.form-control:hover {
   background-color: rgba(249, 249, 249, 0.5);
 }
-.light input.form-control:active, .light input.component__input:active,
-.light input.form-control:focus,
-.light input.component__input:focus {
+.light input.form-control:active,
+.light input.form-control:focus {
   background-color: rgb(255, 255, 255);
   border-bottom: 2px solid rgb(0, 95, 184);
   box-shadow: unset;
 }
-.light input.form-control:disabled, .light input.component__input:disabled {
+.light input.form-control:disabled {
   background-color: rgba(249, 249, 249, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.dark input.form-control, .dark input.component__input {
+.dark input.form-control {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.08);
   border-bottom: 2px solid rgba(255, 255, 255, 0.54);
 }
-.dark input.form-control:hover, .dark input.component__input:hover {
+.dark input.form-control:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.dark input.form-control:active, .dark input.component__input:active,
-.dark input.form-control:focus,
-.dark input.component__input:focus {
+.dark input.form-control:active,
+.dark input.form-control:focus {
   background-color: rgba(30, 30, 30, 0.7);
   border-bottom: 2px solid rgb(96, 205, 255);
   box-shadow: unset;
 }
-.dark input.form-control:disabled, .dark input.component__input:disabled {
+.dark input.form-control:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
@@ -9658,6 +9659,7 @@ textarea.form-control-lg {
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
 }
 
+/* ------------------------- component ------------------------- */
 /* ------------------------- popup.html ------------------------- */
 .toolbar__button-images::before {
   font-family: "Segoe Fluent Icons";
@@ -9666,6 +9668,10 @@ textarea.form-control-lg {
 .toolbar__button-options::before {
   font-family: "Segoe Fluent Icons";
   content: "\e713";
+}
+.toolbar__button-help::before {
+  font-family: "Segoe Fluent Icons";
+  content: "\e897";
 }
 
 .aem {

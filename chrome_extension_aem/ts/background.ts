@@ -2,7 +2,7 @@
  * ------------------------- samsung -------------------------
  */
 
-const S_URL = {
+const URL_SAMSUNG = {
   p5_aem:             "https://aem.samsung.com/",
   p5_aem_eu:          "https://aem-eu.samsung.com/",
   p5_aem_eu_shop:     "https://aem-eu-shop.samsung.com/",
@@ -45,7 +45,7 @@ let url_samsung =           "pl";
  * ------------------------- iqos -------------------------
  */
 
-const I_URL = {
+const URL_IQOS = {
   pre_prod_aem:           "https://author.pp.iqos.com/",
   pre_prod_qa:            "https://www.pp.iqos.com/",
   pre_prod_qa_login:      "cgi-bin/authorize.cgi",
@@ -74,7 +74,7 @@ let selected_aem_iqos = "pre_prod_aem";
 let selected_site =     "pmisite";
 let url_iqos =          "de/en/home";
 
-const I_COUNTRY = {
+const COUNTRIES_IQOS = {
   cr: "costa-rica",
   cz: "czech-republic",
   eg: "egypt",
@@ -103,15 +103,15 @@ const I_COUNTRY = {
  * ------------------------- ... -------------------------
  */
 
-let is_block2_visible = true;
-let is_block3_visible = true;
-let is_block4_visible = true;
+let is_aem_samsung_visible = true;
+let is_aem_iqos_visible = true;
+let is_tools_visible = true;
 
 let selected_theme = "auto";
 
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.local.set({ S_URL });
-  chrome.storage.local.set({ I_URL });
+  chrome.storage.local.set({ URL_SAMSUNG });
+  chrome.storage.local.set({ URL_IQOS });
   chrome.storage.local.set({ user_id });
   chrome.storage.local.set({ user_email });
   chrome.storage.local.set({ selected_aem_samsung });
@@ -119,10 +119,10 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.set({ selected_aem_iqos });
   chrome.storage.local.set({ selected_site });
   chrome.storage.local.set({ url_iqos });
-  chrome.storage.local.set({ I_COUNTRY });
-  chrome.storage.local.set({ is_block2_visible });
-  chrome.storage.local.set({ is_block3_visible });
-  chrome.storage.local.set({ is_block4_visible });
+  chrome.storage.local.set({ COUNTRIES_IQOS });
+  chrome.storage.local.set({ is_aem_samsung_visible });
+  chrome.storage.local.set({ is_aem_iqos_visible });
+  chrome.storage.local.set({ is_tools_visible });
   chrome.storage.local.set({ selected_theme });
 });
 

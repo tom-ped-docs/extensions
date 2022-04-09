@@ -1,13 +1,12 @@
-const BLOCK2__SELECT_THEME = document.querySelector("#block2__select_theme");
-const BLOCK3__BUTTON_SHORTCUTS = document.querySelector("#block3__button_shortcuts");
-const BLOCK4__SPAN_AEM1 = document.querySelector("#block4__span_aem1");
-const BLOCK4__INPUT_AEM1 = document.querySelector("#block4__input_aem1");
-const BLOCK4__SPAN_AEM2 = document.querySelector("#block4__span_aem2");
-const BLOCK4__INPUT_AEM2 = document.querySelector("#block4__input_aem2");
-const BLOCK4__SPAN_AEM_CAPITALIZATION = document.querySelector("#block4__span_capitalization");
-const BLOCK4__INPUT_AEM_CAPITALIZATION = document.querySelector("#block4__input_capitalization");
-const BLOCK5__INPUT_LOGIN_P5 = document.querySelector("#block5__input_login_p5");
-const BLOCK5__INPUT_LOGIN_P6 = document.querySelector("#block5__input_login_p6");
+const APPEARANCE__SELECT_THEME = document.querySelector("#appearance__select-theme");
+const EXTENSIONS__SPAN_SAMSUNG = document.querySelector("#extensions__span-samsung");
+const EXTENSIONS__SPAN_IQOS = document.querySelector("#extensions__span-iqos");
+const EXTENSIONS__SPAN_TOOLS = document.querySelector("#extensions__span-tools");
+const EXTENSIONS__INPUT_SAMSUNG = document.querySelector("#extensions__input-samsung");
+const EXTENSIONS__INPUT_IQOS = document.querySelector("#extensions__input-iqos");
+const EXTENSIONS__INPUT_TOOLS = document.querySelector("#extensions__input-tools");
+const SAMSUNG__INPUT_USER_ID = document.querySelector("#samsung__input-user-id");
+const SAMSUNG__INPUT_USER_EMAIL = document.querySelector("#samsung__input-user-email");
 // @ts-ignore
 const setLight = () => {
     document.documentElement.classList.add("light");
@@ -17,26 +16,26 @@ const setDark = () => {
     document.documentElement.classList.add("dark");
 };
 // on popup ...
-chrome.storage.local.get(["user_id", "user_email", "is_block2_visible", "is_block3_visible", "is_block4_visible", "selected_theme"], ({ user_id, user_email, is_block2_visible, is_block3_visible, is_block4_visible, selected_theme }) => {
-    for (let option of Array.from(BLOCK2__SELECT_THEME.options)) {
+chrome.storage.local.get(["user_id", "user_email", "is_aem_samsung_visible", "is_block3_visible", "is_tools_visible", "selected_theme"], ({ user_id, user_email, is_aem_samsung_visible, is_block3_visible, is_tools_visible, selected_theme }) => {
+    for (let option of Array.from(APPEARANCE__SELECT_THEME.options)) {
         if (option.value === selected_theme) {
             option.selected = true;
         }
     }
-    if (is_block2_visible === true) {
-        BLOCK4__SPAN_AEM1.textContent = "On";
-        BLOCK4__INPUT_AEM1.setAttribute("checked", "");
+    if (is_aem_samsung_visible === true) {
+        EXTENSIONS__SPAN_SAMSUNG.textContent = "On";
+        EXTENSIONS__INPUT_SAMSUNG.setAttribute("checked", "");
     }
     if (is_block3_visible === true) {
-        BLOCK4__SPAN_AEM2.textContent = "On";
-        BLOCK4__INPUT_AEM2.setAttribute("checked", "");
+        EXTENSIONS__SPAN_IQOS.textContent = "On";
+        EXTENSIONS__INPUT_IQOS.setAttribute("checked", "");
     }
-    if (is_block4_visible === true) {
-        BLOCK4__SPAN_AEM_CAPITALIZATION.textContent = "On";
-        BLOCK4__INPUT_AEM_CAPITALIZATION.setAttribute("checked", "");
+    if (is_tools_visible === true) {
+        EXTENSIONS__SPAN_TOOLS.textContent = "On";
+        EXTENSIONS__INPUT_TOOLS.setAttribute("checked", "");
     }
-    BLOCK5__INPUT_LOGIN_P5.value = user_id;
-    BLOCK5__INPUT_LOGIN_P6.value = user_email;
+    SAMSUNG__INPUT_USER_ID.value = user_id;
+    SAMSUNG__INPUT_USER_EMAIL.value = user_email;
     // ------------------------- theme -------------------------
     if (selected_theme === "light") {
         setLight();
@@ -55,71 +54,71 @@ chrome.storage.local.get(["user_id", "user_email", "is_block2_visible", "is_bloc
     }
 });
 /*
- * ------------------------- block2 -------------------------
+ * ------------------------- appearance -------------------------
  */
 // set "selected_theme" var
-BLOCK2__SELECT_THEME.addEventListener("change", () => {
-    chrome.storage.local.set({ selected_theme: BLOCK2__SELECT_THEME.selectedOptions[0].value });
+APPEARANCE__SELECT_THEME.addEventListener("change", () => {
+    chrome.storage.local.set({ selected_theme: APPEARANCE__SELECT_THEME.selectedOptions[0].value });
     location.reload();
 });
 /*
- * ------------------------- block3 -------------------------
+ * ------------------------- shortcuts -------------------------
  */
-BLOCK3__BUTTON_SHORTCUTS.addEventListener("click", () => {
+document.querySelector("#shortcuts__button-open").addEventListener("click", () => {
     chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
 });
 /*
- * ------------------------- block4 -------------------------
+ * ------------------------- extensions -------------------------
  */
-// set "is_block2_visible" var
-BLOCK4__INPUT_AEM1.addEventListener("click", (e) => {
+// set "is_aem_samsung_visible" var
+EXTENSIONS__INPUT_SAMSUNG.addEventListener("click", (e) => {
     if (e.target.hasAttribute("checked")) {
-        chrome.storage.local.set({ is_block2_visible: false });
-        BLOCK4__SPAN_AEM1.textContent = "Off";
-        BLOCK4__INPUT_AEM1.removeAttribute("checked");
+        chrome.storage.local.set({ is_aem_samsung_visible: false });
+        EXTENSIONS__SPAN_SAMSUNG.textContent = "Off";
+        EXTENSIONS__INPUT_SAMSUNG.removeAttribute("checked");
     }
     else {
-        chrome.storage.local.set({ is_block2_visible: true });
-        BLOCK4__SPAN_AEM1.textContent = "On";
-        BLOCK4__INPUT_AEM1.setAttribute("checked", "");
+        chrome.storage.local.set({ is_aem_samsung_visible: true });
+        EXTENSIONS__SPAN_SAMSUNG.textContent = "On";
+        EXTENSIONS__INPUT_SAMSUNG.setAttribute("checked", "");
     }
 });
 // set "is_block3_visible" var
-BLOCK4__INPUT_AEM2.addEventListener("click", (e) => {
+EXTENSIONS__INPUT_IQOS.addEventListener("click", (e) => {
     if (e.target.hasAttribute("checked")) {
         chrome.storage.local.set({ is_block3_visible: false });
-        BLOCK4__SPAN_AEM2.textContent = "Off";
-        BLOCK4__INPUT_AEM2.removeAttribute("checked");
+        EXTENSIONS__SPAN_IQOS.textContent = "Off";
+        EXTENSIONS__INPUT_IQOS.removeAttribute("checked");
     }
     else {
         chrome.storage.local.set({ is_block3_visible: true });
-        BLOCK4__SPAN_AEM2.textContent = "On";
-        BLOCK4__INPUT_AEM2.setAttribute("checked", "");
+        EXTENSIONS__SPAN_IQOS.textContent = "On";
+        EXTENSIONS__INPUT_IQOS.setAttribute("checked", "");
     }
 });
-// set "is_block4_visible" var
-BLOCK4__INPUT_AEM_CAPITALIZATION.addEventListener("click", (e) => {
+// set "is_tools_visible" var
+EXTENSIONS__INPUT_TOOLS.addEventListener("click", (e) => {
     if (e.target.hasAttribute("checked")) {
-        chrome.storage.local.set({ is_block4_visible: false });
-        BLOCK4__SPAN_AEM_CAPITALIZATION.textContent = "Off";
-        BLOCK4__INPUT_AEM_CAPITALIZATION.removeAttribute("checked");
+        chrome.storage.local.set({ is_tools_visible: false });
+        EXTENSIONS__SPAN_TOOLS.textContent = "Off";
+        EXTENSIONS__INPUT_TOOLS.removeAttribute("checked");
     }
     else {
-        chrome.storage.local.set({ is_block4_visible: true });
-        BLOCK4__SPAN_AEM_CAPITALIZATION.textContent = "On";
-        BLOCK4__INPUT_AEM_CAPITALIZATION.setAttribute("checked", "");
+        chrome.storage.local.set({ is_tools_visible: true });
+        EXTENSIONS__SPAN_TOOLS.textContent = "On";
+        EXTENSIONS__INPUT_TOOLS.setAttribute("checked", "");
     }
 });
 /*
- * ------------------------- block5, samsung -------------------------
+ * ------------------------- aem (samsung) -------------------------
  */
 // set "user_id" var
-document.querySelector("#block5__button_save_p5").addEventListener("click", () => {
-    chrome.storage.local.set({ user_id: BLOCK5__INPUT_LOGIN_P5.value });
+document.querySelector("#samsung__button-save-user-id").addEventListener("click", () => {
+    chrome.storage.local.set({ user_id: SAMSUNG__INPUT_USER_ID.value });
 });
 // set "user_email" var
-document.querySelector("#block5__button_save_p6").addEventListener("click", () => {
-    chrome.storage.local.set({ user_email: BLOCK5__INPUT_LOGIN_P6.value });
+document.querySelector("#samsung__button-save-user-email").addEventListener("click", () => {
+    chrome.storage.local.set({ user_email: SAMSUNG__INPUT_USER_EMAIL.value });
 });
 // ------------------------- tooltips -------------------------
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));

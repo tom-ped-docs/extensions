@@ -25,108 +25,114 @@ chrome.storage.local.get("selected_theme", ({ selected_theme }) => {
         }
     }
 });
-/*
- * ------------------------- images.ts -------------------------
- */
 const BODY = document.body;
-const DIV_0 = document.createElement("div");
-DIV_0.setAttribute("class", "body__container ms-motion-slideUpIn");
-const BUTTON = document.createElement("button");
-BUTTON.setAttribute("class", "button button--standard-icon button-close");
-BUTTON.setAttribute("type", "button");
-DIV_0.appendChild(BUTTON);
+const BODY_DIV = document.createElement("div");
+BODY_DIV.setAttribute("class", "body ms-motion-slideUpIn");
+BODY.appendChild(BODY_DIV);
 /*
- * ------------------------- find -------------------------
+ * ------------------------- close -------------------------
  */
-const DIV_1 = document.createElement("div");
-DIV_1.setAttribute("class", "find");
-DIV_0.appendChild(DIV_1);
-const DIV_2 = document.createElement("div");
-DIV_2.setAttribute("class", "find__container-row");
-DIV_1.appendChild(DIV_2);
-const DIV_3 = document.createElement("div");
-DIV_3.setAttribute("class", "find__container-col");
-DIV_2.appendChild(DIV_3);
-const DIV_4 = document.createElement("div");
-DIV_4.setAttribute("class", "find__input-group");
-DIV_3.appendChild(DIV_4);
-const SPAN = document.createElement("span");
-SPAN.setAttribute("class", "find__title");
-DIV_4.appendChild(SPAN);
-const SPAN_TN = document.createTextNode("src");
-SPAN.appendChild(SPAN_TN);
-const SELECT = document.createElement("select");
-SELECT.setAttribute("class", "find__select");
-DIV_4.appendChild(SELECT);
-const OPTION_0 = document.createElement("option");
-OPTION_0.setAttribute("value", "contains");
-SELECT.appendChild(OPTION_0);
-const OPTION_0_TN = document.createTextNode("contains");
-OPTION_0.appendChild(OPTION_0_TN);
-const OPTION_1 = document.createElement("option");
-OPTION_1.setAttribute("value", "not_contains");
-SELECT.appendChild(OPTION_1);
-const OPTION_1_TN = document.createTextNode("not contains");
-OPTION_1.appendChild(OPTION_1_TN);
-const DIV_5 = document.createElement("div");
-DIV_5.setAttribute("class", "find__container-col");
-DIV_2.appendChild(DIV_5);
-const INPUT = document.createElement("input");
-INPUT.setAttribute("class", "find__input");
-INPUT.setAttribute("type", "text");
-INPUT.setAttribute("placeholder", "/pl");
-DIV_5.appendChild(INPUT);
+const CLOSE_DIV = document.createElement("div");
+CLOSE_DIV.setAttribute("class", "component component__container-end");
+BODY_DIV.appendChild(CLOSE_DIV);
+const CLOSE_BUTTON = document.createElement("button");
+CLOSE_BUTTON.setAttribute("class", "button button--standard-icon close__button-close");
+CLOSE_BUTTON.setAttribute("type", "button");
+CLOSE_DIV.appendChild(CLOSE_BUTTON);
 /*
- * ------------------------- images -------------------------
+ * ------------------------- search -------------------------
  */
-const DIV_6 = document.createElement("div");
-DIV_6.setAttribute("class", "images");
-DIV_0.appendChild(DIV_6);
-const DIV_7 = document.createElement("div");
-DIV_7.setAttribute("class", "images__container");
-DIV_6.appendChild(DIV_7);
+const SEARCH_DIV_0 = document.createElement("div");
+SEARCH_DIV_0.setAttribute("class", "component search");
+BODY_DIV.appendChild(SEARCH_DIV_0);
+const SEARCH_DIV_1 = document.createElement("div");
+SEARCH_DIV_1.setAttribute("class", "component__container-row");
+SEARCH_DIV_0.appendChild(SEARCH_DIV_1);
+const SEARCH_DIV_2 = document.createElement("div");
+SEARCH_DIV_2.setAttribute("class", "component__container-col");
+SEARCH_DIV_1.appendChild(SEARCH_DIV_2);
+const SEARCH_DIV_3 = document.createElement("div");
+SEARCH_DIV_3.setAttribute("class", "component__input-group");
+SEARCH_DIV_2.appendChild(SEARCH_DIV_3);
+const SEARCH_SPAN = document.createElement("span");
+SEARCH_SPAN.setAttribute("class", "component__input-group-text");
+SEARCH_DIV_3.appendChild(SEARCH_SPAN);
+const SEARCH_SPAN_TN = document.createTextNode("src");
+SEARCH_SPAN.appendChild(SEARCH_SPAN_TN);
+// select
+const SEARCH_SELECT = document.createElement("select");
+SEARCH_SELECT.setAttribute("class", "component__select");
+SEARCH_DIV_3.appendChild(SEARCH_SELECT);
+const SEARCH_OPTION_0 = document.createElement("option");
+SEARCH_OPTION_0.setAttribute("value", "contains");
+SEARCH_SELECT.appendChild(SEARCH_OPTION_0);
+const SEARCH_OPTION_0_TN = document.createTextNode("contains");
+SEARCH_OPTION_0.appendChild(SEARCH_OPTION_0_TN);
+const SEARCH_OPTION_1 = document.createElement("option");
+SEARCH_OPTION_1.setAttribute("value", "not_contains");
+SEARCH_SELECT.appendChild(SEARCH_OPTION_1);
+const SEARCH_OPTION_1_TN = document.createTextNode("not contains");
+SEARCH_OPTION_1.appendChild(SEARCH_OPTION_1_TN);
+const SEARCH_DIV_4 = document.createElement("div");
+SEARCH_DIV_4.setAttribute("class", "component__container-col");
+SEARCH_DIV_1.appendChild(SEARCH_DIV_4);
+// input
+const SEARCH_INPUT = document.createElement("input");
+SEARCH_INPUT.setAttribute("class", "component__input");
+SEARCH_INPUT.setAttribute("type", "text");
+SEARCH_INPUT.setAttribute("placeholder", "/pl");
+SEARCH_DIV_4.appendChild(SEARCH_INPUT);
+/*
+ * ------------------------- content -------------------------
+ */
+const CONTENT_DIV_0 = document.createElement("div");
+CONTENT_DIV_0.setAttribute("class", "component content");
+BODY_DIV.appendChild(CONTENT_DIV_0);
+const CONTENT_DIV_1 = document.createElement("div");
+CONTENT_DIV_1.setAttribute("class", "content__container");
+CONTENT_DIV_0.appendChild(CONTENT_DIV_1);
 const IMGS = document.querySelectorAll("img");
 let i = 0;
 if (IMGS !== null) {
     for (let img of Array.from(IMGS)) {
-        const DIV = document.createElement("div");
-        DIV.setAttribute("class", "images__container-column");
-        DIV_7.appendChild(DIV);
-        const SPAN_0 = document.createElement("span");
-        SPAN_0.setAttribute("class", "images__title");
-        DIV.appendChild(SPAN_0);
-        const SPAN_0_TN = document.createTextNode("img " + i);
-        SPAN_0.appendChild(SPAN_0_TN);
+        const CONTENT_DIV_2 = document.createElement("div");
+        CONTENT_DIV_2.setAttribute("class", "content__container-column");
+        CONTENT_DIV_1.appendChild(CONTENT_DIV_2);
+        const CONTENT_SPAN_0 = document.createElement("span");
+        CONTENT_SPAN_0.setAttribute("class", "content__title");
+        CONTENT_DIV_2.appendChild(CONTENT_SPAN_0);
+        const CONTENT_SPAN_0_TN = document.createTextNode("img " + i);
+        CONTENT_SPAN_0.appendChild(CONTENT_SPAN_0_TN);
         i++;
-        const SPAN_1 = document.createElement("span");
-        SPAN_1.setAttribute("class", "images__subtitle-src");
-        DIV.appendChild(SPAN_1);
-        const SPAN_1_TN = document.createTextNode("src: " + img.src);
-        SPAN_1.appendChild(SPAN_1_TN);
-        const SPAN_2 = document.createElement("span");
-        SPAN_2.setAttribute("class", "images__subtitle-alt");
-        DIV.appendChild(SPAN_2);
-        const SPAN_2_TN = document.createTextNode("alt: " + img.alt);
-        SPAN_2.appendChild(SPAN_2_TN);
+        const CONTENT_SPAN_1 = document.createElement("span");
+        CONTENT_SPAN_1.setAttribute("class", "content__subtitle-src");
+        CONTENT_DIV_2.appendChild(CONTENT_SPAN_1);
+        const CONTENT_SPAN_1_TN = document.createTextNode("src: " + img.src);
+        CONTENT_SPAN_1.appendChild(CONTENT_SPAN_1_TN);
+        const CONTENT_SPAN_2 = document.createElement("span");
+        CONTENT_SPAN_2.setAttribute("class", "content__subtitle-alt");
+        CONTENT_DIV_2.appendChild(CONTENT_SPAN_2);
+        const CONTENT_SPAN_2_TN = document.createTextNode("alt: " + img.alt);
+        CONTENT_SPAN_2.appendChild(CONTENT_SPAN_2_TN);
     }
 }
 // ms-motion-slideUpIn animation
-BODY.appendChild(DIV_0);
-BUTTON.addEventListener("click", () => {
-    DIV_0.classList.remove("ms-motion-slideUpIn");
-    DIV_0.classList.add("ms-motion-slideDownOut");
+BODY.appendChild(BODY_DIV);
+CLOSE_BUTTON.addEventListener("click", () => {
+    BODY_DIV.classList.remove("ms-motion-slideUpIn");
+    BODY_DIV.classList.add("ms-motion-slideDownOut");
     // ms-motion-slideDownOut animation
     setTimeout(() => {
-        BODY.removeChild(DIV_0);
+        BODY.removeChild(BODY_DIV);
         location.reload();
     }, 100);
 });
 const setFilters = () => {
-    const DIVS = DIV_7.querySelectorAll("div");
+    const DIVS = CONTENT_DIV_0.querySelectorAll("div");
     for (let div of Array.from(DIVS)) {
         const SPAN_TC = div.children[1].textContent;
-        if (SELECT.options[SELECT.selectedIndex].value === "contains") {
-            if (SPAN_TC.indexOf(INPUT.value) !== -1) {
+        if (SEARCH_SELECT.options[SEARCH_SELECT.selectedIndex].value === "contains") {
+            if (SPAN_TC.indexOf(SEARCH_INPUT.value) !== -1) {
                 div.classList.remove("d-none");
                 div.classList.add("d-flex");
             }
@@ -136,7 +142,7 @@ const setFilters = () => {
             }
         }
         else {
-            if (SPAN_TC.indexOf(INPUT.value) === -1) {
+            if (SPAN_TC.indexOf(SEARCH_INPUT.value) === -1) {
                 div.classList.remove("d-none");
                 div.classList.add("d-flex");
             }
@@ -147,9 +153,9 @@ const setFilters = () => {
         }
     }
 };
-SELECT.addEventListener("change", () => {
+SEARCH_SELECT.addEventListener("change", () => {
     setFilters();
 });
-INPUT.addEventListener("keyup", () => {
+SEARCH_INPUT.addEventListener("keyup", () => {
     setFilters();
 });

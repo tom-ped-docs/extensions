@@ -6,12 +6,32 @@
 @use "fluent/controls/dropdown";
 @use "fluent/controls/text_box";
 @use "fluent/surfaces";
-
 @use "fluent/iconography";
-
 @use "fabric/motion";
 
-/* ------------------------- input-group-text (Dropdown) ------------------------- */
+@use "blocks/component";
+
+/* ------------------------- component ------------------------- */
+
+.component { @extend .f-app-surface-layer, .rounded, .p-2; }
+
+/* ------------------------- Typography 2 ------------------------- */
+
+@font-face {
+  font-family: "Cascadia Code";
+  src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
+}
+
+.f-cascadia_code { font-family: "Cascadia Code"; }
+
+@font-face {
+  font-family: "Cascadia Code Italic";
+  src: url(../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
+}
+
+.f-cascadia_code_italic { font-family: "Cascadia Code Italic"; }
+
+/* ------------------------- Dropdown 2 ------------------------- */
 
 .light {
   .input-group-text {
@@ -33,7 +53,7 @@
 
 /* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
 
-.images {
+.content {
   ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
@@ -45,61 +65,37 @@
 }
 
 html.light {
-  .images {
+  .content {
     ::-webkit-scrollbar-thumb { background-color: rgba(0, 0, 0, 0.45); }
   }
 }
 
 html.dark {
-  .images {
+  .content {
     ::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.54); }
   }
 }
 
 /* ------------------------- images.html ------------------------- */
 
-// bootstrap-components + fluent-controls (f-typography, f-color), f-iconography, f-surfaces, bootstrap-utilities, CSS
+// bootstrap-components + fluent-controls (f-typography, f-color, f-iconography), f-surfaces, bootstrap-utilities, CSS
 
-@font-face {
-  font-family: "Cascadia Code";
-  src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
-}
-
-.f-cascadia_code { font-family: "Cascadia Code"; }
-
-@font-face {
-  font-family: "Cascadia Code Italic";
-  src: url(../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
-}
-
-.f-cascadia_code_italic { font-family: "Cascadia Code Italic"; }
-
-.body__container {
+.body {
   @extend .f-app-surface-base, .rounded, .position-fixed, .bottom-0, .start-0, .m-2, .p-2;
   z-index: 999;
 }
 
-.button-close {
-  // { i }
-  @extend .f-app-surface-base, .position-absolute, .top-0, .start-100, .translate-middle;
+.close {
+  // &__button-close { i }
 
   // ChromeClose
-  &::before { font-family: iconography.$font-family; content: "\e8bb"; }
+  &__button-close::before { font-family: iconography.$font-family; content: "\e8bb"; }
 }
 
-.find {
-  @extend .f-app-surface-layer, .rounded, .p-2;
+.search { @extend .mt-2; }
 
-  &__container-row    { @extend .row, .g-2; }
-  &__container-col    { @extend .col; }
-  &__input-group      { @extend .input-group, .input-group-sm; }
-  &__title            { @extend .input-group-text, .f-body, .f-text; }
-  &__select           { @extend .form-select, .form-select-sm; }
-  &__input            { @extend .form-control, .form-control-sm; }
-}
-
-.images {
-  @extend .f-app-surface-layer, .rounded, .mt-2, .p-2;
+.content {
+  @extend .mt-2;
   width: 25rem;
   height: 25rem;
 
@@ -108,6 +104,7 @@ html.dark {
     height: 100%;
   }
   &__container-column { @extend .d-flex, .flex-column, .mb-2; }
+  &__container-column:last-child { @extend .mb-0; }
   &__title            { @extend .text-nowrap, .f-body, .f-text, .f-cascadia_code; }
   &__subtitle-src     { @extend .text-nowrap, .f-caption, .f-text, .f-cascadia_code_italic; }
   &__subtitle-alt     { @extend .text-muted, .text-nowrap, .f-caption, .f-text, .f-cascadia_code_italic; }
