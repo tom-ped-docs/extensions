@@ -11,18 +11,8 @@ const EXTENSIONS__INPUT_TOOLS = document.querySelector("#extensions__input-tools
 const SAMSUNG__INPUT_USER_ID = document.querySelector("#samsung__input-user-id") as HTMLInputElement;
 const SAMSUNG__INPUT_USER_EMAIL = document.querySelector("#samsung__input-user-email") as HTMLInputElement;
 
-// @ts-ignore
-const setLight = () => {
-  document.documentElement.classList.add("light");
-}
-
-// @ts-ignore
-const setDark = () => {
-  document.documentElement.classList.add("dark");
-}
-
 // on popup ...
-chrome.storage.local.get(["user_id", "user_email", "is_aem_samsung_visible", "is_block3_visible", "is_tools_visible", "selected_theme"], ({ user_id, user_email, is_aem_samsung_visible, is_block3_visible, is_tools_visible, selected_theme }) => {
+chrome.storage.local.get(["user_id", "user_email", "is_aem_samsung_visible", "is_aem_iqos_visible", "is_tools_visible", "selected_theme"], ({ user_id, user_email, is_aem_samsung_visible, is_aem_iqos_visible, is_tools_visible, selected_theme }) => {
   for (let option of Array.from(APPEARANCE__SELECT_THEME.options)) {
     if (option.value === selected_theme) {
       option.selected = true;
@@ -34,7 +24,7 @@ chrome.storage.local.get(["user_id", "user_email", "is_aem_samsung_visible", "is
     EXTENSIONS__INPUT_SAMSUNG.setAttribute("checked", "");
   }
 
-  if (is_block3_visible === true) {
+  if (is_aem_iqos_visible === true) {
     EXTENSIONS__SPAN_IQOS.textContent = "On";
     EXTENSIONS__INPUT_IQOS.setAttribute("checked", "");
   }
@@ -46,22 +36,6 @@ chrome.storage.local.get(["user_id", "user_email", "is_aem_samsung_visible", "is
 
   SAMSUNG__INPUT_USER_ID.value = user_id;
   SAMSUNG__INPUT_USER_EMAIL.value = user_email;
-
-  // ------------------------- theme -------------------------
-
-  if (selected_theme === "light") {
-    setLight();
-  } else if (selected_theme === "dark") {
-    setDark();
-  } else {
-    const PREFERS_COLOR_SCHEME = window.matchMedia("(prefers-color-scheme: light)");
-
-    if (PREFERS_COLOR_SCHEME.matches) {
-      setLight();
-    } else {
-      setDark();
-    }
-  }
 });
 
 /*
@@ -101,15 +75,15 @@ EXTENSIONS__INPUT_SAMSUNG.addEventListener("click",
   }
 );
 
-// set "is_block3_visible" var
+// set "is_aem_iqos_visible" var
 EXTENSIONS__INPUT_IQOS.addEventListener("click",
   (e) => {
     if ((e.target as HTMLInputElement).hasAttribute("checked")) {
-      chrome.storage.local.set({ is_block3_visible: false });
+      chrome.storage.local.set({ is_aem_iqos_visible: false });
       EXTENSIONS__SPAN_IQOS.textContent = "Off";
       EXTENSIONS__INPUT_IQOS.removeAttribute("checked");
     } else {
-      chrome.storage.local.set({ is_block3_visible: true });
+      chrome.storage.local.set({ is_aem_iqos_visible: true });
       EXTENSIONS__SPAN_IQOS.textContent = "On";
       EXTENSIONS__INPUT_IQOS.setAttribute("checked", "");
     }

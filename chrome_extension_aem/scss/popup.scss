@@ -1,72 +1,74 @@
 @use "bootstrap/bootstrap";
 
 @use "fluent/controls/button";
-@use "fluent/controls/dropdown";
-@use "fluent/controls/text_box";
 @use "fluent/controls/tooltip";
-@use "fluent/surfaces";
 @use "fluent/iconography";
+
 @use "fabric/motion";
 
 @use "blocks/component";
 
+/* ------------------------- Button ------------------------- */
+
+.button {
+  &--standard { width: 5rem; }
+}
+
 /* ------------------------- component ------------------------- */
 
-.component { @extend .f-app-surface-layer, .rounded, .p-2; }
+.component { border: unset !important; }
 
 /* ------------------------- popup.html ------------------------- */
 
 // bootstrap-components + fluent-controls (f-typography, f-color, f-iconography), f-surfaces, bootstrap-utilities, CSS
-
-.body { @extend .f-app-surface-base, .p-2; }
 
 .toolbar {
   // { a }
 
   &__button-images,
   &__button-options { @extend .me-2; }
-  // &__button-options { i }
+  // &__button-help { i }
 
   // ImageExport
   &__button-images::before  { font-family: iconography.$font-family; content: "\ee71"; }
   // Settings
   &__button-options::before { font-family: iconography.$font-family; content: "\e713"; }
   // Help
-  &__button-help::before  { font-family: iconography.$font-family; content: "\e897"; }
+  &__button-help::before    { font-family: iconography.$font-family; content: "\e897"; }
 }
 
 .aem {
     @extend .mt-2;
     transition: 0.5s ease background-color;
 
-    &--critical           { @extend .f-critical-background; }
+    &--critical         { @extend .f-critical-background; }
 
     // &__samsung { a }
     // &__iqos { a }
 
-    &__container          { @extend .mb-2; }
+    &__container        { @extend .mt-2; }
 
     // &__button-login { i }
     // &__select-site { a }
     // &__input-url { a }
 
-    &__btn-group-editor,
+    &__btn-group-editor { width: 5rem; }
     // &__button-editor { i }
     // &__button-preview { i }
+
     &__button-qa,
     &__button-qa-login,
     &__button-live,
     &__button-sites,
+    &__button-assets,
+    &__button-workflows,
+    &__button-age-gate,
     &__button-purging,
     &__button-pim-b2c,
-    &__button-grfalse     { @extend .me-2; width: 5rem; }
-
-    &__button-assets,
-    &__button-age-gate,
-    &__button-pim-b2b     { width: 5rem; }
+    &__button-pim-b2b   { @extend .ms-2; }
 
     &__button-task-management,
-    &__button-workflows   { @extend .text-truncate, .me-2; width: 5rem; }
+    &__button-workflows { @extend .text-truncate; }
 
     // OpenInNewWindow
     &__button-login::before   { font-family: iconography.$font-family; content: "\e8a7"; }
@@ -82,10 +84,10 @@
 
   // &__button-paste { i }
 
-  &__container                { @extend .d-flex; }
-  &__btn-group-capitalization { @extend .me-2; width: 7.5rem; }
+  &__container                { @extend .d-flex, .justify-content-evenly; }
+  &__btn-group-capitalization { width: 7.5rem; }
 
-  &__btn-group-cut-copy       { width: 5rem; }
+  &__btn-group-cut-copy       { @extend .ms-2; width: 5rem; }
   // &__button-cut { i }
   // &__button-copy { i }
 

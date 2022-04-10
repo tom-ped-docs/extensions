@@ -2,6 +2,7 @@
 
 @use "fluent/typography";
 @use "fluent/color";
+
 @use "fluent/controls/button";
 @use "fluent/controls/dropdown";
 @use "fluent/controls/toggle_switch";
@@ -9,62 +10,56 @@
 @use "fluent/controls/text_box";
 @use "fluent/controls/scroll_viewer";
 @use "fluent/controls/tooltip";
-@use "fluent/surfaces";
 @use "fluent/iconography";
+
 @use "fabric/motion";
 
 @use "blocks/component";
 
-/* ------------------------- Surfaces 2 ------------------------- */
-
-.light,
-.dark {
-  .f-app-surface-base {
-    border: unset;
-  }
-}
 
 /* ------------------------- component ------------------------- */
 
 .component {
-  @extend .f-app-surface-layer, .container, .p-2;
-  border-radius: 8px;
+  border: unset !important;
+
+  &__inner {
+    @extend .container;
+    border-radius: 8px !important;
+  }
 }
 
 /* ------------------------- options.html ------------------------- */
 
 // bootstrap-components + fluent-controls (f-typography, f-color, f-iconography), f-surfaces, bootstrap-utilities, CSS
 
-.body { @extend .f-app-surface-base; }
-
 .heading {
-  @extend .f-text, .d-block, .mb-2;
+  @extend .f-text, .d-block;
 
   &--options      { @extend .f-title; }
-  &--aem-samsung  { @extend .f-body-strong; }
+  &--aem-samsung  { @extend .f-body-strong, .mt-2; }
 }
 
 .about {
   // { a }
-  @extend .mb-2;
+  @extend .mt-2;
 
   &__container-row    { @extend .d-flex, .align-items-center; }// .flex-row
   &__container-center {
-    @extend .d-flex, .justify-content-center, .align-items-center, .me-2;
+    @extend .d-flex, .justify-content-center, .align-items-center;
     height: 100px;
     width: 200px;
   }
-  &__icon             {
+  &__icon {
     width: 4rem;
     height: 4rem;
   }
-  &__container-column { @extend .d-flex, .flex-column; }
+  &__container-column { @extend .d-flex, .flex-column, .ms-2; }
   &__title            { @extend .f-body, .f-text, .text-muted; }
 }
 
 .appearance {
   // { a }
-  @extend .mb-2;
+  @extend .mt-2;
 
   // &__icon-personalize { i }
   &__select-theme { width: 10rem; }
@@ -75,7 +70,7 @@
 
 .shortcuts {
   // { a }
-  @extend .mb-2;
+  @extend .mt-2;
 
   // &__icon-keyboard { i }
   // &__button-open { i }
@@ -88,13 +83,13 @@
 
 .extensions {
   // { a }
-  @extend .mb-2;
+  @extend .mt-2;
 
   // &__icon-view { i }
 
   &__container      { @extend .d-flex, .align-items-center; }
-  &__span           { @extend .f-body, .f-text, .me-2; }
-  &__toggle-switch  { @extend .form-check, .form-switch; }
+  &__span           { @extend .f-body, .f-text; }
+  &__toggle-switch  { @extend .form-check, .form-switch, .ms-2; }
   &__check          { @extend .form-check-input; }
 
   // View
@@ -103,14 +98,14 @@
 
 .aem-samsung {
   // { a }
+  @extend .mt-2;
 
   // &__icon-robot { i }
   &__container    { @extend .d-flex; }
-  &__input-login  {
-    @extend .me-2;
+  &__input-login {
     width: 20rem;
   }
-  // &__button-save { i }
+  &__button-save  { @extend .ms-2; }
 
   // Robot
   &__icon-robot::before   { font-family: iconography.$font-family; content: "\e99a"; }

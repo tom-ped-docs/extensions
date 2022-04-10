@@ -1,39 +1,12 @@
-// @ts-ignore
-const setLight = () => {
-    document.documentElement.classList.add("light");
-};
-// @ts-ignore
-const setDark = () => {
-    document.documentElement.classList.add("dark");
-};
-// on popup ...
-chrome.storage.local.get("selected_theme", ({ selected_theme }) => {
-    // ------------------------- theme -------------------------
-    if (selected_theme === "light") {
-        setLight();
-    }
-    else if (selected_theme === "dark") {
-        setDark();
-    }
-    else {
-        const PREFERS_COLOR_SCHEME = window.matchMedia("(prefers-color-scheme: light)");
-        if (PREFERS_COLOR_SCHEME.matches) {
-            setLight();
-        }
-        else {
-            setDark();
-        }
-    }
-});
 const BODY = document.body;
 const BODY_DIV = document.createElement("div");
-BODY_DIV.setAttribute("class", "body ms-motion-slideUpIn");
+BODY_DIV.setAttribute("class", "component ms-motion-slideUpIn");
 BODY.appendChild(BODY_DIV);
 /*
  * ------------------------- close -------------------------
  */
 const CLOSE_DIV = document.createElement("div");
-CLOSE_DIV.setAttribute("class", "component component__container-end");
+CLOSE_DIV.setAttribute("class", "component__inner component__container-end");
 BODY_DIV.appendChild(CLOSE_DIV);
 const CLOSE_BUTTON = document.createElement("button");
 CLOSE_BUTTON.setAttribute("class", "button button--standard-icon close__button-close");
@@ -43,7 +16,7 @@ CLOSE_DIV.appendChild(CLOSE_BUTTON);
  * ------------------------- search -------------------------
  */
 const SEARCH_DIV_0 = document.createElement("div");
-SEARCH_DIV_0.setAttribute("class", "component search");
+SEARCH_DIV_0.setAttribute("class", "component__inner search");
 BODY_DIV.appendChild(SEARCH_DIV_0);
 const SEARCH_DIV_1 = document.createElement("div");
 SEARCH_DIV_1.setAttribute("class", "component__container-row");
@@ -86,7 +59,7 @@ SEARCH_DIV_4.appendChild(SEARCH_INPUT);
  * ------------------------- content -------------------------
  */
 const CONTENT_DIV_0 = document.createElement("div");
-CONTENT_DIV_0.setAttribute("class", "component content");
+CONTENT_DIV_0.setAttribute("class", "component__inner content");
 BODY_DIV.appendChild(CONTENT_DIV_0);
 const CONTENT_DIV_1 = document.createElement("div");
 CONTENT_DIV_1.setAttribute("class", "content__container");

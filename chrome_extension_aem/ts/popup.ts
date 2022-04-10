@@ -2,18 +2,8 @@ const SAMSUNG = document.querySelector("#samsung") as HTMLDivElement;
 const IQOS = document.querySelector("#iqos") as HTMLDivElement;
 const TOOLS = document.querySelector("#tools") as HTMLDivElement;
 
-// @ts-ignore
-const setLight = () => {
-  document.documentElement.classList.add("light");
-}
-
-// @ts-ignore
-const setDark = () => {
-  document.documentElement.classList.add("dark");
-}
-
 // on popup ...
-chrome.storage.local.get(["is_aem_samsung_visible", "is_aem_iqos_visible", "is_tools_visible", "selected_theme"], ({ is_aem_samsung_visible, is_aem_iqos_visible, is_tools_visible, selected_theme }) => {
+chrome.storage.local.get(["is_aem_samsung_visible", "is_aem_iqos_visible", "is_tools_visible"], ({ is_aem_samsung_visible, is_aem_iqos_visible, is_tools_visible }) => {
   if (is_aem_samsung_visible === false) {
     SAMSUNG.classList.add("d-none");
   }
@@ -24,22 +14,6 @@ chrome.storage.local.get(["is_aem_samsung_visible", "is_aem_iqos_visible", "is_t
 
   if (is_tools_visible === false) {
     TOOLS.classList.add("d-none");
-  }
-
-  // ------------------------- theme -------------------------
-
-  if (selected_theme === "light") {
-    setLight();
-  } else if (selected_theme === "dark") {
-    setDark();
-  } else {
-    const PREFERS_COLOR_SCHEME = window.matchMedia("(prefers-color-scheme: light)");
-
-    if (PREFERS_COLOR_SCHEME.matches) {
-      setLight();
-    } else {
-      setDark();
-    }
   }
 });
 
@@ -61,7 +35,10 @@ document.querySelector("#toolbar__button-images").addEventListener("click", () =
 
     chrome.scripting.executeScript({
       target: { tabId: tab.id },
-      files: [ "js/images.js" ],
+      files: [
+        // "js/set_theme.js",
+        "js/images.js"
+      ],
     });
 
     window.close();
