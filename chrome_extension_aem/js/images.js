@@ -101,7 +101,7 @@ CLOSE_BUTTON.addEventListener("click", () => {
     }, 100);
 });
 const setFilters = () => {
-    const DIVS = CONTENT_DIV_0.querySelectorAll("div");
+    const DIVS = CONTENT_DIV_1.querySelectorAll("div");
     for (let div of Array.from(DIVS)) {
         const SPAN_TC = div.children[1].textContent;
         if (SEARCH_SELECT.options[SEARCH_SELECT.selectedIndex].value === "contains") {

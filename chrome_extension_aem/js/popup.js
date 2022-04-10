@@ -29,7 +29,7 @@ document.querySelector("#toolbar__button-images").addEventListener("click", () =
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
             files: [
-                // "js/set_theme.js",
+                "js/set_theme.js",
                 "js/images.js"
             ],
         });
@@ -61,7 +61,7 @@ chrome.storage.local.get(["selected_aem_samsung", "url_samsung"], ({ selected_ae
 });
 // ------------------------- select -------------------------
 // on popup ...
-const setAttributesBlock2 = () => {
+const setAttributesSamsung = () => {
     chrome.storage.local.get("selected_aem_samsung", ({ selected_aem_samsung }) => {
         if (selected_aem_samsung === "p6_aem_ap" || selected_aem_samsung === "p6_aem_eu" || selected_aem_samsung === "p6_aem_us") {
             SAMSUNG__BUTTON_TASK_MANAGEMENT.setAttribute("disabled", "");
@@ -71,11 +71,11 @@ const setAttributesBlock2 = () => {
         }
     });
 };
-setAttributesBlock2();
+setAttributesSamsung();
 // set "selected_aem_samsung" var
 SAMSUNG__SELECT_AEM.addEventListener("change", () => {
     chrome.storage.local.set({ selected_aem_samsung: SAMSUNG__SELECT_AEM.selectedOptions[0].value });
-    setAttributesBlock2();
+    setAttributesSamsung();
 });
 // ------------------------- button -------------------------
 document.querySelector("#samsung__button-login").addEventListener("click", () => {
@@ -223,7 +223,7 @@ chrome.storage.local.get(["selected_aem_iqos", "selected_site", "url_iqos"], ({ 
 });
 // ------------------------- select -------------------------
 // on popup ...
-const setAttributesBlock3 = () => {
+const setAttributesIqos = () => {
     chrome.storage.local.get("selected_aem_iqos", ({ selected_aem_iqos }) => {
         if (selected_aem_iqos === "prod_aem") {
             IQOS.classList.add("aem--critical");
@@ -235,11 +235,11 @@ const setAttributesBlock3 = () => {
         }
     });
 };
-setAttributesBlock3();
+setAttributesIqos();
 // set "selected_aem_iqos" var
 IQOS__SELECT_AEM.addEventListener("change", () => {
     chrome.storage.local.set({ selected_aem_iqos: IQOS__SELECT_AEM.selectedOptions[0].value });
-    setAttributesBlock3();
+    setAttributesIqos();
 });
 // ------------------------- button -------------------------
 document.querySelector("#iqos__button-login").addEventListener("click", () => {

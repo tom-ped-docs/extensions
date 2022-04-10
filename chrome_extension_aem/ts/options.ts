@@ -60,50 +60,32 @@ document.querySelector("#shortcuts__button-open").addEventListener("click", () =
  * ------------------------- extensions -------------------------
  */
 
-// set "is_aem_samsung_visible" var
-EXTENSIONS__INPUT_SAMSUNG.addEventListener("click",
-  (e) => {
-    if ((e.target as HTMLInputElement).hasAttribute("checked")) {
-      chrome.storage.local.set({ is_aem_samsung_visible: false });
-      EXTENSIONS__SPAN_SAMSUNG.textContent = "Off";
-      EXTENSIONS__INPUT_SAMSUNG.removeAttribute("checked");
-    } else {
-      chrome.storage.local.set({ is_aem_samsung_visible: true });
-      EXTENSIONS__SPAN_SAMSUNG.textContent = "On";
-      EXTENSIONS__INPUT_SAMSUNG.setAttribute("checked", "");
-    }
+const setAttributes = (INPUT: HTMLInputElement, is_visible: string, SPAN: HTMLSpanElement) => {
+  if (INPUT.hasAttribute("checked")) {
+    chrome.storage.local.set({ [is_visible]: false });
+    SPAN.textContent = "Off";
+    INPUT.removeAttribute("checked");
+  } else {
+    chrome.storage.local.set({ [is_visible]: true });
+    SPAN.textContent = "On";
+    INPUT.setAttribute("checked", "");
   }
-);
+}
+
+// set "is_aem_samsung_visible" var
+EXTENSIONS__INPUT_SAMSUNG.addEventListener("click", () => {
+  setAttributes(EXTENSIONS__INPUT_SAMSUNG, "is_aem_samsung_visible", EXTENSIONS__SPAN_SAMSUNG);
+});
 
 // set "is_aem_iqos_visible" var
-EXTENSIONS__INPUT_IQOS.addEventListener("click",
-  (e) => {
-    if ((e.target as HTMLInputElement).hasAttribute("checked")) {
-      chrome.storage.local.set({ is_aem_iqos_visible: false });
-      EXTENSIONS__SPAN_IQOS.textContent = "Off";
-      EXTENSIONS__INPUT_IQOS.removeAttribute("checked");
-    } else {
-      chrome.storage.local.set({ is_aem_iqos_visible: true });
-      EXTENSIONS__SPAN_IQOS.textContent = "On";
-      EXTENSIONS__INPUT_IQOS.setAttribute("checked", "");
-    }
-  }
-);
+EXTENSIONS__INPUT_IQOS.addEventListener("click", () => {
+  setAttributes(EXTENSIONS__INPUT_IQOS, "is_aem_iqos_visible", EXTENSIONS__SPAN_IQOS);
+});
 
 // set "is_tools_visible" var
-EXTENSIONS__INPUT_TOOLS.addEventListener("click",
-  (e) => {
-    if ((e.target as HTMLInputElement).hasAttribute("checked")) {
-      chrome.storage.local.set({ is_tools_visible: false });
-      EXTENSIONS__SPAN_TOOLS.textContent = "Off";
-      EXTENSIONS__INPUT_TOOLS.removeAttribute("checked");
-    } else {
-      chrome.storage.local.set({ is_tools_visible: true });
-      EXTENSIONS__SPAN_TOOLS.textContent = "On";
-      EXTENSIONS__INPUT_TOOLS.setAttribute("checked", "");
-    }
-  }
-);
+EXTENSIONS__INPUT_TOOLS.addEventListener("click", () => {
+  setAttributes(EXTENSIONS__INPUT_TOOLS, "is_tools_visible", EXTENSIONS__SPAN_TOOLS);
+});
 
 /*
  * ------------------------- aem (samsung) -------------------------
