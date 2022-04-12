@@ -2168,7 +2168,7 @@ progress {
   color: #6c757d;
 }
 
-.form-control, .component__input {
+.form-control, .component__text-box {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -2184,35 +2184,35 @@ progress {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control, .component__input {
+  .form-control, .component__text-box {
     transition: none;
   }
 }
-.form-control[type=file], [type=file].component__input {
+.form-control[type=file], [type=file].component__text-box {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]), [type=file].component__input:not(:disabled):not([readonly]) {
+.form-control[type=file]:not(:disabled):not([readonly]), [type=file].component__text-box:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control:focus, .component__input:focus {
+.form-control:focus, .component__text-box:focus {
   color: #212529;
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-control::-webkit-date-and-time-value, .component__input::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value, .component__text-box::-webkit-date-and-time-value {
   height: 1.5em;
 }
-.form-control::placeholder, .component__input::placeholder {
+.form-control::placeholder, .component__text-box::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .component__input:disabled, .form-control[readonly], [readonly].component__input {
+.form-control:disabled, .component__text-box:disabled, .form-control[readonly], [readonly].component__text-box {
   background-color: #e9ecef;
   opacity: 1;
 }
-.form-control::file-selector-button, .component__input::file-selector-button {
+.form-control::file-selector-button, .component__text-box::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -2227,14 +2227,14 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::file-selector-button, .component__input::file-selector-button {
+  .form-control::file-selector-button, .component__text-box::file-selector-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .component__input:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .component__text-box:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
-.form-control::-webkit-file-upload-button, .component__input::-webkit-file-upload-button {
+.form-control::-webkit-file-upload-button, .component__text-box::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -2249,11 +2249,11 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button, .component__input::-webkit-file-upload-button {
+  .form-control::-webkit-file-upload-button, .component__text-box::-webkit-file-upload-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .component__input:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .component__text-box:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
 
@@ -2268,23 +2268,23 @@ progress {
   border: solid transparent;
   border-width: 1px 0;
 }
-.form-control-plaintext.form-control-sm, .form-control-plaintext.component__input, .form-control-plaintext.form-control-lg {
+.form-control-plaintext.form-control-sm, .form-control-plaintext.component__text-box, .form-control-plaintext.form-control-lg {
   padding-right: 0;
   padding-left: 0;
 }
 
-.form-control-sm, .component__input {
+.form-control-sm, .component__text-box {
   min-height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
-.form-control-sm::file-selector-button, .component__input::file-selector-button {
+.form-control-sm::file-selector-button, .component__text-box::file-selector-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
   margin-inline-end: 0.5rem;
 }
-.form-control-sm::-webkit-file-upload-button, .component__input::-webkit-file-upload-button {
+.form-control-sm::-webkit-file-upload-button, .component__text-box::-webkit-file-upload-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
   margin-inline-end: 0.5rem;
@@ -2307,10 +2307,10 @@ progress {
   margin-inline-end: 1rem;
 }
 
-textarea.form-control, textarea.component__input {
+textarea.form-control, textarea.component__text-box {
   min-height: calc(1.5em + 0.75rem + 2px);
 }
-textarea.form-control-sm, textarea.component__input {
+textarea.form-control-sm, textarea.component__text-box {
   min-height: calc(1.5em + 0.5rem + 2px);
 }
 textarea.form-control-lg {
@@ -2334,7 +2334,7 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.form-select, .component__select {
+.form-select, .component__dropdown {
   display: block;
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
@@ -2354,28 +2354,28 @@ textarea.form-control-lg {
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-select, .component__select {
+  .form-select, .component__dropdown {
     transition: none;
   }
 }
-.form-select:focus, .component__select:focus {
+.form-select:focus, .component__dropdown:focus {
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-select[multiple], [multiple].component__select, .form-select[size]:not([size="1"]), [size].component__select:not([size="1"]) {
+.form-select[multiple], [multiple].component__dropdown, .form-select[size]:not([size="1"]), [size].component__dropdown:not([size="1"]) {
   padding-right: 0.75rem;
   background-image: none;
 }
-.form-select:disabled, .component__select:disabled {
+.form-select:disabled, .component__dropdown:disabled {
   background-color: #e9ecef;
 }
-.form-select:-moz-focusring, .component__select:-moz-focusring {
+.form-select:-moz-focusring, .component__dropdown:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #212529;
 }
 
-.form-select-sm, .component__select {
+.form-select-sm, .component__dropdown {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
@@ -2578,9 +2578,9 @@ textarea.form-control-lg {
 .form-floating {
   position: relative;
 }
-.form-floating > .form-control, .form-floating > .component__input,
+.form-floating > .form-control, .form-floating > .component__text-box,
 .form-floating > .form-select,
-.form-floating > .component__select {
+.form-floating > .component__dropdown {
   height: calc(3.5rem + 2px);
   line-height: 1.25;
 }
@@ -2600,33 +2600,33 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.form-floating > .form-control, .form-floating > .component__input {
+.form-floating > .form-control, .form-floating > .component__text-box {
   padding: 1rem 0.75rem;
 }
-.form-floating > .form-control::placeholder, .form-floating > .component__input::placeholder {
+.form-floating > .form-control::placeholder, .form-floating > .component__text-box::placeholder {
   color: transparent;
 }
-.form-floating > .form-control:focus, .form-floating > .component__input:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .component__input:not(:placeholder-shown) {
+.form-floating > .form-control:focus, .form-floating > .component__text-box:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .component__text-box:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:-webkit-autofill, .form-floating > .component__input:-webkit-autofill {
+.form-floating > .form-control:-webkit-autofill, .form-floating > .component__text-box:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-select, .form-floating > .component__select {
+.form-floating > .form-select, .form-floating > .component__dropdown {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:focus ~ label, .form-floating > .component__input:focus ~ label,
+.form-floating > .form-control:focus ~ label, .form-floating > .component__text-box:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .component__input:not(:placeholder-shown) ~ label,
+.form-floating > .component__text-box:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label,
-.form-floating > .component__select ~ label {
+.form-floating > .component__dropdown ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
-.form-floating > .form-control:-webkit-autofill ~ label, .form-floating > .component__input:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label, .form-floating > .component__text-box:-webkit-autofill ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -2638,21 +2638,21 @@ textarea.form-control-lg {
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control, .component__input-group > .form-control, .input-group > .component__input, .component__input-group > .component__input,
+.input-group > .form-control, .component__input-group > .form-control, .input-group > .component__text-box, .component__input-group > .component__text-box,
 .input-group > .form-select,
 .component__input-group > .form-select,
-.input-group > .component__select,
-.component__input-group > .component__select {
+.input-group > .component__dropdown,
+.component__input-group > .component__dropdown {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus, .component__input-group > .form-control:focus, .input-group > .component__input:focus, .component__input-group > .component__input:focus,
+.input-group > .form-control:focus, .component__input-group > .form-control:focus, .input-group > .component__text-box:focus, .component__input-group > .component__text-box:focus,
 .input-group > .form-select:focus,
 .component__input-group > .form-select:focus,
-.input-group > .component__select:focus,
-.component__input-group > .component__select:focus {
+.input-group > .component__dropdown:focus,
+.component__input-group > .component__dropdown:focus {
   z-index: 3;
 }
 .input-group .btn, .component__input-group .btn, .input-group .button, .component__input-group .button {
@@ -2678,9 +2678,9 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-control, .input-group-lg > .component__input,
+.input-group-lg > .form-control, .input-group-lg > .component__text-box,
 .input-group-lg > .form-select,
-.input-group-lg > .component__select,
+.input-group-lg > .component__dropdown,
 .input-group-lg > .input-group-text,
 .input-group-lg > .component__input-group-text,
 .input-group-lg > .btn,
@@ -2690,11 +2690,11 @@ textarea.form-control-lg {
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control, .component__input-group > .form-control, .input-group-sm > .component__input, .component__input-group > .component__input,
+.input-group-sm > .form-control, .component__input-group > .form-control, .input-group-sm > .component__text-box, .component__input-group > .component__text-box,
 .input-group-sm > .form-select,
 .component__input-group > .form-select,
-.input-group-sm > .component__select,
-.component__input-group > .component__select,
+.input-group-sm > .component__dropdown,
+.component__input-group > .component__dropdown,
 .input-group-sm > .input-group-text,
 .component__input-group > .input-group-text,
 .input-group-sm > .component__input-group-text,
@@ -2708,11 +2708,11 @@ textarea.form-control-lg {
   border-radius: 0.2rem;
 }
 
-.input-group-lg > .form-select, .input-group-lg > .component__select,
+.input-group-lg > .form-select, .input-group-lg > .component__dropdown,
 .input-group-sm > .form-select,
 .component__input-group > .form-select,
-.input-group-sm > .component__select,
-.component__input-group > .component__select {
+.input-group-sm > .component__dropdown,
+.component__input-group > .component__dropdown {
   padding-right: 3rem;
 }
 
@@ -2763,7 +2763,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:valid, .was-validated .component__input:valid, .form-control.is-valid, .is-valid.component__input {
+.was-validated .form-control:valid, .was-validated .component__text-box:valid, .form-control.is-valid, .is-valid.component__text-box {
   border-color: #198754;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -2771,26 +2771,26 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:valid:focus, .was-validated .component__input:valid:focus, .form-control.is-valid:focus, .is-valid.component__input:focus {
+.was-validated .form-control:valid:focus, .was-validated .component__text-box:valid:focus, .form-control.is-valid:focus, .is-valid.component__text-box:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
-.was-validated textarea.form-control:valid, .was-validated textarea.component__input:valid, textarea.form-control.is-valid, textarea.is-valid.component__input {
+.was-validated textarea.form-control:valid, .was-validated textarea.component__text-box:valid, textarea.form-control.is-valid, textarea.is-valid.component__text-box {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
 
-.was-validated .form-select:valid, .was-validated .component__select:valid, .form-select.is-valid, .is-valid.component__select {
+.was-validated .form-select:valid, .was-validated .component__dropdown:valid, .form-select.is-valid, .is-valid.component__dropdown {
   border-color: #198754;
 }
-.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .component__select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .was-validated .component__select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .is-valid.component__select:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .is-valid.component__select:not([multiple])[size="1"] {
+.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .component__dropdown:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .was-validated .component__dropdown:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .is-valid.component__dropdown:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .is-valid.component__dropdown:not([multiple])[size="1"] {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-select:valid:focus, .was-validated .component__select:valid:focus, .form-select.is-valid:focus, .is-valid.component__select:focus {
+.was-validated .form-select:valid:focus, .was-validated .component__dropdown:valid:focus, .form-select.is-valid:focus, .is-valid.component__dropdown:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
@@ -2812,26 +2812,26 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:valid, .was-validated .component__input-group .form-control:valid, .was-validated .input-group .component__input:valid, .was-validated .component__input-group .component__input:valid, .input-group .form-control.is-valid, .component__input-group .form-control.is-valid, .input-group .is-valid.component__input, .component__input-group .is-valid.component__input,
+.was-validated .input-group .form-control:valid, .was-validated .component__input-group .form-control:valid, .was-validated .input-group .component__text-box:valid, .was-validated .component__input-group .component__text-box:valid, .input-group .form-control.is-valid, .component__input-group .form-control.is-valid, .input-group .is-valid.component__text-box, .component__input-group .is-valid.component__text-box,
 .was-validated .input-group .form-select:valid,
 .was-validated .component__input-group .form-select:valid,
-.was-validated .input-group .component__select:valid,
-.was-validated .component__input-group .component__select:valid,
+.was-validated .input-group .component__dropdown:valid,
+.was-validated .component__input-group .component__dropdown:valid,
 .input-group .form-select.is-valid,
 .component__input-group .form-select.is-valid,
-.input-group .is-valid.component__select,
-.component__input-group .is-valid.component__select {
+.input-group .is-valid.component__dropdown,
+.component__input-group .is-valid.component__dropdown {
   z-index: 1;
 }
-.was-validated .input-group .form-control:valid:focus, .was-validated .component__input-group .form-control:valid:focus, .was-validated .input-group .component__input:valid:focus, .was-validated .component__input-group .component__input:valid:focus, .input-group .form-control.is-valid:focus, .component__input-group .form-control.is-valid:focus, .input-group .is-valid.component__input:focus, .component__input-group .is-valid.component__input:focus,
+.was-validated .input-group .form-control:valid:focus, .was-validated .component__input-group .form-control:valid:focus, .was-validated .input-group .component__text-box:valid:focus, .was-validated .component__input-group .component__text-box:valid:focus, .input-group .form-control.is-valid:focus, .component__input-group .form-control.is-valid:focus, .input-group .is-valid.component__text-box:focus, .component__input-group .is-valid.component__text-box:focus,
 .was-validated .input-group .form-select:valid:focus,
 .was-validated .component__input-group .form-select:valid:focus,
-.was-validated .input-group .component__select:valid:focus,
-.was-validated .component__input-group .component__select:valid:focus,
+.was-validated .input-group .component__dropdown:valid:focus,
+.was-validated .component__input-group .component__dropdown:valid:focus,
 .input-group .form-select.is-valid:focus,
 .component__input-group .form-select.is-valid:focus,
-.input-group .is-valid.component__select:focus,
-.component__input-group .is-valid.component__select:focus {
+.input-group .is-valid.component__dropdown:focus,
+.component__input-group .is-valid.component__dropdown:focus {
   z-index: 3;
 }
 
@@ -2864,7 +2864,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:invalid, .was-validated .component__input:invalid, .form-control.is-invalid, .is-invalid.component__input {
+.was-validated .form-control:invalid, .was-validated .component__text-box:invalid, .form-control.is-invalid, .is-invalid.component__text-box {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -2872,26 +2872,26 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:invalid:focus, .was-validated .component__input:invalid:focus, .form-control.is-invalid:focus, .is-invalid.component__input:focus {
+.was-validated .form-control:invalid:focus, .was-validated .component__text-box:invalid:focus, .form-control.is-invalid:focus, .is-invalid.component__text-box:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated textarea.form-control:invalid, .was-validated textarea.component__input:invalid, textarea.form-control.is-invalid, textarea.is-invalid.component__input {
+.was-validated textarea.form-control:invalid, .was-validated textarea.component__text-box:invalid, textarea.form-control.is-invalid, textarea.is-invalid.component__text-box {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
 
-.was-validated .form-select:invalid, .was-validated .component__select:invalid, .form-select.is-invalid, .is-invalid.component__select {
+.was-validated .form-select:invalid, .was-validated .component__dropdown:invalid, .form-select.is-invalid, .is-invalid.component__dropdown {
   border-color: #dc3545;
 }
-.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .component__select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .was-validated .component__select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .is-invalid.component__select:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], .is-invalid.component__select:not([multiple])[size="1"] {
+.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .component__dropdown:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .was-validated .component__dropdown:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .is-invalid.component__dropdown:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], .is-invalid.component__dropdown:not([multiple])[size="1"] {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-select:invalid:focus, .was-validated .component__select:invalid:focus, .form-select.is-invalid:focus, .is-invalid.component__select:focus {
+.was-validated .form-select:invalid:focus, .was-validated .component__dropdown:invalid:focus, .form-select.is-invalid:focus, .is-invalid.component__dropdown:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
@@ -2913,26 +2913,26 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:invalid, .was-validated .component__input-group .form-control:invalid, .was-validated .input-group .component__input:invalid, .was-validated .component__input-group .component__input:invalid, .input-group .form-control.is-invalid, .component__input-group .form-control.is-invalid, .input-group .is-invalid.component__input, .component__input-group .is-invalid.component__input,
+.was-validated .input-group .form-control:invalid, .was-validated .component__input-group .form-control:invalid, .was-validated .input-group .component__text-box:invalid, .was-validated .component__input-group .component__text-box:invalid, .input-group .form-control.is-invalid, .component__input-group .form-control.is-invalid, .input-group .is-invalid.component__text-box, .component__input-group .is-invalid.component__text-box,
 .was-validated .input-group .form-select:invalid,
 .was-validated .component__input-group .form-select:invalid,
-.was-validated .input-group .component__select:invalid,
-.was-validated .component__input-group .component__select:invalid,
+.was-validated .input-group .component__dropdown:invalid,
+.was-validated .component__input-group .component__dropdown:invalid,
 .input-group .form-select.is-invalid,
 .component__input-group .form-select.is-invalid,
-.input-group .is-invalid.component__select,
-.component__input-group .is-invalid.component__select {
+.input-group .is-invalid.component__dropdown,
+.component__input-group .is-invalid.component__dropdown {
   z-index: 2;
 }
-.was-validated .input-group .form-control:invalid:focus, .was-validated .component__input-group .form-control:invalid:focus, .was-validated .input-group .component__input:invalid:focus, .was-validated .component__input-group .component__input:invalid:focus, .input-group .form-control.is-invalid:focus, .component__input-group .form-control.is-invalid:focus, .input-group .is-invalid.component__input:focus, .component__input-group .is-invalid.component__input:focus,
+.was-validated .input-group .form-control:invalid:focus, .was-validated .component__input-group .form-control:invalid:focus, .was-validated .input-group .component__text-box:invalid:focus, .was-validated .component__input-group .component__text-box:invalid:focus, .input-group .form-control.is-invalid:focus, .component__input-group .form-control.is-invalid:focus, .input-group .is-invalid.component__text-box:focus, .component__input-group .is-invalid.component__text-box:focus,
 .was-validated .input-group .form-select:invalid:focus,
 .was-validated .component__input-group .form-select:invalid:focus,
-.was-validated .input-group .component__select:invalid:focus,
-.was-validated .component__input-group .component__select:invalid:focus,
+.was-validated .input-group .component__dropdown:invalid:focus,
+.was-validated .component__input-group .component__dropdown:invalid:focus,
 .input-group .form-select.is-invalid:focus,
 .component__input-group .form-select.is-invalid:focus,
-.input-group .is-invalid.component__select:focus,
-.component__input-group .is-invalid.component__select:focus {
+.input-group .is-invalid.component__dropdown:focus,
+.component__input-group .is-invalid.component__dropdown:focus {
   z-index: 3;
 }
 
@@ -3983,181 +3983,6 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.popover {
-  position: absolute;
-  top: 0;
-  left: 0 /* rtl:ignore */;
-  z-index: 1070;
-  display: block;
-  max-width: 276px;
-  font-family: var(--bs-font-sans-serif);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-  text-align: start;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
-  word-break: normal;
-  word-spacing: normal;
-  white-space: normal;
-  line-break: auto;
-  font-size: 0.875rem;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-}
-.popover .popover-arrow {
-  position: absolute;
-  display: block;
-  width: 1rem;
-  height: 0.5rem;
-}
-.popover .popover-arrow::before, .popover .popover-arrow::after {
-  position: absolute;
-  display: block;
-  content: "";
-  border-color: transparent;
-  border-style: solid;
-}
-
-.bs-popover-top > .popover-arrow, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow {
-  bottom: calc(-0.5rem - 1px);
-}
-.bs-popover-top > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::before {
-  bottom: 0;
-  border-width: 0.5rem 0.5rem 0;
-  border-top-color: rgba(0, 0, 0, 0.25);
-}
-.bs-popover-top > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::after {
-  bottom: 1px;
-  border-width: 0.5rem 0.5rem 0;
-  border-top-color: #fff;
-}
-
-.bs-popover-end > .popover-arrow, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow {
-  left: calc(-0.5rem - 1px);
-  width: 0.5rem;
-  height: 1rem;
-}
-.bs-popover-end > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::before {
-  left: 0;
-  border-width: 0.5rem 0.5rem 0.5rem 0;
-  border-right-color: rgba(0, 0, 0, 0.25);
-}
-.bs-popover-end > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::after {
-  left: 1px;
-  border-width: 0.5rem 0.5rem 0.5rem 0;
-  border-right-color: #fff;
-}
-
-.bs-popover-bottom > .popover-arrow, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow {
-  top: calc(-0.5rem - 1px);
-}
-.bs-popover-bottom > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::before {
-  top: 0;
-  border-width: 0 0.5rem 0.5rem 0.5rem;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
-}
-.bs-popover-bottom > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::after {
-  top: 1px;
-  border-width: 0 0.5rem 0.5rem 0.5rem;
-  border-bottom-color: #fff;
-}
-.bs-popover-bottom .popover-header::before, .bs-popover-auto[data-popper-placement^=bottom] .popover-header::before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  display: block;
-  width: 1rem;
-  margin-left: -0.5rem;
-  content: "";
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.bs-popover-start > .popover-arrow, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow {
-  right: calc(-0.5rem - 1px);
-  width: 0.5rem;
-  height: 1rem;
-}
-.bs-popover-start > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::before {
-  right: 0;
-  border-width: 0.5rem 0 0.5rem 0.5rem;
-  border-left-color: rgba(0, 0, 0, 0.25);
-}
-.bs-popover-start > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::after {
-  right: 1px;
-  border-width: 0.5rem 0 0.5rem 0.5rem;
-  border-left-color: #fff;
-}
-
-.popover-header {
-  padding: 0.5rem 1rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  background-color: #f0f0f0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-top-left-radius: calc(0.3rem - 1px);
-  border-top-right-radius: calc(0.3rem - 1px);
-}
-.popover-header:empty {
-  display: none;
-}
-
-.popover-body {
-  padding: 1rem 1rem;
-  color: #212529;
-}
-
-.placeholder {
-  display: inline-block;
-  min-height: 1em;
-  vertical-align: middle;
-  cursor: wait;
-  background-color: currentColor;
-  opacity: 0.5;
-}
-.placeholder.btn::before, .placeholder.button::before {
-  display: inline-block;
-  content: "";
-}
-
-.placeholder-xs {
-  min-height: 0.6em;
-}
-
-.placeholder-sm {
-  min-height: 0.8em;
-}
-
-.placeholder-lg {
-  min-height: 1.2em;
-}
-
-.placeholder-glow .placeholder {
-  animation: placeholder-glow 2s ease-in-out infinite;
-}
-
-@keyframes placeholder-glow {
-  50% {
-    opacity: 0.2;
-  }
-}
-.placeholder-wave {
-  mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
-  mask-size: 200% 100%;
-  animation: placeholder-wave 2s linear infinite;
-}
-
-@keyframes placeholder-wave {
-  100% {
-    mask-position: -200% 0%;
-  }
-}
 .clearfix::after {
   display: block;
   clear: both;
@@ -4462,7 +4287,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .content__container-column, .component__container-start, .component__container-end {
+.d-flex {
   display: flex !important;
 }
 
@@ -4738,7 +4563,7 @@ textarea.form-control-lg {
   flex-direction: row !important;
 }
 
-.flex-column, .content__container-column {
+.flex-column {
   flex-direction: column !important;
 }
 
@@ -4806,7 +4631,7 @@ textarea.form-control-lg {
   justify-content: flex-start !important;
 }
 
-.justify-content-end, .component__container-end {
+.justify-content-end {
   justify-content: flex-end !important;
 }
 
@@ -4934,7 +4759,7 @@ textarea.form-control-lg {
   margin: 0.25rem !important;
 }
 
-.m-2, .component {
+.m-2 {
   margin: 0.5rem !important;
 }
 
@@ -5024,7 +4849,7 @@ textarea.form-control-lg {
   margin-bottom: auto !important;
 }
 
-.mt-0, .content__container-column:first-child {
+.mt-0 {
   margin-top: 0 !important;
 }
 
@@ -5032,7 +4857,7 @@ textarea.form-control-lg {
   margin-top: 0.25rem !important;
 }
 
-.mt-2, .search, .content, .content__container-column {
+.mt-2 {
   margin-top: 0.5rem !important;
 }
 
@@ -5144,7 +4969,7 @@ textarea.form-control-lg {
   padding: 0.25rem !important;
 }
 
-.p-2, .component, .component__inner {
+.p-2 {
   padding: 0.5rem !important;
 }
 
@@ -5634,7 +5459,7 @@ textarea.form-control-lg {
   pointer-events: auto !important;
 }
 
-.rounded, .component, .component__inner {
+.rounded {
   border-radius: 0.25rem !important;
 }
 
@@ -9015,7 +8840,7 @@ textarea.form-control-lg {
   line-height: 16px;
 }
 
-.f-body, .content__title, .component__input-group-text, .light input.form-control, .dark input.form-control, .light input.component__input, .dark input.component__input, .light .form-select, .dark .form-select, .light .component__select, .dark .component__select, .button--standard, .button--accent {
+.f-body, .content__title, .component__text-box, .component__dropdown, .button--standard, .button--accent, .component__input-group-text {
   font-family: "Segoe UI Variable";
   font-feature-settings: "rclt" off;
   font-size: 14px;
@@ -9068,13 +8893,13 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Light & Dark Theme Colors ------------------------- */
-.light .f-text, .light .content__title, .light .content__subtitle-src, .light .content__subtitle-alt, .light .component__input-group-text, .light input.form-control, .light input.component__input, .light .form-select, .light .component__select, .light .button--standard, .light .button--standard-icon {
+.light .f-text, .light .content__title, .light .content__subtitle-src, .light .content__subtitle-alt, .light .component__text-box, .light .component__dropdown, .light .button--standard, .light .button--standard-icon, .light .component__input-group-text {
   color: rgba(0, 0, 0, 0.9);
 }
-.light .f-text:disabled, .light .content__title:disabled, .light .content__subtitle-src:disabled, .light .content__subtitle-alt:disabled, .light .component__input-group-text:disabled, .light input.form-control:disabled, .light input.component__input:disabled, .light .form-select:disabled, .light .component__select:disabled, .light .button--standard:disabled, .light .button--standard-icon:disabled {
+.light .f-text:disabled, .light .content__title:disabled, .light .content__subtitle-src:disabled, .light .content__subtitle-alt:disabled, .light .component__text-box:disabled, .light .component__dropdown:disabled, .light .button--standard:disabled, .light .button--standard-icon:disabled, .light .component__input-group-text:disabled {
   color: rgba(0, 0, 0, 0.36);
 }
-.light .text-background-color {
+.light .f-text-background-color {
   background-color: rgba(246, 246, 246, 0.5);
 }
 .light .f-accent-text {
@@ -9083,7 +8908,7 @@ textarea.form-control-lg {
 .light .f-accent-text:disabled {
   color: rgba(0, 0, 0, 0.36);
 }
-.light .accent-text-background-color {
+.light .f-accent-text-background-color {
   background-color: rgba(246, 246, 246, 0.5);
 }
 .light .f-text-on-accent, .light .button--accent, .light .button--accent-icon {
@@ -9092,17 +8917,17 @@ textarea.form-control-lg {
 .light .f-text-on-accent:disabled, .light .button--accent:disabled, .light .button--accent-icon:disabled {
   color: rgba(255, 255, 255, 0.7);
 }
-.light .text-on-accent-background-color {
+.light .f-text-on-accent-background-color {
   background-color: rgb(0, 95, 184);
 }
 
-.dark .f-text, .dark .content__title, .dark .content__subtitle-src, .dark .content__subtitle-alt, .dark .component__input-group-text, .dark input.form-control, .dark input.component__input, .dark .form-select, .dark .component__select, .dark .button--standard, .dark .button--standard-icon {
+.dark .f-text, .dark .content__title, .dark .content__subtitle-src, .dark .content__subtitle-alt, .dark .component__text-box, .dark .component__dropdown, .dark .button--standard, .dark .button--standard-icon, .dark .component__input-group-text {
   color: rgb(255, 255, 255);
 }
-.dark .f-text:disabled, .dark .content__title:disabled, .dark .content__subtitle-src:disabled, .dark .content__subtitle-alt:disabled, .dark .component__input-group-text:disabled, .dark input.form-control:disabled, .dark input.component__input:disabled, .dark .form-select:disabled, .dark .component__select:disabled, .dark .button--standard:disabled, .dark .button--standard-icon:disabled {
+.dark .f-text:disabled, .dark .content__title:disabled, .dark .content__subtitle-src:disabled, .dark .content__subtitle-alt:disabled, .dark .component__text-box:disabled, .dark .component__dropdown:disabled, .dark .button--standard:disabled, .dark .button--standard-icon:disabled, .dark .component__input-group-text:disabled {
   color: rgba(255, 255, 255, 0.36);
 }
-.dark .text-background-color {
+.dark .f-text-background-color {
   background-color: rgba(255, 255, 255, 0.03);
 }
 .dark .f-accent-text {
@@ -9111,7 +8936,7 @@ textarea.form-control-lg {
 .dark .f-accent-text:disabled {
   color: rgba(255, 255, 255, 0.36);
 }
-.dark .accent-text-background-color {
+.dark .f-accent-text-background-color {
   background-color: rgba(255, 255, 255, 0.03);
 }
 .dark .f-text-on-accent, .dark .button--accent, .dark .button--accent-icon {
@@ -9120,7 +8945,7 @@ textarea.form-control-lg {
 .dark .f-text-on-accent:disabled, .dark .button--accent:disabled, .dark .button--accent-icon:disabled {
   color: rgba(0, 0, 0, 0.5);
 }
-.dark .text-on-accent-background-color {
+.dark .f-text-on-accent-background-color {
   background-color: rgb(96, 205, 255);
 }
 
@@ -9138,200 +8963,64 @@ textarea.form-control-lg {
   background-color: rgb(68, 39, 38) !important;
 }
 
-/* ------------------------- Button ------------------------- */
-.light .btn-standard, .light .button--standard-icon, .light .button--standard {
+.light .input-group-text, .light .component__input-group-text {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
-.light .btn-standard:hover, .light .button--standard-icon:hover, .light .button--standard:hover {
-  background-color: rgba(249, 249, 249, 0.5);
-}
-.light .btn-standard:active, .light .button--standard-icon:active, .light .button--standard:active {
-  background-color: rgba(249, 249, 249, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-.light .btn-standard:disabled, .light .button--standard-icon:disabled, .light .button--standard:disabled {
-  background-color: rgba(249, 249, 249, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-.light .btn-standard:focus, .light .button--standard-icon:focus, .light .button--standard:focus {
-  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
-}
-.light .btn-accent, .light .button--accent-icon, .light .button--accent {
-  background-color: rgb(0, 95, 184);
-  border: 1px solid;
-  border-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(0, 0, 0, 0.4);
-}
-.light .btn-accent:hover, .light .button--accent-icon:hover, .light .button--accent:hover {
-  background-color: rgba(0, 95, 184, 0.9);
-}
-.light .btn-accent:active, .light .button--accent-icon:active, .light .button--accent:active {
-  background-color: rgba(0, 95, 184, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-.light .btn-accent:disabled, .light .button--accent-icon:disabled, .light .button--accent:disabled {
-  background-color: rgba(0, 0, 0, 0.22);
-  border: unset;
-}
-.light .btn-accent:focus, .light .button--accent-icon:focus, .light .button--accent:focus {
-  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
-}
 
-.dark .btn-standard, .dark .button--standard-icon, .dark .button--standard {
+.dark .input-group-text, .dark .component__input-group-text {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-.dark .btn-standard:hover, .dark .button--standard-icon:hover, .dark .button--standard:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-}
-.dark .btn-standard:active, .dark .button--standard-icon:active, .dark .button--standard:active {
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-.dark .btn-standard:disabled, .dark .button--standard-icon:disabled, .dark .button--standard:disabled {
-  background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-.dark .btn-standard:focus, .dark .button--standard-icon:focus, .dark .button--standard:focus {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
-}
-.dark .btn-accent, .dark .button--accent-icon, .dark .button--accent {
-  background-color: rgb(96, 205, 255);
-  border: 1px solid;
-  border-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(0, 0, 0, 0.14);
-}
-.dark .btn-accent:hover, .dark .button--accent-icon:hover, .dark .button--accent:hover {
-  background-color: rgba(96, 205, 255, 0.9);
-}
-.dark .btn-accent:active, .dark .button--accent-icon:active, .dark .button--accent:active {
-  background-color: rgba(96, 205, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-.dark .btn-accent:disabled, .dark .button--accent-icon:disabled, .dark .button--accent:disabled {
-  background-color: rgba(255, 255, 255, 0.16);
-  border: unset;
-}
-.dark .btn-accent:focus, .dark .button--accent-icon:focus, .dark .button--accent:focus {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
-}
 
-/* ------------------------- controls ------------------------- */
-.button--standard-icon {
-  font-size: 14px;
+.component__container-start {
+  display: flex;
 }
-.button--accent-icon {
-  font-size: 14px;
+.component__container-end {
+  display: flex;
+  justify-content: flex-end;
 }
-
-/* ------------------------- Dropdown ------------------------- */
-.light .form-select, .light .component__select {
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.06);
-  border-color: rgba(0, 0, 0, 0.16);
-}
-.light .form-select:hover, .light .component__select:hover {
-  background-color: rgba(249, 249, 249, 0.5);
-}
-.light .form-select:active, .light .component__select:active {
-  background-color: rgba(249, 249, 249, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-.light .form-select:disabled, .light .component__select:disabled {
-  background-color: rgba(249, 249, 249, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-.light .form-select:focus, .light .component__select:focus {
-  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
-}
-.light .form-select option, .light .component__select option {
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
-  background-color: rgba(252, 252, 252, 0.85);
-}
-
-.dark .form-select, .dark .component__select {
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid;
-  border-color: rgba(255, 255, 255, 0.09);
-  border-color: rgba(255, 255, 255, 0.07);
-}
-.dark .form-select:hover, .dark .component__select:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-}
-.dark .form-select:active, .dark .component__select:active {
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-.dark .form-select:disabled, .dark .component__select:disabled {
-  background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-.dark .form-select:focus, .dark .component__select:focus {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
-}
-.dark .form-select option, .dark .component__select option {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
-  background-color: rgba(44, 44, 44, 0.15);
-  background-color: rgba(44, 44, 44, 0.15);
-  background-color: rgba(44, 44, 44, 0.96);
-}
-
-/* ------------------------- Text Box ------------------------- */
-.light input.form-control, .light input.component__input {
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.06);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.45);
-}
-.light input.form-control:hover, .light input.component__input:hover {
-  background-color: rgba(249, 249, 249, 0.5);
-}
-.light input.form-control:active, .light input.component__input:active,
-.light input.form-control:focus,
-.light input.component__input:focus {
-  background-color: rgb(255, 255, 255);
-  border-bottom: 2px solid rgb(0, 95, 184);
-  box-shadow: unset;
-}
-.light input.form-control:disabled, .light input.component__input:disabled {
-  background-color: rgba(249, 249, 249, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.dark input.form-control, .dark input.component__input {
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid;
-  border-color: rgba(255, 255, 255, 0.08);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.54);
-}
-.dark input.form-control:hover, .dark input.component__input:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-}
-.dark input.form-control:active, .dark input.component__input:active,
-.dark input.form-control:focus,
-.dark input.component__input:focus {
-  background-color: rgba(30, 30, 30, 0.7);
-  border-bottom: 2px solid rgb(96, 205, 255);
-  box-shadow: unset;
-}
-.dark input.form-control:disabled, .dark input.component__input:disabled {
-  background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
+/* ------------------------- Variables ------------------------- */
 /* ------------------------- Iconography ------------------------- */
 @font-face {
   font-family: "Segoe Fluent Icons";
   src: url(../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
 }
+/* ------------------------- Surfaces ------------------------- */
+.light .f-app-surface-base, .light .component {
+  border: 1px solid rgba(117, 117, 117, 0.4);
+  background-color: rgba(243, 243, 243, 0.5);
+  background-color: rgba(243, 243, 243, 0.5);
+  background-color: rgb(243, 243, 243);
+}
+.light .f-app-surface-layer, .light .component__inner {
+  border: 1px solid rgba(0, 0, 0, 0.0578);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dark .f-app-surface-base, .dark .component {
+  border: 1px solid rgba(117, 117, 117, 0.4);
+  background-color: rgba(32, 32, 32, 0.8);
+  background-color: rgba(32, 32, 32, 0.8);
+  background-color: rgb(32, 32, 32);
+}
+.dark .f-app-surface-layer, .dark .component__inner {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(58, 58, 58, 0.3);
+}
+
+.component {
+  padding: 0.5rem;
+}
+.component__inner {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
 @-webkit-keyframes ms-motion-fadeIn {
   from {
     opacity: 0;
@@ -9604,50 +9293,191 @@ textarea.form-control-lg {
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
 }
 
-/* ------------------------- Surfaces ------------------------- */
-.light .f-app-surface-base, .light .component {
-  border: 1px solid rgba(117, 117, 117, 0.4);
-  background-color: rgba(243, 243, 243, 0.5);
-  background-color: rgba(243, 243, 243, 0.5);
-  background-color: rgb(243, 243, 243);
-}
-.light .f-app-surface-layer, .light .component__inner {
-  border: 1px solid rgba(0, 0, 0, 0.0578);
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.dark .f-app-surface-base, .dark .component {
-  border: 1px solid rgba(117, 117, 117, 0.4);
-  background-color: rgba(32, 32, 32, 0.8);
-  background-color: rgba(32, 32, 32, 0.8);
-  background-color: rgb(32, 32, 32);
-}
-.dark .f-app-surface-layer, .dark .component__inner {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(58, 58, 58, 0.3);
-}
-
-/* ------------------------- Dropdown 2 ------------------------- */
-.light .component__input-group-text {
+/* ------------------------- Button ------------------------- */
+.light .standard, .light .button--standard-icon, .light .button--standard {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.16);
 }
+.light .standard:hover, .light .button--standard-icon:hover, .light .button--standard:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+}
+.light .standard:active, .light .button--standard-icon:active, .light .button--standard:active {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .standard:disabled, .light .button--standard-icon:disabled, .light .button--standard:disabled {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .standard:focus, .light .button--standard-icon:focus, .light .button--standard:focus {
+  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
+}
+.light .accent, .light .button--accent-icon, .light .button--accent {
+  background-color: rgb(0, 95, 184);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.light .accent:hover, .light .button--accent-icon:hover, .light .button--accent:hover {
+  background-color: rgba(0, 95, 184, 0.9);
+}
+.light .accent:active, .light .button--accent-icon:active, .light .button--accent:active {
+  background-color: rgba(0, 95, 184, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.light .accent:disabled, .light .button--accent-icon:disabled, .light .button--accent:disabled {
+  background-color: rgba(0, 0, 0, 0.22);
+  border: unset;
+}
+.light .accent:focus, .light .button--accent-icon:focus, .light .button--accent:focus {
+  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
+}
 
-.dark .component__input-group-text {
+.dark .standard, .dark .button--standard-icon, .dark .button--standard {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.07);
 }
-
-/* ------------------------- component ------------------------- */
-.component {
-  z-index: 999;
+.dark .standard:hover, .dark .button--standard-icon:hover, .dark .button--standard:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark .standard:active, .dark .button--standard-icon:active, .dark .button--standard:active {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.dark .standard:disabled, .dark .button--standard-icon:disabled, .dark .button--standard:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.dark .standard:focus, .dark .button--standard-icon:focus, .dark .button--standard:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
+}
+.dark .accent, .dark .button--accent-icon, .dark .button--accent {
+  background-color: rgb(96, 205, 255);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+.dark .accent:hover, .dark .button--accent-icon:hover, .dark .button--accent:hover {
+  background-color: rgba(96, 205, 255, 0.9);
+}
+.dark .accent:active, .dark .button--accent-icon:active, .dark .button--accent:active {
+  background-color: rgba(96, 205, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.dark .accent:disabled, .dark .button--accent-icon:disabled, .dark .button--accent:disabled {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: unset;
+}
+.dark .accent:focus, .dark .button--accent-icon:focus, .dark .button--accent:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
 }
 
-/* ------------------------- Typography 2 ------------------------- */
+/* ------------------------- Variants ------------------------- */
+.button--standard-icon {
+  font-size: 14px;
+}
+.button--accent-icon {
+  font-size: 14px;
+}
+
+/* ------------------------- Dropdown ------------------------- */
+.light .form-select, .light .component__dropdown {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.16);
+}
+.light .form-select:hover, .light .component__dropdown:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+}
+.light .form-select:active, .light .component__dropdown:active {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .form-select:disabled, .light .component__dropdown:disabled {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.light .form-select:focus, .light .component__dropdown:focus {
+  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
+}
+.light .form-select option, .light .component__dropdown option {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+  background-color: rgba(252, 252, 252, 0.85);
+}
+
+.dark .form-select, .dark .component__dropdown {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.07);
+}
+.dark .form-select:hover, .dark .component__dropdown:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark .form-select:active, .dark .component__dropdown:active {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.dark .form-select:disabled, .dark .component__dropdown:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.dark .form-select:focus, .dark .component__dropdown:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgb(255, 255, 255);
+}
+.dark .form-select option, .dark .component__dropdown option {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.15);
+  background-color: rgba(44, 44, 44, 0.96);
+}
+
+/* ------------------------- Text Box ------------------------- */
+.light input.form-control, .light input.component__text-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.06);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+}
+.light input.form-control:hover, .light input.component__text-box:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+}
+.light input.form-control:active, .light input.component__text-box:active, .light input.form-control:focus, .light input.component__text-box:focus {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(0, 95, 184);
+  box-shadow: unset;
+}
+.light input.form-control:disabled, .light input.component__text-box:disabled {
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark input.form-control, .dark input.component__text-box {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.54);
+}
+.dark input.form-control:hover, .dark input.component__text-box:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark input.form-control:active, .dark input.component__text-box:active, .dark input.form-control:focus, .dark input.component__text-box:focus {
+  background-color: rgba(30, 30, 30, 0.7);
+  border-bottom: 2px solid rgb(96, 205, 255);
+  box-shadow: unset;
+}
+.dark input.form-control:disabled, .dark input.component__text-box:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
 @font-face {
   font-family: "Cascadia Code";
   src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
@@ -9664,7 +9494,6 @@ textarea.form-control-lg {
   font-family: "Cascadia Code Italic";
 }
 
-/* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
 .content ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
@@ -9685,19 +9514,37 @@ html.dark .content ::-webkit-scrollbar-thumb {
 }
 
 /* ------------------------- images.html ------------------------- */
+.component {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  z-index: 999;
+}
+
 .close__button-close::before {
   font-family: "Segoe Fluent Icons";
   content: "\e8bb";
 }
 
+.search {
+  margin-top: 0.5rem;
+}
+
 .content {
+  margin-top: 0.5rem;
   width: 25rem;
   height: 25rem;
 }
 .content__container {
   height: 100%;
 }
-/* ------------------------- Motion 2 ------------------------- */
+.content__container-inner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+.content__container-inner:first-child {
+  margin-top: 0;
+}
 .ms-motion-slideDownOut {
   -webkit-animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;
   animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;

@@ -1,3 +1,5 @@
+@use "variables" as var;
+
 /* ------------------------- Surfaces ------------------------- */
 
 // ------------------------- App Surface -------------------------
@@ -55,5 +57,17 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     background: rgba(58, 58, 58, 0.3);
+  }
+}
+
+.component {
+  @extend .f-app-surface-base;
+  padding: 0.5rem;
+  // border-radius: var.$border-radius-base;
+
+  &__inner {
+    @extend .f-app-surface-layer;
+    padding: 0.5rem;
+    border-radius: var.$border-radius-layer;
   }
 }

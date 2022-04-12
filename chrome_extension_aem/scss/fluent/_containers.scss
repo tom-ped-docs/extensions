@@ -1,0 +1,41 @@
+@use "controls/bootstrap";
+
+@use "typography";
+@use "color";
+
+.light {
+  .input-group-text {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.16);
+  }
+}
+
+.dark {
+  .input-group-text {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.07);
+  }
+}
+
+.component {
+  &__container-start {
+    display: flex;
+    // justify-content: flex-start;
+  }
+
+  &__container-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__container-row    { @extend .row, .g-2; }
+  &__container-col    { @extend .col; }
+
+  &__input-group      { @extend .input-group, .input-group-sm; }
+  &__input-group-text { @extend .input-group-text, .f-body, .f-text; }
+  &__btn-group        { @extend .btn-group, .btn-group-sm; }
+}

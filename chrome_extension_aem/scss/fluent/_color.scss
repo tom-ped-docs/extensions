@@ -4,52 +4,74 @@
 
 .light {
   // Text / Primary & Disabled
-  .f-text { color: rgba(0, 0, 0, 0.9); }
-  .f-text:disabled { color: rgba(0, 0, 0, 0.36); }
-  .text-background-color { background-color: rgba(246, 246, 246, 0.5); }
+  .f-text {
+    color: rgba(0, 0, 0, 0.9);
+
+    &:disabled { color: rgba(0, 0, 0, 0.36); }
+    &-background-color { background-color: rgba(246, 246, 246, 0.5); }
+  }
 
   // Accent Text / Primary & Disabled
-  .f-accent-text { color: rgba(0, 62, 146, 1); }
-  .f-accent-text:disabled { color: rgba(0, 0, 0, 0.36); }
-  .accent-text-background-color { background-color: rgba(246, 246, 246, 0.5); }
+  .f-accent-text {
+    color: rgba(0, 62, 146, 1);
+
+    &:disabled { color: rgba(0, 0, 0, 0.36); }
+    &-background-color { background-color: rgba(246, 246, 246, 0.5); }
+  }
 
   // Text on Accent / Primary & Disabled
-  .f-text-on-accent { color: rgba(255, 255, 255, 1); }
-  .f-text-on-accent:disabled { color: rgba(255, 255, 255, 0.7); }
-  .text-on-accent-background-color { background-color: rgba(0, 95, 184, 1); }
+  .f-text-on-accent {
+    color: rgba(255, 255, 255, 1);
+
+    &:disabled { color: rgba(255, 255, 255, 0.7); }
+    &-background-color { background-color: rgba(0, 95, 184, 1); }
+  }
 }
 
 .dark {
   // Text / Primary & Disabled
-  .f-text { color: rgba(255, 255, 255, 1); }
-  .f-text:disabled { color: rgba(255, 255, 255, 0.36); }
-  .text-background-color { background-color: rgba(255, 255, 255, 0.03); }
+  .f-text {
+    color: rgba(255, 255, 255, 1);
+
+    &:disabled { color: rgba(255, 255, 255, 0.36); }
+    &-background-color { background-color: rgba(255, 255, 255, 0.03); }
+  }
 
   // Accent Text / Primary & Disabled
-  .f-accent-text { color: rgba(153, 235, 255, 1); }
-  .f-accent-text:disabled { color: rgba(255, 255, 255, 0.36); }
-  .accent-text-background-color { background-color: rgba(255, 255, 255, 0.03); }
+  .f-accent-text {
+    color: rgba(153, 235, 255, 1);
+
+    &:disabled { color: rgba(255, 255, 255, 0.36); }
+    &-background-color { background-color: rgba(255, 255, 255, 0.03); }
+  }
 
   // Text on Accent / Primary & Disabled
-  .f-text-on-accent { color: rgba(0, 0, 0, 1); }
-  .f-text-on-accent:disabled { color: rgba(0, 0, 0, 0.5); }
-  .text-on-accent-background-color { background-color: rgba(96, 205, 255, 1); }
+  .f-text-on-accent {
+    color: rgba(0, 0, 0, 1);
+
+    &:disabled { color: rgba(0, 0, 0, 0.5); }
+    &-background-color { background-color: rgba(96, 205, 255, 1); }
+  }
 }
 
 // ------------------------- System -------------------------
 
 .light {
-  // System / Critical
-  .f-critical { background-color: rgba(196, 43, 28, 1) !important; }
+  .f-critical {
+    // System / Critical
+    background-color: rgba(196, 43, 28, 1) !important;
 
-  // System / Critical Background
-  .f-critical-background { background-color: rgba(253, 231, 233, 1) !important; }
+    // System / Critical Background
+    &-background { background-color: rgba(253, 231, 233, 1) !important; }
+  }
 }
 
 .dark {
-  // System / Critical
-  .f-critical { background-color: rgba(255, 153, 164, 1) !important; }
+  .f-critical {
+    // System / Critical
+    background-color: rgba(255, 153, 164, 1) !important;
 
-  // System / Critical Background
-  .f-critical-background { background-color: rgba(68, 39, 38, 1) !important; }
+    // System / Critical Background
+    &-background { background-color: rgba(68, 39, 38, 1) !important; }
+  }
 }

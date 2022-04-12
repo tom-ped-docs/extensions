@@ -1,25 +1,20 @@
-@use "bootstrap/bootstrap";
+@use "fluent/controls/bootstrap";
+@use "fluent/containers";
+
+@use "fluent/variables";
 
 @use "fluent/typography";
+@use "fluent/iconography";
 @use "fluent/color";
+@use "fluent/surfaces";
+
+@use "fluent/motion";
 
 @use "fluent/controls/button";
 @use "fluent/controls/dropdown";
 @use "fluent/controls/text_box";
-@use "fluent/iconography";
 
-@use "fabric/motion";
-
-@use "blocks/component";
-
-/* ------------------------- component ------------------------- */
-
-.component {
-  @extend .rounded, .position-fixed, .bottom-0, .start-0, .m-2;
-  z-index: 999;
-}
-
-/* ------------------------- Typography 2 ------------------------- */
+// ------------------------- Typography 2 -------------------------
 
 @font-face {
   font-family: "Cascadia Code";
@@ -35,7 +30,7 @@
 
 .f-cascadia_code_italic { font-family: "Cascadia Code Italic"; }
 
-/* ------------------------- Scroll Bar (Scroll Viewer) 2 ------------------------- */
+// ------------------------- Scroll Bar (Scroll Viewer) 2 -------------------------
 
 .content {
   ::-webkit-scrollbar {
@@ -62,6 +57,13 @@ html.dark {
 
 /* ------------------------- images.html ------------------------- */
 
+.component {
+  @extend .position-fixed, .bottom-0, .start-0;
+  margin: 0.5rem;
+  border-radius: variables.$border-radius-base;
+  z-index: 999;
+}
+
 // bootstrap-components + fluent-controls (f-typography, f-color, f-iconography), f-surfaces, bootstrap-utilities, CSS
 
 .close {
@@ -71,10 +73,10 @@ html.dark {
   &__button-close::before { font-family: iconography.$font-family; content: "\e8bb"; }
 }
 
-.search { @extend .mt-2; }
+.search { margin-top: 0.5rem; }
 
 .content {
-  @extend .mt-2;
+  margin-top: 0.5rem;
   width: 25rem;
   height: 25rem;
 
@@ -82,20 +84,26 @@ html.dark {
     @extend .overflow-scroll;
     height: 100%;
   }
-  &__container-column { @extend .d-flex, .flex-column, .mt-2; }
-  &__container-column:first-child { @extend .mt-0; }
+
+  &__container-inner {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem
+  }
+
+  &__container-inner:first-child { margin-top: 0; }
 
   &__title,
   &__subtitle-src,
-  &__subtitle-alt     { @extend .f-text, .text-nowrap; }
+  &__subtitle-alt { @extend .f-text, .text-nowrap; }
 
-  &__title            { @extend .f-body, .f-cascadia_code; }
+  &__title { @extend .f-body, .f-cascadia_code; }
 
   &__subtitle-src,
-  &__subtitle-alt     { @extend .f-caption, .f-cascadia_code_italic, .text-muted; }
+  &__subtitle-alt { @extend .f-caption, .f-cascadia_code_italic, .text-muted; }
 }
 
-/* ------------------------- Motion 2 ------------------------- */
+// ------------------------- Motion 2 -------------------------
 
 .ms-motion-slideDownOut {
   -webkit-animation: ms-motion-slideDownOut 100ms cubic-bezier(0.9, 0.1, 1, 0.2) both, ms-motion-fadeOut 100ms cubic-bezier(0, 0, 1, 1) both;

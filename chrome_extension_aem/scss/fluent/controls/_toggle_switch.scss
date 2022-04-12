@@ -1,3 +1,5 @@
+@use "bootstrap";
+
 /* ------------------------- Toggle Switch ------------------------- */
 
 .light {
@@ -7,26 +9,26 @@
     .form-check-input {
       background-color: rgba(0, 0, 0, 0.02);
       border: 1px solid rgba(0, 0, 0, 0.45);
-    }
 
-    .form-check-input:hover {
-      background-color: rgba(0, 0, 0, 0.06);
-      // border: 1px solid rgba(0, 0, 0, 0.45);
-    }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+        // border: 1px solid rgba(0, 0, 0, 0.45);
+      }
 
-    .form-check-input:active {
-      background-color: rgba(0, 0, 0, 0.09);
-      // border: 1px solid rgba(0, 0, 0, 0.45);
-    }
+      &:active {
+        background-color: rgba(0, 0, 0, 0.09);
+        // border: 1px solid rgba(0, 0, 0, 0.45);
+      }
 
-    .form-check-input:disabled {
-      background-color: rgba(255, 255, 255, 0);
-      border: 1px solid rgba(0, 0, 0, 0.22);
-    }
+      &:disabled {
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(0, 0, 0, 0.22);
+      }
 
-    .form-check-input:focus {
-      // box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.9);
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+      &:focus {
+        // box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.9);
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+      }
     }
 
     // Mode: Light, Selected: True
@@ -34,26 +36,26 @@
     .form-check-input:checked {
       background-color: rgba(0, 95, 184, 1);
       border: 1px solid rgba(0, 95, 184, 1);
-    }
 
-    .form-check-input:checked:hover {
-      background-color: rgba(0, 95, 184, 0.9);
-      border: 1px solid rgba(0, 95, 184, 0.9);
-    }
+      &:hover {
+        background-color: rgba(0, 95, 184, 0.9);
+        border: 1px solid rgba(0, 95, 184, 0.9);
+      }
 
-    .form-check-input:checked:active {
-      background-color: rgba(0, 95, 184, 0.8);
-      border: 1px solid rgba(0, 95, 184, 0.8);
-    }
+      &:active {
+        background-color: rgba(0, 95, 184, 0.8);
+        border: 1px solid rgba(0, 95, 184, 0.8);
+      }
 
-    .form-check-input:checked:disabled {
-      background-color: rgba(0, 0, 0, 0.22);
-      border: 1px solid rgba(0, 0, 0, 0.22);
-    }
+      &:disabled {
+        background-color: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(0, 0, 0, 0.22);
+      }
 
-    .form-check-input:checked:focus {
-      // box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.9);
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+      &:focus {
+        // box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.9);
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+      }
     }
   }
 }
@@ -65,26 +67,26 @@
     .form-check-input {
       background-color: rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.54);
-    }
 
-    .form-check-input:hover {
-      background-color: rgba(255, 255, 255, 0.04);
-      // border: 1px solid rgba(255, 255, 255, 0.54);
-    }
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.04);
+        // border: 1px solid rgba(255, 255, 255, 0.54);
+      }
 
-    .form-check-input:active {
-      background-color: rgba(255, 255, 255, 0.07);
-      // border: 1px solid rgba(255, 255, 255, 0.54);
-    }
+      &:active {
+        background-color: rgba(255, 255, 255, 0.07);
+        // border: 1px solid rgba(255, 255, 255, 0.54);
+      }
 
-    .form-check-input:disabled {
-      background-color: rgba(255, 255, 255, 0);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-    }
+      &:disabled {
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+      }
 
-    .form-check-input:focus {
-      // box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 255, 255, 1);
-      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgba(255, 255, 255, 1);
+      &:focus {
+        // box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 255, 255, 1);
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgba(255, 255, 255, 1);
+      }
     }
 
     // Mode: Dark, Selected: True
@@ -92,26 +94,34 @@
     .form-check-input:checked {
       background-color: rgba(96, 205, 255, 1);
       border: 1px solid rgba(96, 205, 255, 1);
-    }
 
-    .form-check-input:checked:hover {
-      background-color: rgba(96, 205, 255, 0.9);
-      border: 1px solid rgba(96, 205, 255, 0.9);
-    }
+      &:hover {
+        background-color: rgba(96, 205, 255, 0.9);
+        border: 1px solid rgba(96, 205, 255, 0.9);
+      }
 
-    .form-check-input:checked:active {
-      background-color: rgba(96, 205, 255, 0.8);
-      border: 1px solid rgba(96, 205, 255, 0.8);
-    }
+      &:active {
+        background-color: rgba(96, 205, 255, 0.8);
+        border: 1px solid rgba(96, 205, 255, 0.8);
+      }
 
-    .form-check-input:checked:disabled {
-      background-color: rgba(255, 255, 255, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-    }
+      &:disabled {
+        background-color: rgba(255, 255, 255, 0.16);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+      }
 
-    .form-check-input:checked:focus {
-      // box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 255, 255, 1);
-      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgba(255, 255, 255, 1);
+      &:focus {
+        // box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 255, 255, 1);
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgba(255, 255, 255, 1);
+      }
     }
+  }
+}
+
+.component {
+  &__toggle-switch {
+    @extend .form-check, .form-switch;
+
+    &-inner { @extend .form-check-input; }
   }
 }

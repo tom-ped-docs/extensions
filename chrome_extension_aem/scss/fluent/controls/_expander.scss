@@ -1,4 +1,4 @@
-@use "../../bootstrap/bootstrap";
+@use "bootstrap";
 
 @use "../typography";
 @use "../color";
@@ -73,22 +73,40 @@
 
 /* ------------------------- controls ------------------------- */
 
-.expander {
-  &__item { @extend .accordion-item; }
-  &__header { @extend .accordion-header; }
-  &__button { @extend .accordion-button; }
-  &__icon {
-    @extend .f-text;
-    font-size: 24px;
-    margin-right: 1.25rem;
-  }
-  &__container { @extend .d-flex, .flex-column; }
-  &__title { @extend .f-body, .f-text; }
-  &__subtitle { @extend .f-caption, .f-text; }
-  &__collapse { @extend .accordion-collapse; }
-  &__body { @extend .accordion-body, .d-flex, .justify-content-between, .align-items-center; }
+.component {
+  &__expander {
+    &-item { @extend .accordion-item; }
 
-  &__icon::before { font-family: iconography.$font-family; content: "..."; }
+    &-header { @extend .accordion-header; }
+
+    &-button { @extend .accordion-button; }
+
+    &-icon {
+      @extend .f-text;
+      font-size: 24px;
+      margin-right: 1.25rem;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-title { @extend .f-body, .f-text; }
+
+    &-subtitle { @extend .f-caption, .f-text; }
+
+    &-collapse { @extend .accordion-collapse; }
+
+    &-body {
+      @extend .accordion-body;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-icon::before { font-family: iconography.$font-family; content: "..."; }
+  }
 }
 
 // <div class="expander__item">
@@ -108,21 +126,39 @@
 //   </div>
 // </div>
 
-.card {
-  @extend .card;
+.component {
+  &__card {
+    @extend .card;
 
-  &__body { @extend .card-body, .d-flex, .justify-content-between, .align-items-center; }
-  &__container-row { @extend .d-flex; }// .flex-row
-  &__icon {
-    @extend .f-text;
-    font-size: 24px;
-    margin-right: 1.25rem;
+    &-body {
+      @extend .card-body;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-container-row {
+      display: flex;
+      // flex-direction: row;
+    }
+
+    &-icon {
+      @extend .f-text;
+      font-size: 24px;
+      margin-right: 1.25rem;
+    }
+
+    &-container-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-title { @extend .f-body, .f-text; }
+
+    &-subtitle { @extend .f-caption, .f-text; }
+
+    &-icon::before { font-family: iconography.$font-family; content: "..."; }
   }
-  &__container-column { @extend .d-flex, .flex-column; }
-  &__title { @extend .f-body, .f-text; }
-  &__subtitle { @extend .f-caption, .f-text; }
-
-  &__icon::before { font-family: iconography.$font-family; content: "..."; }
 }
 
 // <div class="card">

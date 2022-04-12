@@ -47,7 +47,7 @@ SEARCH_SPAN.appendChild(SEARCH_SPAN_TN);
 // select
 
 const SEARCH_SELECT = document.createElement("select") as HTMLSelectElement;
-SEARCH_SELECT.setAttribute("class", "component__select");
+SEARCH_SELECT.setAttribute("class", "component__dropdown");
 SEARCH_DIV_3.appendChild(SEARCH_SELECT);
 
 const SEARCH_OPTION_0 = document.createElement("option") as HTMLOptionElement;
@@ -71,7 +71,7 @@ SEARCH_DIV_1.appendChild(SEARCH_DIV_4);
 // input
 
 const SEARCH_INPUT = document.createElement("input") as HTMLInputElement;
-SEARCH_INPUT.setAttribute("class", "component__input");
+SEARCH_INPUT.setAttribute("class", "component__text-box");
 SEARCH_INPUT.setAttribute("type", "text");
 SEARCH_INPUT.setAttribute("placeholder", "/pl");
 SEARCH_DIV_4.appendChild(SEARCH_INPUT);
@@ -94,7 +94,7 @@ let i: number = 0;
 if (IMGS !== null) {
   for (let img of Array.from(IMGS)) {
     const CONTENT_DIV_2 = document.createElement("div") as HTMLDivElement;
-    CONTENT_DIV_2.setAttribute("class", "content__container-column");
+    CONTENT_DIV_2.setAttribute("class", "content__container-inner");
     CONTENT_DIV_1.appendChild(CONTENT_DIV_2);
 
     const CONTENT_SPAN_0 = document.createElement("span") as HTMLSpanElement;

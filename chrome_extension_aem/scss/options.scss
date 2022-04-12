@@ -1,7 +1,14 @@
-@use "bootstrap/bootstrap";
+@use "fluent/controls/bootstrap";
+@use "fluent/containers";
+
+@use "fluent/variables";
 
 @use "fluent/typography";
+@use "fluent/iconography";
 @use "fluent/color";
+@use "fluent/surfaces";
+
+@use "fluent/motion";
 
 @use "fluent/controls/button";
 @use "fluent/controls/dropdown";
@@ -10,56 +17,77 @@
 @use "fluent/controls/text_box";
 @use "fluent/controls/scroll_viewer";
 @use "fluent/controls/tooltip";
-@use "fluent/iconography";
 
-@use "fabric/motion";
-
-@use "blocks/component";
-
-
-/* ------------------------- component ------------------------- */
+/* ------------------------- options.html ------------------------- */
 
 .component {
   border: unset !important;
 
   &__inner {
-    @extend .container;
-    border-radius: 8px !important;
+    // @extend .container;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    // border-radius: variables.$border-radius-base;
+  }
+
+  &__toggle-switch {
+    margin-left: 0.5rem;
   }
 }
-
-/* ------------------------- options.html ------------------------- */
 
 // bootstrap-components + fluent-controls (f-typography, f-color, f-iconography), f-surfaces, bootstrap-utilities, CSS
 
 .heading {
-  @extend .f-text, .d-block;
+  @extend .f-text, .text-muted;
+  display: block;
 
-  &--options      { @extend .f-title; }
-  &--aem-samsung  { @extend .f-body-strong, .mt-2; }
+  &--options {
+    // { a }
+    @extend .f-title;
+  }
+
+  &--aem-samsung {
+    // { a }
+    @extend .f-body-strong;
+    margin-top: 0.5rem
+  }
 }
 
 .about {
   // { a }
-  @extend .mt-2;
+  margin-top: 0.5rem;
 
-  &__container-row    { @extend .d-flex, .align-items-center; }// .flex-row
+  &__container-row {
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+  }
+
   &__container-center {
-    @extend .d-flex, .justify-content-center, .align-items-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100px;
     width: 200px;
   }
+
   &__icon {
     width: 4rem;
     height: 4rem;
   }
-  &__container-column { @extend .d-flex, .flex-column, .ms-2; }
-  &__title            { @extend .f-body, .f-text, .text-muted; }
+
+  &__container-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title { @extend .f-body, .f-text; }
 }
 
 .appearance {
   // { a }
-  @extend .mt-2;
+  margin-top: 0.5rem;
 
   // &__icon-personalize { i }
   &__select-theme { width: 10rem; }
@@ -70,7 +98,7 @@
 
 .shortcuts {
   // { a }
-  @extend .mt-2;
+  margin-top: 0.5rem;
 
   // &__icon-keyboard { i }
   // &__button-open { i }
@@ -83,14 +111,13 @@
 
 .extensions {
   // { a }
-  @extend .mt-2;
+  margin-top: 0.5rem;
 
   // &__icon-view { i }
 
-  &__container      { @extend .d-flex, .align-items-center; }
-  &__span           { @extend .f-body, .f-text; }
-  &__toggle-switch  { @extend .form-check, .form-switch, .ms-2; }
-  &__check          { @extend .form-check-input; }
+  &__container { display: flex; }
+
+  &__span { @extend .f-body, .f-text; }
 
   // View
   &__icon-view::before { font-family: iconography.$font-family; content: "\e890"; }
@@ -98,14 +125,14 @@
 
 .aem-samsung {
   // { a }
-  @extend .mt-2;
+  margin-top: 0.5rem;
 
   // &__icon-robot { i }
-  &__container    { @extend .d-flex; }
-  &__input-login {
-    width: 20rem;
-  }
-  &__button-save  { @extend .ms-2; }
+  &__container { display: flex; }
+
+  &__input-login { width: 20rem; }
+
+  &__button-save { margin-left: 0.5rem; }
 
   // Robot
   &__icon-robot::before   { font-family: iconography.$font-family; content: "\e99a"; }
@@ -113,8 +140,9 @@
   &__button-save::before  { font-family: iconography.$font-family; content: "\e74e"; }
 }
 
-/* ------------------------- Motion 2 ------------------------- */
+// ------------------------- Motion 2 -------------------------
 
+.heading--options,
 .about {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
           animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;

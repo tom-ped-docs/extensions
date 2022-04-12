@@ -1,24 +1,23 @@
-@use "bootstrap/bootstrap";
+@use "fluent/controls/bootstrap";
+@use "fluent/containers";
+
+@use "fluent/iconography";
+@use "fluent/surfaces";
+
+@use "fluent/motion";
 
 @use "fluent/controls/button";
+@use "fluent/controls/dropdown";
+@use "fluent/controls/text_box";
 @use "fluent/controls/tooltip";
-@use "fluent/iconography";
 
-@use "fabric/motion";
-
-@use "blocks/component";
-
-/* ------------------------- Button ------------------------- */
+/* ------------------------- popup.html ------------------------- */
 
 .button {
   &--standard { width: 5rem; }
 }
 
-/* ------------------------- component ------------------------- */
-
 .component { border: unset !important; }
-
-/* ------------------------- popup.html ------------------------- */
 
 // bootstrap-components + fluent-controls (f-typography, f-color, f-iconography), f-surfaces, bootstrap-utilities, CSS
 
@@ -26,7 +25,7 @@
   // { a }
 
   &__button-images,
-  &__button-options { @extend .me-2; }
+  &__button-options { margin-right: 0.5rem; }
   // &__button-help { i }
 
   // ImageExport
@@ -38,19 +37,19 @@
 }
 
 .aem {
-    @extend .mt-2;
+    margin-top: 0.5rem;
     transition: 0.5s ease background-color;
 
-    &--critical         { @extend .f-critical-background; }
+    &--critical { @extend .f-critical-background; }
 
     // &__samsung { a }
     // &__iqos { a }
 
-    &__container        { @extend .mt-2; }
-
     // &__button-login { i }
     // &__select-site { a }
     // &__input-url { a }
+
+    &__container { margin-top: 0.5rem; }
 
     &__btn-group-editor { width: 5rem; }
     // &__button-editor { i }
@@ -65,7 +64,7 @@
     &__button-age-gate,
     &__button-purging,
     &__button-pim-b2c,
-    &__button-pim-b2b   { @extend .ms-2; }
+    &__button-pim-b2b { margin-left: 0.5rem; }
 
     &__button-task-management,
     &__button-workflows { @extend .text-truncate; }
@@ -80,14 +79,21 @@
 
 .tools {
   // { a }
-  @extend .mt-2;
+  margin-top: 0.5rem;
 
   // &__button-paste { i }
 
-  &__container                { @extend .d-flex, .justify-content-evenly; }
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   &__btn-group-capitalization { width: 7.5rem; }
 
-  &__btn-group-cut-copy       { @extend .ms-2; width: 5rem; }
+  &__btn-group-cut-copy {
+    margin-left: 0.5rem;
+    width: 5rem;
+  }
   // &__button-cut { i }
   // &__button-copy { i }
 
@@ -99,7 +105,7 @@
   &__button-copy::before  { font-family: iconography.$font-family; content: "\e8c8"; }
 }
 
-/* ------------------------- Motion 2 ------------------------- */
+// ------------------------- Motion 2 -------------------------
 
 .toolbar,
 .aem__samsung,
