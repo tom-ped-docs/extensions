@@ -1,10 +1,10 @@
 @use "../typography";
-@use "../color";
+@use "../colors";
 
 /* ------------------------- Tooltip ------------------------- */
 
 .tooltip {
-  @extend .f-caption, .f-text;
+  @extend .caption, .text;
 
   .tooltip-arrow {
     display: none;
@@ -15,7 +15,7 @@
   // Mode: Light
 
   .tooltip-inner {
-    // .f-text
+    // .text
     color: rgba(0, 0, 0, 0.9);
   }
 
@@ -40,7 +40,7 @@
   // Mode: Dark
 
   .tooltip-inner {
-    // .f-text
+    // .text
     color: rgba(255, 255, 255, 1);
   }
 

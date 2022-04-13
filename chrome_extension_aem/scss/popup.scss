@@ -1,25 +1,25 @@
-@use "fluent/controls/bootstrap";
+@use "fluent/variables" as var;
 @use "fluent/containers";
 
 @use "fluent/iconography";
 @use "fluent/surfaces";
-
-@use "fluent/motion";
 
 @use "fluent/controls/button";
 @use "fluent/controls/dropdown";
 @use "fluent/controls/text_box";
 @use "fluent/controls/tooltip";
 
+@use "fluent/motion";
+
 /* ------------------------- popup.html ------------------------- */
 
-.button {
-  &--standard { width: 5rem; }
+.#{var.$prefix} {
+  &__container-base { border: unset !important; }
+
+  &__button {
+    &--standard { width: 5rem; }
+  }
 }
-
-.component { border: unset !important; }
-
-// bootstrap-components + fluent-controls (f-typography, f-color, f-iconography), f-surfaces, bootstrap-utilities, CSS
 
 .toolbar {
   // { a }
@@ -38,13 +38,16 @@
 
 .aem {
     margin-top: 0.5rem;
-    transition: 0.5s ease background-color;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+    transition-property: background-color;
 
-    &--critical { @extend .f-critical-background; }
+    &--critical { @extend .critical-background; }
 
     // &__samsung { a }
     // &__iqos { a }
 
+    // component__input-group { a }
     // &__button-login { i }
     // &__select-site { a }
     // &__input-url { a }
@@ -67,7 +70,12 @@
     &__button-pim-b2b { margin-left: 0.5rem; }
 
     &__button-task-management,
-    &__button-workflows { @extend .text-truncate; }
+    &__button-workflows {
+      // .text-truncate;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
 
     // OpenInNewWindow
     &__button-login::before   { font-family: iconography.$font-family; content: "\e8a7"; }
@@ -81,12 +89,10 @@
   // { a }
   margin-top: 0.5rem;
 
+  // component__input-group { a }
   // &__button-paste { i }
 
-  &__container {
-    display: flex;
-    justify-content: space-evenly;
-  }
+  &__container { display: flex; }
 
   &__btn-group-capitalization { width: 7.5rem; }
 

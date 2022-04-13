@@ -2,12 +2,26 @@
 
 /* ------------------------- Surfaces ------------------------- */
 
+.#{var.$prefix} {
+  &__container-base {
+    @extend .app-surface-base;
+    padding: 0.5rem;
+    // border-radius: var.$border-radius-base;
+  }
+
+  &__container-layer {
+    @extend .app-surface-layer;
+    padding: 0.5rem;
+    border-radius: var.$border-radius-layer;
+  }
+}
+
 // ------------------------- App Surface -------------------------
 
 .light {
   // Mode: Light, Part: Base (Mica), Inactive: False
 
-  .f-app-surface-base {
+  .app-surface-base {
     border: 1px solid rgba(117, 117, 117, 0.4);
 
     // background: rgba(255, 255, 255, 1);
@@ -25,7 +39,7 @@
 
   // Mode: Light, Part: Layer, Inactive: False
 
-  .f-app-surface-layer {
+  .app-surface-layer {
     border: 1px solid rgba(0, 0, 0, 0.0578);
 
     background: rgba(255, 255, 255, 0.5);
@@ -35,7 +49,7 @@
 .dark {
   // Mode: Dark, Part: Base (Mica), Inactive: False
 
-  .f-app-surface-base {
+  .app-surface-base {
     border: 1px solid rgba(117, 117, 117, 0.4);
 
     // background: rgb(255, 255, 255);
@@ -53,21 +67,9 @@
 
   // Mode: Dark, Part: Layer, Inactive: False
 
-  .f-app-surface-layer {
+  .app-surface-layer {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     background: rgba(58, 58, 58, 0.3);
-  }
-}
-
-.component {
-  @extend .f-app-surface-base;
-  padding: 0.5rem;
-  // border-radius: var.$border-radius-base;
-
-  &__inner {
-    @extend .f-app-surface-layer;
-    padding: 0.5rem;
-    border-radius: var.$border-radius-layer;
   }
 }

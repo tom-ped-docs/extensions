@@ -11,9 +11,9 @@
   <title>Options</title>
 </head>
 
-<body class="component">
-  <div class="component__inner">
-    <span class="heading heading--options">Options</span>
+<body class="component__container-base">
+  <div class="component__container-layer">
+    <span class="heading heading__title">Options</span>
 
     <!-- ------------------------- about ------------------------- -->
 
@@ -23,8 +23,8 @@
           <img class="about__icon" src="../assets/png/icon_176.png" alt="icon">
         </div>
         <div class="about__container-column">
-          <span class="about__title">Cheil extension is a set of utilities for Content Publishers to tune and streamline their AEM experience for greater productivity.</span>
-          <span class="about__title">Made with ❤ by Tomasz Pędzich.</span>
+          <span class="about__body">Cheil extension is a set of utilities for Content Publishers to tune and streamline their AEM experience for greater productivity.</span>
+          <span class="about__body">Made with ❤ by Tomasz Pędzich.</span>
         </div>
       </div>
     </div>
@@ -36,8 +36,8 @@
         <div class="component__card-container-row">
           <span class="component__card-icon appearance__icon-personalize"></span>
           <div class="component__card-container-column">
-            <span class="component__card-title">Choose your mode</span>
-            <span class="component__card-subtitle">Change the colors that appear in popup and options page</span>
+            <span class="component__card-body-text">Choose your mode</span>
+            <span class="component__card-caption">Change the colors that appear in popup and options page</span>
           </div>
         </div>
         <select class="component__dropdown appearance__select-theme" id="appearance__select-theme">
@@ -55,11 +55,11 @@
         <div class="component__card-container-row">
           <span class="component__card-icon shortcuts__icon-keyboard"></span>
           <div class="component__card-container-column">
-            <span class="component__card-title">Activation shortcut</span>
-            <span class="component__card-subtitle">Customize the shortcut to activate this extension</span>
+            <span class="component__card-body-text">Activation shortcut</span>
+            <span class="component__card-caption">Customize the shortcut to activate this extension</span>
           </div>
         </div>
-        <button class="button button--standard-icon shortcuts__button-open" id="shortcuts__button-open" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="open"></button>
+        <button class="component__button component__button--standard-icon shortcuts__button-open" id="shortcuts__button-open" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="open"></button>
       </div>
     </div>
 
@@ -71,17 +71,17 @@
           <button class="component__expander-button collapsed" data-bs-target="#accordion-extensions" data-bs-toggle="collapse" type="button">
             <span class="component__expander-icon extensions__icon-view"></span>
             <div class="component__expander-container">
-              <span class="component__expander-title">Extension items</span>
-              <span class="component__expander-subtitle">Show or hide widgets that appear on the popup</span>
+              <span class="component__expander-body-text">Extension items</span>
+              <span class="component__expander-caption">Show or hide widgets that appear on the popup</span>
             </div>
           </button>
         </span>
         <div class="component__expander-collapse collapse" id="accordion-extensions">
 
           <div class="component__expander-body">
-            <span class="component__expander-title">AEM Samsung</span>
+            <span class="component__expander-body-text">AEM Samsung</span>
             <div class="extensions__container">
-              <span class="extensions__span" id="extensions__span-samsung">Off</span>
+              <span class="extensions__body" id="extensions__span-samsung">Off</span>
               <div class="component__toggle-switch">
                 <input class="component__toggle-switch-inner" id="extensions__input-samsung" type="checkbox">
               </div>
@@ -89,9 +89,9 @@
           </div>
 
           <div class="component__expander-body">
-            <span class="component__expander-title">AEM PMI</span>
+            <span class="component__expander-body-text">AEM PMI</span>
             <div class="extensions__container">
-              <span class="extensions__span" id="extensions__span-iqos">Off</span>
+              <span class="extensions__body" id="extensions__span-iqos">Off</span>
               <div class="component__toggle-switch">
                 <input class="component__toggle-switch-inner" id="extensions__input-iqos" type="checkbox">
               </div>
@@ -99,9 +99,9 @@
           </div>
 
           <div class="component__expander-body">
-            <span class="component__expander-title">Utilities (Text Capitalization)</span>
+            <span class="component__expander-body-text">Utilities (Text Capitalization)</span>
             <div class="extensions__container">
-              <span class="extensions__span" id="extensions__span-tools">Off</span>
+              <span class="extensions__body" id="extensions__span-tools">Off</span>
               <div class="component__toggle-switch">
                 <input class="component__toggle-switch-inner" id="extensions__input-tools" type="checkbox">
               </div>
@@ -114,37 +114,37 @@
 
     <!-- ------------------------- aem (samsung) ------------------------- -->
 
-    <span class="heading heading--aem-samsung">Widgets</span>
+    <span class="heading heading__body-strong">Widgets</span>
 
     <div class="aem-samsung">
       <div class="component__expander-item">
         <span class="component__expander-header">
           <button class="component__expander-button collapsed" data-bs-target="#accordion-samsung" data-bs-toggle="collapse" type="button">
             <span class="component__expander-icon aem-samsung__icon-robot"></span>
-            <span class="component__expander-title">AEM Samsung</span>
+            <span class="component__expander-body-text">AEM Samsung</span>
           </button>
         </span>
         <div class="component__expander-collapse collapse" id="accordion-samsung">
 
           <div class="component__expander-body">
             <div class="component__expander-container">
-              <span class="component__expander-title">AEM P5</span>
-              <span class="component__expander-subtitle">user_id</span>
+              <span class="component__expander-body-text">AEM P5</span>
+              <span class="component__expander-caption">user_id</span>
             </div>
             <div class="aem-samsung__container">
               <input class="component__text-box aem-samsung__input-login" id="samsung__input-user-id" type="text" placeholder="user_id">
-              <button class="button button--standard-icon aem-samsung__button-save" id="samsung__button-save-user-id" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="save"></button>
+              <button class="component__button component__button--standard-icon aem-samsung__button-save" id="samsung__button-save-user-id" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="save"></button>
             </div>
           </div>
 
           <div class="component__expander-body">
             <div class="component__expander-container">
-              <span class="component__expander-title">AEM P6</span>
-              <span class="component__expander-subtitle">user_email</span>
+              <span class="component__expander-body-text">AEM P6</span>
+              <span class="component__expander-caption">user_email</span>
             </div>
             <div class="aem-samsung__container">
               <input class="component__text-box aem-samsung__input-login" id="samsung__input-user-email" type="text" placeholder="user_email">
-              <button class="button button--standard-icon aem-samsung__button-save" id="samsung__button-save-user-email" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="save"></button>
+              <button class="component__button component__button--standard-icon aem-samsung__button-save" id="samsung__button-save-user-email" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="save"></button>
             </div>
           </div>
 

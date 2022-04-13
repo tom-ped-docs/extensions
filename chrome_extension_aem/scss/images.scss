@@ -1,18 +1,16 @@
-@use "fluent/controls/bootstrap";
+@use "fluent/variables" as var;
 @use "fluent/containers";
-
-@use "fluent/variables";
 
 @use "fluent/typography";
 @use "fluent/iconography";
-@use "fluent/color";
+@use "fluent/colors";
 @use "fluent/surfaces";
-
-@use "fluent/motion";
 
 @use "fluent/controls/button";
 @use "fluent/controls/dropdown";
 @use "fluent/controls/text_box";
+
+@use "fluent/motion";
 
 // ------------------------- Typography 2 -------------------------
 
@@ -21,14 +19,14 @@
   src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
 }
 
-.f-cascadia_code { font-family: "Cascadia Code"; }
+.cascadia-code { font-family: "Cascadia Code"; }
 
 @font-face {
   font-family: "Cascadia Code Italic";
   src: url(../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
 }
 
-.f-cascadia_code_italic { font-family: "Cascadia Code Italic"; }
+.cascadia-code-italic { font-family: "Cascadia Code Italic"; }
 
 // ------------------------- Scroll Bar (Scroll Viewer) 2 -------------------------
 
@@ -57,14 +55,16 @@ html.dark {
 
 /* ------------------------- images.html ------------------------- */
 
-.component {
-  @extend .position-fixed, .bottom-0, .start-0;
-  margin: 0.5rem;
-  border-radius: variables.$border-radius-base;
-  z-index: 999;
+.#{var.$prefix} {
+  &__container-base {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0.5rem;
+    border-radius: var.$border-radius-base;
+    z-index: 999;
+  }
 }
-
-// bootstrap-components + fluent-controls (f-typography, f-color, f-iconography), f-surfaces, bootstrap-utilities, CSS
 
 .close {
   // &__button-close { i }
@@ -81,7 +81,7 @@ html.dark {
   height: 25rem;
 
   &__container {
-    @extend .overflow-scroll;
+    overflow: scroll;
     height: 100%;
   }
 
@@ -89,18 +89,21 @@ html.dark {
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem
-  }
 
+  }
   &__container-inner:first-child { margin-top: 0; }
 
-  &__title,
-  &__subtitle-src,
-  &__subtitle-alt { @extend .f-text, .text-nowrap; }
+  &__body,
+  &__caption-src,
+  &__caption-alt {
+    @extend .text;
+    white-space: nowrap;
+  }
 
-  &__title { @extend .f-body, .f-cascadia_code; }
+  &__body { @extend .body, .cascadia-code; }
 
-  &__subtitle-src,
-  &__subtitle-alt { @extend .f-caption, .f-cascadia_code_italic, .text-muted; }
+  &__caption-src,
+  &__caption-alt { @extend .caption, .cascadia-code-italic; }
 }
 
 // ------------------------- Motion 2 -------------------------

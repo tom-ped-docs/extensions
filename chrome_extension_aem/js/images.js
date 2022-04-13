@@ -1,22 +1,22 @@
 const BODY = document.body;
 const BODY_DIV = document.createElement("div");
-BODY_DIV.setAttribute("class", "component ms-motion-slideUpIn");
+BODY_DIV.setAttribute("class", "component__container-base ms-motion-slideUpIn");
 BODY.appendChild(BODY_DIV);
 /*
  * ------------------------- close -------------------------
  */
 const CLOSE_DIV = document.createElement("div");
-CLOSE_DIV.setAttribute("class", "component__inner component__container-end");
+CLOSE_DIV.setAttribute("class", "component__container-layer component__container-end");
 BODY_DIV.appendChild(CLOSE_DIV);
 const CLOSE_BUTTON = document.createElement("button");
-CLOSE_BUTTON.setAttribute("class", "button button--standard-icon close__button-close");
+CLOSE_BUTTON.setAttribute("class", "component__button component__button--standard-icon close__button-close");
 CLOSE_BUTTON.setAttribute("type", "button");
 CLOSE_DIV.appendChild(CLOSE_BUTTON);
 /*
  * ------------------------- search -------------------------
  */
 const SEARCH_DIV_0 = document.createElement("div");
-SEARCH_DIV_0.setAttribute("class", "component__inner search");
+SEARCH_DIV_0.setAttribute("class", "component__container-layer search");
 BODY_DIV.appendChild(SEARCH_DIV_0);
 const SEARCH_DIV_1 = document.createElement("div");
 SEARCH_DIV_1.setAttribute("class", "component__container-row");
@@ -59,7 +59,7 @@ SEARCH_DIV_4.appendChild(SEARCH_INPUT);
  * ------------------------- content -------------------------
  */
 const CONTENT_DIV_0 = document.createElement("div");
-CONTENT_DIV_0.setAttribute("class", "component__inner content");
+CONTENT_DIV_0.setAttribute("class", "component__container-layer content");
 BODY_DIV.appendChild(CONTENT_DIV_0);
 const CONTENT_DIV_1 = document.createElement("div");
 CONTENT_DIV_1.setAttribute("class", "content__container");
@@ -72,18 +72,18 @@ if (IMGS !== null) {
         CONTENT_DIV_2.setAttribute("class", "content__container-inner");
         CONTENT_DIV_1.appendChild(CONTENT_DIV_2);
         const CONTENT_SPAN_0 = document.createElement("span");
-        CONTENT_SPAN_0.setAttribute("class", "content__title");
+        CONTENT_SPAN_0.setAttribute("class", "content__body");
         CONTENT_DIV_2.appendChild(CONTENT_SPAN_0);
         const CONTENT_SPAN_0_TN = document.createTextNode("img " + i);
         CONTENT_SPAN_0.appendChild(CONTENT_SPAN_0_TN);
         i++;
         const CONTENT_SPAN_1 = document.createElement("span");
-        CONTENT_SPAN_1.setAttribute("class", "content__subtitle-src");
+        CONTENT_SPAN_1.setAttribute("class", "content__caption-src");
         CONTENT_DIV_2.appendChild(CONTENT_SPAN_1);
         const CONTENT_SPAN_1_TN = document.createTextNode("src: " + img.src);
         CONTENT_SPAN_1.appendChild(CONTENT_SPAN_1_TN);
         const CONTENT_SPAN_2 = document.createElement("span");
-        CONTENT_SPAN_2.setAttribute("class", "content__subtitle-alt");
+        CONTENT_SPAN_2.setAttribute("class", "content__caption-alt");
         CONTENT_DIV_2.appendChild(CONTENT_SPAN_2);
         const CONTENT_SPAN_2_TN = document.createTextNode("alt: " + img.alt);
         CONTENT_SPAN_2.appendChild(CONTENT_SPAN_2_TN);
@@ -106,22 +106,18 @@ const setFilters = () => {
         const SPAN_TC = div.children[1].textContent;
         if (SEARCH_SELECT.options[SEARCH_SELECT.selectedIndex].value === "contains") {
             if (SPAN_TC.indexOf(SEARCH_INPUT.value) !== -1) {
-                div.classList.remove("d-none");
-                div.classList.add("d-flex");
+                div.style.display = "flex";
             }
             else {
-                div.classList.remove("d-flex");
-                div.classList.add("d-none");
+                div.style.display = "none";
             }
         }
         else {
             if (SPAN_TC.indexOf(SEARCH_INPUT.value) === -1) {
-                div.classList.remove("d-none");
-                div.classList.add("d-flex");
+                div.style.display = "flex";
             }
             else {
-                div.classList.remove("d-flex");
-                div.classList.add("d-none");
+                div.style.display = "none";
             }
         }
     }

@@ -4,7 +4,7 @@
 
 .light {
   // Text / Primary & Disabled
-  .f-text {
+  .text {
     color: rgba(0, 0, 0, 0.9);
 
     &:disabled { color: rgba(0, 0, 0, 0.36); }
@@ -12,7 +12,7 @@
   }
 
   // Accent Text / Primary & Disabled
-  .f-accent-text {
+  .accent-text {
     color: rgba(0, 62, 146, 1);
 
     &:disabled { color: rgba(0, 0, 0, 0.36); }
@@ -20,7 +20,7 @@
   }
 
   // Text on Accent / Primary & Disabled
-  .f-text-on-accent {
+  .text-on-accent {
     color: rgba(255, 255, 255, 1);
 
     &:disabled { color: rgba(255, 255, 255, 0.7); }
@@ -30,7 +30,7 @@
 
 .dark {
   // Text / Primary & Disabled
-  .f-text {
+  .text {
     color: rgba(255, 255, 255, 1);
 
     &:disabled { color: rgba(255, 255, 255, 0.36); }
@@ -38,7 +38,7 @@
   }
 
   // Accent Text / Primary & Disabled
-  .f-accent-text {
+  .accent-text {
     color: rgba(153, 235, 255, 1);
 
     &:disabled { color: rgba(255, 255, 255, 0.36); }
@@ -46,7 +46,7 @@
   }
 
   // Text on Accent / Primary & Disabled
-  .f-text-on-accent {
+  .text-on-accent {
     color: rgba(0, 0, 0, 1);
 
     &:disabled { color: rgba(0, 0, 0, 0.5); }
@@ -57,7 +57,7 @@
 // ------------------------- System -------------------------
 
 .light {
-  .f-critical {
+  .critical {
     // System / Critical
     background-color: rgba(196, 43, 28, 1) !important;
 
@@ -67,7 +67,7 @@
 }
 
 .dark {
-  .f-critical {
+  .critical {
     // System / Critical
     background-color: rgba(255, 153, 164, 1) !important;
 

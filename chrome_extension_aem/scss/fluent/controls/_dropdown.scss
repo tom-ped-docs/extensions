@@ -1,9 +1,17 @@
 @use "bootstrap";
 
+@use "../variables" as var;
+
 @use "../typography";
-@use "../color";
+@use "../colors";
 
 /* ------------------------- Dropdown ------------------------- */
+
+.#{var.$prefix} {
+  &__dropdown {
+    @extend .form-select, .form-select-sm, .body, .text;
+  }
+}
 
 .light {
   // Mode: Light, Open: True
@@ -98,11 +106,5 @@
         // backdrop-filter: blur(60px);
       }
     }
-  }
-}
-
-.component {
-  &__dropdown {
-    @extend .form-select, .form-select-sm, .f-body, .f-text;
   }
 }

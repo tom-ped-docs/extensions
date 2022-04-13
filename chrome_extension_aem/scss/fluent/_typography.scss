@@ -9,14 +9,14 @@ $font-family: "Segoe UI Variable";
   src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
 }
 
-.f-caption {
+.caption {
   font-family: $font-family;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
-.f-body {
+.body {
   font-family: $font-family;
   font-feature-settings: 'rclt' off;
   font-size: 14px;
@@ -24,7 +24,7 @@ $font-family: "Segoe UI Variable";
   line-height: 20px;
 }
 
-.f-body-strong {
+.body-strong {
   font-family: $font-family;
   font-feature-settings: 'fina' on, 'init' on;
   font-size: 14px;
@@ -32,7 +32,7 @@ $font-family: "Segoe UI Variable";
   line-height: 20px;
 }
 
-.f-body-large {
+.body-large {
   font-family: $font-family;
   font-feature-settings: 'fina' on, 'init' on;
   font-size: 18px;
@@ -40,28 +40,28 @@ $font-family: "Segoe UI Variable";
   line-height: 24px;
 }
 
-.f-subtitle {
+.subtitle {
   font-family: $font-family;
   font-size: 20px;
   font-weight: 600;
   line-height: 28px;
 }
 
-.f-title {
+.title {
   font-family: $font-family;
   font-size: 28px;
   font-weight: 600;
   line-height: 36px;
 }
 
-.f-title-large {
+.title-large {
   font-family: $font-family;
   font-size: 40px;
   font-weight: 600;
   line-height: 52px;
 }
 
-.f-display {
+.display {
   font-family: $font-family;
   font-size: 68px;
   font-weight: 600;

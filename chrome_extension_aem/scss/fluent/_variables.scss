@@ -1,6 +1,10 @@
 /* ------------------------- Variables ------------------------- */
 
-// $prefix: f-;
+$prefix: component;
 
-$border-radius-base: 0.5rem;// 8px
-$border-radius-layer: 0.25rem;// 4px
+// ------------------------- Surfaces -------------------------
+
+// Microsoft Docs / ... / Geometry in Windows 11 https: //docs.microsoft.com/en-gb/windows/apps/design/signature-experiences/geometry
+
+$border-radius-base: 8px;
+$border-radius-layer: 4px;

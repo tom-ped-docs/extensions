@@ -1,11 +1,83 @@
 @use "bootstrap";
 
-@use "../typography";
-@use "../color";
+@use "../variables" as var;
 
+@use "../typography";
 @use "../iconography";
+@use "../colors";
 
 /* ------------------------- Expander ------------------------- */
+
+.#{var.$prefix} {
+  &__expander {
+    &-item { @extend .accordion-item; }
+
+    &-header { @extend .accordion-header; }
+
+    &-button { @extend .accordion-button; }
+
+    &-icon {
+      @extend .text;
+      font-size: 24px;
+      margin-right: 1.25rem;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-body-text { @extend .body, .text; }
+
+    &-caption { @extend .caption, .text; }
+
+    &-collapse { @extend .accordion-collapse; }
+
+    &-body {
+      @extend .accordion-body;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-icon::before { font-family: iconography.$font-family; content: "..."; }
+  }
+}
+
+.#{var.$prefix} {
+  &__card {
+    @extend .card;
+
+    &-body {
+      @extend .card-body;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-container-row {
+      display: flex;
+      // flex-direction: row;
+    }
+
+    &-icon {
+      @extend .text;
+      font-size: 24px;
+      margin-right: 1.25rem;
+    }
+
+    &-container-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-body-text { @extend .body, .text; }
+
+    &-caption { @extend .caption, .text; }
+
+    &-icon::before { font-family: iconography.$font-family; content: "..."; }
+  }
+}
 
 .accordion-button:focus {
   box-shadow: none;
@@ -71,44 +143,6 @@
   }
 }
 
-/* ------------------------- controls ------------------------- */
-
-.component {
-  &__expander {
-    &-item { @extend .accordion-item; }
-
-    &-header { @extend .accordion-header; }
-
-    &-button { @extend .accordion-button; }
-
-    &-icon {
-      @extend .f-text;
-      font-size: 24px;
-      margin-right: 1.25rem;
-    }
-
-    &-container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &-title { @extend .f-body, .f-text; }
-
-    &-subtitle { @extend .f-caption, .f-text; }
-
-    &-collapse { @extend .accordion-collapse; }
-
-    &-body {
-      @extend .accordion-body;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &-icon::before { font-family: iconography.$font-family; content: "..."; }
-  }
-}
-
 // <div class="expander__item">
 //   <span class="expander__header">
 //     <button class="expander__button collapsed" data-bs-target="#accordion" data-bs-toggle="collapse" type="button">
@@ -125,41 +159,6 @@
 //     </div>
 //   </div>
 // </div>
-
-.component {
-  &__card {
-    @extend .card;
-
-    &-body {
-      @extend .card-body;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &-container-row {
-      display: flex;
-      // flex-direction: row;
-    }
-
-    &-icon {
-      @extend .f-text;
-      font-size: 24px;
-      margin-right: 1.25rem;
-    }
-
-    &-container-column {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &-title { @extend .f-body, .f-text; }
-
-    &-subtitle { @extend .f-caption, .f-text; }
-
-    &-icon::before { font-family: iconography.$font-family; content: "..."; }
-  }
-}
 
 // <div class="card">
 //   <div class="card__body">

@@ -1,6 +1,16 @@
 @use "bootstrap";
 
+@use "../variables" as var;
+
 /* ------------------------- Toggle Switch ------------------------- */
+
+.#{var.$prefix} {
+  &__toggle-switch {
+    @extend .form-check, .form-switch;
+
+    &-inner { @extend .form-check-input; }
+  }
+}
 
 .light {
   .form-switch {
@@ -115,13 +125,5 @@
         box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px rgba(255, 255, 255, 1);
       }
     }
-  }
-}
-
-.component {
-  &__toggle-switch {
-    @extend .form-check, .form-switch;
-
-    &-inner { @extend .form-check-input; }
   }
 }

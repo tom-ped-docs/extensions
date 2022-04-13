@@ -1,7 +1,9 @@
 @use "bootstrap";
 
+@use "../variables" as var;
+
 @use "../typography";
-@use "../color";
+@use "../colors";
 
 /* ------------------------- Text Box ------------------------- */
 
@@ -9,6 +11,12 @@
 //   height: 32px;
 //   width: 120px;
 // }
+
+.#{var.$prefix} {
+  &__text-box {
+    @extend .form-control, .form-control-sm, .body, .text;
+  }
+}
 
 .light {
   // Mode: Light
@@ -71,11 +79,5 @@
       background-color: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.07);
     }
-  }
-}
-
-.component {
-  &__text-box {
-    @extend .form-control, .form-control-sm, .f-body, .f-text;
   }
 }

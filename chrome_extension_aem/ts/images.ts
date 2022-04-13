@@ -1,7 +1,7 @@
 const BODY = document.body as HTMLBodyElement;
 
 const BODY_DIV = document.createElement("div") as HTMLDivElement;
-BODY_DIV.setAttribute("class", "component ms-motion-slideUpIn");
+BODY_DIV.setAttribute("class", "component__container-base ms-motion-slideUpIn");
 BODY.appendChild(BODY_DIV);
 
 /*
@@ -9,11 +9,11 @@ BODY.appendChild(BODY_DIV);
  */
 
 const CLOSE_DIV = document.createElement("div") as HTMLDivElement;
-CLOSE_DIV.setAttribute("class", "component__inner component__container-end");
+CLOSE_DIV.setAttribute("class", "component__container-layer component__container-end");
 BODY_DIV.appendChild(CLOSE_DIV);
 
 const CLOSE_BUTTON = document.createElement("button") as HTMLButtonElement;
-CLOSE_BUTTON.setAttribute("class", "button button--standard-icon close__button-close");
+CLOSE_BUTTON.setAttribute("class", "component__button component__button--standard-icon close__button-close");
 CLOSE_BUTTON.setAttribute("type", "button");
 CLOSE_DIV.appendChild(CLOSE_BUTTON);
 
@@ -22,7 +22,7 @@ CLOSE_DIV.appendChild(CLOSE_BUTTON);
  */
 
 const SEARCH_DIV_0 = document.createElement("div") as HTMLDivElement;
-SEARCH_DIV_0.setAttribute("class", "component__inner search");
+SEARCH_DIV_0.setAttribute("class", "component__container-layer search");
 BODY_DIV.appendChild(SEARCH_DIV_0);
 
 const SEARCH_DIV_1 = document.createElement("div") as HTMLDivElement;
@@ -81,7 +81,7 @@ SEARCH_DIV_4.appendChild(SEARCH_INPUT);
  */
 
 const CONTENT_DIV_0 = document.createElement("div") as HTMLDivElement;
-CONTENT_DIV_0.setAttribute("class", "component__inner content");
+CONTENT_DIV_0.setAttribute("class", "component__container-layer content");
 BODY_DIV.appendChild(CONTENT_DIV_0);
 
 const CONTENT_DIV_1 = document.createElement("div") as HTMLDivElement;
@@ -98,7 +98,7 @@ if (IMGS !== null) {
     CONTENT_DIV_1.appendChild(CONTENT_DIV_2);
 
     const CONTENT_SPAN_0 = document.createElement("span") as HTMLSpanElement;
-    CONTENT_SPAN_0.setAttribute("class", "content__title");
+    CONTENT_SPAN_0.setAttribute("class", "content__body");
     CONTENT_DIV_2.appendChild(CONTENT_SPAN_0);
 
     const CONTENT_SPAN_0_TN = document.createTextNode("img " + i);
@@ -107,14 +107,14 @@ if (IMGS !== null) {
     i++;
 
     const CONTENT_SPAN_1 = document.createElement("span") as HTMLSpanElement;
-    CONTENT_SPAN_1.setAttribute("class", "content__subtitle-src");
+    CONTENT_SPAN_1.setAttribute("class", "content__caption-src");
     CONTENT_DIV_2.appendChild(CONTENT_SPAN_1);
 
     const CONTENT_SPAN_1_TN = document.createTextNode("src: " + img.src);
     CONTENT_SPAN_1.appendChild(CONTENT_SPAN_1_TN);
 
     const CONTENT_SPAN_2 = document.createElement("span") as HTMLSpanElement;
-    CONTENT_SPAN_2.setAttribute("class", "content__subtitle-alt");
+    CONTENT_SPAN_2.setAttribute("class", "content__caption-alt");
     CONTENT_DIV_2.appendChild(CONTENT_SPAN_2);
 
     const CONTENT_SPAN_2_TN = document.createTextNode("alt: " + img.alt);
@@ -144,19 +144,15 @@ const setFilters = () => {
 
     if (SEARCH_SELECT.options[SEARCH_SELECT.selectedIndex].value === "contains") {
       if (SPAN_TC.indexOf(SEARCH_INPUT.value) !== -1) {
-        div.classList.remove("d-none");
-        div.classList.add("d-flex");
+        div.style.display = "flex";
       } else {
-        div.classList.remove("d-flex");
-        div.classList.add("d-none");
+        div.style.display = "none";
       }
     } else {
       if (SPAN_TC.indexOf(SEARCH_INPUT.value) === -1) {
-        div.classList.remove("d-none");
-        div.classList.add("d-flex");
+        div.style.display = "flex";
       } else {
-        div.classList.remove("d-flex");
-        div.classList.add("d-none");
+        div.style.display = "none";
       }
     }
   }

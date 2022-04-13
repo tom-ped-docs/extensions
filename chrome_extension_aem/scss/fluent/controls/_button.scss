@@ -1,7 +1,9 @@
 @use "bootstrap";
 
+@use "../variables" as var;
+
 @use "../typography";
-@use "../color";
+@use "../colors";
 
 /* ------------------------- Button ------------------------- */
 
@@ -9,6 +11,26 @@
 //   height: 32px;
 //   width: 120px;
 // }
+
+.#{var.$prefix} {
+  &__button {
+    @extend .btn, .btn-sm;
+
+    &--standard { @extend .standard, .body, .text; }
+
+    &--accent { @extend .accent, .body, .text-on-accent; }
+
+    &--standard-icon {
+      @extend .standard, .text;
+      font-size: 14px;
+    }
+
+    &--accent-icon {
+      @extend .accent, .text-on-accent;
+      font-size: 14px;
+    }
+  }
+}
 
 .light {
   // Mode: Light, Style: Standard
@@ -131,25 +153,5 @@
     &:focus {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
     }
-  }
-}
-
-/* ------------------------- Variants ------------------------- */
-
-// .component { }
-
-.button {
-  @extend .btn, .btn-sm;
-
-  &--standard { @extend .standard, .f-body, .f-text; }
-  &--accent { @extend .accent, .f-body, .f-text-on-accent; }
-
-  &--standard-icon {
-    @extend .standard, .f-text;
-    font-size: 14px;
-  }
-  &--accent-icon {
-    @extend .accent, .f-text-on-accent;
-    font-size: 14px;
   }
 }

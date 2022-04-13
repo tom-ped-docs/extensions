@@ -5,15 +5,15 @@ const TOOLS = document.querySelector("#tools") as HTMLDivElement;
 // on popup ...
 chrome.storage.local.get(["is_aem_samsung_visible", "is_aem_iqos_visible", "is_tools_visible"], ({ is_aem_samsung_visible, is_aem_iqos_visible, is_tools_visible }) => {
   if (is_aem_samsung_visible === false) {
-    SAMSUNG.classList.add("d-none");
+    SAMSUNG.style.display = "none";
   }
 
   if (is_aem_iqos_visible === false) {
-    IQOS.classList.add("d-none");
+    IQOS.style.display = "none";
   }
 
   if (is_tools_visible === false) {
-    TOOLS.classList.add("d-none");
+    TOOLS.style.display = "none";
   }
 });
 

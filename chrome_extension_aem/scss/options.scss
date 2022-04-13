@@ -1,14 +1,10 @@
-@use "fluent/controls/bootstrap";
+@use "fluent/variables" as var;
 @use "fluent/containers";
-
-@use "fluent/variables";
 
 @use "fluent/typography";
 @use "fluent/iconography";
-@use "fluent/color";
+@use "fluent/colors";
 @use "fluent/surfaces";
-
-@use "fluent/motion";
 
 @use "fluent/controls/button";
 @use "fluent/controls/dropdown";
@@ -18,17 +14,20 @@
 @use "fluent/controls/scroll_viewer";
 @use "fluent/controls/tooltip";
 
+@use "fluent/motion";
+
 /* ------------------------- options.html ------------------------- */
 
-.component {
-  border: unset !important;
+.#{var.$prefix} {
+  &__container-base {
+    border: unset !important;
+  }
 
-  &__inner {
-    // @extend .container;
+  &__container-layer {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    // border-radius: variables.$border-radius-base;
+    // border-radius: var.$border-radius-base;
   }
 
   &__toggle-switch {
@@ -36,20 +35,18 @@
   }
 }
 
-// bootstrap-components + fluent-controls (f-typography, f-color, f-iconography), f-surfaces, bootstrap-utilities, CSS
-
 .heading {
-  @extend .f-text, .text-muted;
+  @extend .text;
   display: block;
 
-  &--options {
+  &__title {
     // { a }
-    @extend .f-title;
+    @extend .title;
   }
 
-  &--aem-samsung {
+  &__body-strong {
     // { a }
-    @extend .f-body-strong;
+    @extend .body-strong;
     margin-top: 0.5rem
   }
 }
@@ -68,21 +65,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
     width: 200px;
+    height: 100px;
   }
 
   &__icon {
-    width: 4rem;
-    height: 4rem;
+    width: 64px;
+    height: 64px;
   }
 
   &__container-column {
     display: flex;
     flex-direction: column;
+    // align-items: center;
   }
 
-  &__title { @extend .f-body, .f-text; }
+  &__body { @extend .body, .text; }
 }
 
 .appearance {
@@ -90,6 +88,7 @@
   margin-top: 0.5rem;
 
   // &__icon-personalize { i }
+
   &__select-theme { width: 10rem; }
 
   // Personalize
@@ -101,6 +100,7 @@
   margin-top: 0.5rem;
 
   // &__icon-keyboard { i }
+
   // &__button-open { i }
 
   // KeyboardShortcut
@@ -117,7 +117,7 @@
 
   &__container { display: flex; }
 
-  &__span { @extend .f-body, .f-text; }
+  &__body { @extend .body, .text; }
 
   // View
   &__icon-view::before { font-family: iconography.$font-family; content: "\e890"; }
@@ -128,6 +128,7 @@
   margin-top: 0.5rem;
 
   // &__icon-robot { i }
+
   &__container { display: flex; }
 
   &__input-login { width: 20rem; }
