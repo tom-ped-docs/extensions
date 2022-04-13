@@ -174,7 +174,7 @@ const ANCHORS = CONTENT_DIV_1.querySelectorAll("a");
 for (let anchor of Array.from(ANCHORS)) {
   anchor.addEventListener("click", () => {
     for (let img of Array.from(IMGS)) {
-      let href = anchor.href;
+      let href: string = anchor.href;
 
       href = href.slice(href.length - img.id.length);
 

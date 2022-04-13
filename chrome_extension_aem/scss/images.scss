@@ -61,7 +61,7 @@ html.dark {
     bottom: 0;
     left: 0;
     z-index: 999;
-    margin: 0.5rem;
+    margin: var.$spacer;
     border-radius: var.$border-radius-base;
   }
 }
@@ -73,12 +73,12 @@ html.dark {
   &__button-close::before { font-family: iconography.$font-family; content: "\e8bb"; }
 }
 
-.search { margin-top: 0.5rem; }
+.search { margin-top: var.$spacer; }
 
 .content {
   width: 25rem;
   height: 25rem;
-  margin-top: 0.5rem;
+  margin-top: var.$spacer;
 
   &__container {
     overflow: scroll;
@@ -88,7 +88,7 @@ html.dark {
   &__container-inner {
     display: flex;
     flex-direction: column;
-    margin-top: 0.5rem
+    margin-top: var.$spacer
 
   }
   &__container-inner:first-child { margin-top: 0; }

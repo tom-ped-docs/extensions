@@ -5,13 +5,13 @@
 .#{var.$prefix} {
   &__container-base {
     @extend .app-surface-base;
-    padding: 0.5rem;
+    padding: var.$spacer;
     // border-radius: var.$border-radius-base;
   }
 
   &__container-layer {
     @extend .app-surface-layer;
-    padding: 0.5rem;
+    padding: var.$spacer;
     border-radius: var.$border-radius-layer;
   }
 }

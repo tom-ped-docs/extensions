@@ -329,12 +329,14 @@ document.querySelector("#iqos__button-sites").addEventListener("click", () => {
 document.querySelector("#iqos__button-assets").addEventListener("click", () => {
     chrome.storage.local.get(["URL_IQOS", "selected_aem_iqos", "url_iqos", "COUNTRIES_IQOS"], ({ URL_IQOS, selected_aem_iqos, url_iqos, COUNTRIES_IQOS }) => {
         let url = url_iqos.slice(0, 3);
+        let assets_url = URL_IQOS[selected_aem_iqos] + URL_IQOS.assets;
         if (url[2] === "/") {
             url = url.slice(0, 2);
             if (COUNTRIES_IQOS[url]) {
-                chrome.tabs.create({ url: URL_IQOS[selected_aem_iqos] + URL_IQOS.assets + "/" + COUNTRIES_IQOS[url] });
+                assets_url = assets_url + "/" + COUNTRIES_IQOS[url];
             }
         }
+        chrome.tabs.create({ url: assets_url });
     });
 });
 document.querySelector("#iqos__button-grfalse").addEventListener("click", () => {

@@ -25,7 +25,7 @@
   // { a }
 
   &__button-images,
-  &__button-options { margin-right: 0.5rem; }
+  &__button-options { margin-right: var.$spacer; }
   // &__button-help { i }
 
   // ImageExport
@@ -37,7 +37,7 @@
 }
 
 .aem {
-    margin-top: 0.5rem;
+    margin-top: var.$spacer;
     transition-timing-function: ease;
     transition-duration: 0.5s;
     transition-property: background-color;
@@ -52,7 +52,7 @@
     // &__select-site { a }
     // &__input-url { a }
 
-    &__container { margin-top: 0.5rem; }
+    &__container { margin-top: var.$spacer; }
 
     &__btn-group-editor { width: 5rem; }
     // &__button-editor { i }
@@ -67,7 +67,7 @@
     &__button-age-gate,
     &__button-purging,
     &__button-pim-b2c,
-    &__button-pim-b2b { margin-left: 0.5rem; }
+    &__button-pim-b2b { margin-left: var.$spacer; }
 
     &__button-task-management,
     &__button-workflows {
@@ -87,7 +87,7 @@
 
 .tools {
   // { a }
-  margin-top: 0.5rem;
+  margin-top: var.$spacer;
 
   // component__input-group { a }
   // &__button-paste { i }
@@ -98,7 +98,7 @@
 
   &__btn-group-cut-copy {
     width: 5rem;
-    margin-left: 0.5rem;
+    margin-left: var.$spacer;
   }
   // &__button-cut { i }
   // &__button-copy { i }

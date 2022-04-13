@@ -31,7 +31,7 @@
   }
 
   &__toggle-switch {
-    margin-left: 0.5rem;
+    margin-left: var.$spacer;
   }
 }
 
@@ -47,13 +47,13 @@
   &__body-strong {
     // { a }
     @extend .body-strong;
-    margin-top: 0.5rem
+    margin-top: var.$spacer;
   }
 }
 
 .about {
   // { a }
-  margin-top: 0.5rem;
+  margin-top: var.$spacer;
 
   &__container-row {
     display: flex;
@@ -85,7 +85,7 @@
 
 .appearance {
   // { a }
-  margin-top: 0.5rem;
+  margin-top: var.$spacer;
 
   // &__icon-personalize { i }
 
@@ -97,7 +97,7 @@
 
 .shortcuts {
   // { a }
-  margin-top: 0.5rem;
+  margin-top: var.$spacer;
 
   // &__icon-keyboard { i }
 
@@ -111,7 +111,7 @@
 
 .extensions {
   // { a }
-  margin-top: 0.5rem;
+  margin-top: var.$spacer;
 
   // &__icon-view { i }
 
@@ -125,7 +125,7 @@
 
 .aem-samsung {
   // { a }
-  margin-top: 0.5rem;
+  margin-top: var.$spacer;
 
   // &__icon-robot { i }
 
@@ -133,7 +133,7 @@
 
   &__input-login { width: 20rem; }
 
-  &__button-save { margin-left: 0.5rem; }
+  &__button-save { margin-left: var.$spacer; }
 
   // Robot
   &__icon-robot::before   { font-family: iconography.$font-family; content: "\e99a"; }
