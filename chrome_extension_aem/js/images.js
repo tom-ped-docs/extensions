@@ -68,25 +68,27 @@ const IMGS = document.querySelectorAll("img");
 let i = 0;
 if (IMGS !== null) {
     for (let img of Array.from(IMGS)) {
+        img.setAttribute("id", "img_" + i);
         const CONTENT_DIV_2 = document.createElement("div");
         CONTENT_DIV_2.setAttribute("class", "content__container-inner");
         CONTENT_DIV_1.appendChild(CONTENT_DIV_2);
-        const CONTENT_SPAN_0 = document.createElement("span");
-        CONTENT_SPAN_0.setAttribute("class", "content__body");
-        CONTENT_DIV_2.appendChild(CONTENT_SPAN_0);
-        const CONTENT_SPAN_0_TN = document.createTextNode("img " + i);
-        CONTENT_SPAN_0.appendChild(CONTENT_SPAN_0_TN);
+        const CONTENT_A = document.createElement("a");
+        CONTENT_A.setAttribute("class", "content__body");
+        CONTENT_A.setAttribute("href", "#img_" + i);
+        CONTENT_DIV_2.appendChild(CONTENT_A);
+        const CONTENT_A_TN = document.createTextNode("img " + i);
+        CONTENT_A.appendChild(CONTENT_A_TN);
         i++;
+        const CONTENT_SPAN_0 = document.createElement("span");
+        CONTENT_SPAN_0.setAttribute("class", "content__caption-src");
+        CONTENT_DIV_2.appendChild(CONTENT_SPAN_0);
+        const CONTENT_SPAN_0_TN = document.createTextNode("src: " + img.src);
+        CONTENT_SPAN_0.appendChild(CONTENT_SPAN_0_TN);
         const CONTENT_SPAN_1 = document.createElement("span");
-        CONTENT_SPAN_1.setAttribute("class", "content__caption-src");
+        CONTENT_SPAN_1.setAttribute("class", "content__caption-alt");
         CONTENT_DIV_2.appendChild(CONTENT_SPAN_1);
-        const CONTENT_SPAN_1_TN = document.createTextNode("src: " + img.src);
+        const CONTENT_SPAN_1_TN = document.createTextNode("alt: " + img.alt);
         CONTENT_SPAN_1.appendChild(CONTENT_SPAN_1_TN);
-        const CONTENT_SPAN_2 = document.createElement("span");
-        CONTENT_SPAN_2.setAttribute("class", "content__caption-alt");
-        CONTENT_DIV_2.appendChild(CONTENT_SPAN_2);
-        const CONTENT_SPAN_2_TN = document.createTextNode("alt: " + img.alt);
-        CONTENT_SPAN_2.appendChild(CONTENT_SPAN_2_TN);
     }
 }
 // ms-motion-slideUpIn animation
@@ -128,3 +130,15 @@ SEARCH_SELECT.addEventListener("change", () => {
 SEARCH_INPUT.addEventListener("keyup", () => {
     setFilters();
 });
+const ANCHORS = CONTENT_DIV_1.querySelectorAll("a");
+for (let anchor of Array.from(ANCHORS)) {
+    anchor.addEventListener("click", () => {
+        for (let img of Array.from(IMGS)) {
+            let href = anchor.href;
+            href = href.slice(href.length - img.id.length);
+            if (href === img.id) {
+                img.classList.add("focus");
+            }
+        }
+    });
+}

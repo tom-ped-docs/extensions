@@ -10,6 +10,7 @@
 .#{var.$prefix} {
   &__dropdown {
     @extend .form-select, .form-select-sm, .body, .text;
+    height: 32px;
   }
 }
 

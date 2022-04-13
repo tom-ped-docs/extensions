@@ -15,6 +15,7 @@
 .#{var.$prefix} {
   &__text-box {
     @extend .form-control, .form-control-sm, .body, .text;
+    height: 32px;
   }
 }
 

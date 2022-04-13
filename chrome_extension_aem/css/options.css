@@ -3750,6 +3750,9 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Button ------------------------- */
+.component__button {
+  height: 32px;
+}
 .component__button--standard-icon {
   font-size: 14px;
 }
@@ -3840,6 +3843,10 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Dropdown ------------------------- */
+.component__dropdown {
+  height: 32px;
+}
+
 .light .form-select, .light .component__dropdown {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
@@ -3971,8 +3978,8 @@ textarea.form-control-lg {
 
 /* ------------------------- Expander ------------------------- */
 .component__expander-icon {
-  font-size: 24px;
   margin-right: 1.25rem;
+  font-size: 24px;
 }
 .component__expander-container {
   display: flex;
@@ -3980,8 +3987,8 @@ textarea.form-control-lg {
 }
 .component__expander-body {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .component__expander-icon::before {
   font-family: "Segoe Fluent Icons";
@@ -3990,15 +3997,15 @@ textarea.form-control-lg {
 
 .component__card-body {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .component__card-container-row {
   display: flex;
 }
 .component__card-icon {
-  font-size: 24px;
   margin-right: 1.25rem;
+  font-size: 24px;
 }
 .component__card-container-column {
   display: flex;
@@ -4057,6 +4064,10 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Text Box ------------------------- */
+.component__text-box {
+  height: 32px;
+}
+
 .light input.form-control, .light input.component__text-box {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
@@ -4441,8 +4452,8 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 .component__container-layer {
   width: 75%;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 .component__toggle-switch {
   margin-left: 0.5rem;
@@ -4464,8 +4475,8 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 .about__container-center {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 200px;
   height: 100px;
 }

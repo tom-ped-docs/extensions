@@ -60,9 +60,9 @@ html.dark {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 999;
     margin: 0.5rem;
     border-radius: var.$border-radius-base;
-    z-index: 999;
   }
 }
 
@@ -76,9 +76,9 @@ html.dark {
 .search { margin-top: 0.5rem; }
 
 .content {
-  margin-top: 0.5rem;
   width: 25rem;
   height: 25rem;
+  margin-top: 0.5rem;
 
   &__container {
     overflow: scroll;
@@ -104,6 +104,11 @@ html.dark {
 
   &__caption-src,
   &__caption-alt { @extend .caption, .cascadia-code-italic; }
+}
+
+.focus {
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
 // ------------------------- Motion 2 -------------------------

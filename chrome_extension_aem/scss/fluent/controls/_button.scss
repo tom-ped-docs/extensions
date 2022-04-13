@@ -15,6 +15,7 @@
 .#{var.$prefix} {
   &__button {
     @extend .btn, .btn-sm;
+    height: 32px;
 
     &--standard { @extend .standard, .body, .text; }
 

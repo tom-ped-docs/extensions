@@ -3745,6 +3745,9 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Button ------------------------- */
+.component__button {
+  height: 32px;
+}
 .component__button--standard-icon {
   font-size: 14px;
 }
@@ -3835,6 +3838,10 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Dropdown ------------------------- */
+.component__dropdown {
+  height: 32px;
+}
+
 .light .form-select, .light .component__dropdown {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
@@ -3890,6 +3897,10 @@ textarea.form-control-lg {
 }
 
 /* ------------------------- Text Box ------------------------- */
+.component__text-box {
+  height: 32px;
+}
+
 .light input.form-control, .light input.component__text-box {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
@@ -4295,8 +4306,8 @@ textarea.form-control-lg {
   width: 7.5rem;
 }
 .tools__btn-group-cut-copy {
-  margin-left: 0.5rem;
   width: 5rem;
+  margin-left: 0.5rem;
 }
 .tools__button-paste::before {
   font-family: "Segoe Fluent Icons";

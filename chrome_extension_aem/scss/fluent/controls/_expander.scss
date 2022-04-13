@@ -18,8 +18,8 @@
 
     &-icon {
       @extend .text;
-      font-size: 24px;
       margin-right: 1.25rem;
+      font-size: 24px;
     }
 
     &-container {
@@ -36,8 +36,8 @@
     &-body {
       @extend .accordion-body;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     &-icon::before { font-family: iconography.$font-family; content: "..."; }
@@ -51,8 +51,8 @@
     &-body {
       @extend .card-body;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     &-container-row {
@@ -62,8 +62,8 @@
 
     &-icon {
       @extend .text;
-      font-size: 24px;
       margin-right: 1.25rem;
+      font-size: 24px;
     }
 
     &-container-column {
