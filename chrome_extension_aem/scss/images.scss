@@ -19,14 +19,10 @@
   src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
 }
 
-.cascadia-code { font-family: "Cascadia Code"; }
-
 @font-face {
   font-family: "Cascadia Code Italic";
   src: url(../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
 }
-
-.cascadia-code-italic { font-family: "Cascadia Code Italic"; }
 
 // ------------------------- Scroll Bar (Scroll Viewer) 2 -------------------------
 
@@ -88,9 +84,9 @@ html.dark {
   &__container-inner {
     display: flex;
     flex-direction: column;
-    margin-top: var.$spacer
-
+    margin-top: var.$spacer;
   }
+
   &__container-inner:first-child { margin-top: 0; }
 
   &__body,
@@ -100,16 +96,19 @@ html.dark {
     white-space: nowrap;
   }
 
-  &__body { @extend .body, .cascadia-code; }
+  &__body {
+    @extend .body;
+    font-family: "Cascadia Code";
+  }
 
   &__caption-src,
-  &__caption-alt { @extend .caption, .cascadia-code-italic; }
+  &__caption-alt {
+    @extend .caption;
+    font-family: "Cascadia Code Italic";
+  }
 }
 
-.focus {
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
-}
+.focus { box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9); }
 
 // ------------------------- Motion 2 -------------------------
 

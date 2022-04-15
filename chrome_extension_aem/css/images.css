@@ -4215,18 +4215,10 @@ textarea.form-control-lg {
   font-family: "Cascadia Code";
   src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
 }
-.cascadia-code, .content__body {
-  font-family: "Cascadia Code";
-}
-
 @font-face {
   font-family: "Cascadia Code Italic";
   src: url(../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
 }
-.cascadia-code-italic, .content__caption-src, .content__caption-alt {
-  font-family: "Cascadia Code Italic";
-}
-
 .content ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
@@ -4285,8 +4277,14 @@ html.dark .content ::-webkit-scrollbar-thumb {
 .content__body, .content__caption-src, .content__caption-alt {
   white-space: nowrap;
 }
+.content__body {
+  font-family: "Cascadia Code";
+}
+.content__caption-src, .content__caption-alt {
+  font-family: "Cascadia Code Italic";
+}
+
 .focus {
-  border-radius: 4px;
   box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 

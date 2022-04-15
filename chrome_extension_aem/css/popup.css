@@ -4250,16 +4250,16 @@ textarea.form-control-lg {
 .toolbar__button-images, .toolbar__button-options {
   margin-right: 0.5rem;
 }
-.toolbar__button-images::before {
+.toolbar__button-images::before, .toolbar__button-options::before, .toolbar__button-help::before {
   font-family: "Segoe Fluent Icons";
+}
+.toolbar__button-images::before {
   content: "\ee71";
 }
 .toolbar__button-options::before {
-  font-family: "Segoe Fluent Icons";
   content: "\e713";
 }
 .toolbar__button-help::before {
-  font-family: "Segoe Fluent Icons";
   content: "\e897";
 }
 
@@ -4283,16 +4283,16 @@ textarea.form-control-lg {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.aem__button-login::before {
+.aem__button-login::before, .aem__button-editor::before, .aem__button-preview::before {
   font-family: "Segoe Fluent Icons";
+}
+.aem__button-login::before {
   content: "\e8a7";
 }
 .aem__button-editor::before {
-  font-family: "Segoe Fluent Icons";
   content: "\e70f";
 }
 .aem__button-preview::before {
-  font-family: "Segoe Fluent Icons";
   content: "\e890";
 }
 
@@ -4309,16 +4309,16 @@ textarea.form-control-lg {
   width: 5rem;
   margin-left: 0.5rem;
 }
-.tools__button-paste::before {
+.tools__button-paste::before, .tools__button-cut::before, .tools__button-copy::before {
   font-family: "Segoe Fluent Icons";
+}
+.tools__button-paste::before {
   content: "\e77f";
 }
 .tools__button-cut::before {
-  font-family: "Segoe Fluent Icons";
   content: "\e8c6";
 }
 .tools__button-copy::before {
-  font-family: "Segoe Fluent Icons";
   content: "\e8c8";
 }
 

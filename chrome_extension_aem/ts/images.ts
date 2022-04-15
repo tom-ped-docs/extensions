@@ -159,7 +159,7 @@ const setFilters = () => {
       }
     }
   }
-}
+};
 
 SEARCH_SELECT.addEventListener("change", () => {
   setFilters();

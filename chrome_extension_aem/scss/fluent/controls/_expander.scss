@@ -58,6 +58,7 @@
     &-container-row {
       display: flex;
       // flex-direction: row;
+      align-items: center;
     }
 
     &-icon {
@@ -69,6 +70,7 @@
     &-container-column {
       display: flex;
       flex-direction: column;
+      // align-items: center;
     }
 
     &-body-text { @extend .body, .text; }
@@ -143,30 +145,30 @@
   }
 }
 
-// <div class="expander__item">
-//   <span class="expander__header">
-//     <button class="expander__button collapsed" data-bs-target="#accordion" data-bs-toggle="collapse" type="button">
-//       <span class="expander__icon"></span>
-//       <div class="expander__container">
-//         <span class="expander__title">Text</span>
-//         <span class="expander__subtitle">Text</span>
+// <div class="component__expander-item">
+//   <span class="component__expander-header">
+//     <button class="component__expander-button collapsed" data-bs-target="#accordion" data-bs-toggle="collapse" type="button">
+//       <span class="component__expander-icon"></span>
+//       <div class="component__expander-container">
+//         <span class="component__expander-body-text">Text</span>
+//         <span class="component__expander-caption">Text</span>
 //       </div>
 //     </button>
 //   </span>
-//   <div class="expander__collapse collapse" id="accordion">
-//     <div class="expander__body">
+//   <div class="component__expander-collapse collapse" id="accordion">
+//     <div class="component__expander-body">
 //       <!-- ... -->
 //     </div>
 //   </div>
 // </div>
 
-// <div class="card">
-//   <div class="card__body">
-//     <div class="card__container-row">
-//       <span class="card__icon"></span>
-//       <div class="card__container-column">
-//         <span class="card__title">Text</span>
-//         <span class="card__subtitle">Text</span>
+// <div class="component__card">
+//   <div class="component__card-body">
+//     <div class="component__card-container-row">
+//       <span class="component__card-icon"></span>
+//       <div class="component__card-container-column">
+//         <span class="component__card-body-text">Text</span>
+//         <span class="component__card-caption">Text</span>
 //       </div>
 //     </div>
 //     <!-- ... -->

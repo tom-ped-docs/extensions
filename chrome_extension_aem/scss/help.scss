@@ -1,1 +1,76 @@
+@use "fluent/variables"as var;
+@use "fluent/containers";
+
+@use "fluent/typography";
+@use "fluent/iconography";
+@use "fluent/colors";
+@use "fluent/surfaces";
+
+@use "fluent/controls/button";
+@use "fluent/controls/expander";
+@use "fluent/controls/scroll_viewer";
+
+// ------------------------- Typography 2 -------------------------
+
+@font-face {
+  font-family: "Cascadia Code";
+  src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
+}
+
 /* ------------------------- help.html ------------------------- */
+
+.#{var.$prefix} {
+  &__container-base { border: unset !important; }
+
+  &__container-layer {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__button {
+    &--standard { width: 5rem; }
+  }
+
+  &__card { margin-top: var.$spacer; }
+}
+
+.heading {
+  @extend .text;
+  display: block;
+
+  &__title { @extend .title; }
+}
+
+.aem {
+  &__btn-group-editor { width: 5rem; }
+
+  // &__button-editor { i }
+
+  // &__button-preview { i }
+
+  &__button-editor::before,
+  &__button-preview::before { font-family: iconography.$font-family; }
+
+  // Edit
+  &__button-editor::before { content: "\e70f"; }
+
+  // View
+  &__button-preview::before { content: "\e890"; }
+
+  &__button-qa-login,
+  &__button-qa-live,
+  &__button-pim-b2b { margin-top: var.$spacer; }
+
+  &__button-task-management,
+  &__button-workflows {
+    // .text-truncate
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.text {
+  &__container { margin-left: var.$spacer; }
+}

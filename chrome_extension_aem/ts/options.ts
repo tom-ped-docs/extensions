@@ -70,7 +70,7 @@ const setAttributes = (INPUT: HTMLInputElement, is_visible: string, SPAN: HTMLSp
     SPAN.textContent = "On";
     INPUT.setAttribute("checked", "");
   }
-}
+};
 
 // set "is_aem_samsung_visible" var
 EXTENSIONS__INPUT_SAMSUNG.addEventListener("click", () => {

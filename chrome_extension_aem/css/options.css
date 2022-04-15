@@ -4002,6 +4002,7 @@ textarea.form-control-lg {
 }
 .component__card-container-row {
   display: flex;
+  align-items: center;
 }
 .component__card-icon {
   margin-right: 1.25rem;
@@ -4477,8 +4478,8 @@ html.dark ::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 100px;
+  width: 192px;
+  height: 128px;
 }
 .about__icon {
   width: 64px;
@@ -4502,12 +4503,13 @@ html.dark ::-webkit-scrollbar-thumb {
 .shortcuts {
   margin-top: 0.5rem;
 }
-.shortcuts__icon-keyboard::before {
+.shortcuts__icon-keyboard::before, .shortcuts__button-open::before {
   font-family: "Segoe Fluent Icons";
+}
+.shortcuts__icon-keyboard::before {
   content: "\eda7";
 }
 .shortcuts__button-open::before {
-  font-family: "Segoe Fluent Icons";
   content: "\e8a7";
 }
 
@@ -4534,12 +4536,13 @@ html.dark ::-webkit-scrollbar-thumb {
 .aem-samsung__button-save {
   margin-left: 0.5rem;
 }
-.aem-samsung__icon-robot::before {
+.aem-samsung__icon-robot::before, .aem-samsung__button-save::before {
   font-family: "Segoe Fluent Icons";
+}
+.aem-samsung__icon-robot::before {
   content: "\e99a";
 }
 .aem-samsung__button-save::before {
-  font-family: "Segoe Fluent Icons";
   content: "\e74e";
 }
 

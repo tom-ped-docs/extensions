@@ -26,14 +26,21 @@
 
   &__button-images,
   &__button-options { margin-right: var.$spacer; }
+
   // &__button-help { i }
 
+  &__button-images::before,
+  &__button-options::before,
+  &__button-help::before { font-family: iconography.$font-family; }
+
   // ImageExport
-  &__button-images::before  { font-family: iconography.$font-family; content: "\ee71"; }
+  &__button-images::before { content: "\ee71"; }
+
   // Settings
-  &__button-options::before { font-family: iconography.$font-family; content: "\e713"; }
+  &__button-options::before { content: "\e713"; }
+
   // Help
-  &__button-help::before    { font-family: iconography.$font-family; content: "\e897"; }
+  &__button-help::before { content: "\e897"; }
 }
 
 .aem {
@@ -45,17 +52,23 @@
     &--critical { @extend .critical-background; }
 
     // &__samsung { a }
+
     // &__iqos { a }
 
     // component__input-group { a }
+
     // &__button-login { i }
+
     // &__select-site { a }
+
     // &__input-url { a }
 
     &__container { margin-top: var.$spacer; }
 
     &__btn-group-editor { width: 5rem; }
+
     // &__button-editor { i }
+
     // &__button-preview { i }
 
     &__button-qa,
@@ -71,18 +84,24 @@
 
     &__button-task-management,
     &__button-workflows {
-      // .text-truncate;
+      // .text-truncate
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
 
+    &__button-login::before,
+    &__button-editor::before,
+    &__button-preview::before { font-family: iconography.$font-family; }
+
     // OpenInNewWindow
-    &__button-login::before   { font-family: iconography.$font-family; content: "\e8a7"; }
+    &__button-login::before { content: "\e8a7"; }
+
     // Edit
-    &__button-editor::before  { font-family: iconography.$font-family; content: "\e70f"; }
+    &__button-editor::before { content: "\e70f"; }
+
     // View
-    &__button-preview::before { font-family: iconography.$font-family; content: "\e890"; }
+    &__button-preview::before { content: "\e890"; }
 }
 
 .tools {
@@ -90,6 +109,7 @@
   margin-top: var.$spacer;
 
   // component__input-group { a }
+
   // &__button-paste { i }
 
   &__container { display: flex; }
@@ -100,15 +120,23 @@
     width: 5rem;
     margin-left: var.$spacer;
   }
+
   // &__button-cut { i }
+
   // &__button-copy { i }
 
+  &__button-paste::before,
+  &__button-cut::before,
+  &__button-copy::before { font-family: iconography.$font-family; }
+
   // Paste
-  &__button-paste::before { font-family: iconography.$font-family; content: "\e77f"; }
+  &__button-paste::before { content: "\e77f"; }
+
   // Cut
-  &__button-cut::before   { font-family: iconography.$font-family; content: "\e8c6"; }
+  &__button-cut::before { content: "\e8c6"; }
+
   // Copy
-  &__button-copy::before  { font-family: iconography.$font-family; content: "\e8c8"; }
+  &__button-copy::before { content: "\e8c8"; }
 }
 
 // ------------------------- Motion 2 -------------------------

@@ -42,7 +42,7 @@ document.querySelector("#toolbar__button-images").addEventListener("click", () =
     });
 
     window.close();
-  }
+  };
   query_3();
 });
 
@@ -85,7 +85,7 @@ const setAttributesSamsung = () => {
       SAMSUNG__BUTTON_TASK_MANAGEMENT.removeAttribute("disabled");
     }
   });
-}
+};
 setAttributesSamsung();
 
 // set "selected_aem_samsung" var
@@ -133,7 +133,7 @@ const setUrl = (url: string): string => {
 
   url = url.toLowerCase();
   return url;
-}
+};
 
 // set "url_samsung" var
 SAMSUNG__INPUT_URL.addEventListener("input", () => {
@@ -273,7 +273,7 @@ const setAttributesIqos = () => {
       IQOS__BUTTON_QA_LOGIN.removeAttribute("disabled");
     }
   });
-}
+};
 setAttributesIqos();
 
 // set "selected_aem_iqos" var
@@ -411,7 +411,7 @@ document.querySelector("#iqos__button-grfalse").addEventListener("click", () => 
     });
 
     window.close();
-  }
+  };
   query_1();
 });
 
@@ -455,7 +455,7 @@ const setSelect = () => {
       }
     }
   }
-}
+};
 
 document.querySelector("#iqos__button-age-gate").addEventListener("click", () => {
   const query_2 = async () => {
@@ -467,7 +467,7 @@ document.querySelector("#iqos__button-age-gate").addEventListener("click", () =>
     });
 
     window.close();
-  }
+  };
   query_2();
 });
 

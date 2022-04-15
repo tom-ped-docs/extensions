@@ -27,7 +27,6 @@
     width: 75%;
     margin-right: auto;
     margin-left: auto;
-    // border-radius: var.$border-radius-base;
   }
 
   &__toggle-switch {
@@ -65,8 +64,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 100px;
+    width: 192px;
+    height: 128px;
   }
 
   &__icon {
@@ -103,10 +102,14 @@
 
   // &__button-open { i }
 
+  &__icon-keyboard::before,
+  &__button-open::before { font-family: iconography.$font-family; }
+
   // KeyboardShortcut
-  &__icon-keyboard::before  { font-family: iconography.$font-family; content: "\eda7"; }
+  &__icon-keyboard::before { content: "\eda7"; }
+
   // OpenInNewWindow
-  &__button-open::before    { font-family: iconography.$font-family; content: "\e8a7"; }
+  &__button-open::before { content: "\e8a7"; }
 }
 
 .extensions {
@@ -135,10 +138,14 @@
 
   &__button-save { margin-left: var.$spacer; }
 
+  &__icon-robot::before,
+  &__button-save::before { font-family: iconography.$font-family; }
+
   // Robot
-  &__icon-robot::before   { font-family: iconography.$font-family; content: "\e99a"; }
+  &__icon-robot::before { content: "\e99a"; }
+
   // Save
-  &__button-save::before  { font-family: iconography.$font-family; content: "\e74e"; }
+  &__button-save::before { content: "\e74e"; }
 }
 
 // ------------------------- Motion 2 -------------------------
