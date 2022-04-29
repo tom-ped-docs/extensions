@@ -40,7 +40,21 @@ APPEARANCE__SELECT_THEME.addEventListener("change", () => {
 /*
  * ------------------------- shortcuts -------------------------
  */
-document.querySelector("#shortcuts__button-open").addEventListener("click", () => {
+const SHORTCUTS__BUTTON_EDIT = document.querySelector("#shortcuts__button-edit");
+// on popup ...
+const setShortcuts = () => {
+    const MANIFEST = chrome.runtime.getManifest();
+    const COMMANDS = MANIFEST.commands._execute_action.suggested_key.default;
+    const KEYS = COMMANDS.split("+");
+    for (let key of KEYS) {
+        const BUTTON = document.createElement("button");
+        BUTTON.setAttribute("class", "button button--accent shortcuts__key");
+        BUTTON.textContent = key;
+        SHORTCUTS__BUTTON_EDIT.parentElement.insertBefore(BUTTON, SHORTCUTS__BUTTON_EDIT);
+    }
+};
+setShortcuts();
+SHORTCUTS__BUTTON_EDIT.addEventListener("click", () => {
     chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
 });
 /*

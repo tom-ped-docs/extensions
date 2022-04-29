@@ -11,195 +11,264 @@
   <title>Help</title>
 </head>
 
-<body class="component__container-base">
-  <div class="component__container-layer">
-    <span class="heading heading__title">Help</span>
+<body class="surface-base surface-base__page">
 
-    <!-- aem__btn-group-editor -->
+  <div class="container-start">
 
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <div class="component__btn-group aem__btn-group-editor">
-            <button class="component__button component__button--standard-icon aem__button-editor" type="button"></button>
-            <button class="component__button component__button--standard-icon aem__button-preview" type="button"></button>
-          </div>
+    <div class="side-nav">
+      <div class="side-nav__list-item">
+        <span class="side-nav__selector"></span>
+        <span class="side-nav__icon nav__icon-options"></span>
+        <span class="side-nav__body">Options</span>
+        <a class="side-nav__stretched-link" href="options.html"></a>
+      </div>
 
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
-          </div>
-        </div>
+      <div class="side-nav__list-item side-nav__list-item--selected">
+        <span class="side-nav__selector side-nav__selector--selected"></span>
+        <span class="side-nav__icon nav__icon-help"></span>
+        <span class="side-nav__body">Help</span>
+        <a class="side-nav__stretched-link" href="#"></a>
+      </div>
+
+      <div class="side-nav__list-item">
+        <span class="side-nav__selector"></span>
+        <span class="side-nav__icon nav__icon-about"></span>
+        <span class="side-nav__body">About</span>
+        <a class="side-nav__stretched-link" href="about.html"></a>
       </div>
     </div>
 
-    <!-- aem__button-qa, aem__button-qa-login -->
+    <div class="surface-layer surface-layer__page">
 
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <div class="component__card-container-column">
-            <button class="component__button component__button--standard aem__button-qa" type="button">qa</button>
-            <button class="component__button component__button--standard aem__button-qa-login" type="button">qa login</button>
+      <span class="heading heading__title">Extension 101</span>
+
+      <div class="surface-layer__container">
+
+        <div class="info-bar info-bar--informational block__info-bar">
+          <div class="info-bar__single-line">
+            <span class="badge badge--attention"></span>
+            <span class="info-bar__body-strong">How to use this extension?</span>
           </div>
-
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- aem__button-live, aem__button-qa-live -->
-
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <div class="component__card-container-column">
-            <button class="component__button component__button--standard aem__button-live" type="button">live</button>
-            <button class="component__button component__button--standard aem__button-qa-live" type="button">qa / live</button>
-          </div>
-
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
+          <div class="info-bar__multi-line">
+            <span class="info-bar__body info-bar__body--list-item">Log in to the selected version of AEM.</span>
+            <span class="info-bar__body info-bar__body--list-item">Enter page url and use buttons that open the page in the selected environment.</span>
+            <span class="info-bar__body info-bar__body--list-item">Or use shortcuts that open various AEM tools.</span>
+            <span class="info-bar__body info-bar__body--list-item">Or use buttons modifying the active page.</span>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- aem__button-sites -->
+        <!-- ... -->
 
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <button class="component__button component__button--standard aem__button-sites" type="button">sites</button>
+        <span class="heading heading__subtitle">Extensions shortcuts</span>
 
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
+        <div class="block">
+          <button class="button button--standard-icon block__button-images" type="button"></button>
+          <span class="block__body">Opens a popup listing and filtering images on the active page.</span>
+        </div>
+
+        <div class="block">
+          <button class="button button--standard-icon block__button-options" type="button"></button>
+          <span class="block__body">Opens extension's options page.</span>
+        </div>
+
+        <div class="block">
+          <button class="button button--standard-icon block__button-help" type="button"></button>
+          <span class="block__body">Opens extension's help page.</span>
+        </div>
+
+        <!-- ... -->
+
+        <span class="heading heading__subtitle">AEM selects, login buttons & url inputs</span>
+
+        <div class="block">
+          <select class="dropdown block__dropdown">
+            <option value="p5_aem">p5 aem</option>
+            <option value="p5_aem_eu">p5 aem eu</option>
+            <option value="p5_aem_eu_shop">p5 aem eu shop</option>
+            <option value="p6_aem_ap">p6 aem ap</option>
+            <option value="p6_aem_eu">p6 aem eu</option>
+            <option value="p6_aem_us">p6 aem us</option>
+          </select>
+          <span class="block__body">Lets you select the version of AEM to use.</span>
+        </div>
+
+        <div class="block">
+          <select class="dropdown block__dropdown">
+            <option value="pmisite">pmi site</option>
+            <option value="veevsite">veev site</option>
+            <option value="pmiclub">pmi club</option>
+          </select>
+          <span class="block__body">Lets you select the root directory for the entered page url to open.</span>
+        </div>
+
+        <div class="block">
+          <button class="button button--standard-icon block__button-login" type="button"></button>
+          <span class="block__body">Lets you log in to the selected version of AEM.</span>
+        </div>
+
+        <div class="info-bar info-bar__single-line info-bar--warning block__info-bar">
+          <span class="badge badge--caution"></span>
+          <span class="info-bar__body-strong">Samsung AEM</span>
+          <span class="info-bar__body">Enter active USER ID and USER EMAIL on extension’s options page before use.</span>
+          <a class="hyperlink-button" href="options.html">Options</a>
+        </div>
+
+        <div class="block">
+          <input class="text-box block__text-box" type="url" placeholder="pl">
+          <span class="block__body">Lets you input page url to open. Url must start with a country code, for example: <code class="code">pl</code>, <code class="code">de/en</code>.</span>
+        </div>
+
+        <div class="info-bar info-bar--informational block__info-bar">
+          <div class="info-bar__single-line">
+            <span class="badge badge--attention"></span>
+            <span class="info-bar__body-strong">Entered page url is trimmed of redundant characters before opening:</span>
+          </div>
+          <div class="info-bar__multi-line">
+            <span class="info-bar__body info-bar__body--list-item">Starting and ending whitespace is removed.</span>
+            <span class="info-bar__body info-bar__body--list-item">Starting <code class="code">/</code> character is removed.</span>
+            <span class="info-bar__body info-bar__body--list-item">At the end: <code class="code">/</code> character, <code class="code">?gr=false</code> and <code class="code">?wcmmode=disabled</code> options, and <code class="code">.html</code> file extension are removed.</span>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- aem__button-assets -->
+        <!-- ... -->
 
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <button class="component__button component__button--standard aem__button-assets" type="button">assets</button>
+        <span class="heading heading__subtitle">AEM url buttons</span>
 
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
+        <div class="block">
+          <div class="btn-group btn-group--buttons2">
+            <button class="button button--standard-icon block__button-editor" type="button"></button>
+            <button class="button button--standard-icon block__button-preview" type="button"></button>
+          </div>
+          <span class="block__body">Opens entered page url in edit or preview mode.</span>
+        </div>
+
+        <div class="block">
+          <div class="block__container">
+            <button class="button button--standard" type="button">qa login</button>
+            <span class="block__body block__body--ampersand">&</span>
+            <button class="button button--standard" type="button">qa</button>
+          </div>
+          <span class="block__body">Opens a login page to the PRE-PROD (QA) environment or opens entered page url in QA environment.</span>
+        </div>
+
+        <div class="block">
+          <div class="block__container">
+            <button class="button button--standard" type="button">qa / live</button>
+            <span class="block__body block__body--ampersand">&</span>
+            <button class="button button--standard" type="button">live</button>
+          </div>
+          <span class="block__body">Opens entered page url in PRE-PROD (QA) or PROD / LIVE environment.</span>
+        </div>
+
+        <div class="info-bar info-bar__single-line info-bar--warning block__info-bar">
+          <span class="badge badge--caution"></span>
+          <span class="info-bar__body-strong">IQOS AEM</span>
+          <span class="info-bar__body">Log in to the PRE-PROD (QA) environment before use.</span>
+        </div>
+
+        <div class="block">
+          <button class="button button--standard" type="button">sites</button>
+          <span class="block__body">Opens entered page url in AEM <code class="code">Sites</code> tool.</span>
+        </div>
+
+        <div class="block">
+          <button class="button button--standard" type="button">assets</button>
+          <span class="block__body">Opens entered page url in AEM <code class="code">Assets</code> tool.</span>
+        </div>
+
+        <!-- ... -->
+
+        <span class="heading heading__subtitle">Samsung shortcuts</span>
+
+        <div class="block">
+          <button class="button button--standard block__button-task-management" type="button">task management</button>
+          <span class="block__body">Shortcut that opens a page enabling to view and manage local running workflow instances with <code class="code">Create and Preview Page</code> status.</span>
+        </div>
+
+        <div class="block">
+          <button class="button button--standard block____button-workflows" type="button">workflows</button>
+          <span class="block__body">Shortcut that opens a page enabling to view and manage global running workflow instances with <code class="code">Create and Preview Page</code> and <code class="code">Final QA Contents</code> statuses.</span>
+        </div>
+
+        <div class="block">
+          <button class="button button--standard" type="button">purging</button>
+          <span class="block__body">Shortcut that opens a page with <code class="code">Purge Versions</code> tool.</span>
+        </div>
+
+        <div class="info-bar info-bar--informational block__info-bar">
+          <div class="info-bar__single-line">
+            <span class="badge badge--attention"></span>
+            <span class="info-bar__body-strong">Adobe Documentation:</span>
+          </div>
+          <div class="info-bar__multi-line">
+            <span class="info-bar__body">In a standard installation AEM creates a new version of a page or node when you activate a page after updating the content. The Purge Versions tool is intended for purging the versions of a node or a hierarchy of nodes in your repository. Its primary purpose is to help you reduce the size of your repository by removing old versions of your nodes.
+              <a class="hyperlink" href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/version-purging.html" target="_blank">Version Purging</a>
+            </span>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- aem__button-task-management -->
-
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <button class="component__button component__button--standard aem__button-task-management" type="button">task management</button>
-
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
+        <div class="block">
+          <div class="block__container">
+            <button class="button button--standard" type="button">pim b2c</button>
+            <span class="block__body block__body--ampersand">&</span>
+            <button class="button button--standard" type="button">pim b2b</button>
           </div>
+          <span class="block__body">Shortcuts that open pages enabling management of product catalog pages and templates.</span>
         </div>
-      </div>
-    </div>
 
-    <!-- aem__button-workflows -->
+        <!-- ... -->
 
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <button class="component__button component__button--standard aem__button-workflows" type="button">workflows</button>
+        <span class="heading heading__subtitle">IQOS tools</span>
 
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
-          </div>
+        <div class="block">
+          <button class="button button--standard" type="button">?gr=false</button>
+          <span class="block__body">Disables region restriction (updates active tab url with <code class="code">?gr=false</code> option) on IQOS pages.</span>
         </div>
-      </div>
-    </div>
 
-    <!-- aem__button-purging -->
-
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <button class="component__button component__button--standard aem__button-purging" type="button">purging</button>
-
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
-          </div>
+        <div class="block">
+          <button class="button button--standard" type="button">age gate</button>
+          <span class="block__body">Updates age gate forms (selects month and year) on IQOS pages.</span>
         </div>
-      </div>
-    </div>
 
-    <!-- aem__button-pim-b2c, aem__button-pim-b2b -->
+        <!-- ... -->
 
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <div class="component__card-container-column">
-            <button class="component__button component__button--standard aem__button-pim-b2c" type="button">pim b2c</button>
-            <button class="component__button component__button--standard aem__button-pim-b2b" type="button">pim b2b</button>
-          </div>
+        <span class="heading heading__subtitle">Text capitalization utilities</span>
 
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
-          </div>
+        <div class="block">
+          <button class="button button--standard-icon block__button-paste" type="button"></button>
+          <span class="block__body">Click to paste text from the clipboard to the text input.</span>
         </div>
-      </div>
-    </div>
 
-    <!-- aem__button-grfalse -->
-
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <button class="component__button component__button--standard aem__button-grfalse" type="button">?gr=false</button>
-
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
-          </div>
+        <div class="block">
+          <input class="text-box block__text-box" type="text" placeholder="text">
+          <span class="block__body">Lets you input text to capitalize.</span>
         </div>
-      </div>
-    </div>
 
-    <!-- aem__button-age-gate -->
-
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <button class="component__button component__button--standard aem__button-age-gate" type="button">age gate</button>
-
-          <div class="component__card-container-column text__container">
-            <span class="component__card-body-text">Text</span>
+        <div class="block">
+          <div class="btn-group btn-group--buttons3">
+            <button class="button button--standard" type="button">aa</button>
+            <button class="button button--standard" type="button">AA</button>
+            <button class="button button--standard" type="button">Aa</button>
           </div>
+          <span class="block__body">Click to format characters from the text input to lowercase, uppercase, or titlecase.</span>
         </div>
-      </div>
-    </div>
 
-    <!--  -->
-
-    <div class="component__card">
-      <div class="component__card-body">
-        <div class="component__card-container-row">
-          <!-- <span class="component__card-icon"></span> -->
-          <div class="component__card-container-column">
-            <span class="component__card-body-text">Text</span>
-            <!-- <span class="component__card-caption">Text</span> -->
+        <div class="block">
+          <div class="btn-group btn-group--buttons2">
+            <button class="button button--standard-icon block__button-cut" type="button"></button>
+            <button class="button button--standard-icon block__button-copy" type="button"></button>
           </div>
+          <span class="block__body">Click to cut or copy text to the clipboard from the text input.</span>
         </div>
-      </div>
-    </div>
 
+      </div>
+
+    </div>
   </div>
 
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/set_theme.js"></script>
   <script src="../js/help.js"></script>
+
 </body>
 
 </html>

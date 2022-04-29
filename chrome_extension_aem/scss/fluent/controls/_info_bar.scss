@@ -1,19 +1,115 @@
+@use "../typography";
+@use "../colors";
+
 /* ------------------------- Info Bar ------------------------- */
 
-.light {
-  // Mode: Light, Layout: Single Line, Severity: Informational, Action: None
+// | Info Bar       | Badge         |
+// | -------------- | ------------- |
+// |                | Neutral Safe  |
+// | Informational  | Attention     |
+// | Success        | Success       |
+// | Warning        | Caution       |
+// | Critical       | Critical      |
 
-  .toast {
-    background-color: rgba(246, 246, 246, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+$spacer: 0.5rem;
+
+.info-bar {
+  padding: calc($spacer * 1.5);
+  border-radius: 4px;
+
+  &__single-line {
+    display: flex;
+    align-items: center;
+
+    .hyperlink-button {
+      margin-left: auto;
+    }
+  }
+
+  &__multi-line {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+
+    .hyperlink-button {
+      margin-top: $spacer;
+      margin-right: auto;
+      margin-left: calc($spacer * 1.5);
+    }
+  }
+
+  &__body-strong {
+    @extend .body-strong, .text;
+    margin-left: calc($spacer * 1.5);
+  }
+
+  &__body {
+    @extend .body, .text;
+    margin-left: calc($spacer * 1.5);
+
+    &--list-item {
+      display: list-item;
+      margin-left: calc($spacer * 3.5);
+    }
   }
 }
 
-.dark {
-  // Mode: Dark, Layout: Single Line, Severity: Informational, Action: None
+// $light-attention: rgba(246, 246, 246, 0.5);
+$light-solid-attention: rgba(247, 247, 247, 1);
+$light-success:   rgba(223, 246, 221, 1);
+$light-caution:   rgba(255, 244, 206, 1);
+$light-critical:  rgba(253, 231, 233, 1);
+// $light-neutral: rgba(0, 0, 0, 0.02);
+$light-solid-neutral:   rgba(243, 243, 243, 1);
 
-  .toast {
-    background-color: rgba(255, 255, 255, 0.03);
+.light {
+  .info-bar {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    &--informational {
+      background-color: $light-solid-attention;
+    }
+
+    &--success {
+      background-color: $light-success;
+    }
+
+    &--warning {
+      background-color: $light-caution;
+    }
+
+    &--critical {
+      background-color: $light-critical;
+    }
+  }
+}
+
+// $dark-attention: rgba(255, 255, 255, 0.03);
+$dark-solid-attention:rgba(46, 46, 46, 1);
+$dark-success:  rgba(57, 61, 27, 1);
+$dark-caution:  rgba(67, 53, 25, 1);
+$dark-critical: rgba(68, 39, 38, 1);
+// $dark-neutral: rgba(255, 255, 255, 0.03);
+$dark-solid-neutral:  rgba(46, 46, 46, 1);
+
+.dark {
+  .info-bar {
     border: 1px solid rgba(0, 0, 0, 0.1);
+
+    &--informational {
+      background-color: $dark-solid-attention;
+    }
+
+    &--success {
+      background-color: $dark-success;
+    }
+
+    &--warning {
+      background-color: $dark-caution;
+    }
+
+    &--critical {
+      background-color: $dark-critical;
+    }
   }
 }

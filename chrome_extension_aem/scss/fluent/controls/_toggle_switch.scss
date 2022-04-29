@@ -1,14 +1,24 @@
 @use "bootstrap";
 
-@use "../variables" as var;
+@use "focus_rect";
 
 /* ------------------------- Toggle Switch ------------------------- */
 
-.#{var.$prefix} {
-  &__toggle-switch {
-    @extend .form-check, .form-switch;
+$spacer: 0.5rem;
 
-    &-inner { @extend .form-check-input; }
+.toggle-switch {
+  @extend .form-check, .form-switch;
+
+  &--label-right {
+    margin-right: $spacer;
+  }
+
+  &--label-left {
+    margin-left: $spacer;
+  }
+
+  &__inner {
+    @extend .form-check-input;
   }
 }
 
@@ -37,7 +47,8 @@
 
       &:focus {
         // box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.9);
-        box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+        // box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+        @extend .focus-rect;
       }
     }
 
@@ -64,7 +75,8 @@
 
       &:focus {
         // box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.9);
-        box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+        // box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 0.9);
+        @extend .focus-rect;
       }
     }
   }

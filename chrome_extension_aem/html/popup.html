@@ -11,124 +11,116 @@
   <title>Popup</title>
 </head>
 
-<body class="component__container-base">
+<body class="surface-base surface-base__popup">
 
   <!-- ------------------------- toolbar ------------------------- -->
 
-  <div class="component__container-layer toolbar">
-    <div class="component__container-end">
-      <button class="component__button component__button--standard-icon toolbar__button-images" id="toolbar__button-images" data-bs-placement="bottom" data-bs-toggle="tooltip" type="button" title="images"></button>
-      <button class="component__button component__button--standard-icon toolbar__button-options" id="toolbar__button-options" data-bs-placement="bottom" data-bs-toggle="tooltip" type="button" title="options"></button>
-      <button class="component__button component__button--standard-icon toolbar__button-help" id="toolbar__button-help" data-bs-placement="bottom" data-bs-toggle="tooltip" type="button" title="help"></button>
+  <div class="surface-layer surface-layer__popup toolbar">
+    <div class="container-end">
+      <button class="button button--standard-icon toolbar__button-images" id="toolbar__button-images" data-bs-placement="bottom" data-bs-toggle="tooltip" type="button" title="images"></button>
+      <button class="button button--standard-icon toolbar__button-options" id="toolbar__button-options" data-bs-placement="bottom" data-bs-toggle="tooltip" type="button" title="options"></button>
+      <button class="button button--standard-icon toolbar__button-help" id="toolbar__button-help" data-bs-placement="bottom" data-bs-toggle="tooltip" type="button" title="help"></button>
     </div>
   </div>
 
   <!-- ------------------------- aem (samsung) ------------------------- -->
 
-  <div class="component__container-layer aem aem__samsung" id="samsung">
-    <div class="component__container-row">
-      <div class="component__container-col">
-        <div class="component__input-group">
-          <select class="component__dropdown" id="samsung__select-aem">
-            <option value="p5_aem">p5 aem</option>
-            <option value="p5_aem_eu">p5 aem eu</option>
-            <option value="p5_aem_eu_shop">p5 aem eu shop</option>
-            <option value="p6_aem_ap">p6 aem ap</option>
-            <option value="p6_aem_eu">p6 aem eu</option>
-            <option value="p6_aem_us">p6 aem us</option>
-          </select>
-          <button class="component__button component__button--standard-icon aem__button-login" id="samsung__button-login" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="login"></button>
-        </div>
+  <div class="surface-layer surface-layer__popup aem" id="samsung">
+    <div class="container-start">
+      <div class="input-group aem__input-group-login">
+        <select class="dropdown" id="samsung__select-aem">
+          <option value="p5_aem">p5 aem</option>
+          <option value="p5_aem_eu">p5 aem eu</option>
+          <option value="p5_aem_eu_shop">p5 aem eu shop</option>
+          <option value="p6_aem_ap">p6 aem ap</option>
+          <option value="p6_aem_eu">p6 aem eu</option>
+          <option value="p6_aem_us">p6 aem us</option>
+        </select>
+        <button class="button button--standard-icon aem__button-login" id="samsung__button-login" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="login"></button>
       </div>
-      <div class="component__container-col">
-        <input class="component__text-box aem__input-url" id="samsung__input-url" type="url">
-      </div>
+
+      <input class="text-box aem__input-url" id="samsung__input-url" type="url">
     </div>
 
-    <div class="component__container-start aem__container">
-      <div class="component__btn-group aem__btn-group-editor">
-        <button class="component__button component__button--standard-icon aem__button-editor" id="samsung__button-editor" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="editor"></button>
-        <button class="component__button component__button--standard-icon aem__button-preview" id="samsung__button-preview" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="preview"></button>
+    <div class="container-start aem__container">
+      <div class="btn-group btn-group--buttons2">
+        <button class="button button--standard-icon aem__button-editor" id="samsung__button-editor" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="editor"></button>
+        <button class="button button--standard-icon aem__button-preview" id="samsung__button-preview" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="preview"></button>
       </div>
-      <button class="component__button component__button--standard aem__button-qa" id="samsung__button-qa" type="button">qa</button>
-      <button class="component__button component__button--standard aem__button-live" id="samsung__button-live" type="button">live</button>
-      <button class="component__button component__button--standard aem__button-sites" id="samsung__button-sites" type="button">sites</button>
-      <button class="component__button component__button--standard aem__button-assets" id="samsung__button-assets" type="button">assets</button>
+      <button class="button button--standard aem__button-qa" id="samsung__button-qa" type="button">qa</button>
+      <button class="button button--standard aem__button-live" id="samsung__button-live" type="button">live</button>
+      <button class="button button--standard aem__button-sites" id="samsung__button-sites" type="button">sites</button>
+      <button class="button button--standard aem__button-assets" id="samsung__button-assets" type="button">assets</button>
     </div>
 
-    <div class="component__container-start aem__container">
-      <button class="component__button component__button--standard aem__button-task-management" id="samsung__button-task-management" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="task management">task management</button>
-      <button class="component__button component__button--standard aem__button-workflows" id="samsung__button-workflows" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="workflows">workflows</button>
-      <button class="component__button component__button--standard aem__button-purging" id="samsung__button-purging" type="button">purging</button>
-      <button class="component__button component__button--standard aem__button-pim-b2c" id="samsung__button-pim-b2c" type="button">pim b2c</button>
-      <button class="component__button component__button--standard aem__button-pim-b2b" id="samsung__button-pim-b2b" type="button">pim b2b</button>
+    <div class="container-start aem__container">
+      <button class="button button--standard aem__button-task-management" id="samsung__button-task-management" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="task management">task management</button>
+      <button class="button button--standard aem__button-workflows" id="samsung__button-workflows" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="workflows">workflows</button>
+      <button class="button button--standard aem__button-purging" id="samsung__button-purging" type="button">purging</button>
+      <button class="button button--standard aem__button-pim-b2c" id="samsung__button-pim-b2c" type="button">pim b2c</button>
+      <button class="button button--standard aem__button-pim-b2b" id="samsung__button-pim-b2b" type="button">pim b2b</button>
     </div>
   </div>
 
   <!-- ------------------------- aem (iqos) ------------------------- -->
 
-  <div class="component__container-layer aem aem__iqos" id="iqos">
-    <div class="component__container-row">
-      <div class="component__container-col">
-        <div class="component__input-group">
-          <select class="component__dropdown" id="iqos__select-aem">
-            <option value="pre_prod_aem">pre prod aem</option>
-            <option value="prod_aem">prod aem</option>
-          </select>
-          <button class="component__button component__button--standard-icon aem__button-login" id="iqos__button-login" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="login"></button>
-        </div>
-      </div>
-      <div class="component__container-col">
-        <select class="component__dropdown aem__select-site" id="iqos__select-site">
-          <option value="pmisite">pmi site</option>
-          <option value="veevsite">veev site</option>
-          <option value="pmiclub">pmi club</option>
+  <div class="surface-layer surface-layer__popup aem" id="iqos">
+    <div class="container-start">
+      <div class="input-group aem__input-group-login">
+        <select class="dropdown" id="iqos__select-aem">
+          <option value="pre_prod_aem">pre prod aem</option>
+          <option value="prod_aem">prod aem</option>
         </select>
+        <button class="button button--standard-icon aem__button-login" id="iqos__button-login" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="login"></button>
       </div>
+
+      <select class="dropdown aem__select-site" id="iqos__select-site">
+        <option value="pmisite">pmi site</option>
+        <option value="veevsite">veev site</option>
+        <option value="pmiclub">pmi club</option>
+      </select>
     </div>
 
     <div class="aem__container">
-      <input class="component__text-box aem__input-url" id="iqos__input-url" type="url">
+      <input class="text-box" id="iqos__input-url" type="url">
     </div>
 
-    <div class="component__container-start aem__container">
-      <div class="component__btn-group aem__btn-group-editor">
-        <button class="component__button component__button--standard-icon aem__button-editor" id="iqos__button-editor" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="editor"></button>
-        <button class="component__button component__button--standard-icon aem__button-preview" id="iqos__button-preview" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="preview"></button>
+    <div class="container-start aem__container">
+      <div class="btn-group btn-group--buttons2">
+        <button class="button button--standard-icon aem__button-editor" id="iqos__button-editor" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="editor"></button>
+        <button class="button button--standard-icon aem__button-preview" id="iqos__button-preview" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="preview"></button>
       </div>
-      <button class="component__button component__button--standard aem__button-qa-login" id="iqos__button-qa-login" type="button">qa login</button>
-      <button class="component__button component__button--standard aem__button-live" id="iqos__button-live" type="button">qa / live</button>
-      <button class="component__button component__button--standard aem__button-sites" id="iqos__button-sites" type="button">sites</button>
-      <button class="component__button component__button--standard aem__button-assets" id="iqos__button-assets" type="button">assets</button>
+      <button class="button button--standard aem__button-qa-login" id="iqos__button-qa-login" type="button">qa login</button>
+      <button class="button button--standard aem__button-live" id="iqos__button-live" type="button">qa / live</button>
+      <button class="button button--standard aem__button-sites" id="iqos__button-sites" type="button">sites</button>
+      <button class="button button--standard aem__button-assets" id="iqos__button-assets" type="button">assets</button>
     </div>
 
-    <div class="component__container-start aem__container">
-      <button class="component__button component__button--standard aem__button-grfalse" id="iqos__button-grfalse" type="button">?gr=false</button>
-      <button class="component__button component__button--standard aem__button-age-gate" id="iqos__button-age-gate" type="button">age gate</button>
+    <div class="container-start aem__container">
+      <button class="button button--standard aem__button-grfalse" id="iqos__button-grfalse" type="button">?gr=false</button>
+      <button class="button button--standard aem__button-age-gate" id="iqos__button-age-gate" type="button">age gate</button>
+      <button class="button button--accent aem__button-hybris" id="iqos__button-hybris" type="button">hybris</button>
     </div>
   </div>
 
   <!-- ------------------------- tools ------------------------- -->
 
-  <div class="component__container-layer tools" id="tools">
-    <div class="component__container-row">
-      <div class="component__container-col">
-        <div class="component__input-group">
-          <button class="component__button component__button--standard-icon tools__button-paste" id="tools__button-paste" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="paste"></button>
-          <input class="component__text-box" id="tools__input-text" type="text" placeholder="text">
-        </div>
+  <div class="surface-layer surface-layer__popup tools" id="tools">
+    <div class="input-group tools__input-group-paste">
+      <button class="button button--standard-icon tools__button-paste" id="tools__button-paste" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="paste"></button>
+      <input class="text-box" id="tools__input-text" type="text" placeholder="text">
+    </div>
+
+    <div class="tools__container">
+      <div class="btn-group btn-group--buttons3 tools__btn-group-capitalization">
+        <button class="button button--standard" id="tools__button-to-lower-case" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="to lower case">aa</button>
+        <button class="button button--standard" id="tools__button-to-upper-case" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="to upper case">AA</button>
+        <button class="button button--standard" id="tools__button-to-title-case" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="to title case">Aa</button>
       </div>
 
-      <div class="component__container-col tools__container">
-        <div class="component__btn-group tools__btn-group-capitalization">
-          <button class="component__button component__button--standard" id="tools__button-to-lower-case" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="to lower case">aa</button>
-          <button class="component__button component__button--standard" id="tools__button-to-upper-case" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="to upper case">AA</button>
-          <button class="component__button component__button--standard" id="tools__button-to-title-case" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="to title case">Aa</button>
-        </div>
-        <div class="component__btn-group tools__btn-group-cut-copy">
-          <button class="component__button component__button--standard-icon tools__button-cut" id="tools__button-cut" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="cut"></button>
-          <button class="component__button component__button--standard-icon tools__button-copy" id="tools__button-copy" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="copy"></button>
-        </div>
+      <div class="btn-group btn-group--buttons2 tools__btn-group-cut-copy">
+        <button class="button button--standard-icon tools__button-cut" id="tools__button-cut" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="cut"></button>
+        <button class="button button--standard-icon tools__button-copy" id="tools__button-copy" data-bs-placement="top" data-bs-toggle="tooltip" type="button" title="copy"></button>
       </div>
     </div>
   </div>

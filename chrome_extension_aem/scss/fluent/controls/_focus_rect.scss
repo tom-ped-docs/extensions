@@ -1,0 +1,17 @@
+/* ------------------------- Focus Rect ------------------------- */
+
+.light {
+  .focus-rect {
+    &:focus {
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+
+.dark {
+  .focus-rect {
+    &:focus {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+    }
+  }
+}

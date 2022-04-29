@@ -1,0 +1,39 @@
+@use "fluent/containers";
+
+@use "fluent/typography";
+@use "fluent/colors";
+
+@use "fluent/controls/side_nav";
+
+@use "fluent_config.scss";
+
+/* ------------------------- about.html ------------------------- */
+
+.about {
+  &__container-row {
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+  }
+
+  &__container-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 192px;
+    height: 128px;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__container-column {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+  }
+
+  &__body { @extend .body, .text; }
+}

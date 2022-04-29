@@ -471,6 +471,16 @@ document.querySelector("#iqos__button-age-gate").addEventListener("click", () =>
   query_2();
 });
 
+document.querySelector("#iqos__button-hybris").addEventListener("click", () => {
+  chrome.storage.local.get(["URL_IQOS", "selected_aem_iqos"], ({ URL_IQOS, selected_aem_iqos }) => {
+    if (selected_aem_iqos === "pre_prod_aem") {
+      chrome.tabs.create({ url: URL_IQOS.pre_prod_hybris });
+    } else {
+      chrome.tabs.create({ url: URL_IQOS.prod_hybris });
+    }
+  });
+});
+
 /*
  * ------------------------- tools -------------------------
  */

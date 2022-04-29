@@ -15,9 +15,7 @@ body {
   overflow-y: scroll;
 }
 
-html.light {
-  // Mode: Light, Orientation: Bidirectional, Expanded: False
-
+html {
   ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
@@ -28,25 +26,22 @@ html.light {
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.45);
     border-radius: 999px;
+  }
+}
+
+html.light {
+  // Mode: Light, Orientation: Bidirectional, Expanded: False
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.45);
   }
 }
 
 html.dark {
   // Mode: Dark, Orientation: Bidirectional, Expanded: False
 
-  ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-  }
-
-  ::-webkit-scrollbar-corner {
-    background-color: unset;
-  }
-
   ::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.54);
-    border-radius: 999px;
   }
 }

@@ -1,0 +1,143 @@
+@use "fluent/typography";
+@use "fluent/colors";
+
+@use "fluent/surfaces";
+
+@use "fluent/motion";
+
+// ------------------------- Button -------------------------
+
+$width: 5rem;
+
+.button {
+  &--standard {
+    width: $width;
+  }
+
+  &--accent {
+    width: $width;
+  }
+}
+
+// ------------------------- Scroll Bar (Scroll Viewer) -------------------------
+
+html {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.surface-layer__page {
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: unset;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+  }
+}
+
+html.light {
+  .surface-layer__page {
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.45);
+    }
+  }
+}
+
+html.dark {
+  .surface-layer__page {
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.54);
+    }
+  }
+}
+
+// ------------------------- Side Nav (Navigation View) -------------------------
+
+.nav {
+  &__icon-options::before  { content: "\e713"; }
+  &__icon-help::before     { content: "\e897"; }
+  &__icon-about::before    { content: "\f1ad"; }
+}
+
+// ------------------------- Surfaces -------------------------
+
+$spacer: 0.5rem;
+
+.surface-base {
+  @extend .app-surface-base;
+
+  &__page {
+    padding-top: 48px;
+    border: unset !important;
+  }
+
+  &__popup {
+    padding: $spacer;
+    border: unset !important;
+  }
+
+  &__images {
+    padding: $spacer;
+    border-radius: surfaces.$border-radius-base;
+  }
+}
+
+.surface-layer {
+  @extend .app-surface-layer;
+
+  &__page {
+    // 100vw - side-nav (width)
+    width: calc(100vw - 320px);
+    // 100vh - surface-base__page (padding-top)
+    height: calc(100vh - 48px);
+    padding: $spacer;
+    border-right: unset !important;
+    border-bottom: unset !important;
+    border-top-left-radius: surfaces.$border-radius-base;
+  }
+
+  &__container {
+    @extend .ms-motion-slideUpIn;
+    overflow-y: scroll;
+    // 100% - heading__title (line-height)
+    height: calc(100% - 36px);
+    margin-top: $spacer;
+    padding-right: $spacer;
+    padding-bottom: $spacer;
+  }
+
+  &__popup,
+  &__images {
+    padding: $spacer;
+    border-radius: surfaces.$border-radius-layer;
+  }
+}
+
+// ------------------------- Motion -------------------------
+
+.ms-motion-slideUpIn {
+  -webkit-animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
+          animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
+}
+
+// ------------------------- Headings -------------------------
+
+.heading {
+  @extend .text;
+  display: block;
+
+  &__title {
+    @extend .title;
+  }
+
+  &__subtitle {
+    @extend .subtitle;
+    margin-top: calc($spacer * 2.5);
+  }
+}

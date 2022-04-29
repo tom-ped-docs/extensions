@@ -1,0 +1,128 @@
+@use "../typography";
+@use "../colors";
+
+/* ------------------------- Side Nav (Navigation View) ------------------------- */
+
+$spacer: 0.5rem;
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+
+  &__list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 3px 5px;
+    border-radius: 4px;
+  }
+
+  &__selector {
+    display: block;
+    width: 4px;
+    height: 16px;
+    border-radius: 999px;
+  }
+
+  &__icon {
+    @extend .text;
+    margin-left: $spacer;
+    font-size: 16px;
+
+    &::before {
+      font-family: typography.$font-family-segoe-fluent-icons;
+    }
+  }
+
+  &__body {
+    @extend .body, .text;
+    margin-left: calc($spacer * 2);
+  }
+
+  // .stretched-link
+  &__stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+  }
+}
+
+.light {
+  .side-nav {
+    // Mode: Light, Layout: Icon Before
+
+    &__list-item {
+      background-color: rgba(255, 255, 255, 0);
+      border: 1px solid rgba(255, 255, 255, 0);
+
+      &--selected,
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        border: 1px solid rgba(0, 0, 0, 0.04);
+      }
+
+      &:active {
+        background-color: rgba(0, 0, 0, 0.02);
+        border: 1px solid rgba(0, 0, 0, 0.02);
+      }
+
+      &:disabled {
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid rgba(0, 0, 0, 0);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+      }
+    }
+
+    &__selector {
+      &--selected {
+        background-color: rgba(0, 95, 184, 1);
+      }
+    }
+  }
+}
+
+.dark {
+  .side-nav {
+    // Mode: Dark, Layout: Icon Before
+
+    &__list-item {
+      background-color: rgba(255, 255, 255, 0);
+      border: 1px solid rgba(255, 255, 255, 0);
+
+      &--selected,
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+      }
+
+      &:disabled {
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, 0);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+      }
+    }
+
+    &__selector {
+      &--selected {
+        background-color: rgba(96, 205, 255, 1);
+      }
+    }
+  }
+}

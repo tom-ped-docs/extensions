@@ -1,22 +1,13 @@
 @use "bootstrap";
 
-@use "../variables" as var;
-
 @use "../typography";
 @use "../colors";
 
 /* ------------------------- Text Box ------------------------- */
 
-// input.form-control {
-//   height: 32px;
-//   width: 120px;
-// }
-
-.#{var.$prefix} {
-  &__text-box {
-    @extend .form-control, .form-control-sm, .body, .text;
-    height: 32px;
-  }
+.text-box {
+  @extend .form-control, .form-control-sm, .body, .text;
+  height: 32px;
 }
 
 .light {

@@ -59,7 +59,9 @@ const URL_IQOS = {
     live: ".html?gr=false",
     sites: "sites.html/content/",
     assets: "assets.html/content/dam/iqos/local",
-    grfalse: "?gr=false"
+    grfalse: "?gr=false",
+    pre_prod_hybris: "https://backoffice.iqos.com/backoffice/login.zul",
+    prod_hybris: "https://backoffice.pp.iqos.com/backoffice/login.zul"
 };
 let selected_aem_iqos = "pre_prod_aem";
 let selected_site = "pmisite";

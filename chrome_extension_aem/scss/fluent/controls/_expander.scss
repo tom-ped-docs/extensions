@@ -1,83 +1,55 @@
 @use "bootstrap";
 
-@use "../variables" as var;
-
 @use "../typography";
-@use "../iconography";
 @use "../colors";
 
 /* ------------------------- Expander ------------------------- */
 
-.#{var.$prefix} {
-  &__expander {
-    &-item { @extend .accordion-item; }
-
-    &-header { @extend .accordion-header; }
-
-    &-button { @extend .accordion-button; }
-
-    &-icon {
-      @extend .text;
-      margin-right: 1.25rem;
-      font-size: 24px;
-    }
-
-    &-container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &-body-text { @extend .body, .text; }
-
-    &-caption { @extend .caption, .text; }
-
-    &-collapse { @extend .accordion-collapse; }
-
-    &-body {
-      @extend .accordion-body;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    &-icon::before { font-family: iconography.$font-family; content: "..."; }
+.expander {
+  &__item {
+    @extend .accordion-item;
   }
-}
 
-.#{var.$prefix} {
-  &__card {
-    @extend .card;
+  &__header {
+    @extend .accordion-header;
+  }
 
-    &-body {
-      @extend .card-body;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  &__button {
+    @extend .accordion-button;
+  }
+
+  &__icon {
+    @extend .text;
+    margin-right: 1.25rem;
+    font-size: 24px;
+
+    &::before {
+      font-family: typography.$font-family-segoe-fluent-icons;
     }
+  }
 
-    &-container-row {
-      display: flex;
-      // flex-direction: row;
-      align-items: center;
-    }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
 
-    &-icon {
-      @extend .text;
-      margin-right: 1.25rem;
-      font-size: 24px;
-    }
+  &__bodytext {
+    @extend .body, .text;
+  }
 
-    &-container-column {
-      display: flex;
-      flex-direction: column;
-      // align-items: center;
-    }
+  &__caption {
+    @extend .caption, .text;
+  }
 
-    &-body-text { @extend .body, .text; }
+  &__collapse {
+    @extend .accordion-collapse;
+  }
 
-    &-caption { @extend .caption, .text; }
-
-    &-icon::before { font-family: iconography.$font-family; content: "..."; }
+  &__body {
+    @extend .accordion-body;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -88,6 +60,47 @@
 .accordion-body {
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+.card {
+  @extend .card;
+
+  &__body {
+    @extend .card-body;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__container-row {
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+  }
+
+  &__icon {
+    @extend .text;
+    margin-right: 1.25rem;
+    font-size: 24px;
+
+    &::before {
+      font-family: typography.$font-family-segoe-fluent-icons;
+    }
+  }
+
+  &__container-column {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+  }
+
+  &__bodytext {
+    @extend .body, .text;
+  }
+
+  &__caption {
+    @extend .caption, .text;
+  }
 }
 
 .light {
@@ -144,33 +157,3 @@
     border-bottom: none;
   }
 }
-
-// <div class="component__expander-item">
-//   <span class="component__expander-header">
-//     <button class="component__expander-button collapsed" data-bs-target="#accordion" data-bs-toggle="collapse" type="button">
-//       <span class="component__expander-icon"></span>
-//       <div class="component__expander-container">
-//         <span class="component__expander-body-text">Text</span>
-//         <span class="component__expander-caption">Text</span>
-//       </div>
-//     </button>
-//   </span>
-//   <div class="component__expander-collapse collapse" id="accordion">
-//     <div class="component__expander-body">
-//       <!-- ... -->
-//     </div>
-//   </div>
-// </div>
-
-// <div class="component__card">
-//   <div class="component__card-body">
-//     <div class="component__card-container-row">
-//       <span class="component__card-icon"></span>
-//       <div class="component__card-container-column">
-//         <span class="component__card-body-text">Text</span>
-//         <span class="component__card-caption">Text</span>
-//       </div>
-//     </div>
-//     <!-- ... -->
-//   </div>
-// </div>

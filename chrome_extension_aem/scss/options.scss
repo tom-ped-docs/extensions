@@ -1,178 +1,60 @@
-@use "fluent/variables" as var;
-@use "fluent/containers";
-
 @use "fluent/typography";
-@use "fluent/iconography";
 @use "fluent/colors";
-@use "fluent/surfaces";
 
 @use "fluent/controls/button";
 @use "fluent/controls/dropdown";
 @use "fluent/controls/toggle_switch";
 @use "fluent/controls/expander";
 @use "fluent/controls/text_box";
-@use "fluent/controls/scroll_viewer";
-@use "fluent/controls/tooltip";
+@use "fluent/controls/side_nav";
 
-@use "fluent/motion";
+@use "fluent/containers";
+@use "fluent_config.scss";
 
 /* ------------------------- options.html ------------------------- */
 
-.#{var.$prefix} {
-  &__container-base {
-    border: unset !important;
-  }
-
-  &__container-layer {
-    width: 75%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  &__toggle-switch {
-    margin-left: var.$spacer;
-  }
-}
-
-.heading {
-  @extend .text;
-  display: block;
-
-  &__title {
-    // { a }
-    @extend .title;
-  }
-
-  &__body-strong {
-    // { a }
-    @extend .body-strong;
-    margin-top: var.$spacer;
-  }
-}
-
-.about {
-  // { a }
-  margin-top: var.$spacer;
-
-  &__container-row {
-    display: flex;
-    // flex-direction: row;
-    align-items: center;
-  }
-
-  &__container-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 192px;
-    height: 128px;
-  }
-
-  &__icon {
-    width: 64px;
-    height: 64px;
-  }
-
-  &__container-column {
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-  }
-
-  &__body { @extend .body, .text; }
-}
+$spacer: 0.5rem;
 
 .appearance {
-  // { a }
-  margin-top: var.$spacer;
-
-  // &__icon-personalize { i }
+  margin-top: $spacer;
 
   &__select-theme { width: 10rem; }
 
-  // Personalize
-  &__icon-personalize::before { font-family: iconography.$font-family; content: "\e771"; }
+  &__icon-personalize::before { content: "\e771"; }
 }
 
 .shortcuts {
-  // { a }
-  margin-top: var.$spacer;
+  margin-top: $spacer;
 
-  // &__icon-keyboard { i }
+  &__key {
+    width: unset;
+    min-width: 2.5rem;
+    margin-right: $spacer;
+  }
 
-  // &__button-open { i }
-
-  &__icon-keyboard::before,
-  &__button-open::before { font-family: iconography.$font-family; }
-
-  // KeyboardShortcut
-  &__icon-keyboard::before { content: "\eda7"; }
-
-  // OpenInNewWindow
-  &__button-open::before { content: "\e8a7"; }
+  &__icon-keyboard::before  { content: "\eda7"; }
+  &__button-edit::before    { content: "\e70f"; }
 }
 
 .extensions {
-  // { a }
-  margin-top: var.$spacer;
-
-  // &__icon-view { i }
+  margin-top: $spacer;
 
   &__container { display: flex; }
 
   &__body { @extend .body, .text; }
 
-  // View
-  &__icon-view::before { font-family: iconography.$font-family; content: "\e890"; }
+  &__icon-view::before { content: "\e890"; }
 }
 
 .aem-samsung {
-  // { a }
-  margin-top: var.$spacer;
-
-  // &__icon-robot { i }
+  margin-top: $spacer;
 
   &__container { display: flex; }
 
   &__input-login { width: 20rem; }
 
-  &__button-save { margin-left: var.$spacer; }
+  &__button-save { margin-left: $spacer; }
 
-  &__icon-robot::before,
-  &__button-save::before { font-family: iconography.$font-family; }
-
-  // Robot
-  &__icon-robot::before { content: "\e99a"; }
-
-  // Save
-  &__button-save::before { content: "\e74e"; }
-}
-
-// ------------------------- Motion 2 -------------------------
-
-.heading--options,
-.about {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
-}
-
-.appearance {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
-}
-
-.shortcuts {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
-}
-
-.extensions {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
-}
-
-.heading--aem-samsung,
-.aem-samsung {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
+  &__icon-robot::before   { content: "\e99a"; }
+  &__button-save::before  { content: "\e74e"; }
 }

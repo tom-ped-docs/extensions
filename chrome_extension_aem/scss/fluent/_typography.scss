@@ -2,22 +2,22 @@
 
 // ------------------------- Type Ramp -------------------------
 
-$font-family: "Segoe UI Variable";
+$font-family-segoe-ui-variable: "Segoe UI Variable";
 
 @font-face {
-  font-family: $font-family;
+  font-family: $font-family-segoe-ui-variable;
   src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
 }
 
 .caption {
-  font-family: $font-family;
+  font-family: $font-family-segoe-ui-variable;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
 .body {
-  font-family: $font-family;
+  font-family: $font-family-segoe-ui-variable;
   font-feature-settings: 'rclt' off;
   font-size: 14px;
   font-weight: 400;
@@ -25,7 +25,7 @@ $font-family: "Segoe UI Variable";
 }
 
 .body-strong {
-  font-family: $font-family;
+  font-family: $font-family-segoe-ui-variable;
   font-feature-settings: 'fina' on, 'init' on;
   font-size: 14px;
   font-weight: 600;
@@ -33,7 +33,7 @@ $font-family: "Segoe UI Variable";
 }
 
 .body-large {
-  font-family: $font-family;
+  font-family: $font-family-segoe-ui-variable;
   font-feature-settings: 'fina' on, 'init' on;
   font-size: 18px;
   font-weight: 400;
@@ -41,29 +41,55 @@ $font-family: "Segoe UI Variable";
 }
 
 .subtitle {
-  font-family: $font-family;
+  font-family: $font-family-segoe-ui-variable;
   font-size: 20px;
   font-weight: 600;
   line-height: 28px;
 }
 
 .title {
-  font-family: $font-family;
+  font-family: $font-family-segoe-ui-variable;
   font-size: 28px;
   font-weight: 600;
   line-height: 36px;
 }
 
 .title-large {
-  font-family: $font-family;
+  font-family: $font-family-segoe-ui-variable;
   font-size: 40px;
   font-weight: 600;
   line-height: 52px;
 }
 
 .display {
-  font-family: $font-family;
+  font-family: $font-family-segoe-ui-variable;
   font-size: 68px;
   font-weight: 600;
   line-height: 92px;
+}
+
+// ------------------------- Segoe Fluent Icons -------------------------
+
+// Microsoft Docs / ... / Segoe Fluent Icons font https://docs.microsoft.com/en-us/windows/apps/design/style/segoe-fluent-icons-font
+
+$font-family-segoe-fluent-icons: "Segoe Fluent Icons";
+
+@font-face {
+  font-family: $font-family-segoe-fluent-icons;
+  src: url(../../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
+}
+
+// ------------------------- Cascadia Code, Cascadia Code Italic -------------------------
+
+$font-family-cascadia-code: "Cascadia Code";
+$font-family-cascadia-code-italic: "Cascadia Code Italic";
+
+@font-face {
+  font-family: $font-family-cascadia-code;
+  src: url(../../assets/fonts/CascadiaCode.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: $font-family-cascadia-code-italic;
+  src: url(../../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
 }

@@ -1,10 +1,13 @@
 @use "../typography";
-@use "../colors";
 
 /* ------------------------- Tooltip ------------------------- */
 
 .tooltip {
-  @extend .caption, .text;
+  // .caption
+  font-family: typography.$font-family-segoe-ui-variable;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
 
   .tooltip-arrow {
     display: none;
@@ -13,11 +16,6 @@
 
 .light {
   // Mode: Light
-
-  .tooltip-inner {
-    // .text
-    color: rgba(0, 0, 0, 0.9);
-  }
 
   .tooltip-inner {
     // background: rgba(255, 255, 255, 0.75);
@@ -33,16 +31,14 @@
     // backdrop-filter: blur(60px);
 
     background-color: rgba(252, 252, 252, 1);
+
+    // .text
+    color: rgba(0, 0, 0, 0.9);
   }
 }
 
 .dark {
   // Mode: Dark
-
-  .tooltip-inner {
-    // .text
-    color: rgba(255, 255, 255, 1);
-  }
 
   .tooltip-inner {
     // background: rgba(255, 255, 255, 0.75);
@@ -59,5 +55,8 @@
     // backdrop-filter: blur(60px);
 
     background-color: rgba(44, 44, 44, 1);
+
+    // .text
+    color: rgba(255, 255, 255, 1);
   }
 }

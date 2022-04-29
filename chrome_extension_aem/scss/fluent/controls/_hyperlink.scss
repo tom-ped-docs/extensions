@@ -1,0 +1,44 @@
+@use "../typography";
+@use "../colors";
+
+@use "focus_rect";
+
+/* ------------------------- Hyperlink ------------------------- */
+
+.hyperlink {
+  @extend .body, .accent-text;
+}
+
+.light {
+  // Mode: Light, Style: Standard
+
+  .hyperlink {
+    // &:hover { }
+
+    // &:active { }
+
+    // &:disabled { }
+
+    &:focus {
+      @extend .focus-rect;
+      border-radius: 4px;
+    }
+  }
+}
+
+.dark {
+  // Mode: Dark, Style: Standard
+
+  .hyperlink {
+    // &:hover { }
+
+    // &:active { }
+
+    // &:disabled { }
+
+    &:focus {
+      @extend .focus-rect;
+      border-radius: 4px;
+    }
+  }
+}

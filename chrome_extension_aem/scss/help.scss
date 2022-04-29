@@ -1,66 +1,43 @@
-@use "fluent/variables"as var;
-@use "fluent/containers";
-
 @use "fluent/typography";
-@use "fluent/iconography";
 @use "fluent/colors";
-@use "fluent/surfaces";
 
 @use "fluent/controls/button";
-@use "fluent/controls/expander";
-@use "fluent/controls/scroll_viewer";
+@use "fluent/controls/hyperlink_button";
+@use "fluent/controls/hyperlink";
+@use "fluent/controls/dropdown";
+@use "fluent/controls/text_box";
+@use "fluent/controls/info_bar";
+@use "fluent/controls/badge";
+@use "fluent/controls/side_nav";
 
-// ------------------------- Typography 2 -------------------------
-
-@font-face {
-  font-family: "Cascadia Code";
-  src: url(../assets/fonts/CascadiaCode.ttf) format("truetype");
-}
+@use "fluent/containers";
+@use "fluent_config.scss";
 
 /* ------------------------- help.html ------------------------- */
 
-.#{var.$prefix} {
-  &__container-base { border: unset !important; }
+$spacer: 0.5rem;
 
-  &__container-layer {
-    width: 75%;
-    margin-right: auto;
-    margin-left: auto;
+.block {
+  display: flex;
+  align-items: center;
+  margin-top: $spacer;
+
+  &__container {
+    display: flex;
+    align-items: center
   }
 
-  &__button {
-    &--standard { width: 5rem; }
+  &__dropdown,
+  &__text-box { width: 10rem; }
+
+  &__info-bar { margin-top: $spacer; }
+
+  &__body {
+    @extend .body, .text;
+    margin-left: $spacer;
+
+    &--ampersand { margin-right: $spacer; }
   }
-
-  &__card { margin-top: var.$spacer; }
-}
-
-.heading {
-  @extend .text;
-  display: block;
-
-  &__title { @extend .title; }
-}
-
-.aem {
-  &__btn-group-editor { width: 5rem; }
-
-  // &__button-editor { i }
-
-  // &__button-preview { i }
-
-  &__button-editor::before,
-  &__button-preview::before { font-family: iconography.$font-family; }
-
-  // Edit
-  &__button-editor::before { content: "\e70f"; }
-
-  // View
-  &__button-preview::before { content: "\e890"; }
-
-  &__button-qa-login,
-  &__button-qa-live,
-  &__button-pim-b2b { margin-top: var.$spacer; }
 
   &__button-task-management,
   &__button-workflows {
@@ -69,8 +46,42 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  &__button-images::before  { content: "\ee71"; }
+  &__button-options::before { content: "\e713"; }
+  &__button-help::before    { content: "\e897"; }
+  &__button-login::before   { content: "\e8a7"; }
+  &__button-editor::before  { content: "\e70f"; }
+  &__button-preview::before { content: "\e890"; }
+  &__button-paste::before   { content: "\e77f"; }
+  &__button-cut::before     { content: "\e8c6"; }
+  &__button-copy::before    { content: "\e8c8"; }
 }
 
-.text {
-  &__container { margin-left: var.$spacer; }
+.code {
+  @extend .text;
+  // .body
+  font-family: typography.$font-family-cascadia-code;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  // Notion
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.light {
+  .code {
+    // Notion
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(249, 245, 241, 1);
+  }
+}
+
+.dark {
+  .code {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(6, 10, 14, 1);
+  }
 }

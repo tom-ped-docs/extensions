@@ -1,0 +1,137 @@
+@use "../typography";
+
+/* ------------------------- Badge ------------------------- */
+
+// | Info Bar       | Badge         |
+// | -------------- | ------------- |
+// |                | Neutral Safe  |
+// | Informational  | Attention     |
+// | Success        | Success       |
+// | Warning        | Caution       |
+// | Critical       | Critical      |
+
+.badge {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  text-align: center;
+
+  &--neutral-safe,
+  &--attention,
+  &--caution,
+  &--success,
+  &--critical {
+    // .caption
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+
+    &::before {
+      font-family: typography.$font-family-segoe-fluent-icons;
+    }
+  }
+
+  &--neutral-safe {
+    // InfoBadge12
+    &::before { content: "\E625"; }
+  }
+
+  &--attention {
+    // AsteriskBadge12
+    // &::before { content: "\EDAD"; }
+    &::before { content: "\E625"; }
+  }
+
+  &--caution {
+    // ImportantBadge12
+    &::before { content: "\EDB1"; }
+  }
+
+  &--success {
+    // CheckmarkBadge12
+    &::before { content: "\E65F"; }
+  }
+
+  &--critical {
+    // ErrorBadge12
+    &::before { content: "\EDAE"; }
+  }
+}
+
+$light-attention:     rgba(0, 95, 183, 1);
+$light-success:       rgba(15, 123, 15, 1);
+$light-caution:       rgba(157, 93, 0, 1);
+$light-critical:      rgba(196, 43, 28, 1);
+// $light-neutral: rgba(0, 0, 0, 0.45);
+$light-solid-neutral: rgba(138, 138, 138, 1);
+
+.light {
+  .badge {
+    &--neutral-safe,
+    &--attention,
+    &--caution,
+    &--success,
+    &--critical {
+      &::before { color: rgba(255, 255, 255, 1); }
+    }
+
+    &--neutral-safe {
+      background-color: $light-solid-neutral;
+    }
+
+    &--attention {
+      background-color: $light-attention;
+    }
+
+    &--caution {
+      background-color: $light-caution;
+    }
+
+    &--success {
+      background-color: $light-success;
+    }
+
+    &--critical {
+      background-color: $light-critical;
+    }
+  }
+}
+
+$dark-attention:    rgba(96, 205, 255, 1);
+$dark-success:      rgba(108, 203, 95, 1);
+$dark-caution:      rgba(252, 225, 0, 1);
+$dark-critical:     rgba(255, 153, 164, 1);
+// $dark-neutral: rgba(255, 255, 255, 0.54);
+$dark-solid-neutral: /* rgba(138, 138, 138, 1) */ rgba(157, 157, 157, 1);
+
+.dark {
+  .badge {
+    &--neutral-safe,
+    &--attention,
+    &--caution,
+    &--success,
+    &--critical {
+      &::before { color: rgba(0, 0, 0, 0.9); }
+    }
+
+    &--neutral-safe {
+      background-color: $dark-solid-neutral;
+    }
+
+    &--attention {
+      background-color: $dark-attention;
+    }
+
+    &--caution {
+      background-color: $dark-caution;
+    }
+
+    &--success {
+      background-color: $dark-success;
+    }
+
+    &--critical {
+      background-color: $dark-critical;
+    }
+  }
+}

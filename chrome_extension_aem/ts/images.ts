@@ -1,7 +1,7 @@
 const BODY = document.body as HTMLBodyElement;
 
 const BODY_DIV = document.createElement("div") as HTMLDivElement;
-BODY_DIV.setAttribute("class", "component__container-base ms-motion-slideUpIn");
+BODY_DIV.setAttribute("class", "surface-base surface-base__images ms-motion-slideUpIn");
 BODY.appendChild(BODY_DIV);
 
 /*
@@ -9,11 +9,11 @@ BODY.appendChild(BODY_DIV);
  */
 
 const CLOSE_DIV = document.createElement("div") as HTMLDivElement;
-CLOSE_DIV.setAttribute("class", "component__container-layer component__container-end");
+CLOSE_DIV.setAttribute("class", "surface-layer surface-layer__images container-end");
 BODY_DIV.appendChild(CLOSE_DIV);
 
 const CLOSE_BUTTON = document.createElement("button") as HTMLButtonElement;
-CLOSE_BUTTON.setAttribute("class", "component__button component__button--standard-icon close__button-close");
+CLOSE_BUTTON.setAttribute("class", "button button--standard-icon close__button-close");
 CLOSE_BUTTON.setAttribute("type", "button");
 CLOSE_DIV.appendChild(CLOSE_BUTTON);
 
@@ -22,24 +22,20 @@ CLOSE_DIV.appendChild(CLOSE_BUTTON);
  */
 
 const SEARCH_DIV_0 = document.createElement("div") as HTMLDivElement;
-SEARCH_DIV_0.setAttribute("class", "component__container-layer search");
+SEARCH_DIV_0.setAttribute("class", "surface-layer surface-layer__images search");
 BODY_DIV.appendChild(SEARCH_DIV_0);
 
 const SEARCH_DIV_1 = document.createElement("div") as HTMLDivElement;
-SEARCH_DIV_1.setAttribute("class", "component__container-row");
+SEARCH_DIV_1.setAttribute("class", "search__container");
 SEARCH_DIV_0.appendChild(SEARCH_DIV_1);
 
 const SEARCH_DIV_2 = document.createElement("div") as HTMLDivElement;
-SEARCH_DIV_2.setAttribute("class", "component__container-col");
+SEARCH_DIV_2.setAttribute("class", "input-group");
 SEARCH_DIV_1.appendChild(SEARCH_DIV_2);
 
-const SEARCH_DIV_3 = document.createElement("div") as HTMLDivElement;
-SEARCH_DIV_3.setAttribute("class", "component__input-group");
-SEARCH_DIV_2.appendChild(SEARCH_DIV_3);
-
 const SEARCH_SPAN = document.createElement("span") as HTMLSpanElement;
-SEARCH_SPAN.setAttribute("class", "component__input-group-text");
-SEARCH_DIV_3.appendChild(SEARCH_SPAN);
+SEARCH_SPAN.setAttribute("class", "input-group-text");
+SEARCH_DIV_2.appendChild(SEARCH_SPAN);
 
 const SEARCH_SPAN_TN = document.createTextNode("src");
 SEARCH_SPAN.appendChild(SEARCH_SPAN_TN);
@@ -47,8 +43,8 @@ SEARCH_SPAN.appendChild(SEARCH_SPAN_TN);
 // select
 
 const SEARCH_SELECT = document.createElement("select") as HTMLSelectElement;
-SEARCH_SELECT.setAttribute("class", "component__dropdown");
-SEARCH_DIV_3.appendChild(SEARCH_SELECT);
+SEARCH_SELECT.setAttribute("class", "dropdown");
+SEARCH_DIV_2.appendChild(SEARCH_SELECT);
 
 const SEARCH_OPTION_0 = document.createElement("option") as HTMLOptionElement;
 SEARCH_OPTION_0.setAttribute("value", "contains");
@@ -64,24 +60,20 @@ SEARCH_SELECT.appendChild(SEARCH_OPTION_1);
 const SEARCH_OPTION_1_TN = document.createTextNode("not contains");
 SEARCH_OPTION_1.appendChild(SEARCH_OPTION_1_TN);
 
-const SEARCH_DIV_4 = document.createElement("div") as HTMLDivElement;
-SEARCH_DIV_4.setAttribute("class", "component__container-col");
-SEARCH_DIV_1.appendChild(SEARCH_DIV_4);
-
 // input
 
 const SEARCH_INPUT = document.createElement("input") as HTMLInputElement;
-SEARCH_INPUT.setAttribute("class", "component__text-box");
+SEARCH_INPUT.setAttribute("class", "text-box search__text-box");
 SEARCH_INPUT.setAttribute("type", "text");
 SEARCH_INPUT.setAttribute("placeholder", "/pl");
-SEARCH_DIV_4.appendChild(SEARCH_INPUT);
+SEARCH_DIV_1.appendChild(SEARCH_INPUT);
 
 /*
  * ------------------------- content -------------------------
  */
 
 const CONTENT_DIV_0 = document.createElement("div") as HTMLDivElement;
-CONTENT_DIV_0.setAttribute("class", "component__container-layer content");
+CONTENT_DIV_0.setAttribute("class", "surface-layer surface-layer__images content");
 BODY_DIV.appendChild(CONTENT_DIV_0);
 
 const CONTENT_DIV_1 = document.createElement("div") as HTMLDivElement;
@@ -110,14 +102,14 @@ if (IMGS !== null) {
     i++;
 
     const CONTENT_SPAN_0 = document.createElement("span") as HTMLSpanElement;
-    CONTENT_SPAN_0.setAttribute("class", "content__caption-src");
+    CONTENT_SPAN_0.setAttribute("class", "content__caption");
     CONTENT_DIV_2.appendChild(CONTENT_SPAN_0);
 
     const CONTENT_SPAN_0_TN = document.createTextNode("src: " + img.src);
     CONTENT_SPAN_0.appendChild(CONTENT_SPAN_0_TN);
 
     const CONTENT_SPAN_1 = document.createElement("span") as HTMLSpanElement;
-    CONTENT_SPAN_1.setAttribute("class", "content__caption-alt");
+    CONTENT_SPAN_1.setAttribute("class", "content__caption");
     CONTENT_DIV_2.appendChild(CONTENT_SPAN_1);
 
     const CONTENT_SPAN_1_TN = document.createTextNode("alt: " + img.alt);

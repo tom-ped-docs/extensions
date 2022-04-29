@@ -1,27 +1,26 @@
 @use "controls/bootstrap";
 
-@use "variables" as var;
-
 @use "typography";
 @use "colors";
 
-.#{var.$prefix} {
-  &__container-start {
+.container {
+  &-start {
     display: flex;
     // justify-content: flex-start;
   }
 
-  &__container-end {
+  &-end {
     display: flex;
     justify-content: flex-end;
   }
+}
 
-  &__container-row    { @extend .row, .g-2; }
-  &__container-col    { @extend .col; }
+.input-group {
+  @extend .input-group, .input-group-sm;
+}
 
-  &__input-group      { @extend .input-group, .input-group-sm; }
-  &__input-group-text { @extend .input-group-text, .body, .text; }
-  &__btn-group        { @extend .btn-group, .btn-group-sm; }
+.input-group-text {
+  @extend .input-group-text, .body, .text;
 }
 
 .light {
@@ -40,4 +39,12 @@
     border-color: rgba(255, 255, 255, 0.09);
     border-color: rgba(255, 255, 255, 0.07);
   }
+}
+
+.btn-group {
+  @extend .btn-group, .btn-group-sm;
+
+  &--buttons2 { width: 5rem; }
+
+  &--buttons3 { width: 7.5rem; }
 }

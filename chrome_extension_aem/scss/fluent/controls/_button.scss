@@ -1,34 +1,39 @@
 @use "bootstrap";
 
-@use "../variables" as var;
-
 @use "../typography";
 @use "../colors";
 
+@use "focus_rect";
+
 /* ------------------------- Button ------------------------- */
 
-// .btn {
-//   height: 32px;
-//   width: 120px;
-// }
+.button {
+  @extend .btn, .btn-sm;
+  height: 32px;
 
-.#{var.$prefix} {
-  &__button {
-    @extend .btn, .btn-sm;
-    height: 32px;
+  &--standard {
+    @extend .standard, .body, .text;
+  }
 
-    &--standard { @extend .standard, .body, .text; }
+  &--accent {
+    @extend .accent, .body, .text-on-accent;
+  }
 
-    &--accent { @extend .accent, .body, .text-on-accent; }
+  &--standard-icon {
+    @extend .standard, .text;
+    font-size: 14px;
 
-    &--standard-icon {
-      @extend .standard, .text;
-      font-size: 14px;
+    &::before {
+      font-family: typography.$font-family-segoe-fluent-icons;
     }
+  }
 
-    &--accent-icon {
-      @extend .accent, .text-on-accent;
-      font-size: 14px;
+  &--accent-icon {
+    @extend .accent, .text-on-accent;
+    font-size: 14px;
+
+    &::before {
+      font-family: typography.$font-family-segoe-fluent-icons;
     }
   }
 }
@@ -60,7 +65,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+      @extend .focus-rect;
     }
   }
 
@@ -77,6 +82,9 @@
       // border: 1px solid;
       // border-color: rgba(255, 255, 255, 0.08);
       // border-color: rgba(0, 0, 0, 0.4);
+
+      // .text-on-accent
+      color: rgba(255, 255, 255, 1);
     }
 
     &:active {
@@ -90,7 +98,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+      @extend .focus-rect;
     }
   }
 }
@@ -122,7 +130,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+      @extend .focus-rect;
     }
   }
 
@@ -139,6 +147,9 @@
       // border: 1px solid;
       // border-color: rgba(255, 255, 255, 0.08);
       // border-color: rgba(0, 0, 0, 0.14);
+
+      // .text-on-accent
+      color: rgba(0, 0, 0, 1);
     }
 
     &:active {
@@ -152,7 +163,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+      @extend .focus-rect;
     }
   }
 }

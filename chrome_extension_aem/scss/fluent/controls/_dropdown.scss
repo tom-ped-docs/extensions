@@ -1,17 +1,15 @@
 @use "bootstrap";
 
-@use "../variables" as var;
-
 @use "../typography";
 @use "../colors";
 
+@use "focus_rect";
+
 /* ------------------------- Dropdown ------------------------- */
 
-.#{var.$prefix} {
-  &__dropdown {
-    @extend .form-select, .form-select-sm, .body, .text;
-    height: 32px;
-  }
+.dropdown {
+  @extend .form-select, .form-select-sm, .body, .text;
+  height: 32px;
 }
 
 .light {
@@ -41,7 +39,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 3px rgba(0, 0, 0, 0.9);
+      @extend .focus-rect;
     }
 
     & {
@@ -88,7 +86,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px rgba(255, 255, 255, 1);
+      @extend .focus-rect;
     }
 
     & {

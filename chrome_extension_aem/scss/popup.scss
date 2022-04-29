@@ -1,9 +1,3 @@
-@use "fluent/variables" as var;
-@use "fluent/containers";
-
-@use "fluent/iconography";
-@use "fluent/surfaces";
-
 @use "fluent/controls/button";
 @use "fluent/controls/dropdown";
 @use "fluent/controls/text_box";
@@ -11,66 +5,41 @@
 
 @use "fluent/motion";
 
+@use "fluent/containers";
+@use "fluent_config.scss";
+
 /* ------------------------- popup.html ------------------------- */
 
-.#{var.$prefix} {
-  &__container-base { border: unset !important; }
-
-  &__button {
-    &--standard { width: 5rem; }
-  }
-}
+$spacer: 0.5rem;
 
 .toolbar {
   // { a }
 
   &__button-images,
-  &__button-options { margin-right: var.$spacer; }
+  &__button-options { margin-right: $spacer; }
 
-  // &__button-help { i }
-
-  &__button-images::before,
-  &__button-options::before,
-  &__button-help::before { font-family: iconography.$font-family; }
-
-  // ImageExport
-  &__button-images::before { content: "\ee71"; }
-
-  // Settings
+  &__button-images::before  { content: "\ee71"; }
   &__button-options::before { content: "\e713"; }
-
-  // Help
-  &__button-help::before { content: "\e897"; }
+  &__button-help::before    { content: "\e897"; }
 }
 
 .aem {
-    margin-top: var.$spacer;
+    // { a }
+    margin-top: $spacer;
     transition-timing-function: ease;
     transition-duration: 0.5s;
     transition-property: background-color;
 
-    &--critical { @extend .critical-background; }
+    // &--critical { bc }
 
-    // &__samsung { a }
+    &__container { margin-top: $spacer; }
 
-    // &__iqos { a }
+    &__input-group-login,
+    &__input-url,
+    &__select-site { width: 50%; }
 
-    // component__input-group { a }
-
-    // &__button-login { i }
-
-    // &__select-site { a }
-
-    // &__input-url { a }
-
-    &__container { margin-top: var.$spacer; }
-
-    &__btn-group-editor { width: 5rem; }
-
-    // &__button-editor { i }
-
-    // &__button-preview { i }
-
+    &__input-url,
+    &__select-site,
     &__button-qa,
     &__button-qa-login,
     &__button-live,
@@ -79,8 +48,9 @@
     &__button-workflows,
     &__button-age-gate,
     &__button-purging,
+    &__button-hybris,
     &__button-pim-b2c,
-    &__button-pim-b2b { margin-left: var.$spacer; }
+    &__button-pim-b2b { margin-left: $spacer; }
 
     &__button-task-management,
     &__button-workflows {
@@ -90,127 +60,48 @@
       white-space: nowrap;
     }
 
-    &__button-login::before,
-    &__button-editor::before,
-    &__button-preview::before { font-family: iconography.$font-family; }
-
-    // OpenInNewWindow
-    &__button-login::before { content: "\e8a7"; }
-
-    // Edit
-    &__button-editor::before { content: "\e70f"; }
-
-    // View
+    &__button-login::before   { content: "\e8a7"; }
+    &__button-editor::before  { content: "\e70f"; }
     &__button-preview::before { content: "\e890"; }
+}
+
+.light {
+  // Info Bar, Critical
+  .aem--critical { background-color: rgba(253, 231, 233, 1); }
+}
+
+.dark {
+  // Info Bar, Critical
+  .aem--critical { background-color: rgba(68, 39, 38, 1); }
 }
 
 .tools {
   // { a }
-  margin-top: var.$spacer;
+  display: flex;
+  margin-top: $spacer;
 
-  // component__input-group { a }
-
-  // &__button-paste { i }
+  &__input-group-paste,
+  &__container { width: 50%; }
 
   &__container { display: flex; }
 
-  &__btn-group-capitalization { width: 7.5rem; }
+  &__container,
+  &__btn-group-cut-copy { margin-left: $spacer; }
 
-  &__btn-group-cut-copy {
-    width: 5rem;
-    margin-left: var.$spacer;
-  }
-
-  // &__button-cut { i }
-
-  // &__button-copy { i }
-
-  &__button-paste::before,
-  &__button-cut::before,
-  &__button-copy::before { font-family: iconography.$font-family; }
-
-  // Paste
   &__button-paste::before { content: "\e77f"; }
-
-  // Cut
-  &__button-cut::before { content: "\e8c6"; }
-
-  // Copy
-  &__button-copy::before { content: "\e8c8"; }
+  &__button-cut::before   { content: "\e8c6"; }
+  &__button-copy::before  { content: "\e8c8"; }
 }
 
-// ------------------------- Motion 2 -------------------------
+// ------------------------- Motion -------------------------
 
 .toolbar,
-.aem__samsung,
-.aem__iqos,
+.aem,
 .tools {
+  @extend .ms-motion-slideDownIn;
+}
+
+.ms-motion-slideDownIn {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
           animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
-}
-
-.component__input-group,
-.aem__select-site {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 150ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 150ms both;
-}
-
-.aem__input-url,
-.tools__btn-group-capitalization {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 175ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 175ms both;
-}
-
-.aem__btn-group-editor,
-.tools__btn-group-cut-copy {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 200ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 200ms both;
-}
-
-.aem__button-qa,
-.aem__button-qa-login {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 225ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 225ms both;
-}
-
-.aem__button-live {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 250ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 250ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 250ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 250ms both;
-}
-
-.aem__button-sites {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 275ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 275ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 275ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 275ms both;
-}
-
-.aem__button-assets {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 300ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 300ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 300ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 300ms both;
-}
-
-.aem__button-task-management,
-.aem__button-grfalse {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 325ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 325ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 325ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 325ms both;
-}
-
-.aem__button-workflows,
-.aem__button-age-gate {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 350ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 350ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 350ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 350ms both;
-}
-
-.aem__button-purging {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 375ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 375ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 375ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 375ms both;
-}
-
-.aem__button-pim-b2c {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 400ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 400ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 400ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 400ms both;
-}
-
-.aem__button-pim-b2b {
-  -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 425ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 425ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 425ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 425ms both;
 }

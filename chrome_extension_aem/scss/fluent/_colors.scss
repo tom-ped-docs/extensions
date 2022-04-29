@@ -53,25 +53,3 @@
     &-background-color { background-color: rgba(96, 205, 255, 1); }
   }
 }
-
-// ------------------------- System -------------------------
-
-.light {
-  .critical {
-    // System / Critical
-    background-color: rgba(196, 43, 28, 1) !important;
-
-    // System / Critical Background
-    &-background { background-color: rgba(253, 231, 233, 1) !important; }
-  }
-}
-
-.dark {
-  .critical {
-    // System / Critical
-    background-color: rgba(255, 153, 164, 1) !important;
-
-    // System / Critical Background
-    &-background { background-color: rgba(68, 39, 38, 1) !important; }
-  }
-}

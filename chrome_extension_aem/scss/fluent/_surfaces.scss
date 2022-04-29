@@ -1,20 +1,9 @@
-@use "variables" as var;
-
 /* ------------------------- Surfaces ------------------------- */
 
-.#{var.$prefix} {
-  &__container-base {
-    @extend .app-surface-base;
-    padding: var.$spacer;
-    // border-radius: var.$border-radius-base;
-  }
+// Microsoft Docs / ... / Geometry in Windows 11 https: //docs.microsoft.com/en-gb/windows/apps/design/signature-experiences/geometry
 
-  &__container-layer {
-    @extend .app-surface-layer;
-    padding: var.$spacer;
-    border-radius: var.$border-radius-layer;
-  }
-}
+$border-radius-base: 8px;
+$border-radius-layer: 4px;
 
 // ------------------------- App Surface -------------------------
 
