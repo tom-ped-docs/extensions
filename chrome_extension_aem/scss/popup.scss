@@ -16,63 +16,93 @@ $spacer: 0.5rem;
   // { a }
 
   &__button-images,
-  &__button-options { margin-right: $spacer; }
+  &__button-options {
+    margin-right: $spacer;
+  }
 
-  &__button-images::before  { content: "\ee71"; }
-  &__button-options::before { content: "\e713"; }
-  &__button-help::before    { content: "\e897"; }
+  &__button-images::before {
+    content: "\ee71";
+  }
+
+  &__button-options::before {
+    content: "\e713";
+  }
+
+  &__button-help::before {
+    content: "\e897";
+  }
 }
 
 .aem {
-    // { a }
+  // { a }
+  margin-top: $spacer;
+  transition-timing-function: ease;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+
+  // &--critical { bc }
+
+  &__container {
     margin-top: $spacer;
-    transition-timing-function: ease;
-    transition-duration: 0.5s;
-    transition-property: background-color;
+  }
 
-    // &--critical { bc }
+  &__input-group-login,
+  &__input-url,
+  &__select-site {
+    width: 50%;
+  }
 
-    &__container { margin-top: $spacer; }
+  &__input-url,
+  &__select-site,
+  &__button-qa,
+  &__button-qa-login,
+  &__button-live,
+  &__button-sites,
+  &__button-assets,
+  &__button-workflows,
+  &__button-age-gate,
+  &__button-purging,
+  &__button-hybris,
+  &__button-pim-b2c,
+  &__button-pim-b2b {
+    margin-left: $spacer;
+  }
 
-    &__input-group-login,
-    &__input-url,
-    &__select-site { width: 50%; }
+  &__button-task-management,
+  &__button-workflows {
+    // .text-truncate
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
-    &__input-url,
-    &__select-site,
-    &__button-qa,
-    &__button-qa-login,
-    &__button-live,
-    &__button-sites,
-    &__button-assets,
-    &__button-workflows,
-    &__button-age-gate,
-    &__button-purging,
-    &__button-hybris,
-    &__button-pim-b2c,
-    &__button-pim-b2b { margin-left: $spacer; }
+  &__button-login::before {
+    content: "\e8a7";
+  }
 
-    &__button-task-management,
-    &__button-workflows {
-      // .text-truncate
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+  &__button-editor::before {
+    content: "\e70f";
+  }
 
-    &__button-login::before   { content: "\e8a7"; }
-    &__button-editor::before  { content: "\e70f"; }
-    &__button-preview::before { content: "\e890"; }
+  &__button-preview::before {
+    content: "\e890";
+  }
 }
 
 .light {
+
   // Info Bar, Critical
-  .aem--critical { background-color: rgba(253, 231, 233, 1); }
+  .aem--critical {
+    background-color: rgba(253, 231, 233, 1);
+  }
 }
 
 .dark {
+
   // Info Bar, Critical
-  .aem--critical { background-color: rgba(68, 39, 38, 1); }
+  .aem--critical {
+    background-color: rgba(68, 39, 38, 1);
+  }
 }
 
 .tools {
@@ -81,16 +111,30 @@ $spacer: 0.5rem;
   margin-top: $spacer;
 
   &__input-group-paste,
-  &__container { width: 50%; }
+  &__container {
+    width: 50%;
+  }
 
-  &__container { display: flex; }
+  &__container {
+    display: flex;
+  }
 
   &__container,
-  &__btn-group-cut-copy { margin-left: $spacer; }
+  &__btn-group-cut-copy {
+    margin-left: $spacer;
+  }
 
-  &__button-paste::before { content: "\e77f"; }
-  &__button-cut::before   { content: "\e8c6"; }
-  &__button-copy::before  { content: "\e8c8"; }
+  &__button-paste::before {
+    content: "\e77f";
+  }
+
+  &__button-cut::before {
+    content: "\e8c6";
+  }
+
+  &__button-copy::before {
+    content: "\e8c8";
+  }
 }
 
 // ------------------------- Motion -------------------------
@@ -103,5 +147,5 @@ $spacer: 0.5rem;
 
 .ms-motion-slideDownIn {
   -webkit-animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
-          animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
+  animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
 }

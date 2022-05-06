@@ -18,9 +18,13 @@ $spacer: 0.5rem;
 .appearance {
   margin-top: $spacer;
 
-  &__select-theme { width: 10rem; }
+  &__select-theme {
+    width: 10rem;
+  }
 
-  &__icon-personalize::before { content: "\e771"; }
+  &__icon-personalize::before {
+    content: "\e771";
+  }
 }
 
 .shortcuts {
@@ -32,29 +36,51 @@ $spacer: 0.5rem;
     margin-right: $spacer;
   }
 
-  &__icon-keyboard::before  { content: "\eda7"; }
-  &__button-edit::before    { content: "\e70f"; }
+  &__icon-keyboard::before {
+    content: "\eda7";
+  }
+
+  &__button-edit::before {
+    content: "\e70f";
+  }
 }
 
 .extensions {
   margin-top: $spacer;
 
-  &__container { display: flex; }
+  &__container {
+    display: flex;
+  }
 
-  &__body { @extend .body, .text; }
+  &__body {
+    @extend .body, .text;
+  }
 
-  &__icon-view::before { content: "\e890"; }
+  &__icon-view::before {
+    content: "\e890";
+  }
 }
 
 .aem-samsung {
   margin-top: $spacer;
 
-  &__container { display: flex; }
+  &__container {
+    display: flex;
+  }
 
-  &__input-login { width: 20rem; }
+  &__input-login {
+    width: 20rem;
+  }
 
-  &__button-save { margin-left: $spacer; }
+  &__button-save {
+    margin-left: $spacer;
+  }
 
-  &__icon-robot::before   { content: "\e99a"; }
-  &__button-save::before  { content: "\e74e"; }
+  &__icon-robot::before {
+    content: "\e99a";
+  }
+
+  &__button-save::before {
+    content: "\e74e";
+  }
 }

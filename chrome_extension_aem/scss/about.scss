@@ -35,5 +35,7 @@
     // align-items: center;
   }
 
-  &__body { @extend .body, .text; }
+  &__body {
+    @extend .body, .text;
+  }
 }

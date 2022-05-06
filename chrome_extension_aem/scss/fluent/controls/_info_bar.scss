@@ -56,11 +56,11 @@ $spacer: 0.5rem;
 
 // $light-attention: rgba(246, 246, 246, 0.5);
 $light-solid-attention: rgba(247, 247, 247, 1);
-$light-success:   rgba(223, 246, 221, 1);
-$light-caution:   rgba(255, 244, 206, 1);
-$light-critical:  rgba(253, 231, 233, 1);
+$light-success: rgba(223, 246, 221, 1);
+$light-caution: rgba(255, 244, 206, 1);
+$light-critical: rgba(253, 231, 233, 1);
 // $light-neutral: rgba(0, 0, 0, 0.02);
-$light-solid-neutral:   rgba(243, 243, 243, 1);
+$light-solid-neutral: rgba(243, 243, 243, 1);
 
 .light {
   .info-bar {
@@ -86,11 +86,11 @@ $light-solid-neutral:   rgba(243, 243, 243, 1);
 
 // $dark-attention: rgba(255, 255, 255, 0.03);
 $dark-solid-attention:rgba(46, 46, 46, 1);
-$dark-success:  rgba(57, 61, 27, 1);
-$dark-caution:  rgba(67, 53, 25, 1);
+$dark-success: rgba(57, 61, 27, 1);
+$dark-caution: rgba(67, 53, 25, 1);
 $dark-critical: rgba(68, 39, 38, 1);
 // $dark-neutral: rgba(255, 255, 255, 0.03);
-$dark-solid-neutral:  rgba(46, 46, 46, 1);
+$dark-solid-neutral: rgba(46, 46, 46, 1);
 
 .dark {
   .info-bar {

@@ -44,7 +44,11 @@
 .btn-group {
   @extend .btn-group, .btn-group-sm;
 
-  &--buttons2 { width: 5rem; }
+  &--buttons2 {
+    width: 5rem;
+  }
 
-  &--buttons3 { width: 7.5rem; }
+  &--buttons3 {
+    width: 7.5rem;
+  }
 }

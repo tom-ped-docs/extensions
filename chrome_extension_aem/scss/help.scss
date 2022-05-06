@@ -28,15 +28,21 @@ $spacer: 0.5rem;
   }
 
   &__dropdown,
-  &__text-box { width: 10rem; }
+  &__text-box {
+    width: 10rem;
+  }
 
-  &__info-bar { margin-top: $spacer; }
+  &__info-bar {
+    margin-top: $spacer;
+  }
 
   &__body {
     @extend .body, .text;
     margin-left: $spacer;
 
-    &--ampersand { margin-right: $spacer; }
+    &--ampersand {
+      margin-right: $spacer;
+    }
   }
 
   &__button-task-management,
@@ -47,15 +53,41 @@ $spacer: 0.5rem;
     white-space: nowrap;
   }
 
-  &__button-images::before  { content: "\ee71"; }
-  &__button-options::before { content: "\e713"; }
-  &__button-help::before    { content: "\e897"; }
-  &__button-login::before   { content: "\e8a7"; }
-  &__button-editor::before  { content: "\e70f"; }
-  &__button-preview::before { content: "\e890"; }
-  &__button-paste::before   { content: "\e77f"; }
-  &__button-cut::before     { content: "\e8c6"; }
-  &__button-copy::before    { content: "\e8c8"; }
+  &__button-images::before {
+    content: "\ee71";
+  }
+
+  &__button-options::before {
+    content: "\e713";
+  }
+
+  &__button-help::before {
+    content: "\e897";
+  }
+
+  &__button-login::before {
+    content: "\e8a7";
+  }
+
+  &__button-editor::before {
+    content: "\e70f";
+  }
+
+  &__button-preview::before {
+    content: "\e890";
+  }
+
+  &__button-paste::before {
+    content: "\e77f";
+  }
+
+  &__button-cut::before {
+    content: "\e8c6";
+  }
+
+  &__button-copy::before {
+    content: "\e8c8";
+  }
 }
 
 .code {

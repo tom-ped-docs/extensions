@@ -6,7 +6,7 @@ const URL_SAMSUNG = {
     p5_aem_eu: "https://aem-eu.samsung.com/",
     p5_aem_eu_shop: "https://aem-eu-shop.samsung.com/",
     p5_login: "aemapi/user/login_sso?s_user_id=",
-    // p5_login_reset:     "542b562d2e9g30fgcg6b6422101b6e2d95333a3f2e3e49",
+    // p5_login_reset: "542b562d2e9g30fgcg6b6422101b6e2d95333a3f2e3e49",
     p5_qa: "https://qaweb.samsung.com/",
     p5_qa_shop: "https://qaweb-shop.samsung.com/",
     p5_task_management: "aem/taskmanagement",
@@ -18,7 +18,7 @@ const URL_SAMSUNG = {
     p6_aem_eu: "https://p6-eu-author.samsung.com/",
     p6_aem_us: "https://p6-us-author.samsung.com/",
     p6_login: "aemapi/user/login_sso?s_user_email=",
-    // p6_login_reset:     "pedzich.t@samsung.com",
+    // p6_login_reset: "pedzich.t@samsung.com",
     p6_qa: "https://p6-qa.samsung.com/",
     p6_workflows: "aem/inbox",
     p6_purging: "aem/pim/global/setting/cdnpurging/page/purgerequest/info",
@@ -60,8 +60,8 @@ const URL_IQOS = {
     sites: "sites.html/content/",
     assets: "assets.html/content/dam/iqos/local",
     grfalse: "?gr=false",
-    pre_prod_hybris: "https://backoffice.iqos.com/backoffice/login.zul",
-    prod_hybris: "https://backoffice.pp.iqos.com/backoffice/login.zul"
+    pre_prod_hybris: "https://backoffice.pp.iqos.com/backoffice/login.zul",
+    prod_hybris: "https://backoffice.iqos.com/backoffice/login.zul"
 };
 let selected_aem_iqos = "pre_prod_aem";
 let selected_site = "pmisite";

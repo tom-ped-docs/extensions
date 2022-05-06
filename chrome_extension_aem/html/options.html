@@ -1,177 +1,177 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
 
-  <link rel="stylesheet" href="../css/options.css">
+    <link rel="stylesheet" href="../css/options.css">
 
-  <title>Options</title>
-</head>
+    <title>Options</title>
+  </head>
 
-<body class="surface-base surface-base__page">
+  <body class="surface-base surface-base__page">
 
-  <div class="container-start">
+    <div class="container-start">
 
-    <div class="side-nav">
-      <div class="side-nav__list-item side-nav__list-item--selected">
-        <span class="side-nav__selector side-nav__selector--selected"></span>
-        <span class="side-nav__icon nav__icon-options"></span>
-        <span class="side-nav__body">Options</span>
-        <a class="side-nav__stretched-link" href="#"></a>
+      <div class="side-nav">
+        <div class="side-nav__list-item side-nav__list-item--selected">
+          <span class="side-nav__selector side-nav__selector--selected"></span>
+          <span class="side-nav__icon nav__icon-options"></span>
+          <span class="side-nav__body">Options</span>
+          <a class="side-nav__stretched-link" href="#"></a>
+        </div>
+
+        <div class="side-nav__list-item">
+          <span class="side-nav__selector"></span>
+          <span class="side-nav__icon nav__icon-help"></span>
+          <span class="side-nav__body">Help</span>
+          <a class="side-nav__stretched-link" href="help.html"></a>
+        </div>
+
+        <div class="side-nav__list-item">
+          <span class="side-nav__selector"></span>
+          <span class="side-nav__icon nav__icon-about"></span>
+          <span class="side-nav__body">About</span>
+          <a class="side-nav__stretched-link" href="about.html"></a>
+        </div>
       </div>
 
-      <div class="side-nav__list-item">
-        <span class="side-nav__selector"></span>
-        <span class="side-nav__icon nav__icon-help"></span>
-        <span class="side-nav__body">Help</span>
-        <a class="side-nav__stretched-link" href="help.html"></a>
-      </div>
+      <div class="surface-layer surface-layer__page">
 
-      <div class="side-nav__list-item">
-        <span class="side-nav__selector"></span>
-        <span class="side-nav__icon nav__icon-about"></span>
-        <span class="side-nav__body">About</span>
-        <a class="side-nav__stretched-link" href="about.html"></a>
+        <span class="heading heading__title">Options</span>
+
+        <div class="surface-layer__container">
+
+          <!-- ------------------------- appearance ------------------------- -->
+
+          <div class="card appearance">
+            <div class="card__body">
+              <div class="card__container-row">
+                <span class="card__icon appearance__icon-personalize"></span>
+                <div class="card__container-column">
+                  <span class="card__bodytext">Choose your mode</span>
+                  <span class="card__caption">Change the colors that appear in popup and options page</span>
+                </div>
+              </div>
+              <select class="dropdown appearance__select-theme" id="appearance__select-theme">
+                <option value="auto">auto</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ------------------------- shortcuts ------------------------- -->
+
+          <div class="card shortcuts">
+            <div class="card__body">
+              <div class="card__container-row">
+                <span class="card__icon shortcuts__icon-keyboard"></span>
+                <div class="card__container-column">
+                  <span class="card__bodytext">Activation shortcut</span>
+                  <span class="card__caption">Customize the shortcut to activate this extension</span>
+                </div>
+              </div>
+              <div>
+                <button class="button button--standard-icon shortcuts__button-edit" id="shortcuts__button-edit" type="button"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------- extensions ------------------------- -->
+
+          <div class="extensions">
+            <div class="expander__item">
+              <span class="expander__header">
+                <button class="expander__button collapsed" data-bs-target="#accordion-extensions" data-bs-toggle="collapse" type="button">
+                  <span class="expander__icon extensions__icon-view"></span>
+                  <div class="expander__container">
+                    <span class="expander__bodytext">Extension items</span>
+                    <span class="expander__caption">Show or hide widgets that appear on the popup</span>
+                  </div>
+                </button>
+              </span>
+              <div class="expander__collapse collapse" id="accordion-extensions">
+
+                <div class="expander__body">
+                  <span class="expander__bodytext">AEM Samsung</span>
+                  <div class="extensions__container">
+                    <span class="extensions__body" id="extensions__span-samsung">Off</span>
+                    <div class="toggle-switch toggle-switch--label-left">
+                      <input class="toggle-switch__inner" id="extensions__input-samsung" type="checkbox">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="expander__body">
+                  <span class="expander__bodytext">AEM IQOS</span>
+                  <div class="extensions__container">
+                    <span class="extensions__body" id="extensions__span-iqos">Off</span>
+                    <div class="toggle-switch toggle-switch--label-left">
+                      <input class="toggle-switch__inner" id="extensions__input-iqos" type="checkbox">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="expander__body">
+                  <span class="expander__bodytext">Text Capitalization Utilities</span>
+                  <div class="extensions__container">
+                    <span class="extensions__body" id="extensions__span-tools">Off</span>
+                    <div class="toggle-switch toggle-switch--label-left">
+                      <input class="toggle-switch__inner" id="extensions__input-tools" type="checkbox">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------- aem (samsung) ------------------------- -->
+
+          <span class="heading heading__subtitle">Widgets</span>
+
+          <div class="aem-samsung">
+            <div class="expander__item">
+              <span class="expander__header">
+                <button class="expander__button collapsed" data-bs-target="#accordion-samsung" data-bs-toggle="collapse" type="button">
+                  <span class="expander__icon aem-samsung__icon-robot"></span>
+                  <span class="expander__bodytext">AEM Samsung</span>
+                </button>
+              </span>
+              <div class="expander__collapse collapse" id="accordion-samsung">
+
+                <div class="expander__body">
+                  <span class="expander__bodytext">AEM P5 USER_ID</span>
+                  <div class="aem-samsung__container">
+                    <input class="text-box aem-samsung__input-login" id="samsung__input-user-id" type="text" placeholder="user_id">
+                    <button class="button button--standard-icon aem-samsung__button-save" id="samsung__button-save-user-id" type="button"></button>
+                  </div>
+                </div>
+
+                <div class="expander__body">
+                  <span class="expander__bodytext">AEM P6 USER_EMAIL</span>
+                  <div class="aem-samsung__container">
+                    <input class="text-box aem-samsung__input-login" id="samsung__input-user-email" type="text" placeholder="user_email">
+                    <button class="button button--standard-icon aem-samsung__button-save" id="samsung__button-save-user-email" type="button"></button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
 
-    <div class="surface-layer surface-layer__page">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/set_theme.js"></script>
+    <script src="../js/options.js"></script>
 
-      <span class="heading heading__title">Options</span>
-
-      <div class="surface-layer__container">
-
-        <!-- ------------------------- appearance ------------------------- -->
-
-        <div class="card appearance">
-          <div class="card__body">
-            <div class="card__container-row">
-              <span class="card__icon appearance__icon-personalize"></span>
-              <div class="card__container-column">
-                <span class="card__bodytext">Choose your mode</span>
-                <span class="card__caption">Change the colors that appear in popup and options page</span>
-              </div>
-            </div>
-            <select class="dropdown appearance__select-theme" id="appearance__select-theme">
-              <option value="auto">auto</option>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- ------------------------- shortcuts ------------------------- -->
-
-        <div class="card shortcuts">
-          <div class="card__body">
-            <div class="card__container-row">
-              <span class="card__icon shortcuts__icon-keyboard"></span>
-              <div class="card__container-column">
-                <span class="card__bodytext">Activation shortcut</span>
-                <span class="card__caption">Customize the shortcut to activate this extension</span>
-              </div>
-            </div>
-            <div>
-              <button class="button button--standard-icon shortcuts__button-edit" id="shortcuts__button-edit" type="button"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- ------------------------- extensions ------------------------- -->
-
-        <div class="extensions">
-          <div class="expander__item">
-            <span class="expander__header">
-              <button class="expander__button collapsed" data-bs-target="#accordion-extensions" data-bs-toggle="collapse" type="button">
-                <span class="expander__icon extensions__icon-view"></span>
-                <div class="expander__container">
-                  <span class="expander__bodytext">Extension items</span>
-                  <span class="expander__caption">Show or hide widgets that appear on the popup</span>
-                </div>
-              </button>
-            </span>
-            <div class="expander__collapse collapse" id="accordion-extensions">
-
-              <div class="expander__body">
-                <span class="expander__bodytext">AEM Samsung</span>
-                <div class="extensions__container">
-                  <span class="extensions__body" id="extensions__span-samsung">Off</span>
-                  <div class="toggle-switch toggle-switch--label-left">
-                    <input class="toggle-switch__inner" id="extensions__input-samsung" type="checkbox">
-                  </div>
-                </div>
-              </div>
-
-              <div class="expander__body">
-                <span class="expander__bodytext">AEM IQOS</span>
-                <div class="extensions__container">
-                  <span class="extensions__body" id="extensions__span-iqos">Off</span>
-                  <div class="toggle-switch toggle-switch--label-left">
-                    <input class="toggle-switch__inner" id="extensions__input-iqos" type="checkbox">
-                  </div>
-                </div>
-              </div>
-
-              <div class="expander__body">
-                <span class="expander__bodytext">Text Capitalization Utilities</span>
-                <div class="extensions__container">
-                  <span class="extensions__body" id="extensions__span-tools">Off</span>
-                  <div class="toggle-switch toggle-switch--label-left">
-                    <input class="toggle-switch__inner" id="extensions__input-tools" type="checkbox">
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- ------------------------- aem (samsung) ------------------------- -->
-
-        <span class="heading heading__subtitle">Widgets</span>
-
-        <div class="aem-samsung">
-          <div class="expander__item">
-            <span class="expander__header">
-              <button class="expander__button collapsed" data-bs-target="#accordion-samsung" data-bs-toggle="collapse" type="button">
-                <span class="expander__icon aem-samsung__icon-robot"></span>
-                <span class="expander__bodytext">AEM Samsung</span>
-              </button>
-            </span>
-            <div class="expander__collapse collapse" id="accordion-samsung">
-
-              <div class="expander__body">
-                <span class="expander__bodytext">AEM P5 USER_ID</span>
-                <div class="aem-samsung__container">
-                  <input class="text-box aem-samsung__input-login" id="samsung__input-user-id" type="text" placeholder="user_id">
-                  <button class="button button--standard-icon aem-samsung__button-save" id="samsung__button-save-user-id" type="button"></button>
-                </div>
-              </div>
-
-              <div class="expander__body">
-                <span class="expander__bodytext">AEM P6 USER_EMAIL</span>
-                <div class="aem-samsung__container">
-                  <input class="text-box aem-samsung__input-login" id="samsung__input-user-email" type="text" placeholder="user_email">
-                  <button class="button button--standard-icon aem-samsung__button-save" id="samsung__button-save-user-email" type="button"></button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/set_theme.js"></script>
-  <script src="../js/options.js"></script>
-
-</body>
+  </body>
 
 </html>

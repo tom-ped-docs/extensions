@@ -32,47 +32,65 @@
   }
 
   &--neutral-safe {
+
     // InfoBadge12
-    &::before { content: "\E625"; }
+    &::before {
+      content: "\E625";
+    }
   }
 
   &--attention {
+
     // AsteriskBadge12
     // &::before { content: "\EDAD"; }
-    &::before { content: "\E625"; }
+    &::before {
+      content: "\E625";
+    }
   }
 
   &--caution {
+
     // ImportantBadge12
-    &::before { content: "\EDB1"; }
+    &::before {
+      content: "\EDB1";
+    }
   }
 
   &--success {
+
     // CheckmarkBadge12
-    &::before { content: "\E65F"; }
+    &::before {
+      content: "\E65F";
+    }
   }
 
   &--critical {
+
     // ErrorBadge12
-    &::before { content: "\EDAE"; }
+    &::before {
+      content: "\EDAE";
+    }
   }
 }
 
-$light-attention:     rgba(0, 95, 183, 1);
-$light-success:       rgba(15, 123, 15, 1);
-$light-caution:       rgba(157, 93, 0, 1);
-$light-critical:      rgba(196, 43, 28, 1);
+$light-attention: rgba(0, 95, 183, 1);
+$light-success: rgba(15, 123, 15, 1);
+$light-caution: rgba(157, 93, 0, 1);
+$light-critical: rgba(196, 43, 28, 1);
 // $light-neutral: rgba(0, 0, 0, 0.45);
 $light-solid-neutral: rgba(138, 138, 138, 1);
 
 .light {
   .badge {
+
     &--neutral-safe,
     &--attention,
     &--caution,
     &--success,
     &--critical {
-      &::before { color: rgba(255, 255, 255, 1); }
+      &::before {
+        color: rgba(255, 255, 255, 1);
+      }
     }
 
     &--neutral-safe {
@@ -97,21 +115,26 @@ $light-solid-neutral: rgba(138, 138, 138, 1);
   }
 }
 
-$dark-attention:    rgba(96, 205, 255, 1);
-$dark-success:      rgba(108, 203, 95, 1);
-$dark-caution:      rgba(252, 225, 0, 1);
-$dark-critical:     rgba(255, 153, 164, 1);
+$dark-attention: rgba(96, 205, 255, 1);
+$dark-success: rgba(108, 203, 95, 1);
+$dark-caution: rgba(252, 225, 0, 1);
+$dark-critical: rgba(255, 153, 164, 1);
 // $dark-neutral: rgba(255, 255, 255, 0.54);
-$dark-solid-neutral: /* rgba(138, 138, 138, 1) */ rgba(157, 157, 157, 1);
+$dark-solid-neutral:
+/* rgba(138, 138, 138, 1) */
+rgba(157, 157, 157, 1);
 
 .dark {
   .badge {
+
     &--neutral-safe,
     &--attention,
     &--caution,
     &--success,
     &--critical {
-      &::before { color: rgba(0, 0, 0, 0.9); }
+      &::before {
+        color: rgba(0, 0, 0, 0.9);
+      }
     }
 
     &--neutral-safe {

@@ -60,9 +60,17 @@ html.dark {
 // ------------------------- Side Nav (Navigation View) -------------------------
 
 .nav {
-  &__icon-options::before  { content: "\e713"; }
-  &__icon-help::before     { content: "\e897"; }
-  &__icon-about::before    { content: "\f1ad"; }
+  &__icon-options::before {
+    content: "\e713";
+  }
+
+  &__icon-help::before {
+    content: "\e897";
+  }
+
+  &__icon-about::before {
+    content: "\f1ad";
+  }
 }
 
 // ------------------------- Surfaces -------------------------
@@ -123,7 +131,7 @@ $spacer: 0.5rem;
 
 .ms-motion-slideUpIn {
   -webkit-animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
-          animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
+  animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) 125ms both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) 125ms both;
 }
 
 // ------------------------- Headings -------------------------

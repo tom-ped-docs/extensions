@@ -3469,7 +3469,6 @@ textarea.form-control-lg {
 
 .body, .about__body, .side-nav__body, .input-group-text {
   font-family: "Segoe UI Variable";
-  font-feature-settings: "rclt" off;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -3477,7 +3476,6 @@ textarea.form-control-lg {
 
 .body-strong {
   font-family: "Segoe UI Variable";
-  font-feature-settings: "fina" on, "init" on;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -3485,7 +3483,6 @@ textarea.form-control-lg {
 
 .body-large {
   font-family: "Segoe UI Variable";
-  font-feature-settings: "fina" on, "init" on;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
