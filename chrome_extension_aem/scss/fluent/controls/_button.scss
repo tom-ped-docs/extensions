@@ -1,12 +1,9 @@
 @use "bootstrap";
-
 @use "../typography";
 @use "../colors";
-
 @use "focus_rect";
 
 /* ------------------------- Button ------------------------- */
-
 .button {
   @extend .btn, .btn-sm;
   height: 32px;
@@ -39,8 +36,8 @@
 }
 
 .light {
-  // Mode: Light, Style: Standard
 
+  // Mode: Light, Style: Standard
   .standard {
     background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid;
@@ -70,7 +67,6 @@
   }
 
   // Mode: Light, Style: Accent
-
   .accent {
     background-color: rgba(0, 95, 184, 1);
     border: 1px solid;
@@ -82,7 +78,6 @@
       // border: 1px solid;
       // border-color: rgba(255, 255, 255, 0.08);
       // border-color: rgba(0, 0, 0, 0.4);
-
       // .text-on-accent
       color: rgba(255, 255, 255, 1);
     }
@@ -104,8 +99,8 @@
 }
 
 .dark {
-  // Mode: Dark, Style: Standard
 
+  // Mode: Dark, Style: Standard
   .standard {
     background-color: rgba(255, 255, 255, 0.06);
     border: 1px solid;
@@ -135,7 +130,6 @@
   }
 
   // Mode: Dark, Style: Accent
-
   .accent {
     background-color: rgba(96, 205, 255, 1);
     border: 1px solid;
@@ -147,7 +141,6 @@
       // border: 1px solid;
       // border-color: rgba(255, 255, 255, 0.08);
       // border-color: rgba(0, 0, 0, 0.14);
-
       // .text-on-accent
       color: rgba(0, 0, 0, 1);
     }

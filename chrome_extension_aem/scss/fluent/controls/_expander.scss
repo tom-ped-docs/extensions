@@ -1,10 +1,8 @@
 @use "bootstrap";
-
 @use "../typography";
 @use "../colors";
 
 /* ------------------------- Expander ------------------------- */
-
 .expander {
   &__item {
     @extend .accordion-item;
@@ -104,8 +102,8 @@
 }
 
 .light {
-  // Mode: Light, Expanded: False & True
 
+  // Mode: Light, Expanded: False & True
   .accordion-item,
   .card {
     background-color: rgba(246, 246, 246, 0.5);
@@ -131,8 +129,8 @@
 }
 
 .dark {
-  // Mode: Dark, Expanded: False & True
 
+  // Mode: Dark, Expanded: False & True
   .accordion-item,
   .card {
     background-color: rgba(255, 255, 255, 0.03);

@@ -24,3 +24,4 @@ chrome.storage.local.get("selected_theme", ({ selected_theme }) => {
         }
     }
 });
+// https://github.com/postcss/postcss-dark-theme-class

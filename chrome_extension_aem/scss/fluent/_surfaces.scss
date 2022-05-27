@@ -1,64 +1,51 @@
 /* ------------------------- Surfaces ------------------------- */
-
 // Microsoft Docs / ... / Geometry in Windows 11 https: //docs.microsoft.com/en-gb/windows/apps/design/signature-experiences/geometry
-
 $border-radius-base: 8px;
 $border-radius-layer: 4px;
 
 // ------------------------- App Surface -------------------------
-
 .light {
-  // Mode: Light, Part: Base (Mica), Inactive: False
 
+  // Mode: Light, Part: Base (Mica), Inactive: False
   .app-surface-base {
     border: 1px solid rgba(117, 117, 117, 0.4);
-
     // background: rgba(255, 255, 255, 1);
     // mix-blend-mode: multiply;
     // box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.28), 0px 2px 21px rgba(0, 0, 0, 0.22);
-
     // background: linear-gradient(0deg, rgba(243, 243, 243, 0.5), rgba(243, 243, 243, 0.5)), rgb(243, 243, 243);
     background-color: rgba(243, 243, 243, 0.5);
     background-color: rgba(243, 243, 243, 0.5);
     // background-blend-mode: color, luminosity;
     // backdrop-filter: blur(240px);
-
     background-color: rgba(243, 243, 243, 1);
   }
 
   // Mode: Light, Part: Layer, Inactive: False
-
   .app-surface-layer {
     border: 1px solid rgba(0, 0, 0, 0.0578);
-
     background: rgba(255, 255, 255, 0.5);
   }
 }
 
 .dark {
-  // Mode: Dark, Part: Base (Mica), Inactive: False
 
+  // Mode: Dark, Part: Base (Mica), Inactive: False
   .app-surface-base {
     border: 1px solid rgba(117, 117, 117, 0.4);
-
     // background: rgb(255, 255, 255);
     // mix-blend-mode: multiply;
     // box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.56), 0px 2px 21px rgba(0, 0, 0, 0.55);
-
     // background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8)), rgb(32, 32, 32);
     background-color: rgba(32, 32, 32, 0.8);
     background-color: rgba(32, 32, 32, 0.8);
     // background-blend-mode: color, luminosity;
     // backdrop-filter: blur(240px);
-
     background-color: rgba(32, 32, 32, 1);
   }
 
   // Mode: Dark, Part: Layer, Inactive: False
-
   .app-surface-layer {
     border: 1px solid rgba(0, 0, 0, 0.1);
-
     background: rgba(58, 58, 58, 0.3);
   }
 }

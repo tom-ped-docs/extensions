@@ -1,5 +1,4 @@
 /* ------------------------- Scroll Bar (Scroll Viewer) ------------------------- */
-
 html {
   overflow: auto;
 }
@@ -31,16 +30,16 @@ html {
 }
 
 html.light {
-  // Mode: Light, Orientation: Bidirectional, Expanded: False
 
+  // Mode: Light, Orientation: Bidirectional, Expanded: False
   ::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.45);
   }
 }
 
 html.dark {
-  // Mode: Dark, Orientation: Bidirectional, Expanded: False
 
+  // Mode: Dark, Orientation: Bidirectional, Expanded: False
   ::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.54);
   }

@@ -3496,7 +3496,7 @@ textarea.form-control-lg {
 /* ------------------------- Typography ------------------------- */
 @font-face {
   font-family: "Segoe UI Variable";
-  src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
+  src: url("../assets/fonts/segoe_ui_variable.ttf") format("truetype-variations");
 }
 .caption {
   font-family: "Segoe UI Variable";
@@ -3556,15 +3556,15 @@ textarea.form-control-lg {
 
 @font-face {
   font-family: "Segoe Fluent Icons";
-  src: url(../../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
+  src: url("../../assets/fonts/segoe_fluent_icons.ttf") format("truetype");
 }
 @font-face {
   font-family: "Cascadia Code";
-  src: url(../../assets/fonts/CascadiaCode.ttf) format("truetype");
+  src: url("../../assets/fonts/CascadiaCode.ttf") format("truetype");
 }
 @font-face {
   font-family: "Cascadia Code Italic";
-  src: url(../../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
+  src: url("../../assets/fonts/CascadiaCodeItalic.ttf") format("truetype");
 }
 /* ------------------------- Light & Dark Theme Colors ------------------------- */
 .light .text, .light .heading, .light .input-group-text, .light .text-box, .light .dropdown, .light .button--standard, .light .button--standard-icon {

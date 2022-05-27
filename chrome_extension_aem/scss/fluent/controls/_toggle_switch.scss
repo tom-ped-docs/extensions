@@ -1,9 +1,6 @@
 @use "bootstrap";
-
 @use "focus_rect";
-
 /* ------------------------- Toggle Switch ------------------------- */
-
 $spacer: 0.5rem;
 
 .toggle-switch {
@@ -24,8 +21,8 @@ $spacer: 0.5rem;
 
 .light {
   .form-switch {
-    // Mode: Light, Selected: False
 
+    // Mode: Light, Selected: False
     .form-check-input {
       background-color: rgba(0, 0, 0, 0.02);
       border: 1px solid rgba(0, 0, 0, 0.45);
@@ -53,7 +50,6 @@ $spacer: 0.5rem;
     }
 
     // Mode: Light, Selected: True
-
     .form-check-input:checked {
       background-color: rgba(0, 95, 184, 1);
       border: 1px solid rgba(0, 95, 184, 1);
@@ -84,8 +80,8 @@ $spacer: 0.5rem;
 
 .dark {
   .form-switch {
-    // Mode: Dark, Selected: False
 
+    // Mode: Dark, Selected: False
     .form-check-input {
       background-color: rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.54);
@@ -112,7 +108,6 @@ $spacer: 0.5rem;
     }
 
     // Mode: Dark, Selected: True
-
     .form-check-input:checked {
       background-color: rgba(96, 205, 255, 1);
       border: 1px solid rgba(96, 205, 255, 1);

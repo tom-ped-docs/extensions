@@ -1,19 +1,16 @@
 @use "bootstrap";
-
 @use "../typography";
 @use "../colors";
-
 @use "focus_rect";
 
 /* ------------------------- Hyperlink Button ------------------------- */
-
 .hyperlink-button {
   @extend .btn, .btn-sm, .body, .accent-text;
 }
 
 .light {
-  // Mode: Light, Style: Standard
 
+  // Mode: Light, Style: Standard
   .hyperlink-button {
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid rgba(255, 255, 255, 0);
@@ -40,8 +37,8 @@
 }
 
 .dark {
-  // Mode: Dark, Style: Standard
 
+  // Mode: Dark, Style: Standard
   .hyperlink-button {
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid rgba(255, 255, 255, 0);

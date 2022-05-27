@@ -1,18 +1,14 @@
 @use "fluent/typography";
 @use "fluent/colors";
-
 @use "fluent/controls/button";
 @use "fluent/controls/dropdown";
 @use "fluent/controls/toggle_switch";
 @use "fluent/controls/expander";
 @use "fluent/controls/text_box";
 @use "fluent/controls/side_nav";
-
 @use "fluent/containers";
 @use "fluent_config.scss";
-
 /* ------------------------- options.html ------------------------- */
-
 $spacer: 0.5rem;
 
 .appearance {

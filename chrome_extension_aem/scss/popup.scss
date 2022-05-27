@@ -2,19 +2,15 @@
 @use "fluent/controls/dropdown";
 @use "fluent/controls/text_box";
 @use "fluent/controls/tooltip";
-
 @use "fluent/motion";
-
 @use "fluent/containers";
 @use "fluent_config.scss";
-
 /* ------------------------- popup.html ------------------------- */
-
 $spacer: 0.5rem;
 
 .toolbar {
-  // { a }
 
+  // { a }
   &__button-images,
   &__button-options {
     margin-right: $spacer;
@@ -41,7 +37,6 @@ $spacer: 0.5rem;
   transition-property: background-color;
 
   // &--critical { bc }
-
   &__container {
     margin-top: $spacer;
   }
@@ -138,7 +133,6 @@ $spacer: 0.5rem;
 }
 
 // ------------------------- Motion -------------------------
-
 .toolbar,
 .aem,
 .tools {

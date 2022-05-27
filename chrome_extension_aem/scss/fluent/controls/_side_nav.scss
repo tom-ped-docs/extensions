@@ -1,8 +1,6 @@
 @use "../typography";
 @use "../colors";
-
 /* ------------------------- Side Nav (Navigation View) ------------------------- */
-
 $spacer: 0.5rem;
 
 .side-nav {
@@ -55,8 +53,8 @@ $spacer: 0.5rem;
 
 .light {
   .side-nav {
-    // Mode: Light, Layout: Icon Before
 
+    // Mode: Light, Layout: Icon Before
     &__list-item {
       background-color: rgba(255, 255, 255, 0);
       border: 1px solid rgba(255, 255, 255, 0);
@@ -92,8 +90,8 @@ $spacer: 0.5rem;
 
 .dark {
   .side-nav {
-    // Mode: Dark, Layout: Icon Before
 
+    // Mode: Dark, Layout: Icon Before
     &__list-item {
       background-color: rgba(255, 255, 255, 0);
       border: 1px solid rgba(255, 255, 255, 0);

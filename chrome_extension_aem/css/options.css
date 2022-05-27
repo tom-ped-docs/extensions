@@ -1,7 +1,7 @@
 /* ------------------------- Typography ------------------------- */
 @font-face {
   font-family: "Segoe UI Variable";
-  src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
+  src: url("../assets/fonts/segoe_ui_variable.ttf") format("truetype-variations");
 }
 .caption, .expander__caption, .card__caption {
   font-family: "Segoe UI Variable";
@@ -61,15 +61,15 @@
 
 @font-face {
   font-family: "Segoe Fluent Icons";
-  src: url(../../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
+  src: url("../../assets/fonts/segoe_fluent_icons.ttf") format("truetype");
 }
 @font-face {
   font-family: "Cascadia Code";
-  src: url(../../assets/fonts/CascadiaCode.ttf) format("truetype");
+  src: url("../../assets/fonts/CascadiaCode.ttf") format("truetype");
 }
 @font-face {
   font-family: "Cascadia Code Italic";
-  src: url(../../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
+  src: url("../../assets/fonts/CascadiaCodeItalic.ttf") format("truetype");
 }
 /* ------------------------- Light & Dark Theme Colors ------------------------- */
 .light .text, .light .extensions__body, .light .heading, .light .input-group-text, .light .side-nav__icon, .light .side-nav__body, .light .text-box, .light .expander__icon, .light .expander__bodytext, .light .expander__caption, .light .card__icon, .light .card__bodytext, .light .card__caption, .light .dropdown, .light .button--standard, .light .button--standard-icon {

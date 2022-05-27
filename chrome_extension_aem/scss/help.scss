@@ -1,6 +1,5 @@
 @use "fluent/typography";
 @use "fluent/colors";
-
 @use "fluent/controls/button";
 @use "fluent/controls/hyperlink_button";
 @use "fluent/controls/hyperlink";
@@ -9,12 +8,9 @@
 @use "fluent/controls/info_bar";
 @use "fluent/controls/badge";
 @use "fluent/controls/side_nav";
-
 @use "fluent/containers";
 @use "fluent_config.scss";
-
 /* ------------------------- help.html ------------------------- */
-
 $spacer: 0.5rem;
 
 .block {
@@ -97,7 +93,6 @@ $spacer: 0.5rem;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-
   // Notion
   padding: 1px 5px;
   border-radius: 4px;

@@ -1,8 +1,6 @@
 @use "../typography";
 @use "../colors";
-
 /* ------------------------- Info Bar ------------------------- */
-
 // | Info Bar       | Badge         |
 // | -------------- | ------------- |
 // |                | Neutral Safe  |
@@ -10,7 +8,6 @@
 // | Success        | Success       |
 // | Warning        | Caution       |
 // | Critical       | Critical      |
-
 $spacer: 0.5rem;
 
 .info-bar {
@@ -85,7 +82,7 @@ $light-solid-neutral: rgba(243, 243, 243, 1);
 }
 
 // $dark-attention: rgba(255, 255, 255, 0.03);
-$dark-solid-attention:rgba(46, 46, 46, 1);
+$dark-solid-attention: rgba(46, 46, 46, 1);
 $dark-success: rgba(57, 61, 27, 1);
 $dark-caution: rgba(67, 53, 25, 1);
 $dark-critical: rgba(68, 39, 38, 1);

@@ -1,12 +1,10 @@
 /* ------------------------- Typography ------------------------- */
-
 // ------------------------- Type Ramp -------------------------
-
 $font-family-segoe-ui-variable: "Segoe UI Variable";
 
 @font-face {
   font-family: $font-family-segoe-ui-variable;
-  src: url(../assets/fonts/segoe_ui_variable.ttf) format("truetype-variations");
+  src: url("../assets/fonts/segoe_ui_variable.ttf") format("truetype-variations");
 }
 
 .caption {
@@ -69,27 +67,24 @@ $font-family-segoe-ui-variable: "Segoe UI Variable";
 }
 
 // ------------------------- Segoe Fluent Icons -------------------------
-
 // Microsoft Docs / ... / Segoe Fluent Icons font https://docs.microsoft.com/en-us/windows/apps/design/style/segoe-fluent-icons-font
-
 $font-family-segoe-fluent-icons: "Segoe Fluent Icons";
 
 @font-face {
   font-family: $font-family-segoe-fluent-icons;
-  src: url(../../assets/fonts/segoe_fluent_icons.ttf) format("truetype");
+  src: url("../../assets/fonts/segoe_fluent_icons.ttf") format("truetype");
 }
 
 // ------------------------- Cascadia Code, Cascadia Code Italic -------------------------
-
 $font-family-cascadia-code: "Cascadia Code";
 $font-family-cascadia-code-italic: "Cascadia Code Italic";
 
 @font-face {
   font-family: $font-family-cascadia-code;
-  src: url(../../assets/fonts/CascadiaCode.ttf) format("truetype");
+  src: url("../../assets/fonts/CascadiaCode.ttf") format("truetype");
 }
 
 @font-face {
   font-family: $font-family-cascadia-code-italic;
-  src: url(../../assets/fonts/CascadiaCodeItalic.ttf) format("truetype");
+  src: url("../../assets/fonts/CascadiaCodeItalic.ttf") format("truetype");
 }

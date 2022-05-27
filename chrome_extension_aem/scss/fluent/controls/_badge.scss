@@ -1,7 +1,6 @@
 @use "../typography";
 
 /* ------------------------- Badge ------------------------- */
-
 // | Info Bar       | Badge         |
 // | -------------- | ------------- |
 // |                | Neutral Safe  |
@@ -9,7 +8,6 @@
 // | Success        | Success       |
 // | Warning        | Caution       |
 // | Critical       | Critical      |
-
 .badge {
   width: 16px;
   height: 16px;
@@ -121,8 +119,8 @@ $dark-caution: rgba(252, 225, 0, 1);
 $dark-critical: rgba(255, 153, 164, 1);
 // $dark-neutral: rgba(255, 255, 255, 0.54);
 $dark-solid-neutral:
-/* rgba(138, 138, 138, 1) */
-rgba(157, 157, 157, 1);
+  /* rgba(138, 138, 138, 1) */
+  rgba(157, 157, 157, 1);
 
 .dark {
   .badge {

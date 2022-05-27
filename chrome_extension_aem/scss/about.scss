@@ -1,14 +1,10 @@
 @use "fluent/containers";
-
 @use "fluent/typography";
 @use "fluent/colors";
-
 @use "fluent/controls/side_nav";
-
 @use "fluent_config.scss";
 
 /* ------------------------- about.html ------------------------- */
-
 .about {
   &__container-row {
     display: flex;
